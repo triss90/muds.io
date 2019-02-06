@@ -3,7 +3,6 @@
   color: $color4;
   background: $color2;
   background: linear-gradient(to right, $color1, $color2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   padding: 0 0 325px 0;
   &:after {
     content: "";
@@ -29,7 +28,7 @@
 
 #demo {
   padding: 50px 0 125px 0;
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/297848/hero-pattern.02f57cc92.svg');
+  background-image: url('/assets/img/hero-pattern.02f57cc92.svg');
   background-repeat: no-repeat;
   background-position: center top;
   h2 {

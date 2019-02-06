@@ -78,7 +78,7 @@ a {
         .navigation .navigation-items a:hover {
           color: rgba(244, 244, 244, 0.4); } }
   .navigation .logo {
-    margin-top: 16px;
+    margin-top: 20px;
     text-decoration: none;
     border: 0; }
     .navigation .logo .text {
@@ -153,7 +153,7 @@ a {
 
 #demo {
   padding: 50px 0 125px 0;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/297848/hero-pattern.02f57cc92.svg");
+  background-image: url("/assets/img/hero-pattern.02f57cc92.svg");
   background-repeat: no-repeat;
   background-position: center top; }
   #demo h2 {
@@ -182,3 +182,14 @@ a {
       #footer p.desc.copyright a {
         color: #676b79;
         font-weight: bold; }
+
+#menu-bg {
+  padding: 0;
+  height: 65px;
+  position: relative;
+  color: #f4f4f4;
+  background: #1D976C;
+  background: linear-gradient(to right, #93F9B9, #1D976C);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  #menu-bg:after {
+    display: none; }

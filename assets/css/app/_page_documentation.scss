@@ -1,0 +1,11 @@
+#menu-bg {
+  padding: 0;
+  height: 65px;
+  position: relative;
+  color: $color4;
+  background: $color2;
+  background: linear-gradient(to right, $color1, $color2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  &:after {
+    display: none;
+  }
+}

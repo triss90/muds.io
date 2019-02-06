@@ -23,14 +23,14 @@
 
 <section id="demo">
     <div class="container">
-        <div class="row center-tiny">
+        <div class="row">
             <div class="tiny-12">
                 <h2>Getting started with MUDS editor</h2>
                 <p>Simply paste the following snippet in your code where you want MUDS editor to appear.</p><br>
             </div>
         </div>
         <div class="row center-tiny">
-            <div class="tiny-12 small-10 medium-8 large-6">
+            <div class="tiny-12 ">
                 <pre class="code"><span class="c4">&lt;!-- Include stylesheet --></span>
 <span class="c1">&lt;link</span> <span class="c2">rel</span><span class="c6">=</span><span class="c3">"stylesheet"</span> <span class="c2">href</span><span class="c6">=</span><span class="c3">"/assets/css/editor.css"</span><span class="c1">></span>
 
@@ -47,17 +47,6 @@
 <span class="c6">});</span>
 <span class="c1">&lt;/script></span></pre>
             </div>
-            <!--
-            <div class="tiny-12 small-5 medium-6 large-6">
-                <pre class="code"><span class="c4">/* Initialize muds editor */</span>
-<span class="c5">var</span> <span class="c6">editor =</span> <span class="c5">new</span> <span class="c2">muds</span><span class="c6">({</span>
-    <span class="c6">selector:</span> <span class="c3">'editor'</span><span class="c6">,</span>
-    <span class="c6">menuStyle:</span> <span class="c3">'full'</span><span class="c6">,</span>
-    <span class="c6">theme:</span> <span class="c3">'light'</span><span class="c6">,</span>
-    <span class="c6">content:</span> <span class="c3">'prefill content'</span><span class="c6">,</span>
-    <span class="c6">height:</span> <span class="c3">'300px'</span>
-<span class="c6">});</span></pre>
-            </div>-->
         </div>
     </div>
 
@@ -94,7 +83,7 @@
             'print','showHTML','showText','fullScreen'
         ],
         theme: 'light', // dark, light
-        content: '<h1>Try the muds editor today</h1><p>No matter what you\'re building, muds has you covered. From content management to email marketing, here are our customers\' most common uses:</p><ul><li>Content Management Systems (e.g. WordPress, Umbraco)</li><li>Learning Management Systems (e.g. Blackboard)</li><li>Customer Relationship Management and marketing automation (e.g. Marketo)</li></ul><br><p><a href="https://tristanwhite.info" target="_blank">Our team</a> is hard at work, creating and adding new features to take the Javascript web WYSIWYG editing capabilities to the next level.</p>',
+        content: '<h1>Try the MUDS editor today</h1><p>No matter what you\'re building, MUDS has you covered. From content management to email marketing, here are our customers\' most common uses:</p><ul><li>Content Management Systems</li><li>Learning Management Systems</li><li>Customer Relationship Management and marketing automation</li></ul><br><p><a href="https://tristanwhite.info" target="_blank">Our team</a> is hard at work, creating and adding new features to take the Javascript web WYSIWYG editing capabilities to the next level.</p>',
         height: '300px'
     });
 </script>

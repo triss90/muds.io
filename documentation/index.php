@@ -1,12 +1,8 @@
 <?php include('../_inc/header.php'); ?>
 
-<header id="header">
+<header id="menu-bg">
     <div class="container">
         <?php include('../_inc/navigation.php'); ?>
-        <div class="row">
-            <div class="tiny-12 center-tiny">
-            </div>
-        </div>
     </div>
 </header>
 
