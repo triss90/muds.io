@@ -7,11 +7,15 @@
         <div class="row">
             <div class="tiny-12 center-tiny">
                 <h1>MUDS Editor, <i>the</i> lightest WYSIWYG Editor</h1>
+                <br>
+                <br>
                 <p class="desc">Beautiful Javascript web editor that's easy to integrate for developers and your users will simply fall in love with its clean design.</p>
                 <br><br>
+                <br>
+                <br>
                 <a href="#0" class="button primary">Download</a>
-                <a href="https://github.com/triss90/muds.io" target="_blank" class="button secondary">Visit GitHub</a>
-                <br><br><br><br>
+                <a href="https://github.com/triss90/muds.io" target="_blank" class="button secondary">View on GitHub</a>
+                <br><br><br><br><br><br>
                 <div id="editor"></div>
             </div>
         </div>
@@ -22,7 +26,8 @@
     <div class="container">
         <div class="row center-tiny">
             <div class="tiny-12">
-                <h2>How to use muds editor</h2>
+                <h2>Getting started with MUDS editor</h2>
+                <p>Simply paste the following snippet in your code where you want MUDS editor to appear.</p><br>
             </div>
         </div>
         <div class="row center-tiny">
@@ -87,5 +92,8 @@
         theme: 'light', // dark, light
         content: '<h1>Try the muds editor today</h1><p>No matter what you\'re building, muds has you covered. From content management to email marketing, here are our customers\' most common uses:</p><ul><li>Content Management Systems (e.g. WordPress, Umbraco)</li><li>Learning Management Systems (e.g. Blackboard)</li><li>Customer Relationship Management and marketing automation (e.g. Marketo)</li></ul><br><p><a href="https://tristanwhite.info" target="_blank">Our team</a> is hard at work, creating and adding new features to take the Javascript web WYSIWYG editing capabilities to the next level.</p>',
         height: '300px',
+        menuCustom: [
+
+        ]
     });
 </script>

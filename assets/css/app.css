@@ -5,14 +5,16 @@
 
 html, body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 16px; }
+  font-size: 16px;
+  background: #f4f4f4; }
 
 a {
-  cursor: pointer; }
+  cursor: pointer;
+  color: #93F9B9; }
 
 .button, button {
   display: inline-block;
-  background: #333;
+  background: #19191a;
   color: #f4f4f4;
   text-decoration: none;
   border-radius: 2px;
@@ -24,20 +26,20 @@ a {
     padding: 30px 40px;
     margin: 2rem 1rem; }
   .button.primary, button.primary {
-    background: #f7797d;
+    background: #1D976C;
     border: 2px solid transparent;
     color: #f4f4f4; }
     .button.primary:hover, button.primary:hover {
-      background: #f4494e; }
+      background: #156c4d; }
   .button.secondary, button.secondary {
     background: transparent;
-    border: 2px solid #f7797d;
-    color: #f7797d; }
+    border: 2px solid #1D976C;
+    color: #1D976C; }
     .button.secondary:hover, button.secondary:hover {
-      background: #f7797d;
+      background: #1D976C;
       color: #f4f4f4; }
   .button:hover, button:hover {
-    background: #444; }
+    background: black; }
 
 .navigation {
   height: 64px;
@@ -50,7 +52,8 @@ a {
       height: auto; } }
   .navigation .navigation-items a {
     line-height: 64px;
-    color: #333;
+    color: #f4f4f4;
+    font-weight: normal;
     margin-left: 2rem;
     font-weight: 100;
     text-decoration: none;
@@ -60,7 +63,7 @@ a {
       .navigation .navigation-items a {
         margin: 0 1rem; } }
     .navigation .navigation-items a:hover {
-      color: rgba(51, 51, 51, 0.4);
+      color: rgba(244, 244, 244, 0.8);
       background: none; }
   @media (max-width: 46em) {
     .navigation .navigation-items {
@@ -75,38 +78,9 @@ a {
         .navigation .navigation-items a:hover {
           color: rgba(244, 244, 244, 0.4); } }
   .navigation .logo {
-    margin-top: 12px;
+    margin-top: 16px;
     text-decoration: none;
     border: 0; }
-    .navigation .logo:hover {
-      background: none; }
-      .navigation .logo:hover #gridder-logo .a:nth-child(2) {
-        r: 30;
-        transition-delay: 0; }
-      .navigation .logo:hover #gridder-logo .a:nth-child(6) {
-        r: 30;
-        transition-delay: 33ms; }
-      .navigation .logo:hover #gridder-logo .a:nth-child(1) {
-        r: 30;
-        transition-delay: 66ms; }
-      .navigation .logo:hover #gridder-logo .a:nth-child(7) {
-        r: 30;
-        transition-delay: 99ms; }
-      .navigation .logo:hover #gridder-logo .a:nth-child(5) {
-        r: 30;
-        transition-delay: 133ms; }
-      .navigation .logo:hover #gridder-logo .a:nth-child(9) {
-        r: 30;
-        transition-delay: 166ms; }
-      .navigation .logo:hover #gridder-logo .a:nth-child(4) {
-        r: 30;
-        transition-delay: 199ms; }
-      .navigation .logo:hover #gridder-logo .a:nth-child(8) {
-        r: 30;
-        transition-delay: 233ms; }
-      .navigation .logo:hover #gridder-logo .a:nth-child(3) {
-        r: 30;
-        transition-delay: 266ms; }
     .navigation .logo .text {
       color: #f4f4f4;
       font-weight: 100;
@@ -118,20 +92,9 @@ a {
       margin-left: 5px;
       transition: all 100ms ease-in-out;
       border: 0; }
-    .navigation .logo #gridder-logo {
-      width: 40px;
-      height: 40px;
-      padding: 2px; }
-      .navigation .logo #gridder-logo .a {
-        fill: #fff;
-        transition: 200ms ease-in-out; }
-      .navigation .logo #gridder-logo .b {
-        fill: none;
-        stroke: #fff;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-miterlimit: 10;
-        stroke-width: 18px; }
+    .navigation .logo svg {
+      height: 60%;
+      width: 105px; }
     @media (max-width: 46em) {
       .navigation .logo {
         width: 100%;
@@ -141,68 +104,10 @@ a {
     .navigation {
       margin-bottom: 0px; } }
 
-a {
-  color: #FBD786; }
-
-#header {
-  position: relative;
-  color: #333;
-  background: #C6FFDD;
-  /* fallback for old browsers */
-  background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  padding: 0 0 325px 0; }
-  #header:after {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 0px solid transparent;
-    border-right: 100vw solid transparent;
-    border-bottom: 150px solid #fff; }
-  #header h1 {
-    font-size: 3.75rem;
-    font-weight: 100;
-    margin-bottom: 1.5rem; }
-  #header p.desc {
-    font-size: 1.75rem;
-    font-weight: 100; }
-
-#demo {
-  padding: 50px 0 125px 0; }
-  #demo h2 {
-    font-size: 2.75rem;
-    font-weight: 100;
-    margin-bottom: 1.5rem;
-    color: #333; }
-  #demo p.desc {
-    font-size: 1.75rem;
-    font-weight: 100;
-    color: #333; }
-
-#footer {
-  background: #202125;
-  padding: 150px 0;
-  color: #eee; }
-  #footer h2 {
-    font-size: 5rem;
-    font-weight: 100; }
-  #footer p.desc {
-    font-size: 2.5rem;
-    font-weight: 100; }
-    #footer p.desc.copyright {
-      font-size: 1rem;
-      color: #676b79; }
-      #footer p.desc.copyright a {
-        color: #676b79;
-        font-weight: bold; }
-
 .code {
   overflow-y: scroll;
   overflow-x: auto;
-  background: #191A1D;
+  background: #19191a;
   font-size: 0.9rem;
   text-align: left;
   padding: 1.75rem;
@@ -220,3 +125,57 @@ a {
     color: #ff75b5; }
   .code .c6 {
     color: #e6e6e6; }
+
+#header {
+  position: relative;
+  color: #f4f4f4;
+  background: #1D976C;
+  background: linear-gradient(to right, #93F9B9, #1D976C);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 0 0 325px 0; }
+  #header:after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 100vw solid transparent;
+    border-bottom: 150px solid #f4f4f4; }
+  #header h1 {
+    font-size: 3.75rem;
+    font-weight: 100;
+    margin-bottom: 1.5rem; }
+  #header p.desc {
+    font-size: 1.75rem;
+    font-weight: normal; }
+
+#demo {
+  padding: 50px 0 125px 0; }
+  #demo h2 {
+    font-size: 2.75rem;
+    font-weight: 100;
+    margin-bottom: 1.5rem;
+    color: #19191a; }
+  #demo p.desc {
+    font-size: 1.75rem;
+    font-weight: normal;
+    color: #19191a; }
+
+#footer {
+  background: #19191a;
+  padding: 150px 0;
+  color: #f4f4f4; }
+  #footer h2 {
+    font-size: 5rem;
+    font-weight: 100; }
+  #footer p.desc {
+    font-size: 2.5rem;
+    font-weight: 100; }
+    #footer p.desc.copyright {
+      font-size: 1rem;
+      color: #676b79; }
+      #footer p.desc.copyright a {
+        color: #676b79;
+        font-weight: bold; }

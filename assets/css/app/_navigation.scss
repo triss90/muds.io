@@ -11,7 +11,8 @@
   .navigation-items {
     a {
       line-height: 64px;
-      color: #333;
+      color: $color4;
+      font-weight: normal;
       margin-left: 2rem;
       font-weight: 100;
       text-decoration: none;
@@ -21,72 +22,31 @@
         margin: 0 1rem;
       }
       &:hover {
-        color: rgba(#333,0.4);
+        color: rgba($color4,0.8);
         background: none;
       }
     }
     @media(max-width: 46em) {
       width: 100%;
-      background: #19191a;
+      background: $color3;
       margin: 2rem 0 0 0;
       position: relative;
       display: block;
       text-align: center;
       a {
-        color: #f4f4f4;
+        color: $color4;
         &:hover {
-          color: rgba(#f4f4f4,0.4);
+          color: rgba($color4,0.4);
         }
       }
     }
   }
   .logo {
-    margin-top: 12px;
+    margin-top: 16px;
     text-decoration: none;
     border: 0;
-    &:hover {
-      background: none;
-      #gridder-logo {
-        .a:nth-child(2) {
-          r: 30;
-          transition-delay: 0;
-        }
-        .a:nth-child(6) {
-          r: 30;
-          transition-delay: 33ms;
-        }
-        .a:nth-child(1) {
-          r: 30;
-          transition-delay: 66ms;
-        }
-        .a:nth-child(7) {
-          r: 30;
-          transition-delay: 99ms;
-        }
-        .a:nth-child(5) {
-          r: 30;
-          transition-delay: 133ms;
-        }
-        .a:nth-child(9) {
-          r: 30;
-          transition-delay: 166ms;
-        }
-        .a:nth-child(4) {
-          r: 30;
-          transition-delay: 199ms;
-        }
-        .a:nth-child(8) {
-          r: 30;
-          transition-delay: 233ms;
-        }
-        .a:nth-child(3) {
-          r: 30;
-          transition-delay: 266ms;
-        }
-      }
-    }
     .text {
-      color: #f4f4f4;
+      color: $color4;
       font-weight: 100;
       font-size: 1.4rem;
       text-transform: uppercase;
@@ -97,24 +57,10 @@
       transition: all 100ms ease-in-out;
       border: 0;
     }
-    #gridder-logo {
-      width: 40px;
-      height: 40px;
-      padding: 2px;
-      .a {
-        fill: #fff;
-        transition: 200ms ease-in-out;
-      }
-      .b {
-        fill: none;
-        stroke: #fff;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-miterlimit: 10;
-        stroke-width: 18px;
-      }
+    svg {
+      height: 60%;
+      width: 105px;
     }
-
     @media(max-width: 46em) {
       width: 100%;
       text-align: center;

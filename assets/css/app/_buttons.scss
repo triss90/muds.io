@@ -1,7 +1,7 @@
 .button, button {
   display: inline-block;
-  background: #333;
-  color: #f4f4f4;
+  background: $color3;
+  color: $color4;
   text-decoration: none;
   border-radius: 2px;
   padding: 15px 20px;
@@ -13,23 +13,23 @@
     margin: 2rem 1rem;
   }
   &.primary {
-    background: #f7797d;
+    background: $color2;
     border: 2px solid transparent;
-    color: #f4f4f4;
+    color: $color4;
     &:hover {
-      background: darken(#f7797d, 10%);
+      background: darken($color2, 10%);
     }
   }
   &.secondary {
     background: transparent;
-    border: 2px solid #f7797d;
-    color: #f7797d;
+    border: 2px solid $color2;
+    color: $color2;
     &:hover {
-      background: #f7797d;
-      color: #f4f4f4;
+      background: $color2;
+      color: $color4;
     }
   }
   &:hover {
-    background: #444;
+    background: darken($color3, 100%);
   }
 }

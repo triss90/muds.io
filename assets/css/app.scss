@@ -1,91 +1,9 @@
-@import "app/_general.scss";
-@import "app/_buttons.scss";
+@import "app/colors.scss";
+@import "app/general.scss";
+
+@import "app/buttons.scss";
 @import "app/navigation.scss";
+@import "app/code.scss";
+@import "app/page_frontpage.scss";
 
-a {
-  color: #FBD786;
-}
 
-#header {
-  position: relative;
-  color: #333;
-  //background: #1488CC;  /* fallback for old browsers */
-  //background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: #C6FFDD;  /* fallback for old browsers */
-  background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  padding: 0 0 325px 0;
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 0px solid transparent;
-    border-right: 100vw solid transparent;
-    border-bottom: 150px solid #fff;
-  }
-  h1 {
-    font-size: 3.75rem;
-    font-weight: 100;
-    margin-bottom: 1.5rem;
-  }
-  p.desc {
-    font-size: 1.75rem;
-    font-weight: 100;
-  }
-}
-
-#demo {
-  padding: 50px 0 125px 0;
-  h2 {
-    font-size: 2.75rem;
-    font-weight: 100;
-    margin-bottom: 1.5rem;
-    color: #333;
-  }
-  p.desc {
-    font-size: 1.75rem;
-    font-weight: 100;
-    color: #333;
-  }
-}
-
-#footer {
-  background: #202125;
-  padding: 150px 0;
-  color: #eee;
-  h2 {
-    font-size: 5rem;
-    font-weight: 100;
-  }
-  p.desc {
-    font-size: 2.5rem;
-    font-weight: 100;
-    &.copyright {
-      font-size: 1rem;
-      color: #676b79;
-      a {
-        color: #676b79;
-        font-weight: bold;
-      }
-    }
-  }
-}
-
-.code {
-  overflow-y: scroll;
-  overflow-x: auto;
-  background: #191A1D;
-  font-size: 0.9rem;
-  text-align: left;
-  padding: 1.75rem;
-  border-radius: 2px;
-  margin-bottom: 1rem;
-  .c1 {color: #ff2c6d}
-  .c2 {color: #ffb86c}
-  .c3 {color: #19f9d8}
-  .c4 {color: #676b79}
-  .c5 {color: #ff75b5}
-  .c6 {color: #e6e6e6}
-}

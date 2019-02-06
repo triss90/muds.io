@@ -1,0 +1,66 @@
+#header {
+  position: relative;
+  color: $color4;
+  background: $color2;
+  background: linear-gradient(to right, $color1, $color2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  padding: 0 0 325px 0;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 100vw solid transparent;
+    border-bottom: 150px solid $color4;
+  }
+  h1 {
+    font-size: 3.75rem;
+    font-weight: 100;
+    margin-bottom: 1.5rem;
+  }
+  p.desc {
+    font-size: 1.75rem;
+    font-weight: normal;
+  }
+}
+
+#demo {
+  padding: 50px 0 125px 0;
+  h2 {
+    font-size: 2.75rem;
+    font-weight: 100;
+    margin-bottom: 1.5rem;
+    color: $color3;
+  }
+  p.desc {
+    font-size: 1.75rem;
+    font-weight: normal;
+    color: $color3;
+  }
+}
+
+#footer {
+  background: $color3;
+  padding: 150px 0;
+  color: $color4;
+  h2 {
+    font-size: 5rem;
+    font-weight: 100;
+  }
+  p.desc {
+    font-size: 2.5rem;
+    font-weight: 100;
+    &.copyright {
+      font-size: 1rem;
+      color: #676b79;
+      a {
+        color: #676b79;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
