@@ -93,7 +93,9 @@
         content: '<h1>Try the muds editor today</h1><p>No matter what you\'re building, muds has you covered. From content management to email marketing, here are our customers\' most common uses:</p><ul><li>Content Management Systems (e.g. WordPress, Umbraco)</li><li>Learning Management Systems (e.g. Blackboard)</li><li>Customer Relationship Management and marketing automation (e.g. Marketo)</li></ul><br><p><a href="https://tristanwhite.info" target="_blank">Our team</a> is hard at work, creating and adding new features to take the Javascript web WYSIWYG editing capabilities to the next level.</p>',
         height: '300px',
         menuCustom: [
-
+            'header','underline','strikeThrough','bold','italic','link','changeColor','image','undo','redo,',
+            'unorderedList','orderedList','selectAll','copy','cut','delete','justifyLef','justifyCenter','justifyRight',
+            'print','showHTML','showText','fullScreen'
         ]
     });
 </script>

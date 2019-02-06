@@ -10,7 +10,6 @@
         } else {
             editorElement.classList.add('light');
         }
-
         this.menu_style = opts.menuStyle;
         this.menu_custom = opts.menuCustom;
         this.height = opts.height;
@@ -37,6 +36,7 @@
             });
         }
     };
+
 
     // Menu Actions
     muds.prototype.enterFullScreen = function(string) {
@@ -251,13 +251,13 @@
         buttonCut.setAttribute('title', 'Cut');
         item.menu.appendChild(buttonCut);
     }
-    function copy(item) {
-        const copy = document.createElement('button');
-        copy.classList.add('muds-item');
-        copy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11l-6-6zM8 21V7h6v5h5v9H8z"/></svg>';
-        copy.setAttribute('onclick',item.orignal_input.id + '.buttonCopyAction()');
-        copy.setAttribute('title', 'Copy');
-        item.menu.appendChild(copy);
+    function buttonCopy(item) {
+        const buttonCopy = document.createElement('button');
+        buttonCopy.classList.add('muds-item');
+        buttonCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11l-6-6zM8 21V7h6v5h5v9H8z"/></svg>';
+        buttonCopy.setAttribute('onclick',item.orignal_input.id + '.buttonCopyAction()');
+        buttonCopy.setAttribute('title', 'Copy');
+        item.menu.appendChild(buttonCopy);
     }
     function buttonUndo(item) {
         const buttonUndo = document.createElement('button');
@@ -275,15 +275,15 @@
         buttonRedo.setAttribute('title', 'Redo');
         item.menu.appendChild(buttonRedo);
     }
-    function changeColor(item) {
-        const changeColor = document.createElement('button');
-        changeColor.classList.add('muds-item');
-        changeColor.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill-opacity=".36" d="M0 20h24v4H0v-4z"/><path d="M11 3L5.5 17h2.25l1.12-3h6.25l1.12 3h2.25L13 3h-2zm-1.38 9L12 5.67 14.38 12H9.62z"/></svg>';
-        changeColor.setAttribute('onclick',item.orignal_input.id + '.buttonChangeColorAction()');
-        changeColor.setAttribute('title', 'Text color');
-        item.menu.appendChild(changeColor);
+    function buttonChangeColor(item) {
+        const buttonChangeColor = document.createElement('button');
+        buttonChangeColor.classList.add('muds-item');
+        buttonChangeColor.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill-opacity=".36" d="M0 20h24v4H0v-4z"/><path d="M11 3L5.5 17h2.25l1.12-3h6.25l1.12 3h2.25L13 3h-2zm-1.38 9L12 5.67 14.38 12H9.62z"/></svg>';
+        buttonChangeColor.setAttribute('onclick',item.orignal_input.id + '.buttonChangeColorAction()');
+        buttonChangeColor.setAttribute('title', 'Text color');
+        item.menu.appendChild(buttonChangeColor);
     }
-    function getImage(item) {
+    function buttonGetImage(item) {
         const imageInput = document.createElement('input');
         imageInput.classList.add('muds-item');
         imageInput.setAttribute('type','file');
@@ -299,77 +299,77 @@
         imageLabel.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M18 20H4V6h9V4H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-9h-2v9zm-7.79-3.17l-1.96-2.36L5.5 18h11l-3.54-4.71zM20 4V1h-2v3h-3c.01.01 0 2 0 2h3v2.99c.01.01 2 0 2 0V6h3V4h-3z"/></svg>';
         item.menu.appendChild(imageLabel);
     }
-    function strikeThrough(item) {
-        const strikeThrough = document.createElement('button');
-        strikeThrough.classList.add('muds-item');
-        strikeThrough.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M7.24 8.75c-.26-.48-.39-1.03-.39-1.67 0-.61.13-1.16.4-1.67.26-.5.63-.93 1.11-1.29.48-.35 1.05-.63 1.7-.83.66-.19 1.39-.29 2.18-.29.81 0 1.54.11 2.21.34.66.22 1.23.54 1.69.94.47.4.83.88 1.08 1.43s.38 1.15.38 1.81h-3.01c0-.31-.05-.59-.15-.85-.09-.27-.24-.49-.44-.68-.2-.19-.45-.33-.75-.44-.3-.1-.66-.16-1.06-.16-.39 0-.74.04-1.03.13s-.53.21-.72.36c-.19.16-.34.34-.44.55-.1.21-.15.43-.15.66 0 .48.25.88.74 1.21.38.25.77.48 1.41.7H7.39c-.05-.08-.11-.17-.15-.25zM21 12v-2H3v2h9.62c.18.07.4.14.55.2.37.17.66.34.87.51s.35.36.43.57c.07.2.11.43.11.69 0 .23-.05.45-.14.66-.09.2-.23.38-.42.53-.19.15-.42.26-.71.35-.29.08-.63.13-1.01.13-.43 0-.83-.04-1.18-.13s-.66-.23-.91-.42c-.25-.19-.45-.44-.59-.75s-.25-.76-.25-1.21H6.4c0 .55.08 1.13.24 1.58s.37.85.65 1.21c.28.35.6.66.98.92.37.26.78.48 1.22.65.44.17.9.3 1.38.39.48.08.96.13 1.44.13.8 0 1.53-.09 2.18-.28s1.21-.45 1.67-.79c.46-.34.82-.77 1.07-1.27s.38-1.07.38-1.71c0-.6-.1-1.14-.31-1.61-.05-.11-.11-.23-.17-.33H21V12z"/></svg>';
-        strikeThrough.setAttribute('onclick',item.orignal_input.id + '.buttonStrikeThroughAction()');
-        strikeThrough.setAttribute('title', 'Strike Through');
-        item.menu.appendChild(strikeThrough);
+    function buttonStrikeThrough(item) {
+        const buttonStrikeThrough = document.createElement('button');
+        buttonStrikeThrough.classList.add('muds-item');
+        buttonStrikeThrough.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M7.24 8.75c-.26-.48-.39-1.03-.39-1.67 0-.61.13-1.16.4-1.67.26-.5.63-.93 1.11-1.29.48-.35 1.05-.63 1.7-.83.66-.19 1.39-.29 2.18-.29.81 0 1.54.11 2.21.34.66.22 1.23.54 1.69.94.47.4.83.88 1.08 1.43s.38 1.15.38 1.81h-3.01c0-.31-.05-.59-.15-.85-.09-.27-.24-.49-.44-.68-.2-.19-.45-.33-.75-.44-.3-.1-.66-.16-1.06-.16-.39 0-.74.04-1.03.13s-.53.21-.72.36c-.19.16-.34.34-.44.55-.1.21-.15.43-.15.66 0 .48.25.88.74 1.21.38.25.77.48 1.41.7H7.39c-.05-.08-.11-.17-.15-.25zM21 12v-2H3v2h9.62c.18.07.4.14.55.2.37.17.66.34.87.51s.35.36.43.57c.07.2.11.43.11.69 0 .23-.05.45-.14.66-.09.2-.23.38-.42.53-.19.15-.42.26-.71.35-.29.08-.63.13-1.01.13-.43 0-.83-.04-1.18-.13s-.66-.23-.91-.42c-.25-.19-.45-.44-.59-.75s-.25-.76-.25-1.21H6.4c0 .55.08 1.13.24 1.58s.37.85.65 1.21c.28.35.6.66.98.92.37.26.78.48 1.22.65.44.17.9.3 1.38.39.48.08.96.13 1.44.13.8 0 1.53-.09 2.18-.28s1.21-.45 1.67-.79c.46-.34.82-.77 1.07-1.27s.38-1.07.38-1.71c0-.6-.1-1.14-.31-1.61-.05-.11-.11-.23-.17-.33H21V12z"/></svg>';
+        buttonStrikeThrough.setAttribute('onclick',item.orignal_input.id + '.buttonStrikeThroughAction()');
+        buttonStrikeThrough.setAttribute('title', 'Strike Through');
+        item.menu.appendChild(buttonStrikeThrough);
     }
-    function deletes(item) {
-        const deletes = document.createElement('button');
-        deletes.classList.add('muds-item');
-        deletes.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M14.12 10.47L12 12.59l-2.13-2.12-1.41 1.41L10.59 14l-2.12 2.12 1.41 1.41L12 15.41l2.12 2.12 1.41-1.41L13.41 14l2.12-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4zM6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9z"/></svg>';
-        deletes.setAttribute('onclick',item.orignal_input.id + '.buttonDeleteAction()');
-        deletes.setAttribute('title', 'Delete');
-        item.menu.appendChild(deletes);
+    function buttonDelete(item) {
+        const buttonDelete = document.createElement('button');
+        buttonDelete.classList.add('muds-item');
+        buttonDelete.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M14.12 10.47L12 12.59l-2.13-2.12-1.41 1.41L10.59 14l-2.12 2.12 1.41 1.41L12 15.41l2.12 2.12 1.41-1.41L13.41 14l2.12-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4zM6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9z"/></svg>';
+        buttonDelete.setAttribute('onclick',item.orignal_input.id + '.buttonDeleteAction()');
+        buttonDelete.setAttribute('title', 'Delete');
+        item.menu.appendChild(buttonDelete);
     }
-    function selectAll(item) {
-        const selectAll = document.createElement('button');
-        selectAll.classList.add('muds-item');
-        selectAll.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 5h2V3c-1.1 0-2 .9-2 2zm0 8h2v-2H3v2zm4 8h2v-2H7v2zM3 9h2V7H3v2zm10-6h-2v2h2V3zm6 0v2h2c0-1.1-.9-2-2-2zM5 21v-2H3c0 1.1.9 2 2 2zm-2-4h2v-2H3v2zM9 3H7v2h2V3zm2 18h2v-2h-2v2zm8-8h2v-2h-2v2zm0 8c1.1 0 2-.9 2-2h-2v2zm0-12h2V7h-2v2zm0 8h2v-2h-2v2zm-4 4h2v-2h-2v2zm0-16h2V3h-2v2zM7 17h10V7H7v10zm2-8h6v6H9V9z"/></svg>';
-        selectAll.setAttribute('onclick',item.orignal_input.id + '.buttonSelectAllAction()');
-        selectAll.setAttribute('title', 'Select all');
-        item.menu.appendChild(selectAll);
+    function buttonSelectAll(item) {
+        const buttonSelectAll = document.createElement('button');
+        buttonSelectAll.classList.add('muds-item');
+        buttonSelectAll.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 5h2V3c-1.1 0-2 .9-2 2zm0 8h2v-2H3v2zm4 8h2v-2H7v2zM3 9h2V7H3v2zm10-6h-2v2h2V3zm6 0v2h2c0-1.1-.9-2-2-2zM5 21v-2H3c0 1.1.9 2 2 2zm-2-4h2v-2H3v2zM9 3H7v2h2V3zm2 18h2v-2h-2v2zm8-8h2v-2h-2v2zm0 8c1.1 0 2-.9 2-2h-2v2zm0-12h2V7h-2v2zm0 8h2v-2h-2v2zm-4 4h2v-2h-2v2zm0-16h2V3h-2v2zM7 17h10V7H7v10zm2-8h6v6H9V9z"/></svg>';
+        buttonSelectAll.setAttribute('onclick',item.orignal_input.id + '.buttonSelectAllAction()');
+        buttonSelectAll.setAttribute('title', 'Select all');
+        item.menu.appendChild(buttonSelectAll);
     }
-    function justifyCenter(item) {
-        const justifyCenter = document.createElement('button');
-        justifyCenter.classList.add('muds-item');
-        justifyCenter.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M7 15v2h10v-2H7zm-4 6h18v-2H3v2zm0-8h18v-2H3v2zm4-6v2h10V7H7zM3 3v2h18V3H3z"/></svg>';
-        justifyCenter.setAttribute('onclick',item.orignal_input.id + '.buttonJustifyCenterAction()');
-        justifyCenter.setAttribute('title', 'Justify center');
-        item.menu.appendChild(justifyCenter);
+    function buttonJustifyCenter(item) {
+        const buttonJustifyCenter = document.createElement('button');
+        buttonJustifyCenter.classList.add('muds-item');
+        buttonJustifyCenter.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M7 15v2h10v-2H7zm-4 6h18v-2H3v2zm0-8h18v-2H3v2zm4-6v2h10V7H7zM3 3v2h18V3H3z"/></svg>';
+        buttonJustifyCenter.setAttribute('onclick',item.orignal_input.id + '.buttonJustifyCenterAction()');
+        buttonJustifyCenter.setAttribute('title', 'Justify center');
+        item.menu.appendChild(buttonJustifyCenter);
     }
-    function justifyLeft(item) {
-        const justifyLeft = document.createElement('button');
-        justifyLeft.classList.add('muds-item');
-        justifyLeft.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg>';
-        justifyLeft.setAttribute('onclick',item.orignal_input.id + '.buttonJustifyLeftAction()');
-        justifyLeft.setAttribute('title', 'Justify Left');
-        item.menu.appendChild(justifyLeft);
+    function buttonJustifyLeft(item) {
+        const buttonJustifyLeft = document.createElement('button');
+        buttonJustifyLeft.classList.add('muds-item');
+        buttonJustifyLeft.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg>';
+        buttonJustifyLeft.setAttribute('onclick',item.orignal_input.id + '.buttonJustifyLeftAction()');
+        buttonJustifyLeft.setAttribute('title', 'Justify Left');
+        item.menu.appendChild(buttonJustifyLeft);
     }
-    function justifyRight(item) {
-        const justifyRight = document.createElement('button');
-        justifyRight.classList.add('muds-item');
-        justifyRight.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 21h18v-2H3v2zm6-4h12v-2H9v2zm-6-4h18v-2H3v2zm6-4h12V7H9v2zM3 3v2h18V3H3z"/></svg>';
-        justifyRight.setAttribute('onclick',item.orignal_input.id + '.buttonJustifyRightAction()');
-        justifyRight.setAttribute('title', 'Justify Right');
-        item.menu.appendChild(justifyRight);
+    function buttonJustifyRight(item) {
+        const buttonJustifyRight = document.createElement('button');
+        buttonJustifyRight.classList.add('muds-item');
+        buttonJustifyRight.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 21h18v-2H3v2zm6-4h12v-2H9v2zm-6-4h18v-2H3v2zm6-4h12V7H9v2zM3 3v2h18V3H3z"/></svg>';
+        buttonJustifyRight.setAttribute('onclick',item.orignal_input.id + '.buttonJustifyRightAction()');
+        buttonJustifyRight.setAttribute('title', 'Justify Right');
+        item.menu.appendChild(buttonJustifyRight);
     }
-    function printMe(item) {
-        const printMe = document.createElement('button');
-        printMe.classList.add('muds-item');
-        printMe.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M19 8h-1V3H6v5H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zM8 5h8v3H8V5zm8 14H8v-4h8v4zm2-4v-2H6v2H4v-4c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v4h-2z"/><circle cx="18" cy="11.5" r="1"/></svg>';
-        printMe.setAttribute('onclick',item.orignal_input.id + '.buttonPrintMeAction()');
-        printMe.setAttribute('title', 'Print');
-        item.menu.appendChild(printMe);
+    function buttonPrintMe(item) {
+        const buttonPrintMe = document.createElement('button');
+        buttonPrintMe.classList.add('muds-item');
+        buttonPrintMe.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M19 8h-1V3H6v5H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zM8 5h8v3H8V5zm8 14H8v-4h8v4zm2-4v-2H6v2H4v-4c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v4h-2z"/><circle cx="18" cy="11.5" r="1"/></svg>';
+        buttonPrintMe.setAttribute('onclick',item.orignal_input.id + '.buttonPrintMeAction()');
+        buttonPrintMe.setAttribute('title', 'Print');
+        item.menu.appendChild(buttonPrintMe);
     }
-    function showHTML(item) {
-        const showHTML = document.createElement('button');
-        showHTML.classList.add('muds-item');
-        showHTML.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>';
-        showHTML.setAttribute('onclick',item.orignal_input.id + '.buttonShowHTMLAction()');
-        showHTML.setAttribute('title', 'Show HTML');
-        item.menu.appendChild(showHTML);
+    function buttonShowHTML(item) {
+        const buttonShowHTML = document.createElement('button');
+        buttonShowHTML.classList.add('muds-item');
+        buttonShowHTML.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>';
+        buttonShowHTML.setAttribute('onclick',item.orignal_input.id + '.buttonShowHTMLAction()');
+        buttonShowHTML.setAttribute('title', 'Show HTML');
+        item.menu.appendChild(buttonShowHTML);
     }
-    function showText(item) {
-        const showText = document.createElement('button');
-        showText.classList.add('muds-item');
-        showText.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M12 6c3.79 0 7.17 2.13 8.82 5.5C19.17 14.87 15.79 17 12 17s-7.17-2.13-8.82-5.5C4.83 8.13 8.21 6 12 6m0-2C7 4 2.73 7.11 1 11.5 2.73 15.89 7 19 12 19s9.27-3.11 11-7.5C21.27 7.11 17 4 12 4zm0 5c1.38 0 2.5 1.12 2.5 2.5S13.38 14 12 14s-2.5-1.12-2.5-2.5S10.62 9 12 9m0-2c-2.48 0-4.5 2.02-4.5 4.5S9.52 16 12 16s4.5-2.02 4.5-4.5S14.48 7 12 7z"/></svg>';
-        showText.setAttribute('onclick',item.orignal_input.id + '.buttonShowTextAction()');
-        showText.setAttribute('title', 'View content');
-        item.menu.appendChild(showText);
+    function buttonShowText(item) {
+        const buttonShowText = document.createElement('button');
+        buttonShowText.classList.add('muds-item');
+        buttonShowText.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M12 6c3.79 0 7.17 2.13 8.82 5.5C19.17 14.87 15.79 17 12 17s-7.17-2.13-8.82-5.5C4.83 8.13 8.21 6 12 6m0-2C7 4 2.73 7.11 1 11.5 2.73 15.89 7 19 12 19s9.27-3.11 11-7.5C21.27 7.11 17 4 12 4zm0 5c1.38 0 2.5 1.12 2.5 2.5S13.38 14 12 14s-2.5-1.12-2.5-2.5S10.62 9 12 9m0-2c-2.48 0-4.5 2.02-4.5 4.5S9.52 16 12 16s4.5-2.02 4.5-4.5S14.48 7 12 7z"/></svg>';
+        buttonShowText.setAttribute('onclick',item.orignal_input.id + '.buttonShowTextAction()');
+        buttonShowText.setAttribute('title', 'View content');
+        item.menu.appendChild(buttonShowText);
     }
 
     // Build the Menu
@@ -377,35 +377,38 @@
         if (item.menu_style === "full" || item.menu_style === undefined ) {
             buttonHeader(item);
             buttonUnderline(item);
-            strikeThrough(item);
+            buttonStrikeThrough(item);
             buttonItalic(item);
             buttonBold(item);
             buttonLink(item);
-            changeColor(item);
-            getImage(item);
+            buttonChangeColor(item);
+            buttonGetImage(item);
             buttonUndo(item);
             buttonRedo(item);
             buttonUnorderedList(item);
             buttonOrderedList(item);
-            selectAll(item);
-            copy(item);
+            buttonSelectAll(item);
+            buttonCopy(item);
             buttonCut(item);
-            deletes(item);
-            justifyLeft(item);
-            justifyCenter(item);
-            justifyRight(item);
-            printMe(item);
-            showHTML(item);
-            showText(item);
+            buttonDelete(item);
+            buttonJustifyLeft(item);
+            buttonJustifyCenter(item);
+            buttonJustifyRight(item);
+            buttonPrintMe(item);
+            buttonShowHTML(item);
+            buttonShowText(item);
             buttonFullScreen(item);
         } else if (item.menu_style === "minimal") {
             buttonUnderline(item);
-            strikeThrough(item);
+            buttonStrikeThrough(item);
             buttonItalic(item);
             buttonBold(item);
             buttonLink(item);
             buttonUndo(item);
             buttonRedo(item);
+        } else if (item.menu_custom !== undefined || item.menu_custom.length !== 0) {
+            console.log(item.menu_custom);
+
         }
     }
 
@@ -431,10 +434,10 @@
     muds.defaults = {
         selector: '',
         menuStyle: 'full', // full, minimal
-        menuCustom: [],
         theme: 'light', // light, dark
         content: '',
-        height: '100px'
+        height: '100px',
+        menuCustom: []
     };
 
     // make accessible globally

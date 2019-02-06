@@ -9,7 +9,7 @@
         </svg>
     </a>
     <div class="navigation-items">
-        <a href="#demo">Installation guide</a>
+        <a href="/#demo">Installation guide</a>
         <a href="/documentation/">Documentaion</a>
     </div>
 </nav>
