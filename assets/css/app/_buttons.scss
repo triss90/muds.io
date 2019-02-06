@@ -1,0 +1,35 @@
+.button, button {
+  display: inline-block;
+  background: #333;
+  color: #f4f4f4;
+  text-decoration: none;
+  border-radius: 2px;
+  padding: 15px 20px;
+  transition: ease-in-out all 100ms;
+  cursor: pointer;
+  &.big {
+    font-size: 1.5rem;
+    padding: 30px 40px;
+    margin: 2rem 1rem;
+  }
+  &.primary {
+    background: #2B32B2;
+    border: 2px solid transparent;
+    color: #f4f4f4;
+    &:hover {
+      background: #0026b2;
+    }
+  }
+  &.secondary {
+    background: transparent;
+    border: 2px solid #eee;
+    color: #eee;
+    &:hover {
+      background: rgba(255,255,255,0.2);
+      color: #f4f4f4;
+    }
+  }
+  &:hover {
+    background: #444;
+  }
+}
