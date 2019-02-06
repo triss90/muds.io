@@ -1,10 +1,10 @@
-.mrkdwn-toolbar {
+.muds-toolbar {
   background: #F7F7F7;
   padding: 8px 5px 5px 5px;
   border: 2px solid #EBEBEB;
   border-radius: 2px 2px 0 0;
   text-align: left;
-  .mrkdwn-item {
+  .muds-item {
     background-color: transparent;
     border: none;
     border-radius: 0;
@@ -26,7 +26,7 @@
       }
     }
   }
-  .mrkdwn-dropdown {
+  .muds-dropdown {
     position: relative;
     display: inline-block;
     padding: 0px 6px;
@@ -94,13 +94,13 @@
           text-align: left;
           border: none;
           color: #999;
-          &.mrkdwn-h1 {
+          &.muds-h1 {
             font-size: 1.5rem;
           }
-          &.mrkdwn-h2 {
+          &.muds-h2 {
             font-size: 1.2rem;
           }
-          &.mrkdwn-h3 {
+          &.muds-h3 {
             font-size: 0.9rem;
           }
         }
@@ -121,7 +121,7 @@
   }
 }
 
-.mrkdwn-content {
+.muds-content {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   padding: 10px;
   border: 2px solid #EBEBEB;
@@ -168,10 +168,10 @@
 
 
 .dark {
-  .mrkdwn-toolbar {
+  .muds-toolbar {
     background: #202125;
     border: 2px solid #202125;
-    .mrkdwn-item {
+    .muds-item {
       color: #999;
       svg {
         fill: #999;
@@ -184,7 +184,7 @@
         }
       }
     }
-    .mrkdwn-dropdown {
+    .muds-dropdown {
       ul {
         background-color: #202125;
         border-color: #111;
@@ -209,7 +209,7 @@
       }
     }
   }
-  .mrkdwn-content {
+  .muds-content {
     border: 2px solid #202125;
     background: #191A1D;
     color: #eee !important;
