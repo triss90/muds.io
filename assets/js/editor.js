@@ -10,6 +10,7 @@
         } else {
             editorElement.classList.add('light');
         }
+
         this.menu_style = opts.menuStyle;
         this.menu_custom = opts.menuCustom;
         this.height = opts.height;
@@ -120,7 +121,6 @@
             false
         );
         if (file) {
-            console.log("s");
             reader.readAsDataURL(file);
         }
     };
@@ -434,7 +434,7 @@
         menuCustom: [],
         theme: 'light', // light, dark
         content: '',
-        height: '100px',
+        height: '100px'
     };
 
     // make accessible globally

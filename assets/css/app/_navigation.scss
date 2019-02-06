@@ -1,0 +1,127 @@
+.navigation {
+  height: 64px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  @media(max-width: 46em) {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  
+  .navigation-items {
+    a {
+      line-height: 64px;
+      color: #333;
+      margin-left: 2rem;
+      font-weight: 100;
+      text-decoration: none;
+      transition: all 150ms ease-in-out;
+      border: 0;
+      @media(max-width: 46em) {
+        margin: 0 1rem;
+      }
+      &:hover {
+        color: rgba(#333,0.4);
+        background: none;
+      }
+    }
+    @media(max-width: 46em) {
+      width: 100%;
+      background: #19191a;
+      margin: 2rem 0 0 0;
+      position: relative;
+      display: block;
+      text-align: center;
+      a {
+        color: #f4f4f4;
+        &:hover {
+          color: rgba(#f4f4f4,0.4);
+        }
+      }
+    }
+  }
+  .logo {
+    margin-top: 12px;
+    text-decoration: none;
+    border: 0;
+    &:hover {
+      background: none;
+      #gridder-logo {
+        .a:nth-child(2) {
+          r: 30;
+          transition-delay: 0;
+        }
+        .a:nth-child(6) {
+          r: 30;
+          transition-delay: 33ms;
+        }
+        .a:nth-child(1) {
+          r: 30;
+          transition-delay: 66ms;
+        }
+        .a:nth-child(7) {
+          r: 30;
+          transition-delay: 99ms;
+        }
+        .a:nth-child(5) {
+          r: 30;
+          transition-delay: 133ms;
+        }
+        .a:nth-child(9) {
+          r: 30;
+          transition-delay: 166ms;
+        }
+        .a:nth-child(4) {
+          r: 30;
+          transition-delay: 199ms;
+        }
+        .a:nth-child(8) {
+          r: 30;
+          transition-delay: 233ms;
+        }
+        .a:nth-child(3) {
+          r: 30;
+          transition-delay: 266ms;
+        }
+      }
+    }
+    .text {
+      color: #f4f4f4;
+      font-weight: 100;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      height: 64px;
+      position: relative;
+      top: -10px;
+      margin-left: 5px;
+      transition: all 100ms ease-in-out;
+      border: 0;
+    }
+    #gridder-logo {
+      width: 40px;
+      height: 40px;
+      padding: 2px;
+      .a {
+        fill: #fff;
+        transition: 200ms ease-in-out;
+      }
+      .b {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 18px;
+      }
+    }
+
+    @media(max-width: 46em) {
+      width: 100%;
+      text-align: center;
+      margin: 2rem 0 0 0;
+    }
+  }
+  @media(max-width: 48em) {
+    margin-bottom: 0px;
+  }
+}

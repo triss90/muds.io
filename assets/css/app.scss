@@ -1,17 +1,19 @@
 @import "app/_general.scss";
 @import "app/_buttons.scss";
+@import "app/navigation.scss";
 
 a {
-  color: #2B32B2;
+  color: #FBD786;
 }
 
 #header {
   position: relative;
-  color: #f4f4f4;
-  background: #1488CC;  /* fallback for old browsers */
-  background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  padding: 150px 0 325px 0;
+  color: #333;
+  //background: #1488CC;  /* fallback for old browsers */
+  //background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #C6FFDD;  /* fallback for old browsers */
+  background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 0 0 325px 0;
   &:after {
     content: "";
     position: absolute;

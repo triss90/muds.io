@@ -1,7 +1,9 @@
 <?php include('_inc/header.php'); ?>
 
+
 <header id="header">
     <div class="container">
+        <?php include('_inc/navigation.php'); ?>
         <div class="row">
             <div class="tiny-12 center-tiny">
                 <h1>MUDS Editor, <i>the</i> lightest WYSIWYG Editor</h1>
