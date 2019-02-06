@@ -406,9 +406,30 @@
             buttonLink(item);
             buttonUndo(item);
             buttonRedo(item);
-        } else if (item.menu_custom !== undefined || item.menu_custom.length !== 0) {
-            console.log(item.menu_custom);
-
+        } else if (item.menu_style === "custom") {
+            if (item.menu_custom.includes("header")){buttonHeader(item);}
+            if (item.menu_custom.includes("underline")){buttonUnderline(item);}
+            if (item.menu_custom.includes("strikeThrough")){buttonStrikeThrough(item);}
+            if (item.menu_custom.includes("italic")){buttonItalic(item);}
+            if (item.menu_custom.includes("bold")){buttonBold(item);}
+            if (item.menu_custom.includes("link")){buttonLink(item);}
+            if (item.menu_custom.includes("changeColor")){buttonChangeColor(item);}
+            if (item.menu_custom.includes("image")){buttonGetImage(item);}
+            if (item.menu_custom.includes("undo")){buttonUndo(item);}
+            if (item.menu_custom.includes("redo")){buttonRedo(item);}
+            if (item.menu_custom.includes("unorderedList")){buttonUnorderedList(item);}
+            if (item.menu_custom.includes("orderedList")){buttonOrderedList(item);}
+            if (item.menu_custom.includes("selectAll")){buttonSelectAll(item);}
+            if (item.menu_custom.includes("copy")){buttonCopy(item);}
+            if (item.menu_custom.includes("cut")){buttonCut(item);}
+            if (item.menu_custom.includes("delete")){buttonDelete(item);}
+            if (item.menu_custom.includes("justifyLeft")){buttonJustifyLeft(item);}
+            if (item.menu_custom.includes("justifyCenter")){buttonJustifyCenter(item);}
+            if (item.menu_custom.includes("justifyRight")){buttonJustifyRight(item);}
+            if (item.menu_custom.includes("print")){buttonPrintMe(item);}
+            if (item.menu_custom.includes("showHTML")){buttonShowHTML(item);}
+            if (item.menu_custom.includes("showText")){buttonShowText(item);}
+            if (item.menu_custom.includes("fullScreen")){buttonFullScreen(item);}
         }
     }
 
@@ -433,11 +454,11 @@
     // Attach our defaults for plugin to the plugin itself
     muds.defaults = {
         selector: '',
-        menuStyle: 'full', // full, minimal
+        menuStyle: 'full', // full, minimal, custom
+        menuCustom: [], //'header','underline','strikeThrough','bold','italic','link','changeColor','image','undo','redo','unorderedList','orderedList','selectAll','copy','cut','delete','justifyLeft','justifyCenter','justifyRight','print','showHTML','showText','fullScreen'
         theme: 'light', // light, dark
         content: '',
-        height: '100px',
-        menuCustom: []
+        height: '100px'
     };
 
     // make accessible globally

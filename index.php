@@ -1,6 +1,5 @@
 <?php include('_inc/header.php'); ?>
 
-
 <header id="header">
     <div class="container">
         <?php include('_inc/navigation.php'); ?>
@@ -13,8 +12,8 @@
                 <br><br>
                 <br>
                 <br>
-                <a href="#0" class="button primary">Download</a>
-                <a href="https://github.com/triss90/muds.io" target="_blank" class="button secondary">View on GitHub</a>
+                <a href="#0" class="button primary"><i class="fa fa-download" aria-hidden="true"></i> Download</a>
+                <a href="https://github.com/triss90/muds.io" target="_blank" class="button secondary"><i class="fa fa-github" aria-hidden="true"></i> View on GitHub</a>
                 <br><br><br><br><br><br>
                 <div id="editor"></div>
             </div>
@@ -72,8 +71,8 @@
                 <br><br>
                 <p class="desc">Your powerful, lightweight editor.</p>
                 <br><br>
-                <a href="#0" class="button secondary big">Documentation</a>
-                <a href="#0" class="button primary big">Download v1.0.3</a>
+                <a href="#0" class="button secondary big"><i class="fa fa-book" aria-hidden="true"></i> Documentation</a>
+                <a href="#0" class="button primary big"><i class="fa fa-download" aria-hidden="true"></i> Download v1.0.3</a>
                 <br><br><br>
                 <p class="copyright">Made with ❤ ️by <a href="" title="Tristan White">Tristan White</a></p>
                 <p class="copyright">&copy; <?php echo date("Y"); ?></p>
@@ -88,14 +87,14 @@
 <script>
     var editor = new muds({
         selector: 'editor',
-        menuStyle: 'full', // full, minimal
+        menuStyle: 'custom', // full, minimal, custom
+        menuCustom: [
+            'header','underline','strikeThrough','bold','italic','link','changeColor','image','undo','redo',
+            'unorderedList','orderedList','selectAll','copy','cut','delete','justifyLeft','justifyCenter','justifyRight',
+            'print','showHTML','showText','fullScreen'
+        ],
         theme: 'light', // dark, light
         content: '<h1>Try the muds editor today</h1><p>No matter what you\'re building, muds has you covered. From content management to email marketing, here are our customers\' most common uses:</p><ul><li>Content Management Systems (e.g. WordPress, Umbraco)</li><li>Learning Management Systems (e.g. Blackboard)</li><li>Customer Relationship Management and marketing automation (e.g. Marketo)</li></ul><br><p><a href="https://tristanwhite.info" target="_blank">Our team</a> is hard at work, creating and adding new features to take the Javascript web WYSIWYG editing capabilities to the next level.</p>',
-        height: '300px',
-        menuCustom: [
-            'header','underline','strikeThrough','bold','italic','link','changeColor','image','undo','redo,',
-            'unorderedList','orderedList','selectAll','copy','cut','delete','justifyLef','justifyCenter','justifyRight',
-            'print','showHTML','showText','fullScreen'
-        ]
+        height: '300px'
     });
 </script>

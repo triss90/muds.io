@@ -32,7 +32,32 @@
                 <pre class="code"><span class="c4">/* Initialize muds editor */</span>
 <span class="c5">var</span> <span class="c6">editor =</span> <span class="c5">new</span> <span class="c2">muds</span><span class="c6">({</span>
     <span class="c6">selector:</span> <span class="c3">'editor'</span><span class="c6">,</span>
-    <span class="c6">menuStyle:</span> <span class="c3">'full'</span><span class="c6">,</span> <span class="c4">// full, minimal</span>
+    <span class="c6">menuStyle:</span> <span class="c3">'custom'</span><span class="c6">,</span> <span class="c4">// full, minimal, custom</span>
+    <span class="c6">menuCustom: [</span>
+        <span class="c3">'header'<span class="c6">,</span>
+        'underline'<span class="c6">,</span>
+        'strikeThrough'<span class="c6">,</span>
+        'bold'<span class="c6">,</span>
+        'italic'<span class="c6">,</span>
+        'link'<span class="c6">,</span>
+        'changeColor'<span class="c6">,</span>
+        'image'<span class="c6">,</span>
+        'undo'<span class="c6">,</span>
+        'redo'<span class="c6">,</span>
+        'unorderedList'<span class="c6">,</span>
+        'orderedList'<span class="c6">,</span>
+        'selectAll'<span class="c6">,</span>
+        'copy'<span class="c6">,</span>
+        'cut'<span class="c6">,</span>
+        'delete'<span class="c6">,</span>
+        'justifyLeft'<span class="c6">,</span>
+        'justifyCenter'<span class="c6">,</span>
+        'justifyRight'<span class="c6">,</span>
+        'print'<span class="c6">,</span>
+        'showHTML'<span class="c6">,</span>
+        'showText'<span class="c6">,</span>
+        'fullScreen'</span>
+    <span class="c6">],</span>
     <span class="c6">theme:</span> <span class="c3">'light'</span><span class="c6">,</span> <span class="c4">// light, dark</span>
     <span class="c6">content:</span> <span class="c3">'This is my initial content'</span><span class="c6">,</span>
     <span class="c6">height:</span> <span class="c3">'300px'</span>
