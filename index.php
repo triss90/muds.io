@@ -31,17 +31,17 @@
         </div>
         <div class="row center-tiny">
             <div class="tiny-12 ">
-                <pre class="code"><span class="c4">&lt;!-- Include stylesheet --></span>
+                <pre class="code"><span class="c4">&lt;!-- Include the MUDS stylesheet --></span>
 <span class="c1">&lt;link</span> <span class="c2">rel</span><span class="c6">=</span><span class="c3">"stylesheet"</span> <span class="c2">href</span><span class="c6">=</span><span class="c3">"/assets/css/editor.css"</span><span class="c1">></span>
 
 <span class="c4">&lt;!-- Create the editor container --></span>
 <span class="c1">&lt;div</span> <span class="c2">id</span><span class="c6">=</span><span class="c3">"editor"></span><span class="c1">&lt;/div></span>
 
-<span class="c4">&lt;!-- Include the muds library --></span>
+<span class="c4">&lt;!-- Include the MUDS library --></span>
 <span class="c1">&lt;script</span> <span class="c2">src</span><span class="c6">=</span><span class="c3">"/assets/js/editor.js"></span><span class="c1">&lt;/script></span>
 
-<span class="c4">&lt;!-- Initialize muds editor --></span>
-<span class="c1">&lt;script</span>
+<span class="c4">&lt;!-- Initialize MUDS editor --></span>
+<span class="c1">&lt;script></span>
 <span class="c5">var</span> <span class="c6">editor =</span> <span class="c5">new</span> <span class="c2">muds</span><span class="c6">({</span>
     <span class="c6">selector:</span> <span class="c3">'editor'</span>
 <span class="c6">});</span>
