@@ -12,7 +12,7 @@
                 <br><br>
                 <br>
                 <br>
-                <a href="muds.zip" class="button primary" download><i class="fa fa-download" aria-hidden="true"></i> Download</a>
+                <a href="/download/muds-editor-v1.0.0.zip" class="button primary" download><i class="fa fa-download" aria-hidden="true"></i> Download</a>
                 <a href="https://github.com/triss90/muds.io" target="_blank" class="button secondary"><i class="fa fa-github" aria-hidden="true"></i> View on GitHub</a>
                 <br><br><br><br><br><br>
                 <div id="editor"></div>

@@ -16,6 +16,13 @@
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
+	"\/.htaccess": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/.htaccess",
+		"oF": 0
+		},
 	"\/.idea": {
 		"ft": 65536,
 		"oA": 1,
@@ -647,6 +654,13 @@
 		"oAP": "\/documentation\/index.php",
 		"oF": 0
 		},
+	"\/download\/muds-editor-v1.0.0.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/download\/muds-editor-v1.0.0.zip",
+		"oF": 0
+		},
 	"\/google9a2ba4a21ba11ef5.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -666,13 +680,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/LICENSE",
-		"oF": 0
-		},
-	"\/muds.zip": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/muds.zip",
 		"oF": 0
 		},
 	"\/muds\/index.html": {

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MUDS Editor - The lightest WYSIWYG Editor</title>
+    <meta name="description" content="The lightest WYSIWYG Editor on the internet" />
+    <meta name="keywords" content="simple wyiswyg, wyiswyg, free wyiswyg editor, free wyiswyg, free online editor, free editor, editor, online editor simple editor, wyiswyg editor">
+    <meta name="author" content="Tristan White">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
