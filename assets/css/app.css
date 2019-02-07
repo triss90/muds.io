@@ -10,7 +10,11 @@ html, body {
 
 a {
   cursor: pointer;
-  color: #93F9B9; }
+  color: #1D976C; }
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.45; }
 
 .button, button {
   display: inline-block;
@@ -24,7 +28,7 @@ a {
   .button.big, button.big {
     font-size: 1.5rem;
     padding: 30px 40px;
-    margin: 2rem 1rem; }
+    margin: 1rem; }
   .button.primary, button.primary {
     background: #1D976C;
     border: 2px solid transparent;
@@ -126,12 +130,40 @@ a {
   .code .c6 {
     color: #e6e6e6; }
 
+.tag {
+  font-family: monospace;
+  font-size: 0.9rem;
+  background: #93F9B9;
+  color: #19191a;
+  padding: 0px 3px;
+  border-radius: 3px;
+  font-weight: bold; }
+
+#footer {
+  background: #19191a;
+  padding: 150px 0;
+  color: #f4f4f4; }
+  #footer h2 {
+    font-size: 5rem;
+    font-weight: 100; }
+    @media (max-width: 768px) {
+      #footer h2 {
+        font-size: 3rem; } }
+  #footer p.desc {
+    font-size: 2rem;
+    font-weight: 100; }
+    #footer p.desc.copyright {
+      font-size: 1rem;
+      color: #676b79; }
+      #footer p.desc.copyright a {
+        color: #676b79;
+        font-weight: bold; }
+
 #header {
   position: relative;
   color: #f4f4f4;
   background: #1D976C;
   background: linear-gradient(to right, #93F9B9, #1D976C);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   padding: 0 0 325px 0; }
   #header:after {
     content: "";
@@ -147,6 +179,10 @@ a {
     font-size: 3.75rem;
     font-weight: 100;
     margin-bottom: 1.5rem; }
+    @media (max-width: 768px) {
+      #header h1 {
+        font-size: 2.75rem;
+        margin-top: 2rem; } }
   #header p.desc {
     font-size: 1.75rem;
     font-weight: normal; }
@@ -154,7 +190,7 @@ a {
 #demo {
   padding: 50px 0 125px 0;
   background-image: url("/assets/img/hero-pattern.02f57cc92.svg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-position: center top; }
   #demo h2 {
     font-size: 2.75rem;
@@ -166,23 +202,6 @@ a {
     font-weight: normal;
     color: #19191a; }
 
-#footer {
-  background: #19191a;
-  padding: 150px 0;
-  color: #f4f4f4; }
-  #footer h2 {
-    font-size: 5rem;
-    font-weight: 100; }
-  #footer p.desc {
-    font-size: 2.5rem;
-    font-weight: 100; }
-    #footer p.desc.copyright {
-      font-size: 1rem;
-      color: #676b79; }
-      #footer p.desc.copyright a {
-        color: #676b79;
-        font-weight: bold; }
-
 #menu-bg {
   padding: 0;
   height: 65px;
@@ -191,5 +210,6 @@ a {
   background: #1D976C;
   background: linear-gradient(to right, #93F9B9, #1D976C);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
-  #menu-bg:after {
-    display: none; }
+  @media (max-width: 46em) {
+    #menu-bg {
+      height: 140px; } }

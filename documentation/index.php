@@ -8,79 +8,253 @@
 
 <section id="demo">
     <div class="container">
-        <div class="row center-tiny">
+        <div class="row">
+
+            <!-- Menu Style -->
             <div class="tiny-12">
-                <h2>Options</h2>
+                <h2>Menu Style</h2>
+                <p>The MUDS Editor comes with 3 built-in menu options: <span class="tag">full</span>(which is default), <span class="tag">minimal</span> and <span class="tag">custom</span>.</p>
+                <p>The full menu includes, as the name might suggest, all the available menu items. Where as the minimal menu option includes: <span class="tag">underline</span>, <span class="tag">strikeThrough</span>, <span class="tag">italic</span>, <span class="tag">bold</span>, <span class="tag">undo</span>, <span class="tag">redo</span>.</p>
+                <p>If you wan full control over which menu items, please refer to our section about <a href="#custom-menu">customizing menu items</a>.</p>
+                <br>
+                <h3>Example:</h3>
+                <div class="codepen" data-height="770" data-theme-id="36048" data-default-tab="js,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
+                    <pre data-lang="scss" data-option-autoprefixer>
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+}
+b {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+                    </pre>
+                    <pre data-lang="js">
+// Initialize muds editor
+var editor1 = new muds({
+    selector: 'editor1',
+    menuStyle: 'full'
+});
+
+// Initialize another muds editor
+var editor2 = new muds({
+    selector: 'editor2',
+    menuStyle: 'minimal'
+});
+
+// Initialize yet another muds editor
+var editor3 = new muds({
+    selector: 'editor3',
+    menuStyle: 'custom',
+    menuCustom: [
+        'header',
+        'link'
+    ]
+});
+                    </pre>
+                    <pre data-lang="html">
+&#x3C;!-- Include the MUDS stylesheet --&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.0.0/muds.min.css&#x22;&#x3E;
+
+&#x3C;b&#x3E;Full Editor&#x3C;/b&#x3E;
+&#x3C;!-- Create the editor container --&#x3E;
+&#x3C;div id=&#x22;editor1&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;br&#x3E;
+
+&#x3C;b&#x3E;Minimal Editor&#x3C;/b&#x3E;
+&#x3C;!-- Create another editor container --&#x3E;
+&#x3C;div id=&#x22;editor2&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;br&#x3E;
+
+&#x3C;b&#x3E;Custom Editor&#x3C;/b&#x3E;
+&#x3C;!-- Create yet another editor container --&#x3E;
+&#x3C;div id=&#x22;editor3&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;!-- Include the MUDS library --&#x3E;
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.0.0/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+                    </pre>
+                </div>
             </div>
-        </div>
-        <div class="row center-tiny">
-            <div class="tiny-12 small-10 medium-8 large-6">
-                <pre class="code"><span class="c4">&lt;!-- Include stylesheet --></span>
-<span class="c1">&lt;link</span> <span class="c2">rel</span><span class="c6">=</span><span class="c3">"stylesheet"</span> <span class="c2">href</span><span class="c6">=</span><span class="c3">"/assets/css/editor.css"</span><span class="c1">></span>
 
-<span class="c4">&lt;!-- Create the editor container --></span>
-<span class="c1">&lt;div</span> <span class="c2">id</span><span class="c6">=</span><span class="c3">"editor"></span><span class="c1">&lt;/div></span>
+            <!-- Custumize menu items -->
+            <div class="tiny-12" id="custom-menu">
+                <h2>Custumizing menu items</h2>
+                <p>To customize which menu-items are available, you simply need define <span class="tag">menuStyle: 'custom'</span> and the include the items you want in <span class="tag">menuCustom: []</span>.</p>
+                <br>
+                <h3>Available menu items include:</h3>
+                <p>
+                    <span class="tag">header</span>,
+                    <span class="tag">underline</span>,
+                    <span class="tag">strikeThrough</span>,
+                    <span class="tag">bold</span>,
+                    <span class="tag">italic</span>,
+                    <span class="tag">link</span>,
+                    <span class="tag">changeColor</span>,
+                    <span class="tag">image</span>,
+                    <span class="tag">undo</span>,
+                    <span class="tag">redo</span>,
+                    <span class="tag">unorderedList</span>,
+                    <span class="tag">orderedList</span>,
+                    <span class="tag">selectAll</span>,
+                    <span class="tag">copy</span>,
+                    <span class="tag">cut</span>,
+                    <span class="tag">delete</span>,
+                    <span class="tag">justifyLeft</span>,
+                    <span class="tag">justifyCenter</span>,
+                    <span class="tag">justifyRight</span>,
+                    <span class="tag">print</span>,
+                    <span class="tag">showHTML</span>,
+                    <span class="tag">showText</span> and
+                    <span class="tag">fullScreen</span>.
+                </p>
+                <br>
+                <h3>Example:</h3>
+                <div class="codepen" data-height="680" data-theme-id="36048" data-default-tab="js,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
+                    <pre data-lang="scss" data-option-autoprefixer></pre>
+                    <pre data-lang="js">
+// Initialize muds editor
+var editor = new muds({
+    selector: 'editor',
+    menuStyle: 'custom',
+    menuCustom: [
+        'header',
+        'underline',
+        'strikeThrough',
+        'bold',
+        'italic',
+        'link',
+        'changeColor',
+        'image',
+        'undo',
+        'redo',
+        'unorderedList',
+        'orderedList',
+        'selectAll',
+        'copy',
+        'cut',
+        'delete',
+        'justifyLeft',
+        'justifyCenter',
+        'justifyRight',
+        'print',
+        'showHTML',
+        'showText',
+        'fullScreen'
+    ]
+});
+                    </pre>
+                    <pre data-lang="html">
+&#x3C;!-- Include the MUDS stylesheet --&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.0.0/muds.min.css&#x22;&#x3E;
 
-<span class="c4">&lt;!-- Include the muds library --></span>
-<span class="c1">&lt;script</span> <span class="c2">src</span><span class="c6">=</span><span class="c3">"/assets/js/editor.js"></span><span class="c1">&lt;/script></span></div>
+&#x3C;!-- Create the editor container --&#x3E;
+&#x3C;div id=&#x22;editor&#x22;&#x3E;&#x3C;/div&#x3E;
 
-            <div class="tiny-12 small-5 medium-6 large-6">
-                <pre class="code"><span class="c4">/* Initialize muds editor */</span>
-<span class="c5">var</span> <span class="c6">editor =</span> <span class="c5">new</span> <span class="c2">muds</span><span class="c6">({</span>
-    <span class="c6">selector:</span> <span class="c3">'editor'</span><span class="c6">,</span>
-    <span class="c6">menuStyle:</span> <span class="c3">'custom'</span><span class="c6">,</span> <span class="c4">// full, minimal, custom</span>
-    <span class="c6">menuCustom: [</span>
-        <span class="c3">'header'<span class="c6">,</span>
-        'underline'<span class="c6">,</span>
-        'strikeThrough'<span class="c6">,</span>
-        'bold'<span class="c6">,</span>
-        'italic'<span class="c6">,</span>
-        'link'<span class="c6">,</span>
-        'changeColor'<span class="c6">,</span>
-        'image'<span class="c6">,</span>
-        'undo'<span class="c6">,</span>
-        'redo'<span class="c6">,</span>
-        'unorderedList'<span class="c6">,</span>
-        'orderedList'<span class="c6">,</span>
-        'selectAll'<span class="c6">,</span>
-        'copy'<span class="c6">,</span>
-        'cut'<span class="c6">,</span>
-        'delete'<span class="c6">,</span>
-        'justifyLeft'<span class="c6">,</span>
-        'justifyCenter'<span class="c6">,</span>
-        'justifyRight'<span class="c6">,</span>
-        'print'<span class="c6">,</span>
-        'showHTML'<span class="c6">,</span>
-        'showText'<span class="c6">,</span>
-        'fullScreen'</span>
-    <span class="c6">],</span>
-    <span class="c6">theme:</span> <span class="c3">'light'</span><span class="c6">,</span> <span class="c4">// light, dark</span>
-    <span class="c6">content:</span> <span class="c3">'This is my initial content'</span><span class="c6">,</span>
-    <span class="c6">height:</span> <span class="c3">'300px'</span>
-<span class="c6">});</span></pre>
+&#x3C;!-- Include the MUDS library --&#x3E;
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.0.0/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+                    </pre>
+                </div>
             </div>
+
+            <!-- Darkmode -->
+            <div class="tiny-12">
+                <h2>Darkmode</h2>
+                <p>The MUDS Editor comes with built-in darkmode. Simply define <span class="tag">theme: 'dark'</span>. The team is currently hard at working creating more themes.</p>
+                <br>
+                <h3>Example:</h3>
+                <div class="codepen" data-height="500" data-theme-id="36048" data-default-tab="js,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
+                    <pre data-lang="scss" data-option-autoprefixer></pre>
+                    <pre data-lang="js">
+// Initialize muds editor
+var editor = new muds({
+    selector: 'editor',
+    theme: 'light'
+});
+
+// Initialize another muds editor
+var editorDark = new muds({
+    selector: 'editor-dark',
+    theme: 'dark'
+});
+                    </pre>
+                    <pre data-lang="html">
+&#x3C;!-- Include the MUDS stylesheet --&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.0.0/muds.min.css&#x22;&#x3E;
+
+&#x3C;!-- Create the editor container --&#x3E;
+&#x3C;div id=&#x22;editor&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;br&#x3E;
+
+&#x3C;!-- Create another editor container --&#x3E;
+&#x3C;div id=&#x22;editor-dark&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;!-- Include the MUDS library --&#x3E;
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.0.0/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Default height -->
+            <div class="tiny-12">
+                <h2>Editor Height</h2>
+                <p>The default height of the editor is 100px (this excludes the height of the menu). If you wish to alter this, simply add <span class="tag">height: '342px'</span> to your configuration.</p>
+                <br>
+                <h3>Example:</h3>
+                <div class="codepen" data-height="650" data-theme-id="36048" data-default-tab="js,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
+                    <pre data-lang="scss" data-option-autoprefixer></pre>
+                    <pre data-lang="js">
+// Initialize muds editor
+var editor = new muds({
+    selector: 'editor',
+    height: '342px'
+});
+                    </pre>
+                    <pre data-lang="html">
+&#x3C;!-- Include the MUDS stylesheet --&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.0.0/muds.min.css&#x22;&#x3E;
+
+&#x3C;!-- Create the editor container --&#x3E;
+&#x3C;div id=&#x22;editor&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;!-- Include the MUDS library --&#x3E;
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.0.0/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Prefill content -->
+            <div class="tiny-12">
+                <h2>Editor Content</h2>
+                <p>you can easily prefill content in your MUDS editor like so: <span class="tag">content: 'content goes here'</span>.</p>
+                <br>
+                <h3>Example:</h3>
+                <div class="codepen" data-height="300" data-theme-id="36048" data-default-tab="js,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
+                    <pre data-lang="scss" data-option-autoprefixer></pre>
+                    <pre data-lang="js">
+// Initialize muds editor
+var editor = new muds({
+    selector: 'editor',
+    content: 'I am prefilled content... Woohoo... 😃👍'
+});
+                    </pre>
+                    <pre data-lang="html">
+&#x3C;!-- Include the MUDS stylesheet --&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.0.0/muds.min.css&#x22;&#x3E;
+
+&#x3C;!-- Create the editor container --&#x3E;
+&#x3C;div id=&#x22;editor&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;!-- Include the MUDS library --&#x3E;
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.0.0/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+                    </pre>
+                </div>
+            </div>
+
         </div>
     </div>
-
 </section>
-
-<footer id="footer">
-    <div class="container">
-        <div class="row center-tiny">
-            <div class="tiny-12">
-                <h2>MUDS Editor</h2>
-                <br><br>
-                <p class="desc">Your powerful, lightweight editor.</p>
-                <br><br>
-                <a href="#0" class="button secondary big">Documentation</a>
-                <a href="#0" class="button primary big">Download v1.0.3</a>
-                <br><br><br>
-                <p class="copyright">Made with ❤ ️by <a href="" title="Tristan White">Tristan White</a></p>
-                <p class="copyright">&copy; <?php echo date("Y"); ?></p>
-            </div>
-        </div>
-    </div>
-</footer>
-
 
 <?php include('../_inc/footer.php'); ?>

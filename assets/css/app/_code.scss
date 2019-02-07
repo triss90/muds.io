@@ -14,3 +14,12 @@
   .c5 {color: #ff75b5}
   .c6 {color: #e6e6e6}
 }
+.tag {
+  font-family: monospace;
+  font-size: 0.9rem;
+  background: $color1;
+  color: $color3;
+  padding: 0px 3px;
+  border-radius: 3px;
+  font-weight: bold;
+}

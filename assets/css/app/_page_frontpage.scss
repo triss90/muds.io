@@ -2,7 +2,7 @@
   position: relative;
   color: $color4;
   background: $color2;
-  background: linear-gradient(to right, $color1, $color2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, $color1, $color2);
   padding: 0 0 325px 0;
   &:after {
     content: "";
@@ -19,6 +19,10 @@
     font-size: 3.75rem;
     font-weight: 100;
     margin-bottom: 1.5rem;
+    @media(max-width: 768px) {
+      font-size: 2.75rem;
+      margin-top: 2rem;
+    }
   }
   p.desc {
     font-size: 1.75rem;
@@ -29,7 +33,7 @@
 #demo {
   padding: 50px 0 125px 0;
   background-image: url('/assets/img/hero-pattern.02f57cc92.svg');
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-position: center top;
   h2 {
     font-size: 2.75rem;
@@ -41,28 +45,6 @@
     font-size: 1.75rem;
     font-weight: normal;
     color: $color3;
-  }
-}
-
-#footer {
-  background: $color3;
-  padding: 150px 0;
-  color: $color4;
-  h2 {
-    font-size: 5rem;
-    font-weight: 100;
-  }
-  p.desc {
-    font-size: 2.5rem;
-    font-weight: 100;
-    &.copyright {
-      font-size: 1rem;
-      color: #676b79;
-      a {
-        color: #676b79;
-        font-weight: bold;
-      }
-    }
   }
 }
 
