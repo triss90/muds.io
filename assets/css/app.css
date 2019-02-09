@@ -16,6 +16,9 @@ p {
   margin-bottom: 1rem;
   line-height: 1.45; }
 
+ul {
+  margin-left: 1.5rem; }
+
 .button, button {
   display: inline-block;
   background: #19191a;
@@ -261,3 +264,9 @@ p {
   @media (max-width: 46em) {
     #menu-bg {
       height: 140px; } }
+
+#todo {
+  padding: 100px 0; }
+  #todo h1 {
+    font-size: 3rem;
+    font-weight: 100; }

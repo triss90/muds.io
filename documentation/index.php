@@ -15,7 +15,7 @@
                 <h2>Menu Style</h2>
                 <p>The MUDS Editor comes with 3 built-in menu options: <span class="tag">full</span>(which is default), <span class="tag">minimal</span> and <span class="tag">custom</span>.</p>
                 <p>The full menu includes, as the name might suggest, all the available menu items. Where as the minimal menu option includes: <span class="tag">underline</span>, <span class="tag">strikeThrough</span>, <span class="tag">italic</span>, <span class="tag">bold</span>, <span class="tag">undo</span>, <span class="tag">redo</span>.</p>
-                <p>If you wan full control over which menu items, please refer to our section about <a href="#custom-menu">customizing menu items</a>.</p>
+                <p>If you want full control over which menu items to use, please refer to our section about <a href="#custom-menu">customizing menu items</a>.</p>
                 <br>
                 <h3>Example:</h3>
                 <div class="codepen" data-height="770" data-theme-id="36048" data-default-tab="js,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
@@ -81,7 +81,7 @@ var editor3 = new muds({
             <!-- Custumize menu items -->
             <div class="tiny-12" id="custom-menu">
                 <h2>Custumizing menu items</h2>
-                <p>To customize which menu-items are available, you simply need define <span class="tag">menuStyle: 'custom'</span> and the include the items you want in <span class="tag">menuCustom: []</span>.</p>
+                <p>To customize which items are available in the menu, you simply need to define <span class="tag">menuStyle: 'custom'</span> and then include the items you want in <span class="tag">menuCustom: []</span>.</p>
                 <br>
                 <h3>Available menu items include:</h3>
                 <p>

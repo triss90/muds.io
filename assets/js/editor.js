@@ -37,7 +37,6 @@
         }
     };
 
-
     // Menu Actions
     muds.prototype.enterFullScreen = function(string) {
         const content = this.orignal_input.querySelector('.muds-content');
@@ -148,11 +147,31 @@
     };
     muds.prototype.buttonShowHTMLAction = function(string) {
         const editorContent = document.querySelector(".muds-content");
+        const HTMLButton = document.querySelector(".show-html");
+        const menuButtons = document.querySelectorAll('.muds-item');
         const htmlCode = editorContent.innerHTML;
-        const myWindow = window.open("", "muds - View HTML", "width=768,height=600");
-        myWindow.document.write('<html><head><title>muds - View HTML</title><style>html,body{margin:0;padding:0;}pre{height:100%;}</style></head><body>');
-        myWindow.document.write('<pre class="prettyprint">' + htmlentities.encode(htmlCode) + '</pre>');
-        myWindow.document.write('<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script></body></html>');
+        const htmlCodeEncoded = htmlentities.encode(htmlCode);
+        if (HTMLButton.classList.contains('active') === false) {
+            editorContent.innerHTML = htmlCodeEncoded;
+            for (i = 0; i < menuButtons.length; ++i) {
+                if (menuButtons[i].classList.contains('show-html')) {
+                    menuButtons[i].classList.add('active');
+                } else {
+                    menuButtons[i].classList.add('disabled');
+                    menuButtons[i].disabled = true;
+                }
+            }
+        } else if (HTMLButton.classList.contains('active') === true){
+            editorContent.innerHTML = editorContent.textContent;
+            for (i = 0; i < menuButtons.length; ++i) {
+                if (menuButtons[i].classList.contains('show-html')) {
+                    menuButtons[i].classList.remove('active');
+                } else {
+                    menuButtons[i].classList.remove('disabled');
+                    menuButtons[i].disabled = false;
+                }
+            }
+        }
     };
     muds.prototype.buttonShowTextAction = function(string) {
         const editorContent = document.querySelector(".muds-content");
@@ -186,7 +205,7 @@
     }
     function buttonHeader(item) {
         const buttonHeader = document.createElement('div');
-        buttonHeader.classList.add('muds-dropdown');
+        buttonHeader.classList.add('muds-item','muds-dropdown');
         buttonHeader.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M5 4v3h5.5v12h3V7H19V4H5z"/></svg></label>' +
             '<ul>' +
             '<li><button class="muds-h1" title="Healine 1" onclick="'+item.orignal_input.id + '.buttonH1Action()'+'">Header 1</button></li>' +
@@ -357,9 +376,9 @@
     }
     function buttonShowHTML(item) {
         const buttonShowHTML = document.createElement('button');
-        buttonShowHTML.classList.add('muds-item');
+        buttonShowHTML.classList.add('muds-item','show-html');
         buttonShowHTML.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>';
-        buttonShowHTML.setAttribute('onclick',item.orignal_input.id + '.buttonShowHTMLAction()');
+        buttonShowHTML.setAttribute('onclick',item.orignal_input.id + '.buttonShowHTMLAction(event)');
         buttonShowHTML.setAttribute('title', 'Show HTML');
         item.menu.appendChild(buttonShowHTML);
     }

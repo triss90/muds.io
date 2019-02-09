@@ -177,6 +177,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/assets\/css\/app\/_page_todo.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/app\/_page_todo.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/assets\/css\/app\/_toggle.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -695,42 +708,75 @@
 		"oAP": "\/LICENSE",
 		"oF": 0
 		},
-	"\/muds\/index.html": {
+	"\/muds": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/build\/muds",
+		"oF": 0
+		},
+	"\/muds-v1.0.0\/index.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/muds\/index.html",
+		"oAP": "\/muds-v1.0.0\/index.html",
 		"oF": 0
 		},
-	"\/muds\/muds.min.css": {
+	"\/muds-v1.0.0\/muds.min-min.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/muds\/muds.min-min.css",
+		"oAP": "\/muds-v1.0.0\/muds.min-min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/muds\/muds.min.js": {
+	"\/muds-v1.0.0\/muds.min-min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/muds\/muds.min-min.js",
+		"oAP": "\/muds-v1.0.0\/muds.min-min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"\/muds\/package.json": {
+	"\/muds-v1.0.0\/muds.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/muds-v1.0.0\/muds.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/muds-v1.0.0\/muds.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/muds-v1.0.0\/muds.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/muds-v1.0.0\/package.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/muds\/package-min.json",
+		"oAP": "\/muds-v1.0.0\/package-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"\/muds\/README.md": {
+	"\/muds-v1.0.0\/README.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/muds-v1.0.0\/README.html",
+		"oF": 0
+		},
+	"\/muds-v1.0.0\/README.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -738,15 +784,22 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
-		"oA": 1,
-		"oAP": "\/muds\/README.html",
-		"oF": 1,
+		"oA": 0,
+		"oAP": "\/muds-v1.0.0\/README.html",
+		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
 		"pHT": 0,
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"\/playground\/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/playground\/index.php",
+		"oF": 0
 		},
 	"\/README.md": {
 		"cB": 0,
@@ -765,6 +818,13 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"\/todo\/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/todo\/index.php",
+		"oF": 0
 		}
 	},
 "hooks": [
@@ -780,7 +840,7 @@
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
-	"alwaysUseExternalServer": 0,
+	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
@@ -2171,7 +2231,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/localhost:8888",
+	"externalServerAddress": "http:\/\/muds.test",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
@@ -2758,7 +2818,7 @@
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules, \/muds",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
 	"uglifyDefinesString": "",
