@@ -31,13 +31,32 @@
         </div>
     </div>
 
+    <pre>
+dropdown-item >
+
+&.table {
+  ul {
+    width: calc(16px * 10);
+    padding: 5px;
+    li {
+      height: 13px;
+      width: 13px;
+      background: red;
+      float: left;
+      margin: 1.5px;
+      padding: 0;
+    }
+  }
+}
+    </pre>
+
     <script src="/assets/js/editor.js"></script>
     <script>
         var editor = new muds({
             selector: 'editor',
             height: '342px',
             content: '<h1>Try the MUDS editor today</h1><p>No matter what you\'re building, MUDS has you covered. From content management to email marketing, here are our customers\' most common uses:</p><ul><li>Content Management Systems</li><li>Learning Management Systems</li><li>Customer Relationship Management and marketing automation</li></ul><p>Our team is hard at work, creating and adding new features to take the Javascript web WYSIWYG editing capabilities to the next level.</p>',
-            theme: "dark",
+            theme: "light",
             menuStyle: 'custom',
             menuCustom: [
                 'header',
