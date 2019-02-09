@@ -17,7 +17,7 @@
 </footer>
 
 <script src="/assets/js/app.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/muds-editor@1.1.0/muds.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/muds-editor@1.1.1/muds.min.js"></script>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 </body>
 </html>
