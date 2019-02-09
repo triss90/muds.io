@@ -21,6 +21,14 @@
           fill: #cecece;
         }
       }
+      &.muds-dropdown  {
+        label, label svg {
+          cursor: not-allowed;
+        }
+        ul {
+          display: none;
+        }
+      }
     }
     &.show-html {
       &.active {
