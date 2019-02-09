@@ -21,7 +21,22 @@ var editor = new muds({
 ```
 
 ## Example
-![Example of MUDS Editor](https://muds.io/assets/img/example.png)
+<!-- Include the MUDS stylesheet -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/muds-editor@1.1.0/muds.min.css">
+
+<!-- Create the editor container -->
+<div id="editor"></div>
+
+<!-- Include the MUDS library -->
+<script src="https://cdn.jsdelivr.net/npm/muds-editor@1.1.0/muds.min.js"></script>
+
+<!-- Initialize MUDS editor -->
+<script>
+var editor = new muds({
+    selector: 'editor'
+});
+</script>
+             
 
 
 ## Custom menu items

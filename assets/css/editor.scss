@@ -54,6 +54,20 @@
       opacity: 1;
       visibility: visible;
     }
+    &.table {
+      ul {
+        width: calc(16px * 10);
+        padding: 5px;
+        li {
+          height: 13px;
+          width: 13px;
+          background: red;
+          float: left;
+          margin: 1.5px;
+          padding: 0;
+        }
+      }
+    }
     label {
       svg {
         height: 1.25rem !important;
