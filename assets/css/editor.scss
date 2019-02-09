@@ -54,7 +54,6 @@
       opacity: 1;
       visibility: visible;
     }
-
     label {
       svg {
         height: 1.25rem !important;
@@ -194,6 +193,16 @@
     border: 2px solid #202125;
     .muds-item {
       color: #999;
+      &.disabled {
+        svg {
+          fill: #454545;
+        }
+        &:hover {
+          svg {
+            fill: #454545;
+          }
+        }
+      }
       svg {
         fill: #999;
       }
