@@ -266,7 +266,7 @@ ul {
       height: 140px; } }
 
 #changelog {
-  padding: 100px; }
+  padding: 100px 0; }
   #changelog h1 {
     font-size: 2.5rem; }
   #changelog h2 a {
