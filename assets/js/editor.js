@@ -224,7 +224,7 @@
     }
     function buttonHeader(item) {
         const buttonHeader = document.createElement('div');
-        buttonHeader.classList.add('muds-item','muds-dropdown');
+        buttonHeader.classList.add('muds-item','muds-dropdown','headers');
         buttonHeader.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M5 4v3h5.5v12h3V7H19V4H5z"/></svg></label>' +
             '<ul>' +
             '<li><button class="muds-h1" title="Healine 1" onclick="'+item.orignal_input.id + '.buttonH1Action()'+'">Header 1</button></li>' +
@@ -361,10 +361,9 @@
         buttonSelectAll.setAttribute('title', 'Select all');
         item.menu.appendChild(buttonSelectAll);
     }
-
     function buttonJustification(item) {
         const buttonJustification = document.createElement('div');
-        buttonJustification.classList.add('muds-item','muds-dropdown');
+        buttonJustification.classList.add('muds-item','muds-dropdown','justification');
         buttonJustification.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg></label>' +
             '<ul>' +
             '<li><button class="just-left" title="Justify Left" onclick="'+item.orignal_input.id + '.buttonJustifyLeftAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg> Justify Left</button></li>' +
@@ -375,7 +374,6 @@
             '</ul>';
         item.menu.appendChild(buttonJustification);
     }
-
     function buttonJustifyCenter(item) {
         const buttonJustifyCenter = document.createElement('button');
         buttonJustifyCenter.classList.add('muds-item');

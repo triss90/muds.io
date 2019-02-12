@@ -63,6 +63,16 @@
       opacity: 1;
       visibility: visible;
     }
+    &.headers {
+      ul {
+        width: 115px;
+      }
+    }
+    &.justification {
+      ul {
+        width: 150px;
+      }
+    }
     label {
       svg {
         height: 1.25rem !important;
@@ -78,7 +88,6 @@
       padding: 4px 0;
       top: 14px;
       left: 0;
-      width: 150px;
       background-color: white;
       border: 1px solid hsl(0, 0%, 80%);
       border-radius: 2px;
