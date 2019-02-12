@@ -265,8 +265,12 @@ ul {
     #menu-bg {
       height: 140px; } }
 
-#todo {
-  padding: 100px 0; }
-  #todo h1 {
-    font-size: 3rem;
-    font-weight: 100; }
+#changelog {
+  padding: 100px; }
+  #changelog h1 {
+    font-size: 2.5rem; }
+  #changelog h2 a {
+    font-size: 0.8rem;
+    text-decoration: none; }
+    #changelog h2 a:hover {
+      text-decoration: underline; }

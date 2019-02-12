@@ -6,7 +6,7 @@
     </div>
 </header>
 
-<section id="todo">
+<section id="changelog">
     <div class="container">
         <div class="row center-tiny start-medium">
             <div class="tiny-12">
@@ -20,7 +20,7 @@
         </div>
         <div class="row">
             <div class="tiny-12 medium-6">
-                <h2>MUDS v1.1.3</h2>
+                <h2>MUDS v1.1.3 <a href="/download/muds-editor-v1.1.3.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
                     <li>Changing order on full menu</li>
                     <li>Implementing individual width to dropdown menus</li>
@@ -30,7 +30,7 @@
 
                 <br><br>
 
-                <h2>MUDS v1.1.2</h2>
+                <h2>MUDS v1.1.2 <a href="/download/muds-editor-v1.1.2.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
                     <li>Fixing a bug where dropdowns would be visible in HTML mode</li>
                     <li>Adding ability remove links</li>
@@ -40,7 +40,7 @@
 
                 <br><br>
 
-                <h2>MUDS v1.1.1</h2>
+                <h2>MUDS v1.1.1 <a href="/download/muds-editor-v1.1.1.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
                     <li>Fixing dropdown menu bug where menu would be skewed to the right</li>
                     <li>Fixing HTML editing in darkmode. Inactive buttons are new clearly indicated in darkmode</li>
@@ -48,17 +48,19 @@
 
                 <br><br>
 
-                <h2>MUDS v1.1.0</h2>
+                <h2>MUDS v1.1.0 <a href="/download/muds-editor-v1.1.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
                     <li>Adding support for editing HTML directly in the editor</li>
                 </ul>
 
                 <br><br>
 
-                <h2>MUDS v1.0.0</h2>
+                <h2>MUDS v1.0.0 <a href="/download/muds-editor-v1.0.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
                     <li>We Launched MUDS Editor! Woohooo!</li>
                 </ul>
+                <br>
+
 
             </div>
             <div class="tiny-12 medium-6">
