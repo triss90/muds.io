@@ -20,6 +20,13 @@
         </div>
         <div class="row">
             <div class="tiny-12 medium-6">
+<!--                <h2>MUDS v1.1.3</h2>-->
+<!--                <ul>-->
+<!--                    <li>Changing order on full menu</li>-->
+<!--                </ul>-->
+<!---->
+<!--                <br><br>-->
+
                 <h2>MUDS v1.1.2</h2>
                 <ul>
                     <li>Fixing a bug where dropdowns would be visible in HTML mode</li>
@@ -65,12 +72,12 @@
                     <li>Custom font type support</li>
                     <li>Editible links</li>
                     <li>Custom keybindings</li>
+                    <li><strike>In-, and outdent support</strike></li>
                     <li>Embedded video support</li>
                     <li>Custom keybindings</li>
                     <li>Code and quoteblock support</li>
-<!--                    <li><strike>In-, and outdent support</strike></li>-->
-                    <li>In-, and outdent support</li>
                 </ul>
+                <p>If you have any suggestions, feel free to reach out <a href="https://twitter.com/Triss90" target="_blank">Tristan White</a>.</p>
             </div>
         </div>
     </div>

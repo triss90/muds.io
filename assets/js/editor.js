@@ -454,13 +454,13 @@
             buttonGetImage(item);
             buttonUndo(item);
             buttonRedo(item);
+            buttonJustification(item);
             buttonUnorderedList(item);
             buttonOrderedList(item);
             buttonSelectAll(item);
             buttonCopy(item);
             buttonCut(item);
             buttonDelete(item);
-            buttonJustification(item);
             buttonPrintMe(item);
             buttonShowHTML(item);
             buttonShowText(item);
