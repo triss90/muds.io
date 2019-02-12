@@ -60,6 +60,7 @@
         toolbarButton.setAttribute('onclick', this.orignal_input.id + '.enterFullScreen()');
         toolbarButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>'
     };
+
     muds.prototype.buttonH1Action = function(string) {
         document.execCommand('formatBlock', false, 'h1');
     };
@@ -69,12 +70,14 @@
     muds.prototype.buttonH3Action = function(string) {
         document.execCommand('formatBlock', false, 'h3');
     };
+
     muds.prototype.buttonUnorderedListAction = function(string) {
         document.execCommand('insertUnorderedList', false, '');
     };
     muds.prototype.buttonOrderedListAction = function(string) {
         document.execCommand('insertOrderedList', false, '');
     };
+
     muds.prototype.buttonUnderlineAction = function(string) {
         document.execCommand('underline', false, '');
     };
@@ -85,21 +88,29 @@
         document.execCommand('bold', false, '');
     };
     muds.prototype.buttonLinkAction = function(string) {
-        const linkURL = prompt('Enter the URL');
-        document.execCommand('createLink', false, linkURL);
+        const selectedElement = window.getSelection().focusNode.parentElement;
+        if (selectedElement.tagName === "A") {
+            document.execCommand('unlink', false, '');
+        } else {
+            const linkURL = prompt('Enter the URL');
+            document.execCommand('createLink', false, linkURL);
+        }
     };
+
     muds.prototype.buttonCutAction = function(string) {
         document.execCommand('cut',false,'');
     };
     muds.prototype.buttonCopyAction = function(string) {
         document.execCommand('copy', false, '');
     };
+
     muds.prototype.buttonUndoAction = function(string) {
         document.execCommand('undo',false,'');
     };
     muds.prototype.buttonRedoAction = function(string) {
         document.execCommand('redo',false,'');
     };
+
     muds.prototype.buttonChangeColorAction = function(string) {
         const color = prompt('Enter your color in hex ex: #f1f233');
         document.execCommand('foreColor', false, color);
@@ -136,6 +147,7 @@
         }
         document.execCommand('selectAll',false,'');
     };
+
     muds.prototype.buttonJustifyCenterAction = function(string) {
         document.execCommand('justifyCenter',false,'');
     };
@@ -145,6 +157,13 @@
     muds.prototype.buttonJustifyRightAction = function(string) {
         document.execCommand('justifyRight',false,'')
     };
+    muds.prototype.buttonIndentAction = function(string) {
+        document.execCommand('indent',false,'')
+    };
+    muds.prototype.buttonOutdentAction = function(string) {
+        document.execCommand('outdent',false,'')
+    };
+
     muds.prototype.buttonShowHTMLAction = function(string) {
         const editorContent = document.querySelector(".muds-content");
         const HTMLButton = document.querySelector(".show-html");
@@ -153,7 +172,7 @@
         const htmlCodeEncoded = htmlentities.encode(htmlCode);
         if (HTMLButton.classList.contains('active') === false) {
             editorContent.innerHTML = htmlCodeEncoded;
-            for (i = 0; i < menuButtons.length; ++i) {
+            for (let i = 0; i < menuButtons.length; ++i) {
                 if (menuButtons[i].classList.contains('show-html')) {
                     menuButtons[i].classList.add('active');
                 } else {
@@ -163,7 +182,7 @@
             }
         } else if (HTMLButton.classList.contains('active') === true){
             editorContent.innerHTML = editorContent.textContent;
-            for (i = 0; i < menuButtons.length; ++i) {
+            for (let i = 0; i < menuButtons.length; ++i) {
                 if (menuButtons[i].classList.contains('show-html')) {
                     menuButtons[i].classList.remove('active');
                 } else {
@@ -342,6 +361,21 @@
         buttonSelectAll.setAttribute('title', 'Select all');
         item.menu.appendChild(buttonSelectAll);
     }
+
+    function buttonJustification(item) {
+        const buttonJustification = document.createElement('div');
+        buttonJustification.classList.add('muds-item','muds-dropdown');
+        buttonJustification.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg></label>' +
+            '<ul>' +
+            '<li><button class="just-left" title="Justify Left" onclick="'+item.orignal_input.id + '.buttonJustifyLeftAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg> Justify Left</button></li>' +
+            '<li><button class="just-center" title="Justify Center" onclick="'+item.orignal_input.id + '.buttonJustifyCenterAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M7 15v2h10v-2H7zm-4 6h18v-2H3v2zm0-8h18v-2H3v2zm4-6v2h10V7H7zM3 3v2h18V3H3z"/></svg> Justify Center</button></li>' +
+            '<li><button class="just-right" title="Justify Right" onclick="'+item.orignal_input.id + '.buttonJustifyRightAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 21h18v-2H3v2zm6-4h12v-2H9v2zm-6-4h18v-2H3v2zm6-4h12V7H9v2zM3 3v2h18V3H3z"/></svg> Justify Right</button></li>' +
+            '<li><button class="just-indent" title="Indent" onclick="'+item.orignal_input.id + '.buttonIndentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM3 8v8l4-4-4-4zm8 9h10v-2H11v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> Indent</button></li>' +
+            '<li><button class="just-outdent" title="Outdent" onclick="'+item.orignal_input.id + '.buttonOutdentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 17h10v-2H11v2zm-8-5l4 4V8l-4 4zm0 9h18v-2H3v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> Outdent</button></li>' +
+            '</ul>';
+        item.menu.appendChild(buttonJustification);
+    }
+
     function buttonJustifyCenter(item) {
         const buttonJustifyCenter = document.createElement('button');
         buttonJustifyCenter.classList.add('muds-item');
@@ -365,6 +399,22 @@
         buttonJustifyRight.setAttribute('onclick',item.orignal_input.id + '.buttonJustifyRightAction()');
         buttonJustifyRight.setAttribute('title', 'Justify Right');
         item.menu.appendChild(buttonJustifyRight);
+    }
+    function buttonIndent(item) {
+        const buttonIndent = document.createElement('button');
+        buttonIndent.classList.add('muds-item');
+        buttonIndent.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM3 8v8l4-4-4-4zm8 9h10v-2H11v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg>';
+        buttonIndent.setAttribute('onclick',item.orignal_input.id + '.buttonIndentAction()');
+        buttonIndent.setAttribute('title', 'Indent');
+        item.menu.appendChild(buttonIndent);
+    }
+    function buttonOutdent(item) {
+        const buttonOutdent = document.createElement('button');
+        buttonOutdent.classList.add('muds-item');
+        buttonOutdent.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 17h10v-2H11v2zm-8-5l4 4V8l-4 4zm0 9h18v-2H3v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg>';
+        buttonOutdent.setAttribute('onclick',item.orignal_input.id + '.buttonOutdentAction()');
+        buttonOutdent.setAttribute('title', 'Outdent');
+        item.menu.appendChild(buttonOutdent);
     }
     function buttonPrintMe(item) {
         const buttonPrintMe = document.createElement('button');
@@ -410,9 +460,7 @@
             buttonCopy(item);
             buttonCut(item);
             buttonDelete(item);
-            buttonJustifyLeft(item);
-            buttonJustifyCenter(item);
-            buttonJustifyRight(item);
+            buttonJustification(item);
             buttonPrintMe(item);
             buttonShowHTML(item);
             buttonShowText(item);
@@ -442,9 +490,12 @@
             if (item.menu_custom.includes("copy")){buttonCopy(item);}
             if (item.menu_custom.includes("cut")){buttonCut(item);}
             if (item.menu_custom.includes("delete")){buttonDelete(item);}
+            if (item.menu_custom.includes("justification")){buttonJustification(item);}
             if (item.menu_custom.includes("justifyLeft")){buttonJustifyLeft(item);}
             if (item.menu_custom.includes("justifyCenter")){buttonJustifyCenter(item);}
             if (item.menu_custom.includes("justifyRight")){buttonJustifyRight(item);}
+            if (item.menu_custom.includes("indent")){buttonIndent(item);}
+            if (item.menu_custom.includes("outdent")){buttonOutdent(item);}
             if (item.menu_custom.includes("print")){buttonPrintMe(item);}
             if (item.menu_custom.includes("showHTML")){buttonShowHTML(item);}
             if (item.menu_custom.includes("showText")){buttonShowText(item);}

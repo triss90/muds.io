@@ -9,7 +9,7 @@
                 <a href="/documentation/" class="button secondary big"><i class="fa fa-book" aria-hidden="true"></i> Documentation</a>
                 <a href="/download/muds-editor-v1.1.0.zip" class="button primary big" download><i class="fa fa-download" aria-hidden="true"></i> Download</a>
                 <br><br><br>
-                <p class="copyright">️Made with ❤️ by <a href="" title="Tristan White">Tristan White</a></p>
+                <p class="copyright">️Made with ❤️ by <a href="https://tristanwhite.info" target="_blank" title="Tristan White">Tristan White</a></p>
                 <p class="copyright">&copy; <?php echo date("Y"); ?></p>
             </div>
         </div>

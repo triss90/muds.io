@@ -20,6 +20,16 @@
         </div>
         <div class="row">
             <div class="tiny-12 medium-6">
+<!--                <h2>MUDS v1.1.2</h2>-->
+<!--                <ul>-->
+<!--                    <li>Fixing a bug where dropdowns would be visible in HTML mode</li>-->
+<!--                    <li>Adding ability remove links</li>-->
+<!--                    <li>Adding in-, and outdent support</li>-->
+<!--                    <li>Adding dropdown for justification features</li>-->
+<!--                </ul>-->
+<!---->
+<!--                <br><br>-->
+
                 <h2>MUDS v1.1.1</h2>
                 <ul>
                     <li>Fixing dropdown menu bug where menu would be skewed to the right</li>
@@ -53,10 +63,12 @@
                     <li>Better image handling capabilities</li>
                     <li>Color control (both text and background color)</li>
                     <li>Custom font type support</li>
+                    <li>Editible links</li>
                     <li>Custom keybindings</li>
                     <li>Embedded video support</li>
                     <li>Custom keybindings</li>
                     <li>Code and quoteblock support</li>
+<!--                    <li><strike>In-, and outdent support</strike></li>-->
                     <li>In-, and outdent support</li>
                 </ul>
             </div>

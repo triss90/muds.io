@@ -12,6 +12,7 @@
     display: inline-block;
     padding: 0px 6px;
     &.disabled {
+      cursor: not-allowed !important;
       svg {
         fill: #cecece;
       }
@@ -77,7 +78,7 @@
       padding: 4px 0;
       top: 14px;
       left: 0;
-      width: 130px;
+      width: 150px;
       background-color: white;
       border: 1px solid hsl(0, 0%, 80%);
       border-radius: 2px;
@@ -123,6 +124,14 @@
           text-align: left;
           border: none;
           color: #999;
+          font-size: 1rem;
+          cursor: pointer;
+          svg {
+            height: 1rem !important;
+            fill: #999 !important;
+            position: relative;
+            top: 2px;
+          }
           &.muds-h1 {
             font-size: 1.5rem;
           }
