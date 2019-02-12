@@ -54,7 +54,7 @@ var editor3 = new muds({
                     </pre>
                     <pre data-lang="html">
 &#x3C;!-- Include the MUDS stylesheet --&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.1.2/muds.min.css&#x22;&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.1.3/muds.min.css&#x22;&#x3E;
 
 &#x3C;b&#x3E;Full Editor&#x3C;/b&#x3E;
 &#x3C;!-- Create the editor container --&#x3E;
@@ -73,7 +73,7 @@ var editor3 = new muds({
 &#x3C;div id=&#x22;editor3&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;!-- Include the MUDS library --&#x3E;
-&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.1.2/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.1.3/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
                     </pre>
                 </div>
             </div>
@@ -153,13 +153,13 @@ var editor = new muds({
                     </pre>
                     <pre data-lang="html">
 &#x3C;!-- Include the MUDS stylesheet --&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.1.2/muds.min.css&#x22;&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.1.3/muds.min.css&#x22;&#x3E;
 
 &#x3C;!-- Create the editor container --&#x3E;
 &#x3C;div id=&#x22;editor&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;!-- Include the MUDS library --&#x3E;
-&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.1.2/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.1.3/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
                     </pre>
                 </div>
             </div>
@@ -187,7 +187,7 @@ var editorDark = new muds({
                     </pre>
                     <pre data-lang="html">
 &#x3C;!-- Include the MUDS stylesheet --&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.1.2/muds.min.css&#x22;&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.1.3/muds.min.css&#x22;&#x3E;
 
 &#x3C;!-- Create the editor container --&#x3E;
 &#x3C;div id=&#x22;editor&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -198,7 +198,7 @@ var editorDark = new muds({
 &#x3C;div id=&#x22;editor-dark&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;!-- Include the MUDS library --&#x3E;
-&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.1.2/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.1.3/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
                     </pre>
                 </div>
             </div>
@@ -220,13 +220,13 @@ var editor = new muds({
                     </pre>
                     <pre data-lang="html">
 &#x3C;!-- Include the MUDS stylesheet --&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.1.2/muds.min.css&#x22;&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.1.3/muds.min.css&#x22;&#x3E;
 
 &#x3C;!-- Create the editor container --&#x3E;
 &#x3C;div id=&#x22;editor&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;!-- Include the MUDS library --&#x3E;
-&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.1.2/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.1.3/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
                     </pre>
                 </div>
             </div>
@@ -248,13 +248,13 @@ var editor = new muds({
                     </pre>
                     <pre data-lang="html">
 &#x3C;!-- Include the MUDS stylesheet --&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.1.2/muds.min.css&#x22;&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.1.3/muds.min.css&#x22;&#x3E;
 
 &#x3C;!-- Create the editor container --&#x3E;
 &#x3C;div id=&#x22;editor&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;!-- Include the MUDS library --&#x3E;
-&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.1.2/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.1.3/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
                     </pre>
                 </div>
             </div>
