@@ -482,13 +482,13 @@
             if (item.menu_custom.includes("image")){buttonGetImage(item);}
             if (item.menu_custom.includes("undo")){buttonUndo(item);}
             if (item.menu_custom.includes("redo")){buttonRedo(item);}
+            if (item.menu_custom.includes("justification")){buttonJustification(item);}
             if (item.menu_custom.includes("unorderedList")){buttonUnorderedList(item);}
             if (item.menu_custom.includes("orderedList")){buttonOrderedList(item);}
             if (item.menu_custom.includes("selectAll")){buttonSelectAll(item);}
             if (item.menu_custom.includes("copy")){buttonCopy(item);}
             if (item.menu_custom.includes("cut")){buttonCut(item);}
             if (item.menu_custom.includes("delete")){buttonDelete(item);}
-            if (item.menu_custom.includes("justification")){buttonJustification(item);}
             if (item.menu_custom.includes("justifyLeft")){buttonJustifyLeft(item);}
             if (item.menu_custom.includes("justifyCenter")){buttonJustifyCenter(item);}
             if (item.menu_custom.includes("justifyRight")){buttonJustifyRight(item);}

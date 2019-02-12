@@ -24,7 +24,8 @@
 <!--                <ul>-->
 <!--                    <li>Changing order on full menu</li>-->
 <!--                    <li>Implementing individual width to dropdown menus</li>-->
-<!--                    <li>Adjust fontsize in menus</li>-->
+<!--                    <li>Adjust font-size in menus</li>-->
+<!--                    <li>Increasing dropdown visibility in darkmode/li>-->
 <!--                </ul>-->
 <!---->
 <!--                <br><br>-->
