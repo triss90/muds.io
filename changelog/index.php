@@ -23,6 +23,8 @@
 <!--                <h2>MUDS v1.1.3</h2>-->
 <!--                <ul>-->
 <!--                    <li>Changing order on full menu</li>-->
+<!--                    <li>Implementing individual width to dropdown menus</li>-->
+<!--                    <li>Adjust fontsize in menus</li>-->
 <!--                </ul>-->
 <!---->
 <!--                <br><br>-->
@@ -77,6 +79,7 @@
                     <li>Custom keybindings</li>
                     <li>Code and quoteblock support</li>
                 </ul>
+                <br>
                 <p>If you have any suggestions, feel free to reach out <a href="https://twitter.com/Triss90" target="_blank">Tristan White</a>.</p>
             </div>
         </div>

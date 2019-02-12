@@ -133,13 +133,13 @@
           text-align: left;
           border: none;
           color: #999;
-          font-size: 1rem;
+          font-size: 0.85rem;
           cursor: pointer;
           svg {
             height: 1rem !important;
             fill: #999 !important;
             position: relative;
-            top: 2px;
+            top: 3px;
           }
           &.muds-h1 {
             font-size: 1.5rem;
