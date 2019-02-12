@@ -24,8 +24,8 @@
                 <ul>
                     <li>Changing order on full menu</li>
                     <li>Implementing individual width to dropdown menus</li>
-                    <li>Adjust font-size in dropdown menus</li>
-                    <li>Increasing dropdown visibility in darkmode/li>
+                    <li>Adjusting font-size in dropdown menus</li>
+                    <li>Increasing dropdown visibility in darkmode</li>
                 </ul>
 
                 <br><br>
@@ -81,7 +81,7 @@
                     <li>Code and quoteblock support</li>
                 </ul>
                 <br>
-                <p>If you have any suggestions, feel free to reach out <a href="https://twitter.com/Triss90" target="_blank">Tristan White</a>.</p>
+                <p>If you have any suggestions, feel free to reach out to <a href="https://twitter.com/Triss90" target="_blank">Tristan White</a>.</p>
             </div>
         </div>
     </div>
