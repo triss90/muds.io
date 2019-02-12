@@ -20,15 +20,15 @@
         </div>
         <div class="row">
             <div class="tiny-12 medium-6">
-<!--                <h2>MUDS v1.1.2</h2>-->
-<!--                <ul>-->
-<!--                    <li>Fixing a bug where dropdowns would be visible in HTML mode</li>-->
-<!--                    <li>Adding ability remove links</li>-->
-<!--                    <li>Adding in-, and outdent support</li>-->
-<!--                    <li>Adding dropdown for justification features</li>-->
-<!--                </ul>-->
-<!---->
-<!--                <br><br>-->
+                <h2>MUDS v1.1.2</h2>
+                <ul>
+                    <li>Fixing a bug where dropdowns would be visible in HTML mode</li>
+                    <li>Adding ability remove links</li>
+                    <li>Adding in-, and outdent support</li>
+                    <li>Adding dropdown for justification features</li>
+                </ul>
+
+                <br><br>
 
                 <h2>MUDS v1.1.1</h2>
                 <ul>
