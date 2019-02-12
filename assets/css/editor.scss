@@ -86,7 +86,7 @@
       position: absolute;
       margin: 1rem 0 !important;
       padding: 4px 0;
-      top: 14px;
+      top: 10px;
       left: 0;
       background-color: white;
       border: 1px solid hsl(0, 0%, 80%);
@@ -244,12 +244,9 @@
     .muds-dropdown {
       ul {
         background-color: #202125;
-        border-color: #111;
-        &:before {
-
-        }
+        border-color: #666;
         &:after {
-          border-bottom-color: #111;
+          border-bottom-color: #666;
         }
         li {
           &:hover {
