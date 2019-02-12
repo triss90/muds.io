@@ -20,15 +20,15 @@
         </div>
         <div class="row">
             <div class="tiny-12 medium-6">
-<!--                <h2>MUDS v1.1.3</h2>-->
-<!--                <ul>-->
-<!--                    <li>Changing order on full menu</li>-->
-<!--                    <li>Implementing individual width to dropdown menus</li>-->
-<!--                    <li>Adjust font-size in menus</li>-->
-<!--                    <li>Increasing dropdown visibility in darkmode/li>-->
-<!--                </ul>-->
-<!---->
-<!--                <br><br>-->
+                <h2>MUDS v1.1.3</h2>
+                <ul>
+                    <li>Changing order on full menu</li>
+                    <li>Implementing individual width to dropdown menus</li>
+                    <li>Adjust font-size in dropdown menus</li>
+                    <li>Increasing dropdown visibility in darkmode/li>
+                </ul>
+
+                <br><br>
 
                 <h2>MUDS v1.1.2</h2>
                 <ul>
