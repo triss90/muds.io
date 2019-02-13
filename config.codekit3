@@ -629,6 +629,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/img\/muds-inverted.png": {
+		"ft": 32768,
+		"iS": 7954,
+		"oA": 0,
+		"oAP": "\/assets\/img\/muds-inverted.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/img\/muds.sketch": {
 		"cB": 0,
 		"ft": 8192,

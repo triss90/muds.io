@@ -13,6 +13,7 @@
         this.menu_style = opts.menuStyle;
         this.menu_custom = opts.menuCustom;
         this.height = opts.height;
+        this.resize = opts.resize;
         this.text = opts.content;
         this.menu = document.createElement('div');
         this.content = document.createElement('div');
@@ -508,7 +509,10 @@
         const mudsContentElement = editor.content;
         mudsContentElement.classList.add('muds-content');
         mudsContentElement.setAttribute('contenteditable','true');
-        mudsContentElement.style.resize = 'vertical';
+        console.log(editor.resize);
+        if (editor.resize === true) {
+            mudsContentElement.style.resize = 'vertical';
+        }
         mudsContentElement.style.overflow = 'auto';
         mudsContentElement.style.height = editor.height;
         if (editor.text !== undefined) { mudsContentElement.innerHTML = editor.text; }
@@ -522,6 +526,7 @@
     // Attach our defaults for plugin to the plugin itself
     muds.defaults = {
         selector: '',
+        resize: true,
         menuStyle: 'full', // full, minimal, custom
         menuCustom: [], //'header','underline','strikeThrough','bold','italic','link','changeColor','image','undo','redo','unorderedList','orderedList','selectAll','copy','cut','delete','justifyLeft','justifyCenter','justifyRight','print','showHTML','showText','fullScreen'
         theme: 'light', // light, dark
