@@ -75,11 +75,12 @@
     }
     &.fonts {
       ul {
-        width: 185px;
-        max-height: 107px;
+        padding:0 !important;
+        width: 185px !important;
+        max-height: 107px !important;
         .wrapper {
-          overflow-y: scroll;
-          max-height: 111px;
+          overflow-y: scroll !important;
+          max-height: 107px !important;
           li {
             button {
               font-size: 1rem;
