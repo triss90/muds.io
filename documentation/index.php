@@ -261,7 +261,7 @@ var editor = new muds({
                 </div>
             </div>
 
-             Resize
+
             <div class="tiny-12">
                 <h2>Resize Editor</h2>
                 <p>The editor is resizable by default, but can be disabled like so: <span class="tag">resize: false</span>.</p>
