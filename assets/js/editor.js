@@ -509,12 +509,9 @@
         const mudsContentElement = editor.content;
         mudsContentElement.classList.add('muds-content');
         mudsContentElement.setAttribute('contenteditable','true');
-        console.log(editor.resize);
-        if (editor.resize === true) {
-            mudsContentElement.style.resize = 'vertical';
-        }
         mudsContentElement.style.overflow = 'auto';
         mudsContentElement.style.height = editor.height;
+        if (editor.resize === true) { mudsContentElement.style.resize = 'vertical'; }
         if (editor.text !== undefined) { mudsContentElement.innerHTML = editor.text; }
         const mudsOutputElement = editor.output;
         mudsOutputElement.classList.add('muds-output');

@@ -20,6 +20,14 @@
         </div>
         <div class="row">
             <div class="tiny-12 medium-6">
+
+<!--                <h2>MUDS v1.1.4 <a href="/download/muds-editor-v1.1.4.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>-->
+<!--                <ul>-->
+<!--                    <li>Adding resize parameter to editor config</li>-->
+<!--                </ul>-->
+<!---->
+<!--                <br><br>-->
+
                 <h2>MUDS v1.1.3 <a href="/download/muds-editor-v1.1.3.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
                     <li>Changing order on full menu</li>

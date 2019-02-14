@@ -63,7 +63,7 @@ var editor = new muds({
                     <pre data-lang="js"></pre>
                 </div>
 
-                <p>Or install the library with NPM: <span class="tag">npm i muds-editor</span></p><br>
+                <p>Or install the library with NPM: <span class="tag">npm i muds-editor</span>. Alternatively you can <a href="/download/muds-editor-v1.1.3.zip" download>Download</a> and run MUDS locally.</p><br>
 
             </div>
         </div>
