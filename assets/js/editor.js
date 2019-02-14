@@ -72,6 +72,49 @@
         document.execCommand('formatBlock', false, 'h3');
     };
 
+    muds.prototype.buttonFontDefaultAction = function(string) {
+        document.execCommand('fontName', false, '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"');
+    };
+    muds.prototype.buttonFontArialAction = function(string) {
+        document.execCommand('fontName', false, 'Arial, Helvetica, sans-serif');
+    };
+    muds.prototype.buttonFontArialBlackAction = function(string) {
+        document.execCommand('fontName', false, '"Arial Black", Gadget, sans-serif');
+    };
+    muds.prototype.buttonFontGeorgiaAction = function(string) {
+        document.execCommand('fontName', false, 'Georgia, serif');
+    };
+    muds.prototype.buttonFontPalatinoAction = function(string) {
+        document.execCommand('fontName', false, '"Palatino Linotype", "Book Antiqua", Palatino, serif');
+    };
+    muds.prototype.buttonFontTimesNewRomanAction = function(string) {
+        document.execCommand('fontName', false, '"Times New Roman", Times, serif');
+    };
+    muds.prototype.buttonFontComicSansAction = function(string) {
+        document.execCommand('fontName', false, '"Comic Sans MS", cursive, sans-serif');
+    };
+    muds.prototype.buttonFontImpactAction = function(string) {
+        document.execCommand('fontName', false, 'Impact, Charcoal, sans-serif');
+    };
+    muds.prototype.buttonFontLucidaSansUnicodeAction = function(string) {
+        document.execCommand('fontName', false, '"Lucida Sans Unicode", "Lucida Grande", sans-serif');
+    };
+    muds.prototype.buttonFontLucidaConsoleAction = function(string) {
+        document.execCommand('fontName', false, '"Lucida Console", Monaco, monospace');
+    };
+    muds.prototype.buttonFontTahamoAction = function(string) {
+        document.execCommand('fontName', false, 'Tahoma, Geneva, sans-serif');
+    };
+    muds.prototype.buttonFontTrebuchetAction = function(string) {
+        document.execCommand('fontName', false, '"Trebuchet MS", Helvetica, sans-serif');
+    };
+    muds.prototype.buttonFontVerdanaAction = function(string) {
+        document.execCommand('fontName', false, 'Verdana, Geneva, sans-serif');
+    };
+    muds.prototype.buttonFontCourierNewAction = function(string) {
+        document.execCommand('fontName', false, '"Courier New", Courier, monospace');
+    };
+
     muds.prototype.buttonUnorderedListAction = function(string) {
         document.execCommand('insertUnorderedList', false, '');
     };
@@ -233,6 +276,30 @@
             '<li><button class="muds-h3" title="Healine 3" onclick="'+item.orignal_input.id + '.buttonH3Action()'+'">Header 3</button></li>' +
             '</ul>';
         item.menu.appendChild(buttonHeader);
+    }
+    function buttonFonts(item) {
+        const buttonFonts = document.createElement('div');
+        buttonFonts.classList.add('muds-item','muds-dropdown','fonts');
+        buttonFonts.innerHTML = '<label><svg baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M9.93 13.5h4.14L12 7.98zM20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-4.05 16.5l-1.14-3H9.17l-1.12 3H5.96l5.11-13h1.86l5.11 13h-2.09z"/></svg>\n</label>' +
+            '<ul>' +
+            '<div class="wrapper">' +
+            '<li><button class="font-arial" title="Arial" onclick="'+item.orignal_input.id + '.buttonFontArialAction()'+'">Arial</button></li>' +
+            '<li><button class="font-arial-black" title="Arial Black" onclick="'+item.orignal_input.id + '.buttonFontArialBlackAction()'+'">Arial Black</button></li>' +
+            '<li><button class="font-comic-sans" title="Comic Sans" onclick="'+item.orignal_input.id + '.buttonFontComicSansAction()'+'">Comic Sans</button></li>' +
+            '<li><button class="font-courier-new" title="Courier New" onclick="'+item.orignal_input.id + '.buttonFontCourierNewAction()'+'">Courier New</button></li>' +
+            '<li><button class="font-georgia" title="Georgia" onclick="'+item.orignal_input.id + '.buttonFontGeorgiaAction()'+'">Georgia</button></li>' +
+            '<li><button class="font-impact" title="Georgia" onclick="'+item.orignal_input.id + '.buttonFontImpactAction()'+'">Impact</button></li>' +
+            '<li><button class="font-lucida-console" title="Lucida Console" onclick="'+item.orignal_input.id + '.buttonFontLucidaConsoleAction()'+'">Lucida Console</button></li>' +
+            '<li><button class="font-lucida-sans-unicode" title="Lucida Sans Unicode" onclick="'+item.orignal_input.id + '.buttonFontLucidaSansUnicodeAction()'+'">Lucida Sans Unicode</button></li>' +
+            '<li><button class="font-palatino" title="Palatino" onclick="'+item.orignal_input.id + '.buttonFontPalatinoAction()'+'">Palatino</button></li>' +
+            '<li><button class="font-default" title="Default" onclick="'+item.orignal_input.id + '.buttonFontDefaultAction()'+'">System Default</button></li>' +
+            '<li><button class="font-tahoma" title="Tahoma" onclick="'+item.orignal_input.id + '.buttonFontTahamoAction()'+'">Tahoma</button></li>' +
+            '<li><button class="font-times-new-roman" title="Times New Roman" onclick="'+item.orignal_input.id + '.buttonFontTimesNewRomanAction()'+'">Times New Roman</button></li>' +
+            '<li><button class="font-trebuchet" title="Trehuchet MS" onclick="'+item.orignal_input.id + '.buttonFontTrebuchetAction()'+'">Trebuchet MS</button></li>' +
+            '<li><button class="font-verdana" title="Verdana" onclick="'+item.orignal_input.id + '.buttonFontVerdanaAction()'+'">Verdana</button></li>' +
+            '</div>' +
+            '</ul>';
+        item.menu.appendChild(buttonFonts);
     }
     function buttonUnorderedList(item) {
         const buttonUnorderedList = document.createElement('button');
@@ -444,6 +511,7 @@
     function buildMenu(item) {
         if (item.menu_style === "full" || item.menu_style === undefined ) {
             buttonHeader(item);
+            buttonFonts(item);
             buttonUnderline(item);
             buttonStrikeThrough(item);
             buttonItalic(item);
@@ -474,6 +542,7 @@
             buttonRedo(item);
         } else if (item.menu_style === "custom") {
             if (item.menu_custom.includes("header")){buttonHeader(item);}
+            if (item.menu_custom.includes("fonts")){buttonFonts(item);}
             if (item.menu_custom.includes("underline")){buttonUnderline(item);}
             if (item.menu_custom.includes("strikeThrough")){buttonStrikeThrough(item);}
             if (item.menu_custom.includes("italic")){buttonItalic(item);}
@@ -524,7 +593,7 @@
     muds.defaults = {
         selector: '',
         resize: true,
-        menuStyle: 'full', // full, minimal, custom
+        menuStyle: 'custom', // full, minimal, custom
         menuCustom: [], //'header','underline','strikeThrough','bold','italic','link','changeColor','image','undo','redo','unorderedList','orderedList','selectAll','copy','cut','delete','justifyLeft','justifyCenter','justifyRight','print','showHTML','showText','fullScreen'
         theme: 'light', // light, dark
         content: '',

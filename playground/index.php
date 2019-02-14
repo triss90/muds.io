@@ -66,6 +66,7 @@ dropdown-item >
             menuStyle: 'custom',
             menuCustom: [
                 'header',
+                'fonts',
                 'underline',
                 'strikeThrough',
                 'bold',
