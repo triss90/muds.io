@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+
+<h1 id="mudseditor">MUDS Editor</h1>
+
+<h2 id="gettingstartedwithmuds">Getting started with MUDS</h2>
+
+<p>Simply paste the following snippet in your code where you want MUDS editor to appear.</p>
+
+<pre><code class="html"><!-- Include stylesheet -->
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/css/muds.min.css&quot;&gt;
+
+<!-- Create the editor container -->
+&lt;div id=&quot;editor&quot;&gt;&lt;/div&gt;
+
+<!-- Include the muds library -->
+&lt;script src=&quot;/assets/js/muds.min.js&quot;&gt;&lt;/script&gt;
+
+<!-- Initialize muds editor -->
+&lt;script&gt;
+var editor = new muds({
+    selector: 'editor'
+});
+&lt;/script&gt;
+</code></pre>
+
+<h2 id="example">Example</h2>
+
+<figure>
+<img src="https://muds.io/assets/img/example.png" alt="Example of MUDS Editor" />
+<figcaption>Example of MUDS Editor</figcaption>
+</figure>
+
+<h2 id="custommenuitems">Custom menu items</h2>
+
+<pre><code class="Javascript">var editor = new muds({
+    selector: 'editor',
+    menuStyle: 'custom',
+    menuCustom: [
+        'header',
+        'underline',
+        'strikeThrough',
+        'bold',
+        'italic',
+        'link',
+        'changeColor',
+        'image',
+        'undo',
+        'redo',
+        'unorderedList',
+        'orderedList',
+        'selectAll',
+        'copy',
+        'cut',
+        'delete',
+        'justification',
+        'justifyLeft',
+        'justifyCenter',
+        'justifyRight',
+        'indent',
+        'outdent',
+        'print',
+        'showHTML',
+        'showText',
+        'fullScreen'
+    ]
+});
+</code></pre>
+
+</body>
+</html>
+

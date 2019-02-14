@@ -90,7 +90,7 @@
                     <li>Custom themes or some version of injected custom CSS</li>
                     <li>Better image handling capabilities</li>
                     <li>Color control (both text and background color)</li>
-                    <li>Custom font type support</li>
+                    <li><strike>Custom font type support</strike></li>
                     <li>Editible links</li>
                     <li>Custom keybindings</li>
                     <li><strike>In-, and outdent support</strike></li>
