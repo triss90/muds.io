@@ -31,6 +31,7 @@ var editor = new muds({
     menuStyle: 'custom',
     menuCustom: [
         'header',
+        'fonts',
         'underline',
         'strikeThrough',
         'bold',

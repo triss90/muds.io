@@ -1,6 +1,6 @@
 {
   "name": "muds-editor",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "The lightest WYSIWYG Editor on the internet",
   "main": "muds.min.js",
   "repository": {

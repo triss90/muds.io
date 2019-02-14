@@ -12,7 +12,7 @@
                 <br><br>
                 <br>
                 <br>
-                <a href="/download/muds-editor-v1.2.0.zip" class="button primary" download><i class="fa fa-download" aria-hidden="true"></i> Download</a>
+                <a href="/download/muds-editor-v1.2.1.zip" class="button primary" download><i class="fa fa-download" aria-hidden="true"></i> Download v1.2.1</a>
                 <a href="https://github.com/triss90/muds.io" target="_blank" class="button secondary"><i class="fa fa-github" aria-hidden="true"></i> View on GitHub</a>
                 <br><br><br><br><br><br>
                 <div id="editor"></div>
@@ -44,13 +44,13 @@
                 <div class="codepen" data-height="410" data-theme-id="36048" data-default-tab="html" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
                     <pre data-lang="html">
 &#x3C;!-- Include the MUDS stylesheet --&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.2.0/muds.min.css&#x22;&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.2.1/muds.min.css&#x22;&#x3E;
 
 &#x3C;!-- Create the editor container --&#x3E;
 &#x3C;div id=&#x22;editor&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;!-- Include the MUDS library --&#x3E;
-&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.2.0/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.2.1/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
 
 &#x3C;!-- Initialize MUDS editor --&#x3E;
 &#x3C;script&#x3E;

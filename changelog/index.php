@@ -21,6 +21,13 @@
         <div class="row">
             <div class="tiny-12 medium-6">
 
+                <h2>MUDS v1.2.1 <a href="/download/muds-editor-v1.2.1.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
+                <ul>
+                    <li>Fix overflow problem on Font dropdown</li>
+                </ul>
+
+                <br><br>
+
                 <h2>MUDS v1.2.0 <a href="/download/muds-editor-v1.2.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
                     <li>Adding resize parameter to editor config</li>
