@@ -597,7 +597,7 @@
         menuCustom: [], //'header','underline','strikeThrough','bold','italic','link','changeColor','image','undo','redo','unorderedList','orderedList','selectAll','copy','cut','delete','justifyLeft','justifyCenter','justifyRight','print','showHTML','showText','fullScreen'
         theme: 'light', // light, dark
         content: '',
-        height: '100px'
+        height: '150px'
     };
 
     // make accessible globally
