@@ -20,6 +20,9 @@
         this.output = document.createElement('div');
         buildMenu(this);
         buildEditor(this);
+        if (opts.keybindings != false) {
+            keybindings(this);
+        }
     };
 
     // Encode and decode HTML
@@ -256,6 +259,7 @@
         myWindow.print();
         myWindow.close();
     };
+
 
     // Menu buttons
     function buttonFullScreen(item) {
@@ -507,6 +511,31 @@
         item.menu.appendChild(buttonShowText);
     }
 
+
+    // Keybindings
+    function keybindings(editor) {
+        editor.content.addEventListener("keydown", function(e) {
+            console.log("Keypress: "+e.keyCode);
+
+            // Tab
+            if(e.keyCode === 9) {
+                e.preventDefault();  // this will prevent us from tabbing out of the editor
+                var editor = document.getElementById("editor");
+                var doc = editor.ownerDocument.defaultView;
+                var sel = doc.getSelection();
+                var range = sel.getRangeAt(0);
+                var tabNode = document.createTextNode("\u00a0\u00a0\u00a0\u00a0");
+                range.insertNode(tabNode);
+                range.setStartAfter(tabNode);
+                range.setEndAfter(tabNode);
+                sel.removeAllRanges();
+                sel.addRange(range);
+            }
+
+
+        }, false);
+    }
+
     // Build the Menu
     function buildMenu(item) {
         if (item.menu_style === "full" || item.menu_style === undefined ) {
@@ -588,7 +617,6 @@
         editor.orignal_input.appendChild(mudsContentElement);
         editor.orignal_input.appendChild(mudsOutputElement);
     }
-
     // Attach our defaults for plugin to the plugin itself
     muds.defaults = {
         selector: '',
@@ -597,7 +625,8 @@
         menuCustom: [], //'header','underline','strikeThrough','bold','italic','link','changeColor','image','undo','redo','unorderedList','orderedList','selectAll','copy','cut','delete','justifyLeft','justifyCenter','justifyRight','print','showHTML','showText','fullScreen'
         theme: 'light', // light, dark
         content: '',
-        height: '150px'
+        height: '150px',
+        keybindings: true
     };
 
     // make accessible globally
