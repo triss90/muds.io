@@ -21,46 +21,45 @@
         <div class="row">
             <div class="tiny-12 medium-6">
 
-<!--                <h2>MUDS v1.3.0 <a href="/download/muds-editor-v1.2.1.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>-->
-<!--                <ul>-->
-<!--                    <li>Adjusting default heights of editor content and dropdowns</li>-->
-<!--                    <li>Adjusting default fontsizes of dropdowns</li>-->
-<!--                    <li>Adding body text action</li>-->
-<!--                    <li>Adjusting fontsize of header dropdown</li>-->
-<!--                    <li>Adding tooltips to menu items</li>-->
-<!--                    <li>Adding Blockquote</li>-->
-<!--                    <li>Change darkmode link color from pink to blue</li>-->w
-<!--                    <li>Add keybindings:-->
-<!--                        <ul>-->
-<!--                            <li><span class="tag">Tab</span>: inserts 4 spaces at the cursor position</li>-->
-<!--                            <li><span class="tag">Ctrl/Cmd + P</span>: Opens the print dialog</li>-->
-<!--                            <li><span class="tag">Ctrl/Cmd + B</span>: Makes highlighted text bold</li>-->
-<!--                            <li><span class="tag">Ctrl/Cmd + I</span>: Makes highlighted text italic</li>-->
-<!--                            <li><span class="tag">Ctrl/Cmd + A</span>: Highlight everything</li>-->
-<!--                            <li><span class="tag">Ctrl/Cmd + C</span>: Copy highlighted text</li>-->
-<!--                            <li><span class="tag">Ctrl/Cmd + X</span>: Cut highlighted text</li>-->
-<!--                            <li><span class="tag">Ctrl/Cmd + V</span>: Paste from clipboard</li>-->
-<!--                            <li><span class="tag">Ctrl/Cmd + Z</span>: Undo</li>-->
-<!--                            <li><span class="tag">Shift + Ctrl/Cmd + Z</span>: Redo</li>-->
-<!--                            <li><span class="tag">Ctrl/Cmd + Left Arrow</span>: Align Left</li>-->
-<!--                            <li><span class="tag">Ctrl/Cmd + Up Arrow/Down Arrow</span>: Align Center</li>-->
-<!--                            <li><span class="tag">Ctrl/Cmd + Right Arrow</span>: Align Right</li>-->
-<!--                            <li><span class="tag">Shift + Ctrl/Cmd + Right Arrow</span>: Indent</li>-->
-<!--                            <li><span class="tag">Shift + Ctrl/Cmd + Left Arrow</span>: Outdent</li>-->
-<!--                            <li><span class="tag">Shift + Ctrl/Cmd + C</span>: Open "Change Color" dialog</li>-->
-<!--                            <li><span class="tag">Ctrl/Cmd + H</span>: Show HTML</li>-->
-<!--                            <li><span class="tag">Ctrl/Cmd + S</span>: Strikethrough</li>-->
-<!--                            <li><span class="tag">Ctrl/Cmd + L</span>: Open "Insert Link" dialog</li>-->
-<!--                            <li><span class="tag">Ctrl/Cmd + 0</span>: Body Text</li>-->
-<!--                            <li><span class="tag">Ctrl/Cmd + Q</span>: Blockquote</li>-->
-<!--                            <li><span class="tag">Ctrl/Cmd + 1</span>: Header 1</li>-->
-<!--                            <li><span class="tag">Ctrl/Cmd + 2</span>: Header 2</li>-->
-<!--                            <li><span class="tag">Ctrl/Cmd + 3</span>: Header 3</li>-->
-<!--                        </ul>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!---->
-<!--                <br><br>-->
+                <h2>MUDS v1.3.0 <a href="/download/muds-editor-v1.2.1.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
+                <ul>
+                    <li>Adjusting default heights of editor content and dropdowns</li>
+                    <li>Adjusting default fontsizes of dropdowns</li>
+                    <li>Adding body text action</li>
+                    <li>Adding tooltips to menu items</li>
+                    <li>Adding Blockquote</li>
+                    <li>Change darkmode link color from pink to blue</li>
+                    <li>Add keybindings:
+                        <ul>
+                            <li><span class="tag">Tab</span>: inserts 4 spaces at the cursor position</li>
+                            <li><span class="tag">Ctrl/Cmd + P</span>: Opens the print dialog</li>
+                            <li><span class="tag">Ctrl/Cmd + B</span>: Makes highlighted text bold</li>
+                            <li><span class="tag">Ctrl/Cmd + I</span>: Makes highlighted text italic</li>
+                            <li><span class="tag">Ctrl/Cmd + A</span>: Highlight everything</li>
+                            <li><span class="tag">Ctrl/Cmd + C</span>: Copy highlighted text</li>
+                            <li><span class="tag">Ctrl/Cmd + X</span>: Cut highlighted text</li>
+                            <li><span class="tag">Ctrl/Cmd + V</span>: Paste from clipboard</li>
+                            <li><span class="tag">Ctrl/Cmd + Z</span>: Undo</li>
+                            <li><span class="tag">Shift + Ctrl/Cmd + Z</span>: Redo</li>
+                            <li><span class="tag">Ctrl/Cmd + Left Arrow</span>: Align Left</li>
+                            <li><span class="tag">Ctrl/Cmd + Up Arrow/Down Arrow</span>: Align Center</li>
+                            <li><span class="tag">Ctrl/Cmd + Right Arrow</span>: Align Right</li>
+                            <li><span class="tag">Shift + Ctrl/Cmd + Right Arrow</span>: Indent</li>
+                            <li><span class="tag">Shift + Ctrl/Cmd + Left Arrow</span>: Outdent</li>
+                            <li><span class="tag">Shift + Ctrl/Cmd + C</span>: Open "Change Color" dialog</li>
+                            <li><span class="tag">Ctrl/Cmd + H</span>: Show HTML</li>
+                            <li><span class="tag">Ctrl/Cmd + S</span>: Strikethrough</li>
+                            <li><span class="tag">Ctrl/Cmd + L</span>: Open "Insert Link" dialog</li>
+                            <li><span class="tag">Ctrl/Cmd + 0</span>: Body Text</li>
+                            <li><span class="tag">Ctrl/Cmd + Q</span>: Blockquote</li>
+                            <li><span class="tag">Ctrl/Cmd + 1</span>: Header 1</li>
+                            <li><span class="tag">Ctrl/Cmd + 2</span>: Header 2</li>
+                            <li><span class="tag">Ctrl/Cmd + 3</span>: Header 3</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <br><br>
 
                 <h2>MUDS v1.2.1 <a href="/download/muds-editor-v1.2.1.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>

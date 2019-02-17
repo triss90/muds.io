@@ -15,6 +15,7 @@
         this.height = opts.height;
         this.resize = opts.resize;
         this.text = opts.content;
+        this.tooltips = opts.tooltips;
         if (window.navigator.userAgent.indexOf("Mac") != -1) {
             this.osModifier = "CMD";
         } else {
@@ -747,6 +748,9 @@
     function buildEditor(editor) {
         const mudsToolElement = editor.menu;
         mudsToolElement.classList.add('muds-toolbar');
+        if (editor.tooltips === true) {
+            mudsToolElement.classList.add('tooltips');
+        }
         const mudsContentElement = editor.content;
         mudsContentElement.classList.add('muds-content');
         mudsContentElement.setAttribute('contenteditable','true');
@@ -769,7 +773,8 @@
         theme: 'light', // light, dark
         content: '',
         height: '150px',
-        keybindings: true
+        keybindings: true,
+        tooltips: true
     };
 
     // make accessible globally
