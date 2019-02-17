@@ -49,7 +49,9 @@
 <!--                            <li><span class="tag">Ctrl/Cmd + 1</span>: Header 1</li>-->
 <!--                            <li><span class="tag">Ctrl/Cmd + 2</span>: Header 2</li>-->
 <!--                            <li><span class="tag">Ctrl/Cmd + 3</span>: Header 3</li>-->
+<!--                            <br>-->
 <!--                            <li>Adding body text action</li>-->
+<!--                            <li>Adjusting fontsize of header dropdown</li>-->
 <!--                        </ul>-->
 <!--                    </li>-->
 <!--                </ul>-->
