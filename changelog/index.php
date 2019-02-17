@@ -25,6 +25,11 @@
 <!--                <ul>-->
 <!--                    <li>Adjusting default heights of editor content and dropdowns</li>-->
 <!--                    <li>Adjusting default fontsizes of dropdowns</li>-->
+<!--                    <li>Adding body text action</li>-->
+<!--                    <li>Adjusting fontsize of header dropdown</li>-->
+<!--                    <li>Adding tooltips to menu items</li>-->
+<!--                    <li>Adding Blockquote</li>-->
+<!--                    <li>Change darkmode link color from pink to blue</li>-->
 <!--                    <li>Add keybindings:-->
 <!--                        <ul>-->
 <!--                            <li><span class="tag">Tab</span>: inserts 4 spaces at the cursor position</li>-->
@@ -49,9 +54,6 @@
 <!--                            <li><span class="tag">Ctrl/Cmd + 1</span>: Header 1</li>-->
 <!--                            <li><span class="tag">Ctrl/Cmd + 2</span>: Header 2</li>-->
 <!--                            <li><span class="tag">Ctrl/Cmd + 3</span>: Header 3</li>-->
-<!--                            <br>-->
-<!--                            <li>Adding body text action</li>-->
-<!--                            <li>Adjusting fontsize of header dropdown</li>-->
 <!--                        </ul>-->
 <!--                    </li>-->
 <!--                </ul>-->
@@ -114,7 +116,6 @@
                 </ul>
                 <br>
 
-
             </div>
             <div class="tiny-12 medium-6">
                 <h2>Our roadmap</h2>
@@ -126,6 +127,7 @@
                     <li><strike>A redesign of HTML editing mode.</strike></li>
                     <li>Custom themes or some version of injected custom CSS</li>
                     <li>Better image handling capabilities</li>
+                    <li>Tooltips on menuitems</li>
                     <li>Color control (both text and background color)</li>
                     <li><strike>Custom font type support</strike></li>
                     <li>Editible links</li>

@@ -315,6 +315,26 @@
 
     }
   }
+  blockquote {
+    font-size: 1rem !important;
+    margin: 1rem 3rem 1rem 3rem !important;
+    font-style: italic !important;
+    color: #555555 !important;
+    padding: 1.2em 30px 1.2em 50px !important;
+    border-left: 8px solid #61aeee !important;
+    line-height: 1.6 !important;
+    position: relative !important;
+    background: #EDEDED !important;
+    &:before{
+      font-family: Arial !important;
+      content: "\201C" !important;
+      color: #61aeee !important;
+      font-size: 4em !important;
+      position: absolute !important;
+      left: 10px !important;
+      top: -10px !important;
+    }
+  }
   &:focus {
     outline: 0;
   }
@@ -373,8 +393,5 @@
     border: 2px solid #202125;
     background: #191A1D;
     color: #eee !important;
-    a {
-      color: #ee0979 !important;
-    }
   }
 }

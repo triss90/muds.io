@@ -68,6 +68,9 @@
     muds.prototype.buttonBodyTextAction = function(string) {
         document.execCommand('formatBlock', false, 'p');
     };
+    muds.prototype.buttonBlockquoteAction = function(string) {
+        document.execCommand('formatBlock', false, 'blockquote');
+    };
     muds.prototype.buttonH1Action = function(string) {
         document.execCommand('formatBlock', false, 'h1');
     };
@@ -283,6 +286,7 @@
             '<li><button class="muds-h2" title="Healine 2" onclick="'+item.orignal_input.id + '.buttonH2Action()'+'">Header 2</button></li>' +
             '<li><button class="muds-h3" title="Healine 3" onclick="'+item.orignal_input.id + '.buttonH3Action()'+'">Header 3</button></li>' +
             '<li><button class="muds-body" title="Body Text" onclick="'+item.orignal_input.id + '.buttonBodyTextAction()'+'">Body</button></li>' +
+            '<li><button class="muds-blockquote" title="Blockquote" onclick="'+item.orignal_input.id + '.buttonBlockquoteAction()'+'">Blockquote</button></li>' +
             '</ul>';
         item.menu.appendChild(buttonHeader);
     }
@@ -341,6 +345,14 @@
         buttonItalic.setAttribute('onclick',item.orignal_input.id + '.buttonItalicAction()');
         buttonItalic.setAttribute('data-tooltip', 'Italic');
         item.menu.appendChild(buttonItalic);
+    }
+    function buttonBlockquote(item) {
+        const buttonBlockquote = document.createElement('button');
+        buttonBlockquote.classList.add('muds-item');
+        buttonBlockquote.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/><path d="M0 0h24v24H0z" fill="none"/></svg>\n';
+        buttonBlockquote.setAttribute('onclick',item.orignal_input.id + '.buttonBlockquoteAction()');
+        buttonBlockquote.setAttribute('data-tooltip', 'Blockquote');
+        item.menu.appendChild(buttonBlockquote);
     }
     function buttonBold(item) {
         const buttonBold = document.createElement('button');
@@ -694,6 +706,7 @@
             if (item.menu_custom.includes("italic")){buttonItalic(item);}
             if (item.menu_custom.includes("bold")){buttonBold(item);}
             if (item.menu_custom.includes("link")){buttonLink(item);}
+            if (item.menu_custom.includes("blockquote")){buttonBlockquote(item);}
             if (item.menu_custom.includes("changeColor")){buttonChangeColor(item);}
             if (item.menu_custom.includes("image")){buttonGetImage(item);}
             if (item.menu_custom.includes("undo")){buttonUndo(item);}
