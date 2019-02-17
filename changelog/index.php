@@ -38,6 +38,7 @@
 <!--                            <li><span class="tag">Ctrl/Cmd + I</span>: Makes highlighted text italic</li>-->
 <!--                            <li><span class="tag">Ctrl/Cmd + A</span>: Highlight everything</li>-->
 <!--                            <li><span class="tag">Ctrl/Cmd + C</span>: Copy highlighted text</li>-->
+<!--                            <li><span class="tag">Ctrl/Cmd + X</span>: Cut highlighted text</li>-->
 <!--                            <li><span class="tag">Ctrl/Cmd + V</span>: Paste from clipboard</li>-->
 <!--                            <li><span class="tag">Ctrl/Cmd + Z</span>: Undo</li>-->
 <!--                            <li><span class="tag">Shift + Ctrl/Cmd + Z</span>: Redo</li>-->
