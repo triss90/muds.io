@@ -65,6 +65,9 @@
         toolbarButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>'
     };
 
+    muds.prototype.buttonBodyTextAction = function(string) {
+        document.execCommand('formatBlock', false, 'p');
+    };
     muds.prototype.buttonH1Action = function(string) {
         document.execCommand('formatBlock', false, 'h1');
     };
@@ -134,6 +137,9 @@
     muds.prototype.buttonBoldAction = function(string) {
         document.execCommand('bold', false, '');
     };
+    muds.prototype.buttonStrikeThroughAction = function(string) {
+        document.execCommand('strikeThrough',false,'');
+    };
     muds.prototype.buttonLinkAction = function(string) {
         const selectedElement = window.getSelection().focusNode.parentElement;
         if (selectedElement.tagName === "A") {
@@ -143,6 +149,7 @@
             document.execCommand('createLink', false, linkURL);
         }
     };
+
 
     muds.prototype.buttonCutAction = function(string) {
         document.execCommand('cut',false,'');
@@ -180,9 +187,6 @@
         if (file) {
             reader.readAsDataURL(file);
         }
-    };
-    muds.prototype.buttonStrikeThroughAction = function(string) {
-        document.execCommand('strikeThrough',false,'');
     };
     muds.prototype.buttonDeleteAction = function(string) {
         document.execCommand('delete',false,'');
@@ -278,6 +282,7 @@
             '<li><button class="muds-h1" title="Healine 1" onclick="'+item.orignal_input.id + '.buttonH1Action()'+'">Header 1</button></li>' +
             '<li><button class="muds-h2" title="Healine 2" onclick="'+item.orignal_input.id + '.buttonH2Action()'+'">Header 2</button></li>' +
             '<li><button class="muds-h3" title="Healine 3" onclick="'+item.orignal_input.id + '.buttonH3Action()'+'">Header 3</button></li>' +
+            '<li><button class="muds-body" title="Body Text" onclick="'+item.orignal_input.id + '.buttonBodyTextAction()'+'">Body</button></li>' +
             '</ul>';
         item.menu.appendChild(buttonHeader);
     }
@@ -511,15 +516,14 @@
         item.menu.appendChild(buttonShowText);
     }
 
-
     // Keybindings
     function keybindings(editor) {
         editor.content.addEventListener("keydown", function(e) {
-            console.log("Keypress: "+e.keyCode);
+            console.log(e.keyCode);
 
             // Tab
             if(e.keyCode === 9) {
-                e.preventDefault();  // this will prevent us from tabbing out of the editor
+                e.preventDefault();
                 var editor = document.getElementById("editor");
                 var doc = editor.ownerDocument.defaultView;
                 var sel = doc.getSelection();
@@ -532,6 +536,119 @@
                 sel.addRange(range);
             }
 
+            // Print
+            if(e.keyCode === 80) {
+                if(e.metaKey === true || e.ctrlKey === true) {
+                    e.cancelBubble = true;
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+                    muds.prototype.buttonPrintMeAction();
+                }
+            }
+
+            // Align Left / Outdent
+            if(e.keyCode === 37) {
+                if(e.metaKey === true && e.shiftKey === false || e.ctrlKey === true && e.shiftKey === false) {
+                    e.preventDefault();
+                    muds.prototype.buttonJustifyLeftAction();
+                }
+                if(e.metaKey === true && e.shiftKey === true || e.ctrlKey === true && e.shiftKey === true) {
+                    e.preventDefault();
+                    muds.prototype.buttonOutdentAction();
+                }
+            }
+
+            // Align Center
+            if(e.keyCode === 38 || e.keyCode === 40) {
+                if(e.metaKey === true || e.ctrlKey === true) {
+                    e.preventDefault();
+                    muds.prototype.buttonJustifyCenterAction();
+                }
+            }
+
+            // Align Right / Indent
+            if(e.keyCode === 39) {
+                if(e.metaKey === true && e.shiftKey === false || e.ctrlKey === true && e.shiftKey === false) {
+                    e.preventDefault();
+                    muds.prototype.buttonJustifyRightAction();
+                }
+                if(e.metaKey === true && e.shiftKey === true || e.ctrlKey === true && e.shiftKey === true) {
+                    e.preventDefault();
+                    muds.prototype.buttonIndentAction();
+                }
+            }
+
+            // Open Color dialog
+            if(e.keyCode === 67) {
+                if(e.metaKey === true && e.shiftKey === true || e.ctrlKey === true && e.shiftKey === true) {
+                    e.preventDefault();
+                    muds.prototype.buttonChangeColorAction();
+                }
+            }
+
+            // Show HTML Editor
+            if(e.keyCode === 72) {
+                if(e.metaKey === true || e.ctrlKey === true) {
+                    e.preventDefault();
+                    muds.prototype.buttonShowHTMLAction();
+                }
+            }
+
+            // Open Link Editor
+            if(e.keyCode === 76) {
+                if(e.metaKey === true || e.ctrlKey === true) {
+                    e.preventDefault();
+                    muds.prototype.buttonLinkAction();
+                }
+            }
+
+            // Strikethrough
+            if(e.keyCode === 83) {
+                if(e.metaKey === true || e.ctrlKey === true) {
+                    e.preventDefault();
+                    muds.prototype.buttonStrikeThroughAction();
+                }
+            }
+
+            // Underline
+            if(e.keyCode === 85) {
+                if(e.metaKey === true || e.ctrlKey === true) {
+                    e.preventDefault();
+                    muds.prototype.buttonUnderlineAction();
+                }
+            }
+
+            // Body Text
+            if(e.keyCode === 48) {
+                if(e.metaKey === true || e.ctrlKey === true) {
+                    e.preventDefault();
+                    muds.prototype.buttonBodyTextAction();
+                }
+            }
+
+            // Header 1
+            if(e.keyCode === 49) {
+                if(e.metaKey === true || e.ctrlKey === true) {
+                    e.preventDefault();
+                    muds.prototype.buttonH1Action();
+                }
+            }
+
+            // Header 2
+            if(e.keyCode === 50) {
+                if(e.metaKey === true || e.ctrlKey === true) {
+                    e.preventDefault();
+                    muds.prototype.buttonH2Action();
+                }
+            }
+
+            // Header 3
+            if(e.keyCode === 51) {
+                if(e.metaKey === true || e.ctrlKey === true) {
+                    e.preventDefault();
+                    muds.prototype.buttonH3Action();
+                }
+            }
 
         }, false);
     }

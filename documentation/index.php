@@ -239,7 +239,7 @@ var editor = new muds({
                 <p>you can easily prefill content in your MUDS editor like so: <span class="tag">content: 'content goes here'</span>.</p>
                 <br>
                 <h3>Example:</h3>
-                <div class="codepen" data-height="300" data-theme-id="36048" data-default-tab="js,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
+                <div class="codepen" data-height="400" data-theme-id="36048" data-default-tab="js,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
                     <pre data-lang="scss" data-option-autoprefixer></pre>
                     <pre data-lang="js">
 // Initialize muds editor
@@ -261,13 +261,13 @@ var editor = new muds({
                 </div>
             </div>
 
-
+            <!-- Resize Editor -->
             <div class="tiny-12">
                 <h2>Resize Editor</h2>
                 <p>The editor is resizable by default, but can be disabled like so: <span class="tag">resize: false</span>.</p>
                 <br>
                 <h3>Example:</h3>
-                <div class="codepen" data-height="300" data-theme-id="36048" data-default-tab="js,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
+                <div class="codepen" data-height="400" data-theme-id="36048" data-default-tab="js,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
                     <pre data-lang="scss" data-option-autoprefixer></pre>
                     <pre data-lang="js">
 // Initialize muds editor
@@ -289,16 +289,40 @@ var editor = new muds({
                 </div>
             </div>
 
+            <!-- Keybindings -->
 <!--            <div class="tiny-12">-->
 <!--                <h2>Keybindings</h2>-->
 <!--                <p>Keybindings are enabled by default, but can be disabled like so: <span class="tag">keybindings: false</span>.</p>-->
 <!--                <br>-->
 <!--                <h3>Available keybindings:</h3>-->
 <!--                <ul>-->
-<!--                    <li>Tab = inserts 4 spaces at the cursor position</li>-->
+<!--                    <li><span class="tag">Tab</span>: inserts 4 spaces at the cursor position</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + P</span>: Opens the print dialog</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + B</span>: Makes highlighted text bold</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + I</span>: Makes highlighted text italic</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + A</span>: Highlight everything</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + C</span>: Copy highlighted text</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + V</span>: Paste from clipboard</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + Z</span>: Undo</li>-->
+<!--                    <li><span class="tag">Shift + Ctrl/Cmd + Z</span>: Redo</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + Left Arrow</span>: Align Left</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + Up Arrow/Down Arrow</span>: Align Center</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + Right Arrow</span>: Align Right</li>-->
+<!--                    <li><span class="tag">Shift + Ctrl/Cmd + Right Arrow</span>: Indent</li>-->
+<!--                    <li><span class="tag">Shift + Ctrl/Cmd + Left Arrow</span>: Outdent</li>-->
+<!--                    <li><span class="tag">Shift + Ctrl/Cmd + C</span>: Open "Change Color" dialog</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + L</span>: Open "Insert Link" dialog</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + H</span>: Show HTML</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + S</span>: Strikethrough</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + L</span>: Open "Insert Link" dialog</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + 0</span>: Body Text</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + 1</span>: Header 1</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + 2</span>: Header 2</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + 3</span>: Header 3</li>-->
 <!--                </ul>-->
+<!--                <br>-->
 <!--                <h3>Example:</h3>-->
-<!--                <div class="codepen" data-height="300" data-theme-id="36048" data-default-tab="js,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>-->
+<!--                <div class="codepen" data-height="400" data-theme-id="36048" data-default-tab="js,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>-->
 <!--                    <pre data-lang="scss" data-option-autoprefixer></pre>-->
 <!--                    <pre data-lang="js">-->
 <!--// Initialize muds editor-->
