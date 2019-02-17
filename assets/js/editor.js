@@ -15,6 +15,11 @@
         this.height = opts.height;
         this.resize = opts.resize;
         this.text = opts.content;
+        if (window.navigator.userAgent.indexOf("Mac") != -1) {
+            this.osModifier = "CMD";
+        } else {
+            this.osModifier = "CTRL";
+        }
         this.menu = document.createElement('div');
         this.content = document.createElement('div');
         this.output = document.createElement('div');
@@ -282,11 +287,11 @@
         buttonHeader.classList.add('muds-item','muds-dropdown','headers');
         buttonHeader.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M5 4v3h5.5v12h3V7H19V4H5z"/></svg></label>' +
             '<ul>' +
-            '<li><button class="muds-h1" title="Healine 1" onclick="'+item.orignal_input.id + '.buttonH1Action()'+'">Header 1</button></li>' +
-            '<li><button class="muds-h2" title="Healine 2" onclick="'+item.orignal_input.id + '.buttonH2Action()'+'">Header 2</button></li>' +
-            '<li><button class="muds-h3" title="Healine 3" onclick="'+item.orignal_input.id + '.buttonH3Action()'+'">Header 3</button></li>' +
-            '<li><button class="muds-body" title="Body Text" onclick="'+item.orignal_input.id + '.buttonBodyTextAction()'+'">Body</button></li>' +
-            '<li><button class="muds-blockquote" title="Blockquote" onclick="'+item.orignal_input.id + '.buttonBlockquoteAction()'+'">Blockquote</button></li>' +
+            '<li><button class="muds-h1" title="Healine 1 (cmd+1)" onclick="'+item.orignal_input.id + '.buttonH1Action()'+'">Header 1</button></li>' +
+            '<li><button class="muds-h2" title="Healine 2 (cmd+2)" onclick="'+item.orignal_input.id + '.buttonH2Action()'+'">Header 2</button></li>' +
+            '<li><button class="muds-h3" title="Healine 3 (cmd+3)" onclick="'+item.orignal_input.id + '.buttonH3Action()'+'">Header 3</button></li>' +
+            '<li><button class="muds-body" title="Body Text (cmd+0)" onclick="'+item.orignal_input.id + '.buttonBodyTextAction()'+'">Body</button></li>' +
+            '<li><button class="muds-blockquote" title="Blockquote (cmd+Q)" onclick="'+item.orignal_input.id + '.buttonBlockquoteAction()'+'">Blockquote</button></li>' +
             '</ul>';
         item.menu.appendChild(buttonHeader);
     }
@@ -335,7 +340,7 @@
         buttonUnderline.classList.add('muds-item');
         buttonUnderline.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M12 17c3.31 0 6-2.69 6-6V3h-2.5v8c0 1.93-1.57 3.5-3.5 3.5S8.5 12.93 8.5 11V3H6v8c0 3.31 2.69 6 6 6zm-7 2v2h14v-2H5z"/></svg>';
         buttonUnderline.setAttribute('onclick', item.orignal_input.id + '.buttonUnderlineAction()');
-        buttonUnderline.setAttribute('data-tooltip', 'Underline');
+        buttonUnderline.setAttribute('data-tooltip', 'Underline ('+item.osModifier+'+U)');
         item.menu.appendChild(buttonUnderline);
     }
     function buttonItalic(item) {
@@ -343,7 +348,7 @@
         buttonItalic.classList.add('muds-item');
         buttonItalic.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M10 4v3h2.21l-3.42 8H6v3h8v-3h-2.21l3.42-8H18V4h-8z"/></svg>';
         buttonItalic.setAttribute('onclick',item.orignal_input.id + '.buttonItalicAction()');
-        buttonItalic.setAttribute('data-tooltip', 'Italic');
+        buttonItalic.setAttribute('data-tooltip', 'Italic ('+item.osModifier+'+I)');
         item.menu.appendChild(buttonItalic);
     }
     function buttonBlockquote(item) {
@@ -351,7 +356,7 @@
         buttonBlockquote.classList.add('muds-item');
         buttonBlockquote.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/><path d="M0 0h24v24H0z" fill="none"/></svg>\n';
         buttonBlockquote.setAttribute('onclick',item.orignal_input.id + '.buttonBlockquoteAction()');
-        buttonBlockquote.setAttribute('data-tooltip', 'Blockquote');
+        buttonBlockquote.setAttribute('data-tooltip', 'Blockquote ('+item.osModifier+'+Q)');
         item.menu.appendChild(buttonBlockquote);
     }
     function buttonBold(item) {
@@ -359,7 +364,7 @@
         buttonBold.classList.add('muds-item');
         buttonBold.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.6 10.79c.97-.67 1.65-1.77 1.65-2.79 0-2.26-1.75-4-4-4H7v14h7.04c2.09 0 3.71-1.7 3.71-3.79 0-1.52-.86-2.82-2.15-3.42zM10 6.5h3c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-3v-3zm3.5 9H10v-3h3.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5z"/></svg>';
         buttonBold.setAttribute('onclick',item.orignal_input.id + '.buttonBoldAction()');
-        buttonBold.setAttribute('data-tooltip', 'Bold');
+        buttonBold.setAttribute('data-tooltip', 'Bold ('+item.osModifier+'+B)');
         item.menu.appendChild(buttonBold);
     }
     function buttonLink(item) {
@@ -367,7 +372,7 @@
         buttonLink.classList.add('muds-item');
         buttonLink.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M17 7h-4v2h4c1.65 0 3 1.35 3 3s-1.35 3-3 3h-4v2h4c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-6 8H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-2zm-3-4h8v2H8z"/></svg>';
         buttonLink.setAttribute('onclick',item.orignal_input.id + '.buttonLinkAction()');
-        buttonLink.setAttribute('data-tooltip', 'Create link');
+        buttonLink.setAttribute('data-tooltip', 'Create link ('+item.osModifier+'+L)');
         item.menu.appendChild(buttonLink);
     }
     function buttonCut(item) {
@@ -375,7 +380,7 @@
         buttonCut.classList.add('muds-item');
         buttonCut.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19,3L13,9L15,11L22,4V3M12,12.5A0.5,0.5 0 0,1 11.5,12A0.5,0.5 0 0,1 12,11.5A0.5,0.5 0 0,1 12.5,12A0.5,0.5 0 0,1 12,12.5M6,20A2,2 0 0,1 4,18C4,16.89 4.9,16 6,16A2,2 0 0,1 8,18C8,19.11 7.1,20 6,20M6,8A2,2 0 0,1 4,6C4,4.89 4.9,4 6,4A2,2 0 0,1 8,6C8,7.11 7.1,8 6,8M9.64,7.64C9.87,7.14 10,6.59 10,6A4,4 0 0,0 6,2A4,4 0 0,0 2,6A4,4 0 0,0 6,10C6.59,10 7.14,9.87 7.64,9.64L10,12L7.64,14.36C7.14,14.13 6.59,14 6,14A4,4 0 0,0 2,18A4,4 0 0,0 6,22A4,4 0 0,0 10,18C10,17.41 9.87,16.86 9.64,16.36L12,14L19,21H22V20L9.64,7.64Z" /></svg>';
         buttonCut.setAttribute('onclick',item.orignal_input.id + '.buttonCutAction()');
-        buttonCut.setAttribute('data-tooltip', 'Cut');
+        buttonCut.setAttribute('data-tooltip', 'Cut ('+item.osModifier+'+X)');
         item.menu.appendChild(buttonCut);
     }
     function buttonCopy(item) {
@@ -383,7 +388,7 @@
         buttonCopy.classList.add('muds-item');
         buttonCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11l-6-6zM8 21V7h6v5h5v9H8z"/></svg>';
         buttonCopy.setAttribute('onclick',item.orignal_input.id + '.buttonCopyAction()');
-        buttonCopy.setAttribute('data-tooltip', 'Copy');
+        buttonCopy.setAttribute('data-tooltip', 'Copy ('+item.osModifier+'+C)');
         item.menu.appendChild(buttonCopy);
     }
     function buttonUndo(item) {
@@ -391,7 +396,7 @@
         buttonUndo.classList.add('muds-item');
         buttonUndo.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M12.5 8c-2.65 0-5.05.99-6.9 2.6L2 7v9h9l-3.62-3.62c1.39-1.16 3.16-1.88 5.12-1.88 3.54 0 6.55 2.31 7.6 5.5l2.37-.78C21.08 11.03 17.15 8 12.5 8z"/></svg>';
         buttonUndo.setAttribute('onclick', item.orignal_input.id + '.buttonUndoAction()');
-        buttonUndo.setAttribute('data-tooltip', 'Undo');
+        buttonUndo.setAttribute('data-tooltip', 'Undo ('+item.osModifier+'+Z)');
         item.menu.appendChild(buttonUndo);
     }
     function buttonRedo(item) {
@@ -399,7 +404,7 @@
         buttonRedo.classList.add('muds-item');
         buttonRedo.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M18.4 10.6C16.55 8.99 14.15 8 11.5 8c-4.65 0-8.58 3.03-9.96 7.22L3.9 16c1.05-3.19 4.05-5.5 7.6-5.5 1.95 0 3.73.72 5.12 1.88L13 16h9V7l-3.6 3.6z"/></svg>';
         buttonRedo.setAttribute('onclick',item.orignal_input.id + '.buttonRedoAction()');
-        buttonRedo.setAttribute('data-tooltip', 'Redo');
+        buttonRedo.setAttribute('data-tooltip', 'Redo (SHIFT+'+item.osModifier+'+Z)');
         item.menu.appendChild(buttonRedo);
     }
     function buttonChangeColor(item) {
@@ -407,7 +412,7 @@
         buttonChangeColor.classList.add('muds-item');
         buttonChangeColor.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill-opacity=".36" d="M0 20h24v4H0v-4z"/><path d="M11 3L5.5 17h2.25l1.12-3h6.25l1.12 3h2.25L13 3h-2zm-1.38 9L12 5.67 14.38 12H9.62z"/></svg>';
         buttonChangeColor.setAttribute('onclick',item.orignal_input.id + '.buttonChangeColorAction()');
-        buttonChangeColor.setAttribute('data-tooltip', 'Text color');
+        buttonChangeColor.setAttribute('data-tooltip', 'Text color (SHIFT+'+item.osModifier+'+C)');
         item.menu.appendChild(buttonChangeColor);
     }
     function buttonGetImage(item) {
@@ -431,7 +436,7 @@
         buttonStrikeThrough.classList.add('muds-item');
         buttonStrikeThrough.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M7.24 8.75c-.26-.48-.39-1.03-.39-1.67 0-.61.13-1.16.4-1.67.26-.5.63-.93 1.11-1.29.48-.35 1.05-.63 1.7-.83.66-.19 1.39-.29 2.18-.29.81 0 1.54.11 2.21.34.66.22 1.23.54 1.69.94.47.4.83.88 1.08 1.43s.38 1.15.38 1.81h-3.01c0-.31-.05-.59-.15-.85-.09-.27-.24-.49-.44-.68-.2-.19-.45-.33-.75-.44-.3-.1-.66-.16-1.06-.16-.39 0-.74.04-1.03.13s-.53.21-.72.36c-.19.16-.34.34-.44.55-.1.21-.15.43-.15.66 0 .48.25.88.74 1.21.38.25.77.48 1.41.7H7.39c-.05-.08-.11-.17-.15-.25zM21 12v-2H3v2h9.62c.18.07.4.14.55.2.37.17.66.34.87.51s.35.36.43.57c.07.2.11.43.11.69 0 .23-.05.45-.14.66-.09.2-.23.38-.42.53-.19.15-.42.26-.71.35-.29.08-.63.13-1.01.13-.43 0-.83-.04-1.18-.13s-.66-.23-.91-.42c-.25-.19-.45-.44-.59-.75s-.25-.76-.25-1.21H6.4c0 .55.08 1.13.24 1.58s.37.85.65 1.21c.28.35.6.66.98.92.37.26.78.48 1.22.65.44.17.9.3 1.38.39.48.08.96.13 1.44.13.8 0 1.53-.09 2.18-.28s1.21-.45 1.67-.79c.46-.34.82-.77 1.07-1.27s.38-1.07.38-1.71c0-.6-.1-1.14-.31-1.61-.05-.11-.11-.23-.17-.33H21V12z"/></svg>';
         buttonStrikeThrough.setAttribute('onclick',item.orignal_input.id + '.buttonStrikeThroughAction()');
-        buttonStrikeThrough.setAttribute('data-tooltip', 'Strike Through');
+        buttonStrikeThrough.setAttribute('data-tooltip', 'Strike Through ('+item.osModifier+'+S)');
         item.menu.appendChild(buttonStrikeThrough);
     }
     function buttonDelete(item) {
@@ -447,7 +452,7 @@
         buttonSelectAll.classList.add('muds-item');
         buttonSelectAll.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 5h2V3c-1.1 0-2 .9-2 2zm0 8h2v-2H3v2zm4 8h2v-2H7v2zM3 9h2V7H3v2zm10-6h-2v2h2V3zm6 0v2h2c0-1.1-.9-2-2-2zM5 21v-2H3c0 1.1.9 2 2 2zm-2-4h2v-2H3v2zM9 3H7v2h2V3zm2 18h2v-2h-2v2zm8-8h2v-2h-2v2zm0 8c1.1 0 2-.9 2-2h-2v2zm0-12h2V7h-2v2zm0 8h2v-2h-2v2zm-4 4h2v-2h-2v2zm0-16h2V3h-2v2zM7 17h10V7H7v10zm2-8h6v6H9V9z"/></svg>';
         buttonSelectAll.setAttribute('onclick',item.orignal_input.id + '.buttonSelectAllAction()');
-        buttonSelectAll.setAttribute('data-tooltip', 'Select all');
+        buttonSelectAll.setAttribute('data-tooltip', 'Select all ('+item.osModifier+'+A)');
         item.menu.appendChild(buttonSelectAll);
     }
     function buttonJustification(item) {
@@ -468,7 +473,7 @@
         buttonJustifyCenter.classList.add('muds-item');
         buttonJustifyCenter.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M7 15v2h10v-2H7zm-4 6h18v-2H3v2zm0-8h18v-2H3v2zm4-6v2h10V7H7zM3 3v2h18V3H3z"/></svg>';
         buttonJustifyCenter.setAttribute('onclick',item.orignal_input.id + '.buttonJustifyCenterAction()');
-        buttonJustifyCenter.setAttribute('data-tooltip', 'Justify center');
+        buttonJustifyCenter.setAttribute('data-tooltip', 'Justify center ('+item.osModifier+'+Up/Down Arrow)');
         item.menu.appendChild(buttonJustifyCenter);
     }
     function buttonJustifyLeft(item) {
@@ -476,7 +481,7 @@
         buttonJustifyLeft.classList.add('muds-item');
         buttonJustifyLeft.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg>';
         buttonJustifyLeft.setAttribute('onclick',item.orignal_input.id + '.buttonJustifyLeftAction()');
-        buttonJustifyLeft.setAttribute('data-tooltip', 'Justify Left');
+        buttonJustifyLeft.setAttribute('data-tooltip', 'Justify Left ('+item.osModifier+'+Left Arrow)');
         item.menu.appendChild(buttonJustifyLeft);
     }
     function buttonJustifyRight(item) {
@@ -484,7 +489,7 @@
         buttonJustifyRight.classList.add('muds-item');
         buttonJustifyRight.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 21h18v-2H3v2zm6-4h12v-2H9v2zm-6-4h18v-2H3v2zm6-4h12V7H9v2zM3 3v2h18V3H3z"/></svg>';
         buttonJustifyRight.setAttribute('onclick',item.orignal_input.id + '.buttonJustifyRightAction()');
-        buttonJustifyRight.setAttribute('data-tooltip', 'Justify Right');
+        buttonJustifyRight.setAttribute('data-tooltip', 'Justify Right ('+item.osModifier+'+Right Arrow)');
         item.menu.appendChild(buttonJustifyRight);
     }
     function buttonIndent(item) {
@@ -492,7 +497,7 @@
         buttonIndent.classList.add('muds-item');
         buttonIndent.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM3 8v8l4-4-4-4zm8 9h10v-2H11v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg>';
         buttonIndent.setAttribute('onclick',item.orignal_input.id + '.buttonIndentAction()');
-        buttonIndent.setAttribute('data-tooltip', 'Indent');
+        buttonIndent.setAttribute('data-tooltip', 'Indent (SHIFT+'+item.osModifier+'+Right Arrow)');
         item.menu.appendChild(buttonIndent);
     }
     function buttonOutdent(item) {
@@ -500,7 +505,7 @@
         buttonOutdent.classList.add('muds-item');
         buttonOutdent.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 17h10v-2H11v2zm-8-5l4 4V8l-4 4zm0 9h18v-2H3v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg>';
         buttonOutdent.setAttribute('onclick',item.orignal_input.id + '.buttonOutdentAction()');
-        buttonOutdent.setAttribute('data-tooltip', 'Outdent');
+        buttonOutdent.setAttribute('data-tooltip', 'Outdent (SHIFT+'+item.osModifier+'+Left Arrow)');
         item.menu.appendChild(buttonOutdent);
     }
     function buttonPrintMe(item) {
@@ -508,7 +513,7 @@
         buttonPrintMe.classList.add('muds-item');
         buttonPrintMe.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M19 8h-1V3H6v5H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zM8 5h8v3H8V5zm8 14H8v-4h8v4zm2-4v-2H6v2H4v-4c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v4h-2z"/><circle cx="18" cy="11.5" r="1"/></svg>';
         buttonPrintMe.setAttribute('onclick',item.orignal_input.id + '.buttonPrintMeAction()');
-        buttonPrintMe.setAttribute('data-tooltip', 'Print');
+        buttonPrintMe.setAttribute('data-tooltip', 'Print ('+item.osModifier+'+P)');
         item.menu.appendChild(buttonPrintMe);
     }
     function buttonShowHTML(item) {
@@ -516,7 +521,7 @@
         buttonShowHTML.classList.add('muds-item','show-html');
         buttonShowHTML.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>';
         buttonShowHTML.setAttribute('onclick',item.orignal_input.id + '.buttonShowHTMLAction(event)');
-        buttonShowHTML.setAttribute('data-tooltip', 'Show HTML');
+        buttonShowHTML.setAttribute('data-tooltip', 'Show HTML ('+item.osModifier+'+H)');
         item.menu.appendChild(buttonShowHTML);
     }
     function buttonShowText(item) {
@@ -635,6 +640,14 @@
                 if(e.metaKey === true || e.ctrlKey === true) {
                     e.preventDefault();
                     muds.prototype.buttonBodyTextAction();
+                }
+            }
+
+            // Blockquote
+            if(e.keyCode === 81) {
+                if(e.metaKey === true || e.ctrlKey === true) {
+                    e.preventDefault();
+                    muds.prototype.buttonBlockquoteAction();
                 }
             }
 

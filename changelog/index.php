@@ -51,6 +51,7 @@
 <!--                            <li><span class="tag">Ctrl/Cmd + S</span>: Strikethrough</li>-->
 <!--                            <li><span class="tag">Ctrl/Cmd + L</span>: Open "Insert Link" dialog</li>-->
 <!--                            <li><span class="tag">Ctrl/Cmd + 0</span>: Body Text</li>-->
+<!--                            <li><span class="tag">Ctrl/Cmd + Q</span>: Blockquote</li>-->
 <!--                            <li><span class="tag">Ctrl/Cmd + 1</span>: Header 1</li>-->
 <!--                            <li><span class="tag">Ctrl/Cmd + 2</span>: Header 2</li>-->
 <!--                            <li><span class="tag">Ctrl/Cmd + 3</span>: Header 3</li>-->
