@@ -258,7 +258,7 @@
         const editorContent = document.querySelector(".muds-content");
         const formattedText = editorContent.innerHTML;
         const myWindow = window.open("", "muds - Print", "width=768,height=600");
-        myWindow.document.write('<html><head><title>muds - Print</title><style>h1,h2{margin:0 0 1rem!important}h3,p{margin:0 0 .5rem!important}body,html{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";color:#333!important;margin:10px;padding:0}h1{font-size:2.5rem!important}h2{font-size:2rem!important}h3{font-size:1.5rem!important}p{font-size:1rem!important}a{color:#61aeee!important}ol,ul{margin-left:1.5rem}</style></head><body>');
+        myWindow.document.write('<html><head><title>muds - Print</title><style>h1,h2{margin:0 0 1rem!important;font-weight:700!important}h1,h2,h3{font-weight:700!important}h3,p{margin:0 0 .5rem!important}a,blockquote::before{color:#61aeee!important}h1{font-size:2.5rem!important}h2{font-size:2rem!important}h3{font-size:1.5rem!important}blockquote,p{font-size:1rem!important}p{font-weight:400!important}ol,ul{margin-left:1.5rem!important}blockquote{margin:1rem 3rem!important;font-style:italic!important;color:#555!important;padding:1.2em 30px 1.2em 50px!important;border-left:8px solid #61aeee!important;line-height:1.6!important;position:relative!important;background:#EDEDED!important}blockquote::before{font-family:Arial!important;content:"\\201C"!important;font-size:4em!important;position:absolute!important;left:10px!important;top:-10px!important}</style></head><body>');
         myWindow.document.write(formattedText);
         myWindow.document.write('</body></html>');
         myWindow.document.close();
