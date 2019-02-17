@@ -60,7 +60,7 @@ dropdown-item >
         var editor = new muds({
             selector: 'editor',
             height: '342px',
-            content: '<h1>Try the MUDS editor today</h1><p>No matter what you\'re building, <a href="#0">MUDS has you covered</a>. From content management to email marketing, here are our customers\' most common uses:</p><ul><li>Content Management Systems</li><li>Learning Management Systems</li><li>Customer Relationship Management and marketing automation</li></ul><p>Our team is hard at work, creating and adding new features to take the Javascript web WYSIWYG editing capabilities to the next level.</p>',
+            content: '<h1>Try the MUDS editor today</h1><p>No matter what you\'re building, <a href="#0">MUDS has you covered</a>. From content management to email marketing, here are our customers\' most common uses:</p><ul><li>Content Management Systems</li><li>Learning Management Systems</li><li>Customer Relationship Management and marketing automation</li></ul><blockquote>Our team is hard at work, creating and adding new features to take the Javascript web WYSIWYG editing capabilities to the next level.</blockquote>',
             theme: "dark",
             resize: true,
             keybindings: true,

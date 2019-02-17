@@ -29,7 +29,7 @@
 <!--                    <li>Adjusting fontsize of header dropdown</li>-->
 <!--                    <li>Adding tooltips to menu items</li>-->
 <!--                    <li>Adding Blockquote</li>-->
-<!--                    <li>Change darkmode link color from pink to blue</li>-->
+<!--                    <li>Change darkmode link color from pink to blue</li>-->w
 <!--                    <li>Add keybindings:-->
 <!--                        <ul>-->
 <!--                            <li><span class="tag">Tab</span>: inserts 4 spaces at the cursor position</li>-->

@@ -393,5 +393,9 @@
     border: 2px solid #202125;
     background: #191A1D;
     color: #eee !important;
+    blockquote {
+      background: #333 !important;
+      color: #eee !important;
+    }
   }
 }
