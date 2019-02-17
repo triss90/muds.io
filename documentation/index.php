@@ -351,6 +351,8 @@ var editor = new muds({
 <!--                    <li><span class="tag">Ctrl/Cmd + 1</span>: Header 1</li>-->
 <!--                    <li><span class="tag">Ctrl/Cmd + 2</span>: Header 2</li>-->
 <!--                    <li><span class="tag">Ctrl/Cmd + 3</span>: Header 3</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + .</span>: Unordered List</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + ,</span>: Ordered List</li>-->
 <!--                </ul>-->
 <!--                <br>-->
 <!--                <h3>Example:</h3>-->
