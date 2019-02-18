@@ -7,7 +7,7 @@
                 <p class="desc">Your powerful, lightweight editor.</p>
                 <br><br>
                 <a href="/documentation/" class="button secondary big"><i class="fa fa-book" aria-hidden="true"></i> Documentation</a>
-                <a href="/download/muds-editor-v1.3.0.zip" class="button primary big" download><i class="fa fa-download" aria-hidden="true"></i> Download v1.2.1</a>
+                <a href="/download/muds-editor-v1.3.0.zip" class="button primary big" download><i class="fa fa-download" aria-hidden="true"></i> Download v1.3.0</a>
                 <br><br><br>
                 <p class="copyright">️Made with ❤️ by <a href="https://tristanwhite.info" target="_blank" title="Tristan White">Tristan White</a></p>
                 <p class="copyright">&copy; <?php echo date("Y"); ?></p>
