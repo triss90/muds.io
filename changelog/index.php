@@ -130,15 +130,16 @@
                     <li><strike>A redesign of HTML editing mode.</strike></li>
                     <li>Custom themes or some version of injected custom CSS</li>
                     <li>Better image handling capabilities</li>
-                    <li>Tooltips on menuitems</li>
+                    <li><strike>Tooltips on menuitems</strike></li>
                     <li>Color control (both text and background color)</li>
                     <li><strike>Custom font type support</strike></li>
                     <li>Editible links</li>
                     <li>Custom keybindings</li>
                     <li><strike>In-, and outdent support</strike></li>
                     <li>Embedded video support</li>
-                    <li>Custom keybindings</li>
-                    <li>Code and quoteblock support</li>
+                    <li><strike>Custom keybindings</strike></li>
+                    <li>Code block support</li>
+                    <li><strike>Quoteblock support</strike></li>
                 </ul>
                 <br>
                 <p>If you have any suggestions, feel free to reach out to <a href="https://twitter.com/Triss90" target="_blank">Tristan White</a>.</p>
