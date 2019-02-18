@@ -65,7 +65,7 @@ dropdown-item >
             resize: true,
             keybindings: true,
             menuStyle: 'custom',
-            tooltips: true,
+            //tooltips: true,
             menuCustom: [
                 'header',
                 'fonts',

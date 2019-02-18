@@ -296,6 +296,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/assets\/icons\/baseline-format_quote-24px.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/icons\/baseline-format_quote-24px.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/assets\/icons\/baseline-fullscreen-24px.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1229,6 +1239,86 @@
 		"ft": 4096,
 		"oA": 0,
 		"oAP": "\/muds-v1.2.0\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/muds-v1.2.1\/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/muds-v1.2.1\/index.html",
+		"oF": 0
+		},
+	"\/muds-v1.2.1\/muds.min-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/muds-v1.2.1\/muds.min-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/muds-v1.2.1\/muds.min-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/muds-v1.2.1\/muds.min-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/muds-v1.2.1\/muds.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/muds-v1.2.1\/muds.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/muds-v1.2.1\/muds.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/muds-v1.2.1\/muds.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/muds-v1.2.1\/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/muds-v1.2.1\/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/muds-v1.2.1\/README.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/muds-v1.2.1\/README.html",
+		"oF": 0
+		},
+	"\/muds-v1.2.1\/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/muds-v1.2.1\/README.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
