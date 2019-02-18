@@ -134,7 +134,6 @@
                     <li>Color control (both text and background color)</li>
                     <li><strike>Custom font type support</strike></li>
                     <li>Editible links</li>
-                    <li>Custom keybindings</li>
                     <li><strike>In-, and outdent support</strike></li>
                     <li>Embedded video support</li>
                     <li><strike>Custom keybindings</strike></li>
