@@ -794,6 +794,13 @@
 		"oAP": "\/download\/muds-editor-v1.3.0.zip",
 		"oF": 0
 		},
+	"\/download\/muds-editor-v1.3.1.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/download\/muds-editor-v1.3.1.zip",
+		"oF": 0
+		},
 	"\/google9a2ba4a21ba11ef5.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -813,12 +820,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/LICENSE",
-		"oF": 0
-		},
-	"\/muds": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "\/build\/muds",
 		"oF": 0
 		},
 	"\/muds-v1.0.0\/index.html": {
@@ -1326,6 +1327,139 @@
 		"ft": 4096,
 		"oA": 0,
 		"oAP": "\/muds-v1.2.1\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/muds-v1.3.0\/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/muds-v1.3.0\/index.html",
+		"oF": 0
+		},
+	"\/muds-v1.3.0\/muds.min-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/muds-v1.3.0\/muds.min-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/muds-v1.3.0\/muds.min-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/muds-v1.3.0\/muds.min-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/muds-v1.3.0\/muds.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/muds-v1.3.0\/muds.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/muds-v1.3.0\/muds.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/muds-v1.3.0\/muds.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/muds-v1.3.0\/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/muds-v1.3.0\/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/muds-v1.3.0\/README.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/muds-v1.3.0\/README.html",
+		"oF": 0
+		},
+	"\/muds-v1.3.0\/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/muds-v1.3.0\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/muds-v1.3.1\/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/muds-v1.3.1\/index.html",
+		"oF": 0
+		},
+	"\/muds-v1.3.1\/muds.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/muds-v1.3.1\/muds.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/muds-v1.3.1\/muds.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/muds-v1.3.1\/muds.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/muds-v1.3.1\/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/muds-v1.3.1\/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/muds-v1.3.1\/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/muds-v1.3.1\/README.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,

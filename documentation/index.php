@@ -353,6 +353,9 @@ var editor = new muds({
                     <li><span class="tag">Ctrl/Cmd + 3</span>: Header 3</li>
                     <li><span class="tag">Ctrl/Cmd + .</span>: Unordered List</li>
                     <li><span class="tag">Ctrl/Cmd + ,</span>: Ordered List</li>
+                    <li><span class="tag">Shift + Enter</span>: New line</li>
+<!--                    <li><span class="tag">Ctrl/Cmd + Enter</span>: Enter/Exit Fullscreen</li>-->
+<!--                    <li><span class="tag">Ctrl/Cmd + O</span>: Show Text Content</li>-->
                 </ul>
                 <br>
                 <h3>Example:</h3>
@@ -367,7 +370,7 @@ var editor = new muds({
                     </pre>
                     <pre data-lang="html">
 &#x3C;!-- Include the MUDS stylesheet --&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.3.0/muds.min.css&#x22;&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.3.1/muds.min.css&#x22;&#x3E;
 
 &#x3C;!-- Create the editor container --&#x3E;
 &#x3C;div id=&#x22;editor&#x22;&#x3E;&#x3C;/div&#x3E;

@@ -21,6 +21,14 @@
         <div class="row">
             <div class="tiny-12 medium-6">
 
+                <h2>MUDS v1.3.1 <a href="/download/muds-editor-v1.3.1.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
+                <ul>
+                    <li>Add keybinding for fullscreen: <span class="tag">Ctrl/Cmd + Enter</span></li>
+                    <li>Add keybinding display of text content: <span class="tag">Ctrl/Cmd + O</span></li>
+                </ul>
+
+                <br><br>
+
                 <h2>MUDS v1.3.0 <a href="/download/muds-editor-v1.3.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
                     <li>Adjusting default heights of editor content and dropdowns</li>
