@@ -291,7 +291,7 @@
         buttonFullScreen.classList.add('muds-item','fullscreen');
         buttonFullScreen.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>';
         buttonFullScreen.setAttribute('onclick', item.original_input.id + '.enterFullScreen()');
-        buttonFullScreen.setAttribute('data-tooltip', 'Fullscreen');
+        buttonFullScreen.setAttribute('data-tooltip', 'Fullscreen ('+item.osModifier+'+Enter)');
         item.menu.appendChild(buttonFullScreen);
     }
     function buttonHeader(item) {
@@ -336,7 +336,7 @@
         buttonUnorderedList.classList.add('muds-item');
         buttonUnorderedList.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg>';
         buttonUnorderedList.setAttribute('onclick', item.original_input.id + '.buttonUnorderedListAction()');
-        buttonUnorderedList.setAttribute('data-tooltip', 'Unordered list  ('+item.osModifier+'+.)');
+        buttonUnorderedList.setAttribute('data-tooltip', 'Unordered list ('+item.osModifier+'+.)');
         item.menu.appendChild(buttonUnorderedList);
     }
     function buttonOrderedList(item) {
@@ -554,7 +554,7 @@
 
         editor.content.addEventListener("keydown", function(e) {
 
-            //console.log(e.keyCode);
+            console.log(e.keyCode);
 
             // Tab
             if(e.keyCode === 9) {
@@ -709,7 +709,7 @@
                 }
             }
 
-            // Full scren
+            // Fullscreen
             if(e.keyCode === 13) {
 
                 if(e.metaKey === true || e.ctrlKey === true) {
@@ -719,6 +719,14 @@
                     } else {
                         muds.prototype.enterFullScreen(editorObj);
                     }
+                }
+            }
+
+            // Show Text Content
+            if(e.keyCode === 79) {
+                if(e.metaKey === true || e.ctrlKey === true) {
+                    e.preventDefault();
+                    muds.prototype.buttonShowTextAction();
                 }
             }
 
