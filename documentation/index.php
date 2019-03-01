@@ -347,15 +347,15 @@ var editor = new muds({
                     <li><span class="tag">Ctrl/Cmd + S</span>: Strikethrough</li>
                     <li><span class="tag">Ctrl/Cmd + L</span>: Open "Insert Link" dialog</li>
                     <li><span class="tag">Ctrl/Cmd + 0</span>: Body Text</li>
-                    <li><span class="tag">Ctrl/Cmd + Q</span>: Blockquote</li>
+                    <li><span class="tag">Shift + Ctrl/Cmd + B</span>: Blockquote</li>
                     <li><span class="tag">Ctrl/Cmd + 1</span>: Header 1</li>
                     <li><span class="tag">Ctrl/Cmd + 2</span>: Header 2</li>
                     <li><span class="tag">Ctrl/Cmd + 3</span>: Header 3</li>
                     <li><span class="tag">Ctrl/Cmd + .</span>: Unordered List</li>
                     <li><span class="tag">Ctrl/Cmd + ,</span>: Ordered List</li>
                     <li><span class="tag">Shift + Enter</span>: New line</li>
-<!--                    <li><span class="tag">Ctrl/Cmd + Enter</span>: Enter/Exit Fullscreen</li>-->
-<!--                    <li><span class="tag">Ctrl/Cmd + O</span>: Show Text Content</li>-->
+                    <li><span class="tag">Ctrl/Cmd + Enter</span>: Enter/Exit Fullscreen</li>
+                    <li><span class="tag">Ctrl/Cmd + O</span>: Show Text Content</li>
                 </ul>
                 <br>
                 <h3>Example:</h3>

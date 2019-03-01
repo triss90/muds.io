@@ -21,6 +21,13 @@
         <div class="row">
             <div class="tiny-12 medium-6">
 
+<!--                <h2>MUDS v1.3.2 <a href="/download/muds-editor-v1.3.2.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>-->
+<!--                <ul>-->
+<!--                    <li>Update blockquote keybinding from <span class="tag">Ctrl/Cmd + Q</span> to <span class="tag">Shift + Ctrl/Cmd + B</span></li>-->
+<!--                </ul>-->
+<!---->
+<!--                <br><br>-->
+
                 <h2>MUDS v1.3.1 <a href="/download/muds-editor-v1.3.1.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
                     <li>Add keybinding for fullscreen: <span class="tag">Ctrl/Cmd + Enter</span></li>
