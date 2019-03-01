@@ -303,7 +303,7 @@
             '<li><button class="muds-h2" title="Healine 2 (cmd+2)" onclick="'+item.original_input.id + '.buttonH2Action()'+'">Header 2</button></li>' +
             '<li><button class="muds-h3" title="Healine 3 (cmd+3)" onclick="'+item.original_input.id + '.buttonH3Action()'+'">Header 3</button></li>' +
             '<li><button class="muds-body" title="Body Text (cmd+0)" onclick="'+item.original_input.id + '.buttonBodyTextAction()'+'">Body</button></li>' +
-            '<li><button class="muds-blockquote" title="Blockquote (cmd+Q)" onclick="'+item.original_input.id + '.buttonBlockquoteAction()'+'">Blockquote</button></li>' +
+            '<li><button class="muds-blockquote" title="Blockquote (shift+cmd+B)" onclick="'+item.original_input.id + '.buttonBlockquoteAction()'+'">Blockquote</button></li>' +
             '</ul>';
         item.menu.appendChild(buttonHeader);
     }
@@ -368,7 +368,7 @@
         buttonBlockquote.classList.add('muds-item');
         buttonBlockquote.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/><path d="M0 0h24v24H0z" fill="none"/></svg>\n';
         buttonBlockquote.setAttribute('onclick',item.original_input.id + '.buttonBlockquoteAction()');
-        buttonBlockquote.setAttribute('data-tooltip', 'Blockquote ('+item.osModifier+'+Q)');
+        buttonBlockquote.setAttribute('data-tooltip', 'Blockquote (SHIFT+'+item.osModifier+'+B)');
         item.menu.appendChild(buttonBlockquote);
     }
     function buttonBold(item) {
