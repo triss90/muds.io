@@ -111,6 +111,16 @@
       }
     }
   }
+  .muds-seperator {
+    background: #d1d1d1;
+    width: 2px;
+    height: 1rem;
+    position: relative;
+    display: inline-block;
+    margin: 0px 1rem;
+    top: -2px;
+
+  }
   .muds-dropdown {
     position: relative;
     display: inline-block;

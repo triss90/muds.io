@@ -285,6 +285,11 @@
 
 
     // Menu buttons
+    function buttonSeperator(item) {
+        const buttonSeperator = document.createElement('span');
+        buttonSeperator.classList.add('muds-seperator');
+        item.menu.appendChild(buttonSeperator);
+    }
     function buttonFullScreen(item) {
         const buttonFullScreen = document.createElement('button');
         buttonFullScreen.classList.add('muds-item','fullscreen');
@@ -735,15 +740,17 @@
         if (item.menu_style === "full" || item.menu_style === undefined ) {
             buttonHeader(item);
             buttonFonts(item);
+            buttonBold(item);
+            buttonItalic(item);
             buttonUnderline(item);
             buttonStrikeThrough(item);
-            buttonItalic(item);
-            buttonBold(item);
+            buttonSeperator(item);
             buttonLink(item);
             buttonChangeColor(item);
             buttonGetImage(item);
             buttonUndo(item);
             buttonRedo(item);
+            buttonSeperator(item);
             buttonJustification(item);
             buttonUnorderedList(item);
             buttonOrderedList(item);
@@ -751,6 +758,7 @@
             buttonCopy(item);
             buttonCut(item);
             buttonDelete(item);
+            buttonSeperator(item);
             buttonPrintMe(item);
             buttonShowHTML(item);
             buttonShowText(item);
@@ -760,7 +768,7 @@
             buttonItalic(item);
             buttonUnderline(item);
             buttonStrikeThrough(item);
-            buttonLink(item);
+            buttonChangeColor(item);
         } else if (item.menu_style === "custom") {
             function buildCustomMenu(menuItem) {
                 if (menuItem === "header"){buttonHeader(item);}
@@ -791,6 +799,7 @@
                 if (menuItem === "showHTML"){buttonShowHTML(item);}
                 if (menuItem === "showText"){buttonShowText(item);}
                 if (menuItem === "fullScreen"){buttonFullScreen(item);}
+                if (menuItem === "seperator"){buttonSeperator(item);}
             }
             const customMenuItems = item.menu_custom;
             for (var i = 0; i < customMenuItems.length; i++) {

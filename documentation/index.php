@@ -86,6 +86,7 @@ var editor3 = new muds({
                 <br>
                 <h3>Available menu items include:</h3>
                 <p>
+<!--                    <span class="tag">seperator</span>,-->
                     <span class="tag">header</span>,
                     <span class="tag">fonts</span>,
                     <span class="tag">underline</span>,
@@ -125,6 +126,7 @@ var editor = new muds({
     selector: 'editor',
     menuStyle: 'custom',
     menuCustom: [
+<!--        'seperator',-->
         'header',
         'fonts',
         'underline',
