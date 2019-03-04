@@ -42,6 +42,8 @@ var editor = new muds({
         'image',
         'undo',
         'redo',
+        'blockquote',
+        'code',
         'unorderedList',
         'orderedList',
         'selectAll',
