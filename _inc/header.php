@@ -1,3 +1,7 @@
+<?php
+    $mudsVersion = "1.3.4";
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -20,7 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- https://fontawesome.com/v4.7.0/ -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridder-css@1.5.1/gridder.min.css">
     <link rel="stylesheet" href="/assets/css/app.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/muds-editor@1.3.4/muds.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds.min.css">
 </head>
 <body>
 

@@ -20,13 +20,13 @@
                 <div class="codepen" data-height="410" data-theme-id="36048" data-default-tab="html" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
                     <pre data-lang="html">
 &#x3C;!-- Include the MUDS stylesheet --&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.3.4/muds.min.css&#x22;&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds.min.css&#x22;&#x3E;
 
 &#x3C;!-- Create the editor container --&#x3E;
 &#x3C;div id=&#x22;editor&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;!-- Include the MUDS library --&#x3E;
-&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.3.4/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
 
 &#x3C;!-- Initialize MUDS editor --&#x3E;
 &#x3C;script&#x3E;
