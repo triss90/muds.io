@@ -180,7 +180,7 @@
                     <li><strike>In-, and outdent support</strike></li>
                     <li>Embedded video support</li>
                     <li><strike>Custom keybindings</strike></li>
-                    <li>Code block support</li>
+                    <li><strike>Code block support</strike></li>
                     <li><strike>Quoteblock support</strike></li>
                 </ul>
                 <br>
