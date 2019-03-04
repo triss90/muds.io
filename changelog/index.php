@@ -159,6 +159,7 @@
                     <li><strike>Tooltips on menuitems</strike></li>
                     <li>Color control (both text and background color)</li>
                     <li><strike>Custom font type support</strike></li>
+                    <li><strike>Separators</strike></li>
                     <li>Editible links</li>
                     <li><strike>In-, and outdent support</strike></li>
                     <li>Embedded video support</li>

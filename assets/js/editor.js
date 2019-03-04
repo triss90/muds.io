@@ -285,10 +285,10 @@
 
 
     // Menu buttons
-    function buttonSeperator(item) {
-        const buttonSeperator = document.createElement('span');
-        buttonSeperator.classList.add('muds-seperator');
-        item.menu.appendChild(buttonSeperator);
+    function buttonSeparator(item) {
+        const buttonSeparator = document.createElement('span');
+        buttonSeparator.classList.add('muds-separator');
+        item.menu.appendChild(buttonSeparator);
     }
     function buttonFullScreen(item) {
         const buttonFullScreen = document.createElement('button');
@@ -744,13 +744,13 @@
             buttonItalic(item);
             buttonUnderline(item);
             buttonStrikeThrough(item);
-            buttonSeperator(item);
+            buttonSeparator(item);
             buttonLink(item);
             buttonChangeColor(item);
             buttonGetImage(item);
             buttonUndo(item);
             buttonRedo(item);
-            buttonSeperator(item);
+            buttonSeparator(item);
             buttonJustification(item);
             buttonUnorderedList(item);
             buttonOrderedList(item);
@@ -758,7 +758,7 @@
             buttonCopy(item);
             buttonCut(item);
             buttonDelete(item);
-            buttonSeperator(item);
+            buttonSeparator(item);
             buttonPrintMe(item);
             buttonShowHTML(item);
             buttonShowText(item);
@@ -799,7 +799,7 @@
                 if (menuItem === "showHTML"){buttonShowHTML(item);}
                 if (menuItem === "showText"){buttonShowText(item);}
                 if (menuItem === "fullScreen"){buttonFullScreen(item);}
-                if (menuItem === "seperator"){buttonSeperator(item);}
+                if (menuItem === "separator"){buttonSeperator(item);}
             }
             const customMenuItems = item.menu_custom;
             for (var i = 0; i < customMenuItems.length; i++) {
