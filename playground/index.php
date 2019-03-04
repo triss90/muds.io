@@ -16,46 +16,7 @@
 
     <div id="editor"></div>
 
-    <br>
-
-    <div class="muds-toolbar">
-        <div class="muds-dropdown table">
-            <label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M5 4v3h5.5v12h3V7H19V4H5z"></path></svg></label>
-            <ul>
-                <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
-                <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
-                <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
-                <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
-                <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
-                <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
-                <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
-                <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
-                <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
-                <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
-            </ul>
-        </div>
-    </div>
-
-    <pre>
-dropdown-item >
-
-&.table {
-  ul {
-    width: calc(16px * 10);
-    padding: 5px;
-    li {
-      height: 13px;
-      width: 13px;
-      background: red;
-      float: left;
-      margin: 1.5px;
-      padding: 0;
-    }
-  }
-}
-    </pre>
-
-    <script src="/assets/js/editor.js"></script>
+    <script src="/assets/js/editor.js" ></script>
     <script>
         var editor = new muds({
             selector: 'editor',
@@ -65,36 +26,36 @@ dropdown-item >
             resize: true,
             keybindings: true,
             menuStyle: 'custom',
-            //tooltips: true,
+            tooltips: true,
             menuCustom: [
                 'header',
                 'fonts',
                 'underline',
-                'strikeThrough',
-                'bold',
-                'italic',
-                'link',
-                'blockquote',
-                'changeColor',
-                'image',
-                'undo',
-                'redo',
-                'justification',
-                'unorderedList',
-                'orderedList',
-                'selectAll',
-                'copy',
-                'cut',
-                'delete',
-                'justifyLeft',
-                'justifyCenter',
-                'justifyRight',
-                'indent',
-                'outdent',
-                'print',
-                'showHTML',
-                'showText',
-                'fullScreen'
+                // 'strikeThrough',
+                // 'bold',
+                // 'italic',
+                // 'link',
+                // 'blockquote',
+                // 'changeColor',
+                // 'image',
+                // 'undo',
+                // 'redo',
+                // 'justification',
+                // 'unorderedList',
+                // 'orderedList',
+                // 'selectAll',
+                // 'copy',
+                // 'cut',
+                // 'delete',
+                // 'justifyLeft',
+                // 'justifyCenter',
+                // 'justifyRight',
+                // 'indent',
+                // 'outdent',
+                // 'print',
+                // 'showHTML',
+                // 'showText',
+                // 'fullScreen'
             ]
         });
     </script>

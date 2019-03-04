@@ -98,7 +98,6 @@
     muds.prototype.buttonH3Action = function(string) {
         document.execCommand('formatBlock', false, 'h3');
     };
-
     muds.prototype.buttonFontDefaultAction = function(string) {
         document.execCommand('fontName', false, '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"');
     };
@@ -757,42 +756,48 @@
             buttonShowText(item);
             buttonFullScreen(item);
         } else if (item.menu_style === "minimal") {
+            buttonBold(item);
+            buttonItalic(item);
             buttonUnderline(item);
             buttonStrikeThrough(item);
-            buttonItalic(item);
-            buttonBold(item);
             buttonLink(item);
-            buttonUndo(item);
-            buttonRedo(item);
         } else if (item.menu_style === "custom") {
-            if (item.menu_custom.includes("header")){buttonHeader(item);}
-            if (item.menu_custom.includes("fonts")){buttonFonts(item);}
-            if (item.menu_custom.includes("underline")){buttonUnderline(item);}
-            if (item.menu_custom.includes("strikeThrough")){buttonStrikeThrough(item);}
-            if (item.menu_custom.includes("italic")){buttonItalic(item);}
-            if (item.menu_custom.includes("bold")){buttonBold(item);}
-            if (item.menu_custom.includes("link")){buttonLink(item);}
-            if (item.menu_custom.includes("blockquote")){buttonBlockquote(item);}
-            if (item.menu_custom.includes("changeColor")){buttonChangeColor(item);}
-            if (item.menu_custom.includes("image")){buttonGetImage(item);}
-            if (item.menu_custom.includes("undo")){buttonUndo(item);}
-            if (item.menu_custom.includes("redo")){buttonRedo(item);}
-            if (item.menu_custom.includes("justification")){buttonJustification(item);}
-            if (item.menu_custom.includes("unorderedList")){buttonUnorderedList(item);}
-            if (item.menu_custom.includes("orderedList")){buttonOrderedList(item);}
-            if (item.menu_custom.includes("selectAll")){buttonSelectAll(item);}
-            if (item.menu_custom.includes("copy")){buttonCopy(item);}
-            if (item.menu_custom.includes("cut")){buttonCut(item);}
-            if (item.menu_custom.includes("delete")){buttonDelete(item);}
-            if (item.menu_custom.includes("justifyLeft")){buttonJustifyLeft(item);}
-            if (item.menu_custom.includes("justifyCenter")){buttonJustifyCenter(item);}
-            if (item.menu_custom.includes("justifyRight")){buttonJustifyRight(item);}
-            if (item.menu_custom.includes("indent")){buttonIndent(item);}
-            if (item.menu_custom.includes("outdent")){buttonOutdent(item);}
-            if (item.menu_custom.includes("print")){buttonPrintMe(item);}
-            if (item.menu_custom.includes("showHTML")){buttonShowHTML(item);}
-            if (item.menu_custom.includes("showText")){buttonShowText(item);}
-            if (item.menu_custom.includes("fullScreen")){buttonFullScreen(item);}
+            function buildCustomMenu(menuItem) {
+                if (menuItem === "header"){buttonHeader(item);}
+                if (menuItem === "fonts"){buttonFonts(item);}
+                if (menuItem === "underline"){buttonUnderline(item);}
+                if (menuItem === "strikeThrough"){buttonStrikeThrough(item);}
+                if (menuItem === "italic"){buttonItalic(item);}
+                if (menuItem === "bold"){buttonBold(item);}
+                if (menuItem === "link"){buttonLink(item);}
+                if (menuItem === "blockquote"){buttonBlockquote(item);}
+                if (menuItem === "changeColor"){buttonChangeColor(item);}
+                if (menuItem === "image"){buttonGetImage(item);}
+                if (menuItem === "undo"){buttonUndo(item);}
+                if (menuItem === "redo"){buttonRedo(item);}
+                if (menuItem === "justification"){buttonJustification(item);}
+                if (menuItem === "unorderedList"){buttonUnorderedList(item);}
+                if (menuItem === "orderedList"){buttonOrderedList(item);}
+                if (menuItem === "selectAll"){buttonSelectAll(item);}
+                if (menuItem === "copy"){buttonCopy(item);}
+                if (menuItem === "cut"){buttonCut(item);}
+                if (menuItem === "delete"){buttonDelete(item);}
+                if (menuItem === "justifyLeft"){buttonJustifyLeft(item);}
+                if (menuItem === "justifyCenter"){buttonJustifyCenter(item);}
+                if (menuItem === "justifyRight"){buttonJustifyRight(item);}
+                if (menuItem === "indent"){buttonIndent(item);}
+                if (menuItem === "outdent"){buttonOutdent(item);}
+                if (menuItem === "print"){buttonPrintMe(item);}
+                if (menuItem === "showHTML"){buttonShowHTML(item);}
+                if (menuItem === "showText"){buttonShowText(item);}
+                if (menuItem === "fullScreen"){buttonFullScreen(item);}
+            }
+            const customMenuItems = item.menu_custom;
+            for (var i = 0; i < customMenuItems.length; i++) {
+                console.log(customMenuItems[i]);
+                buildCustomMenu(customMenuItems[i]);
+            }
+
         }
     }
 
