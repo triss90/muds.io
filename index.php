@@ -76,7 +76,7 @@ var editor = new muds({
 <script>
     var editor = new muds({
         selector: 'editor',
-        menuStyle: 'full', // full, minimal, custom
+        menuStyle: 'full',
         content: '<h1>Try the MUDS editor today</h1><p>No matter what you\'re building, MUDS has you covered. From content management to email marketing, here are our customers\' most common uses:</p><ul><li>Content Management Systems</li><li>Learning Management Systems</li><li>Customer Relationship Management and marketing automation</li></ul><br><p><a href="https://tristanwhite.info" target="_blank">Our team</a> is hard at work, creating and adding <a href="https://muds.io/changelog/">new features</a> to take the Javascript web WYSIWYG editing capabilities to the next level.</p><blockquote>The Muds editor has proven to seamlessly integrate with my webapp. It has offered me endless customizability, so as to suit my needs.<br>- Ronan Richardson</blockquote>',
         height: '370px'
     });
