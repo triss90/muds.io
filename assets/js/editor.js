@@ -821,7 +821,7 @@
         mudsContentElement.setAttribute('contenteditable','true');
         mudsContentElement.style.overflow = 'auto';
         mudsContentElement.style.height = editor.height;
-        if (editor.resize === true) { mudsContentElement.style.resize = 'vertical'; }
+        if (editor.resize !== false) { mudsContentElement.style.resize = 'vertical'; }
         if (editor.text !== undefined) { mudsContentElement.innerHTML = editor.text; }
         const mudsOutputElement = editor.output;
         mudsOutputElement.classList.add('muds-output');
