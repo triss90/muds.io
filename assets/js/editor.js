@@ -90,7 +90,6 @@
         document.execCommand('formatBlock', false, 'blockquote');
     };
     muds.prototype.buttonCodeBlockAction = function(string) {
-        console.log('test');
         document.execCommand('formatBlock', false, 'pre');
     };
     muds.prototype.buttonH1Action = function(string) {
