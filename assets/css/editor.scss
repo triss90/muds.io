@@ -119,7 +119,6 @@
     display: inline-block;
     margin: 0px 1rem;
     top: -2px;
-
   }
   .muds-dropdown {
     position: relative;
@@ -361,6 +360,9 @@
   .muds-toolbar {
     background: #202125;
     border: 2px solid #202125;
+    .muds-seperator {
+      background: #575757;
+    }
     .muds-item {
       color: #999;
       &.disabled {

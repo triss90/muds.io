@@ -30,6 +30,7 @@ var editor = new muds({
     selector: 'editor',
     menuStyle: 'custom',
     menuCustom: [
+        // 'seperator',
         'header',
         'fonts',
         'underline',
