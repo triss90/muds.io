@@ -8,5 +8,11 @@
   @media(max-width: 46em) {
     height: 140px;
   }
+}
 
+.doc-nav {
+  a {
+    margin: 0.5rem 0;
+    display: block;
+  }
 }

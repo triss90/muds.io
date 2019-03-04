@@ -43,6 +43,13 @@
 		"oAP": "\/_inc\/header.php",
 		"oF": 0
 		},
+	"\/_inc\/navigation-doc.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/_inc\/navigation-doc.php",
+		"oF": 0
+		},
 	"\/_inc\/navigation.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -741,11 +748,53 @@
 		"oAP": "\/changelog\/index.php",
 		"oF": 0
 		},
+	"\/documentation\/content-prefill\/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/documentation\/content-prefill\/index.php",
+		"oF": 0
+		},
+	"\/documentation\/custom-menu\/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/documentation\/custom-menu\/index.php",
+		"oF": 0
+		},
+	"\/documentation\/darkmode\/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/documentation\/darkmode\/index.php",
+		"oF": 0
+		},
+	"\/documentation\/editor-formatting\/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/documentation\/editor-formatting\/index.php",
+		"oF": 0
+		},
 	"\/documentation\/index.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/documentation\/index.php",
+		"oF": 0
+		},
+	"\/documentation\/keybindings\/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/documentation\/keybindings\/index.php",
+		"oF": 0
+		},
+	"\/documentation\/tooltips\/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/documentation\/tooltips\/index.php",
 		"oF": 0
 		},
 	"\/download\/muds-editor-v1.0.0.zip": {

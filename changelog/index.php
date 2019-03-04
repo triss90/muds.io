@@ -26,6 +26,7 @@
 <!--                    <li>Changing order of full and minimal menu option</li>-->
 <!--                    <li>Changing which menu items are available on the minimal menu option</li>-->
 <!--                    <li>Adding seperator item to menu</li>-->
+<!--                    <li>Fixing bug where resizing option didn't work automatically</li>-->
 <!--                </ul>-->
 <!---->
 <!--                <br><br>-->
@@ -159,7 +160,7 @@
                     <li><strike>Tooltips on menuitems</strike></li>
                     <li>Color control (both text and background color)</li>
                     <li><strike>Custom font type support</strike></li>
-                    <li><strike>Separators</strike></li>
+<!--                    <li><strike>Menu item separators</strike></li>-->
                     <li>Editible links</li>
                     <li><strike>In-, and outdent support</strike></li>
                     <li>Embedded video support</li>

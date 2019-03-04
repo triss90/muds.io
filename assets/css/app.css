@@ -265,6 +265,10 @@ ul {
     #menu-bg {
       height: 140px; } }
 
+.doc-nav a {
+  margin: 0.5rem 0;
+  display: block; }
+
 #changelog {
   padding: 100px 0; }
   #changelog h1 {
