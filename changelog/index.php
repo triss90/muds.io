@@ -24,7 +24,7 @@
                 <h2>MUDS v1.3.5 <a href="/download/muds-editor-v1.3.5.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
                     <li>Fix bug where separator didn't work with custom menu</li>
-                    <li>Adding support for codeblock</li>
+                    <li>Adding support for codeblocks</li>
                 </ul>
 
                 <br><br>
