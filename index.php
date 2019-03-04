@@ -12,7 +12,7 @@
                 <br><br>
                 <br>
                 <br>
-                <a href="/download/muds-editor-v1.3.2.zip" class="button primary" download><i class="fa fa-download" aria-hidden="true"></i> Download v1.3.2</a>
+                <a href="/download/muds-editor-v1.3.3.zip" class="button primary" download><i class="fa fa-download" aria-hidden="true"></i> Download v1.3.3</a>
                 <a href="https://github.com/triss90/muds.io" target="_blank" class="button secondary"><i class="fa fa-github" aria-hidden="true"></i> View on GitHub</a>
                 <br><br><br><br><br><br>
                 <div id="editor"></div>
@@ -44,13 +44,13 @@
                 <div class="codepen" data-height="410" data-theme-id="36048" data-default-tab="html" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
                     <pre data-lang="html">
 &#x3C;!-- Include the MUDS stylesheet --&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.3.2/muds.min.css&#x22;&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.3.3/muds.min.css&#x22;&#x3E;
 
 &#x3C;!-- Create the editor container --&#x3E;
 &#x3C;div id=&#x22;editor&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;!-- Include the MUDS library --&#x3E;
-&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.3.2/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.3.3/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
 
 &#x3C;!-- Initialize MUDS editor --&#x3E;
 &#x3C;script&#x3E;
@@ -63,7 +63,7 @@ var editor = new muds({
                     <pre data-lang="js"></pre>
                 </div>
 
-                <p>Or install the library with NPM: <span class="tag">npm i muds-editor</span>. Alternatively you can <a href="/download/muds-editor-v1.3.2.zip" download>download the newest version</a> and run MUDS locally.</p><br>
+                <p>Or install the library with NPM: <span class="tag">npm i muds-editor</span>. Alternatively you can <a href="/download/muds-editor-v1.3.3.zip" download>download the newest version</a> and run MUDS locally.</p><br>
 
             </div>
         </div>
@@ -78,7 +78,7 @@ var editor = new muds({
         selector: 'editor',
         menuStyle: 'full', // full, minimal, custom
         content: '<h1>Try the MUDS editor today</h1><p>No matter what you\'re building, MUDS has you covered. From content management to email marketing, here are our customers\' most common uses:</p><ul><li>Content Management Systems</li><li>Learning Management Systems</li><li>Customer Relationship Management and marketing automation</li></ul><br><p><a href="https://tristanwhite.info" target="_blank">Our team</a> is hard at work, creating and adding <a href="https://muds.io/changelog/">new features</a> to take the Javascript web WYSIWYG editing capabilities to the next level.</p><blockquote>The Muds editor has proven to seamlessly integrate with my webapp. It has offered me endless customizability, so as to suit my needs.<br>- Ronan Richardson</blockquote>',
-        height: '300px'
+        height: '370px'
     });
 
     function themeSwitcher() {

@@ -58,7 +58,7 @@ var editor3 = new muds({
                     </pre>
                     <pre data-lang="html">
 &#x3C;!-- Include the MUDS stylesheet --&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.3.0/muds.min.css&#x22;&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.3.3/muds.min.css&#x22;&#x3E;
 
 &#x3C;b&#x3E;Full Editor&#x3C;/b&#x3E;
 &#x3C;!-- Create the editor container --&#x3E;
@@ -77,7 +77,7 @@ var editor3 = new muds({
 &#x3C;div id=&#x22;editor3&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;!-- Include the MUDS library --&#x3E;
-&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.3.0/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.3.3/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
                     </pre>
                 </div>
             </div>
@@ -90,7 +90,7 @@ var editor3 = new muds({
                 <br>
                 <h3>Available menu items include:</h3>
                 <p>
-                    <!--                    <span class="tag">separators</span>,-->
+                    <span class="tag">separator</span>,
                     <span class="tag">header</span>,
                     <span class="tag">fonts</span>,
                     <span class="tag">underline</span>,
@@ -130,7 +130,7 @@ var editor = new muds({
     selector: 'editor',
     menuStyle: 'custom',
     menuCustom: [
-<!--        'separators',-->
+        'separator',
         'header',
         'fonts',
         'underline',
@@ -164,13 +164,13 @@ var editor = new muds({
                     </pre>
                     <pre data-lang="html">
 &#x3C;!-- Include the MUDS stylesheet --&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.3.0/muds.min.css&#x22;&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.3.3/muds.min.css&#x22;&#x3E;
 
 &#x3C;!-- Create the editor container --&#x3E;
 &#x3C;div id=&#x22;editor&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;!-- Include the MUDS library --&#x3E;
-&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.3.0/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.3.3/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
                     </pre>
                 </div>
             </div>

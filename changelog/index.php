@@ -21,15 +21,15 @@
         <div class="row">
             <div class="tiny-12 medium-7">
 
-<!--                <h2>MUDS v1.3.3 <a href="/download/muds-editor-v1.3.3.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>-->
-<!--                <ul>-->
-<!--                    <li>Changing order of full and minimal menu option</li>-->
-<!--                    <li>Changing which menu items are available on the minimal menu option</li>-->
-<!--                    <li>Adding seperator item to menu</li>-->
-<!--                    <li>Fixing bug where resizing option didn't work automatically</li>-->
-<!--                </ul>-->
-<!---->
-<!--                <br><br>-->
+                <h2>MUDS v1.3.3 <a href="/download/muds-editor-v1.3.3.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
+                <ul>
+                    <li>Changing order of full and minimal menu option</li>
+                    <li>Changing which menu items are available on the minimal menu option</li>
+                    <li>Adding separator item to menu</li>
+                    <li>Fixing bug where resizing option didn't work automatically</li>
+                </ul>
+
+                <br><br>
 
                 <h2>MUDS v1.3.2 <a href="/download/muds-editor-v1.3.2.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
