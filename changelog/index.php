@@ -166,7 +166,7 @@
                 <p>We're currently working and a lot exciting changes, among them are:</p>
                 <ul>
                     <li>Table support</li>
-                    <li>Redesigned documentation</li>
+                    <li><strike>Redesigned documentation</strike></li>
                     <li>Emoji menu (You can already use emojis in the editor)</li>
                     <li><strike>A redesign of HTML editing mode.</strike></li>
                     <li><strike>Custom ordering of menu items</strike></li>
