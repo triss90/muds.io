@@ -36,19 +36,19 @@ b {
                     <pre data-lang="js">
 // Initialize muds editor
 var editor1 = new muds({
-    selector: 'editor1',
+    selector: 'full-editor',
     menuStyle: 'full'
 });
 
 // Initialize another muds editor
 var editor2 = new muds({
-    selector: 'editor2',
+    selector: 'minimal-editor',
     menuStyle: 'minimal'
 });
 
 // Initialize yet another muds editor
 var editor3 = new muds({
-    selector: 'editor3',
+    selector: 'custom-editor',
     menuStyle: 'custom',
     menuCustom: [
         'header',
@@ -62,19 +62,19 @@ var editor3 = new muds({
 
 &#x3C;b&#x3E;Full Editor&#x3C;/b&#x3E;
 &#x3C;!-- Create the editor container --&#x3E;
-&#x3C;div id=&#x22;editor1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div id=&#x22;full-editor&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;br&#x3E;
 
 &#x3C;b&#x3E;Minimal Editor&#x3C;/b&#x3E;
 &#x3C;!-- Create another editor container --&#x3E;
-&#x3C;div id=&#x22;editor2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div id=&#x22;minimal-editor&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;br&#x3E;
 
 &#x3C;b&#x3E;Custom Editor&#x3C;/b&#x3E;
 &#x3C;!-- Create yet another editor container --&#x3E;
-&#x3C;div id=&#x22;editor3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div id=&#x22;custom-editor&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;!-- Include the MUDS library --&#x3E;
 &#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
