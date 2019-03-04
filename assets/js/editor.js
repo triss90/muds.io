@@ -89,6 +89,10 @@
     muds.prototype.buttonBlockquoteAction = function(string) {
         document.execCommand('formatBlock', false, 'blockquote');
     };
+    muds.prototype.buttonCodeBlockAction = function(string) {
+        console.log('test');
+        document.execCommand('formatBlock', false, 'pre');
+    };
     muds.prototype.buttonH1Action = function(string) {
         document.execCommand('formatBlock', false, 'h1');
     };
@@ -308,6 +312,7 @@
             '<li><button class="muds-h3" title="Healine 3 (cmd+3)" onclick="'+item.original_input.id + '.buttonH3Action()'+'">Header 3</button></li>' +
             '<li><button class="muds-body" title="Body Text (cmd+0)" onclick="'+item.original_input.id + '.buttonBodyTextAction()'+'">Body</button></li>' +
             '<li><button class="muds-blockquote" title="Blockquote (shift+cmd+B)" onclick="'+item.original_input.id + '.buttonBlockquoteAction()'+'">Blockquote</button></li>' +
+            '<li><button class="muds-blockquote" title="Code Block" onclick="'+item.original_input.id + '.buttonCodeBlockAction()'+'">Code Block</button></li>' +
             '</ul>';
         item.menu.appendChild(buttonHeader);
     }
@@ -370,10 +375,18 @@
     function buttonBlockquote(item) {
         const buttonBlockquote = document.createElement('button');
         buttonBlockquote.classList.add('muds-item');
-        buttonBlockquote.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/><path d="M0 0h24v24H0z" fill="none"/></svg>\n';
+        buttonBlockquote.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/><path d="M0 0h24v24H0z" fill="none"/></svg>';
         buttonBlockquote.setAttribute('onclick',item.original_input.id + '.buttonBlockquoteAction()');
         buttonBlockquote.setAttribute('data-tooltip', 'Blockquote (SHIFT+'+item.osModifier+'+B)');
         item.menu.appendChild(buttonBlockquote);
+    }
+    function buttonCodeBlock(item) {
+        const buttonCodeBlock = document.createElement('button');
+        buttonCodeBlock.classList.add('muds-item');
+        buttonCodeBlock.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>';
+        buttonCodeBlock.setAttribute('onclick',item.original_input.id + '.buttonCodeBlockAction()');
+        buttonCodeBlock.setAttribute('data-tooltip', 'Code Block');
+        item.menu.appendChild(buttonCodeBlock);
     }
     function buttonBold(item) {
         const buttonBold = document.createElement('button');
@@ -779,6 +792,7 @@
                 if (menuItem === "bold"){buttonBold(item);}
                 if (menuItem === "link"){buttonLink(item);}
                 if (menuItem === "blockquote"){buttonBlockquote(item);}
+                if (menuItem === "code"){buttonCodeBlock(item);}
                 if (menuItem === "changeColor"){buttonChangeColor(item);}
                 if (menuItem === "image"){buttonGetImage(item);}
                 if (menuItem === "undo"){buttonUndo(item);}

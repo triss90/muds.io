@@ -351,6 +351,15 @@
       top: -10px !important;
     }
   }
+  pre {
+    overflow-y: scroll;
+    font-size: 1rem !important;
+    color: #555555 !important;
+    padding: 1.2em !important;
+    line-height: 1.2 !important;
+    position: relative !important;
+    background: #EDEDED !important;
+  }
   &:focus {
     outline: 0;
   }
@@ -413,6 +422,10 @@
     background: #191A1D;
     color: #eee !important;
     blockquote {
+      background: #333 !important;
+      color: #eee !important;
+    }
+    pre {
       background: #333 !important;
       color: #eee !important;
     }

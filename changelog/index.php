@@ -21,6 +21,14 @@
         <div class="row">
             <div class="tiny-12 medium-7">
 
+                <h2>MUDS v1.3.5 <a href="/download/muds-editor-v1.3.5.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
+                <ul>
+                    <li>Fix bug where separator didn't work with custom menu</li>
+                    <li>Adding support for codeblock</li>
+                </ul>
+
+                <br><br>
+
                 <h2>MUDS v1.3.4 <a href="/download/muds-editor-v1.3.4.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
                     <li>Fix broken version 1.3.3</li>
