@@ -19,14 +19,15 @@
             </div>
         </div>
         <div class="row">
-            <div class="tiny-12 medium-6">
+            <div class="tiny-12 medium-7">
 
-<!--                <h2>MUDS v1.3.2 <a href="/download/muds-editor-v1.3.2.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>-->
-<!--                <ul>-->
-<!--                    <li>Update blockquote keybinding from <span class="tag">Ctrl/Cmd + Q</span> to <span class="tag">Shift + Ctrl/Cmd + B</span></li>-->
-<!--                </ul>-->
-<!---->
-<!--                <br><br>-->
+                <h2>MUDS v1.3.2 <a href="/download/muds-editor-v1.3.2.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
+                <ul>
+                    <li>Update blockquote keybinding from <span class="tag">Ctrl/Cmd + Q</span> to <span class="tag">Shift + Ctrl/Cmd + B</span></li>
+                    <li>The custom menu now allows for custom ordering of items</li>
+                </ul>
+
+                <br><br>
 
                 <h2>MUDS v1.3.1 <a href="/download/muds-editor-v1.3.1.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
@@ -135,7 +136,7 @@
                 <br>
 
             </div>
-            <div class="tiny-12 medium-6">
+            <div class="tiny-12 medium-5">
                 <h2>Our roadmap</h2>
                 <p>We're currently working and a lot exciting changes, among them are:</p>
                 <ul>
@@ -143,6 +144,7 @@
                     <li>Redesigned documentation</li>
                     <li>Emoji menu (You can already use emojis in the editor)</li>
                     <li><strike>A redesign of HTML editing mode.</strike></li>
+                    <li><strike>Custom ordering of menu items</strike></li>
                     <li>Custom themes or some version of injected custom CSS</li>
                     <li>Better image handling capabilities</li>
                     <li><strike>Tooltips on menuitems</strike></li>

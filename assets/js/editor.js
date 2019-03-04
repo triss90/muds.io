@@ -794,7 +794,6 @@
             }
             const customMenuItems = item.menu_custom;
             for (var i = 0; i < customMenuItems.length; i++) {
-                console.log(customMenuItems[i]);
                 buildCustomMenu(customMenuItems[i]);
             }
 

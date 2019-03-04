@@ -82,6 +82,7 @@ var editor3 = new muds({
             <div class="tiny-12" id="custom-menu">
                 <h2>Custumizing menu items</h2>
                 <p>To customize which items are available in the menu, you simply need to define <span class="tag">menuStyle: 'custom'</span> and then include the items you want in <span class="tag">menuCustom: []</span>.</p>
+                <p>The order in which you include the menu items will be reflected in the menu.</p>
                 <br>
                 <h3>Available menu items include:</h3>
                 <p>
@@ -370,7 +371,7 @@ var editor = new muds({
                     </pre>
                     <pre data-lang="html">
 &#x3C;!-- Include the MUDS stylesheet --&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.3.1/muds.min.css&#x22;&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@1.3.2/muds.min.css&#x22;&#x3E;
 
 &#x3C;!-- Create the editor container --&#x3E;
 &#x3C;div id=&#x22;editor&#x22;&#x3E;&#x3C;/div&#x3E;
