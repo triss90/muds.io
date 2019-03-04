@@ -1,0 +1,13 @@
+{
+  "name": "muds-editor",
+  "version": "1.3.0",
+  "description": "The lightest WYSIWYG Editor on the internet",
+  "main": "muds.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/triss90/muds.io"
+  },
+  "author": "Tristan White",
+  "homepage": "https://muds.io/",
+  "license": "MIT"
+}
