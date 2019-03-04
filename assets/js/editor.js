@@ -799,7 +799,7 @@
                 if (menuItem === "showHTML"){buttonShowHTML(item);}
                 if (menuItem === "showText"){buttonShowText(item);}
                 if (menuItem === "fullScreen"){buttonFullScreen(item);}
-                if (menuItem === "separator"){buttonSeperator(item);}
+                if (menuItem === "separator"){buttonSeparator(item);}
             }
             const customMenuItems = item.menu_custom;
             for (var i = 0; i < customMenuItems.length; i++) {
