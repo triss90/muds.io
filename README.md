@@ -7,14 +7,14 @@ Simply paste the following snippet in your code where you want MUDS editor to ap
 <link rel="stylesheet" href="/assets/css/muds.min.css">
 
 <!-- Create the editor container -->
-<div id="editor"></div>
+<textarea id="editor"></textarea>
 
 <!-- Include the muds library -->
 <script src="/assets/js/muds.min.js"></script>
 
 <!-- Initialize muds editor -->
 <script>
-var editor = new muds({
+var muds = new muds({
     selector: 'editor'
 });
 </script>

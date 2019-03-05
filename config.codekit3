@@ -249,19 +249,6 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"\/assets\/css\/editor_old.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/assets\/css\/editor_old.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/assets\/css\/formatting.css": {
 		"aP": 1,
 		"bl": 0,
@@ -767,16 +754,6 @@
 		"sC": 3,
 		"tS": 1
 		},
-	"\/assets\/js\/editor_old.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/assets\/js\/editor_old-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"\/changelog\/index.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -964,13 +941,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/playground\/index.php",
-		"oF": 0
-		},
-	"\/playground\/index_old.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/playground\/index_old.php",
 		"oF": 0
 		},
 	"\/README.md": {
