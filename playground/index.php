@@ -14,9 +14,17 @@
 </head>
 <body>
 
-    <textarea id="editor">adadada
-    adadaggg
-    Daniel er træls...</textarea>
+    <textarea id="editor">
+        <h1>adadada</h1>
+        adadaggg
+        <ul>
+            <li>Daniel er træls...</li>
+            <li>Daniel er MEGA træls...</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid atque cupiditate, facere fugiat illum laboriosam libero magni nisi porro praesentium quaerat quas ratione reiciendis soluta tenetur voluptatem voluptatibus. Mollitia, totam.</p>
+        <h3>This is a test</h3>
+        <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid atque cupiditate, facere fugiat illum laboriosam libero magni nisi porro praesentium quaerat quas ratione reiciendis soluta tenetur voluptatem voluptatibus. Mollitia, totam.</blockquote>
+    </textarea>
 
     <script src="/assets/js/editor.js" ></script>
     <script>

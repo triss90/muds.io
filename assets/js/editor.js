@@ -4,7 +4,7 @@
     var muds = function(opts) {
         this.options = Object.assign(muds.defaults, opts);
         this.original_input = document.getElementById(opts.selector);
-        this.original_content = this.original_input.innerHTML;
+        this.original_content = this.original_input.textContent;
         this.menu_style = opts.menuStyle;
         this.menu_custom = opts.menuCustom;
         this.height = opts.height;
