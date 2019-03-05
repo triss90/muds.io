@@ -49,6 +49,30 @@
             });
         }
     };
+    function getCaretPosition(editableDiv) {
+        var caretPos = 0,
+            sel, range;
+        if (window.getSelection) {
+            sel = window.getSelection();
+            if (sel.rangeCount) {
+                range = sel.getRangeAt(0);
+                if (range.commonAncestorContainer.parentNode == editableDiv) {
+                    caretPos = range.endOffset;
+                }
+            }
+        } else if (document.selection && document.selection.createRange) {
+            range = document.selection.createRange();
+            if (range.parentElement() == editableDiv) {
+                var tempEl = document.createElement("span");
+                editableDiv.insertBefore(tempEl, editableDiv.firstChild);
+                var tempRange = range.duplicate();
+                tempRange.moveToElementText(tempEl);
+                tempRange.setEndPoint("EndToEnd", range);
+                caretPos = tempRange.text.length;
+            }
+        }
+        return caretPos;
+    }
 
     // Menu Actions
     muds.prototype.enterFullScreen = function(string) {
@@ -80,7 +104,13 @@
         const toolbarButton = editObj.wrapper.querySelector('.muds-toolbar .muds-item.fullscreen');
         editObj.wrapper.setAttribute('style', '');
         editObj.wrapper.classList.remove('fullscreen');
-        content.style.height = editObj.height;
+
+        if (editObj.height === undefined) {
+            content.style.height = "150px";
+        } else {
+            content.style.height = editObj.height;
+        }
+        console.log(editObj.height);
         toolbarButton.setAttribute('onclick', 'muds.enterFullScreen()');
         toolbarButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>'
     };

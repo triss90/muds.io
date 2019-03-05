@@ -38,10 +38,9 @@
             menuStyle: 'custom',
             tooltips: true,
             onChange: function() {
-                // JS goes here
+                console.log('onChange event fired...!');
             },
             menuCustom: [
-                'code',
                 'header',
                 'fonts',
                 'underline',
@@ -50,6 +49,7 @@
                 'italic',
                 'link',
                 'blockquote',
+                'code',
                 'changeColor',
                 'image',
                 'undo',
@@ -73,9 +73,6 @@
             ]
         });
 
-        function damn() {
-            console.log('test');
-        }
     </script>
 </body>
 </html>

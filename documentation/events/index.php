@@ -25,6 +25,7 @@
 var muds = new muds({
     selector: 'editor',
     onChange: function() {
+        console.log('onChange event fired...!');
         // JS goes here
     }
 });
