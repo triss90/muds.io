@@ -206,6 +206,7 @@
                     <li><strike>Custom font type support</strike></li>
                     <li><strike>Menu item separators</strike></li>
                     <li>Editible links</li>
+                    <li>Multi instance support</li>
                     <li><strike>In-, and outdent support</strike></li>
                     <li>Embedded video support</li>
                     <li><strike>Custom keybindings</strike></li>
