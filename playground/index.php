@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <textarea id="editor">
+    <textarea id="editordd">
         <h1>adadada</h1>
         adadaggg
         <ul>
@@ -28,14 +28,14 @@
 
     <script src="/assets/js/editor.js" ></script>
     <script>
-        var editor = new muds({
-            selector: 'editor',
+        var muds = new muds({
+            selector: 'editordd',
             submitName: 'mySubmit',
             height: '542px',
             theme: "light",
             resize: true,
             keybindings: true,
-            menuStyle: 'full',
+            menuStyle: 'custom',
             tooltips: true,
             menuCustom: [
                 'code',
@@ -69,6 +69,7 @@
                 'fullScreen'
             ]
         });
+
     </script>
 </body>
 </html>

@@ -22,7 +22,7 @@
                     <pre data-lang="scss" data-option-autoprefixer></pre>
                     <pre data-lang="js">
 // Initialize muds editor
-var editor = new muds({
+var muds = new muds({
     selector: 'editor'
 });
                     </pre>
@@ -49,7 +49,7 @@ var editor = new muds({
                     <pre data-lang="scss" data-option-autoprefixer></pre>
                     <pre data-lang="js">
 // Initialize muds editor
-var editor = new muds({
+var muds = new muds({
     selector: 'editor',
     submitName: 'my_submit_name'
 });

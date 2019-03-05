@@ -5,12 +5,14 @@
         this.options = Object.assign(muds.defaults, opts);
         this.original_input = document.getElementById(opts.selector);
         this.original_content = this.original_input.textContent;
+        this.original_id = this.original_input.id;
         this.menu_style = opts.menuStyle;
         this.menu_custom = opts.menuCustom;
         this.height = opts.height;
         this.resize = opts.resize;
         this.tooltips = opts.tooltips;
         this.theme = opts.theme;
+        this.selector = opts.selector;
         this.content_submit = opts.submitName;
         if (window.navigator.userAgent.indexOf("Mac") != -1) {
             this.osModifier = "CMD";
@@ -23,7 +25,6 @@
         this.contentSubmittable.style.display = "none";
         this.contentSubmittable.style.opacity = "0";
         this.contentSubmittable.style.height = "0";
-        this.contentSubmittable.id = "muds-content-submittable";
         this.wrapper = document.createElement('div');
         buildMenu(this);
         buildEditor(this);
@@ -297,7 +298,8 @@
         const buttonFullScreen = document.createElement('button');
         buttonFullScreen.classList.add('muds-item','fullscreen');
         buttonFullScreen.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>';
-        buttonFullScreen.setAttribute('onclick', item.original_input.id + '.enterFullScreen()');
+        buttonFullScreen.setAttribute('onclick', 'muds.enterFullScreen()');
+        buttonFullScreen.setAttribute('type', 'button');
         buttonFullScreen.setAttribute('data-tooltip', 'Fullscreen ('+item.osModifier+'+Enter)');
         item.menu.appendChild(buttonFullScreen);
     }
@@ -306,12 +308,12 @@
         buttonHeader.classList.add('muds-item','muds-dropdown','headers');
         buttonHeader.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M5 4v3h5.5v12h3V7H19V4H5z"/></svg></label>' +
             '<ul>' +
-            '<li><button class="muds-h1" title="Healine 1 (cmd+1)" onclick="'+item.original_input.id + '.buttonH1Action()'+'">Header 1</button></li>' +
-            '<li><button class="muds-h2" title="Healine 2 (cmd+2)" onclick="'+item.original_input.id + '.buttonH2Action()'+'">Header 2</button></li>' +
-            '<li><button class="muds-h3" title="Healine 3 (cmd+3)" onclick="'+item.original_input.id + '.buttonH3Action()'+'">Header 3</button></li>' +
-            '<li><button class="muds-body" title="Body Text (cmd+0)" onclick="'+item.original_input.id + '.buttonBodyTextAction()'+'">Body</button></li>' +
-            '<li><button class="muds-blockquote" title="Blockquote (shift+cmd+B)" onclick="'+item.original_input.id + '.buttonBlockquoteAction()'+'">Blockquote</button></li>' +
-            '<li><button class="muds-blockquote" title="Code Block" onclick="'+item.original_input.id + '.buttonCodeBlockAction()'+'">Code Block</button></li>' +
+            '<li><button type="button" class="muds-h1" title="Healine 1 (cmd+1)" onclick="'+'muds.buttonH1Action()'+'">Header 1</button></li>' +
+            '<li><button type="button" class="muds-h2" title="Healine 2 (cmd+2)" onclick="'+'muds.buttonH2Action()'+'">Header 2</button></li>' +
+            '<li><button type="button" class="muds-h3" title="Healine 3 (cmd+3)" onclick="'+'muds.buttonH3Action()'+'">Header 3</button></li>' +
+            '<li><button type="button" class="muds-body" title="Body Text (cmd+0)" onclick="'+'muds.buttonBodyTextAction()'+'">Body</button></li>' +
+            '<li><button type="button" class="muds-blockquote" title="Blockquote (shift+cmd+B)" onclick="'+'muds.buttonBlockquoteAction()'+'">Blockquote</button></li>' +
+            '<li><button type="button" class="muds-blockquote" title="Code Block" onclick="'+'muds.buttonCodeBlockAction()'+'">Code Block</button></li>' +
             '</ul>';
         item.menu.appendChild(buttonHeader);
     }
@@ -321,20 +323,20 @@
         buttonFonts.innerHTML = '<label><svg baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M9.93 13.5h4.14L12 7.98zM20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-4.05 16.5l-1.14-3H9.17l-1.12 3H5.96l5.11-13h1.86l5.11 13h-2.09z"/></svg>\n</label>' +
             '<ul>' +
             '<div class="wrapper">' +
-            '<li><button class="font-arial" title="Arial" onclick="'+item.original_input.id + '.buttonFontArialAction()'+'">Arial</button></li>' +
-            '<li><button class="font-arial-black" title="Arial Black" onclick="'+item.original_input.id + '.buttonFontArialBlackAction()'+'">Arial Black</button></li>' +
-            '<li><button class="font-comic-sans" title="Comic Sans" onclick="'+item.original_input.id + '.buttonFontComicSansAction()'+'">Comic Sans</button></li>' +
-            '<li><button class="font-courier-new" title="Courier New" onclick="'+item.original_input.id + '.buttonFontCourierNewAction()'+'">Courier New</button></li>' +
-            '<li><button class="font-georgia" title="Georgia" onclick="'+item.original_input.id + '.buttonFontGeorgiaAction()'+'">Georgia</button></li>' +
-            '<li><button class="font-impact" title="Georgia" onclick="'+item.original_input.id + '.buttonFontImpactAction()'+'">Impact</button></li>' +
-            '<li><button class="font-lucida-console" title="Lucida Console" onclick="'+item.original_input.id + '.buttonFontLucidaConsoleAction()'+'">Lucida Console</button></li>' +
-            '<li><button class="font-lucida-sans-unicode" title="Lucida Sans Unicode" onclick="'+item.original_input.id + '.buttonFontLucidaSansUnicodeAction()'+'">Lucida Sans Unicode</button></li>' +
-            '<li><button class="font-palatino" title="Palatino" onclick="'+item.original_input.id + '.buttonFontPalatinoAction()'+'">Palatino</button></li>' +
-            '<li><button class="font-default" title="Default" onclick="'+item.original_input.id + '.buttonFontDefaultAction()'+'">System Default</button></li>' +
-            '<li><button class="font-tahoma" title="Tahoma" onclick="'+item.original_input.id + '.buttonFontTahamoAction()'+'">Tahoma</button></li>' +
-            '<li><button class="font-times-new-roman" title="Times New Roman" onclick="'+item.original_input.id + '.buttonFontTimesNewRomanAction()'+'">Times New Roman</button></li>' +
-            '<li><button class="font-trebuchet" title="Trehuchet MS" onclick="'+item.original_input.id + '.buttonFontTrebuchetAction()'+'">Trebuchet MS</button></li>' +
-            '<li><button class="font-verdana" title="Verdana" onclick="'+item.original_input.id + '.buttonFontVerdanaAction()'+'">Verdana</button></li>' +
+            '<li><button type="button" class="font-arial" title="Arial" onclick="'+'muds.buttonFontArialAction()'+'">Arial</button></li>' +
+            '<li><button type="button" class="font-arial-black" title="Arial Black" onclick="'+'muds.buttonFontArialBlackAction()'+'">Arial Black</button></li>' +
+            '<li><button type="button" class="font-comic-sans" title="Comic Sans" onclick="'+'muds.buttonFontComicSansAction()'+'">Comic Sans</button></li>' +
+            '<li><button type="button" class="font-courier-new" title="Courier New" onclick="'+'muds.buttonFontCourierNewAction()'+'">Courier New</button></li>' +
+            '<li><button type="button" class="font-georgia" title="Georgia" onclick="'+'muds.buttonFontGeorgiaAction()'+'">Georgia</button></li>' +
+            '<li><button type="button" class="font-impact" title="Georgia" onclick="'+'muds.buttonFontImpactAction()'+'">Impact</button></li>' +
+            '<li><button type="button" class="font-lucida-console" title="Lucida Console" onclick="'+'muds.buttonFontLucidaConsoleAction()'+'">Lucida Console</button></li>' +
+            '<li><button type="button" class="font-lucida-sans-unicode" title="Lucida Sans Unicode" onclick="'+'muds.buttonFontLucidaSansUnicodeAction()'+'">Lucida Sans Unicode</button></li>' +
+            '<li><button type="button" class="font-palatino" title="Palatino" onclick="'+'muds.buttonFontPalatinoAction()'+'">Palatino</button></li>' +
+            '<li><button type="button" class="font-default" title="Default" onclick="'+'muds.buttonFontDefaultAction()'+'">System Default</button></li>' +
+            '<li><button type="button" class="font-tahoma" title="Tahoma" onclick="'+'muds.buttonFontTahamoAction()'+'">Tahoma</button></li>' +
+            '<li><button type="button" class="font-times-new-roman" title="Times New Roman" onclick="'+'muds.buttonFontTimesNewRomanAction()'+'">Times New Roman</button></li>' +
+            '<li><button type="button" class="font-trebuchet" title="Trehuchet MS" onclick="'+'muds.buttonFontTrebuchetAction()'+'">Trebuchet MS</button></li>' +
+            '<li><button type="button" class="font-verdana" title="Verdana" onclick="'+'muds.buttonFontVerdanaAction()'+'">Verdana</button></li>' +
             '</div>' +
             '</ul>';
         item.menu.appendChild(buttonFonts);
@@ -343,7 +345,8 @@
         const buttonUnorderedList = document.createElement('button');
         buttonUnorderedList.classList.add('muds-item');
         buttonUnorderedList.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z"/><path fill="none" d="M0 0h24v24H0V0z"/></svg>';
-        buttonUnorderedList.setAttribute('onclick', item.original_input.id + '.buttonUnorderedListAction()');
+        buttonUnorderedList.setAttribute('onclick', 'muds.buttonUnorderedListAction()');
+        buttonUnorderedList.setAttribute('type', 'button');
         buttonUnorderedList.setAttribute('data-tooltip', 'Unordered list ('+item.osModifier+'+.)');
         item.menu.appendChild(buttonUnorderedList);
     }
@@ -351,7 +354,8 @@
         const buttonOrderedList = document.createElement('button');
         buttonOrderedList.classList.add('muds-item');
         buttonOrderedList.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M2 17h2v.5H3v1h1v.5H2v1h3v-4H2v1zm1-9h1V4H2v1h1v3zm-1 3h1.8L2 13.1v.9h3v-1H3.2L5 10.9V10H2v1zm5-6v2h14V5H7zm0 14h14v-2H7v2zm0-6h14v-2H7v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg>';
-        buttonOrderedList.setAttribute('onclick', item.original_input.id + '.buttonOrderedListAction()');
+        buttonOrderedList.setAttribute('onclick', 'muds.buttonOrderedListAction()');
+        buttonOrderedList.setAttribute('type', 'button');
         buttonOrderedList.setAttribute('data-tooltip', 'Ordered list  ('+item.osModifier+'+,)');
         item.menu.appendChild(buttonOrderedList);
     }
@@ -359,7 +363,8 @@
         const buttonUnderline = document.createElement('button');
         buttonUnderline.classList.add('muds-item');
         buttonUnderline.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M12 17c3.31 0 6-2.69 6-6V3h-2.5v8c0 1.93-1.57 3.5-3.5 3.5S8.5 12.93 8.5 11V3H6v8c0 3.31 2.69 6 6 6zm-7 2v2h14v-2H5z"/></svg>';
-        buttonUnderline.setAttribute('onclick', item.original_input.id + '.buttonUnderlineAction()');
+        buttonUnderline.setAttribute('onclick', 'muds.buttonUnderlineAction()');
+        buttonUnderline.setAttribute('type', 'button');
         buttonUnderline.setAttribute('data-tooltip', 'Underline ('+item.osModifier+'+U)');
         item.menu.appendChild(buttonUnderline);
     }
@@ -367,7 +372,8 @@
         const buttonItalic = document.createElement('button');
         buttonItalic.classList.add('muds-item');
         buttonItalic.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M10 4v3h2.21l-3.42 8H6v3h8v-3h-2.21l3.42-8H18V4h-8z"/></svg>';
-        buttonItalic.setAttribute('onclick',item.original_input.id + '.buttonItalicAction()');
+        buttonItalic.setAttribute('onclick','muds.buttonItalicAction()');
+        buttonItalic.setAttribute('type', 'button');
         buttonItalic.setAttribute('data-tooltip', 'Italic ('+item.osModifier+'+I)');
         item.menu.appendChild(buttonItalic);
     }
@@ -375,7 +381,8 @@
         const buttonBlockquote = document.createElement('button');
         buttonBlockquote.classList.add('muds-item');
         buttonBlockquote.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/><path d="M0 0h24v24H0z" fill="none"/></svg>';
-        buttonBlockquote.setAttribute('onclick',item.original_input.id + '.buttonBlockquoteAction()');
+        buttonBlockquote.setAttribute('onclick','muds.buttonBlockquoteAction()');
+        buttonBlockquote.setAttribute('type', 'button');
         buttonBlockquote.setAttribute('data-tooltip', 'Blockquote (SHIFT+'+item.osModifier+'+B)');
         item.menu.appendChild(buttonBlockquote);
     }
@@ -383,7 +390,8 @@
         const buttonCodeBlock = document.createElement('button');
         buttonCodeBlock.classList.add('muds-item');
         buttonCodeBlock.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>';
-        buttonCodeBlock.setAttribute('onclick',item.original_input.id + '.buttonCodeBlockAction()');
+        buttonCodeBlock.setAttribute('onclick','muds.buttonCodeBlockAction()');
+        buttonCodeBlock.setAttribute('type', 'button');
         buttonCodeBlock.setAttribute('data-tooltip', 'Code Block');
         item.menu.appendChild(buttonCodeBlock);
     }
@@ -391,7 +399,8 @@
         const buttonBold = document.createElement('button');
         buttonBold.classList.add('muds-item');
         buttonBold.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.6 10.79c.97-.67 1.65-1.77 1.65-2.79 0-2.26-1.75-4-4-4H7v14h7.04c2.09 0 3.71-1.7 3.71-3.79 0-1.52-.86-2.82-2.15-3.42zM10 6.5h3c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-3v-3zm3.5 9H10v-3h3.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5z"/></svg>';
-        buttonBold.setAttribute('onclick',item.original_input.id + '.buttonBoldAction()');
+        buttonBold.setAttribute('onclick','muds.buttonBoldAction()');
+        buttonBold.setAttribute('type', 'button');
         buttonBold.setAttribute('data-tooltip', 'Bold ('+item.osModifier+'+B)');
         item.menu.appendChild(buttonBold);
     }
@@ -399,7 +408,8 @@
         const buttonLink = document.createElement('button');
         buttonLink.classList.add('muds-item');
         buttonLink.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M17 7h-4v2h4c1.65 0 3 1.35 3 3s-1.35 3-3 3h-4v2h4c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-6 8H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-2zm-3-4h8v2H8z"/></svg>';
-        buttonLink.setAttribute('onclick',item.original_input.id + '.buttonLinkAction()');
+        buttonLink.setAttribute('onclick','muds.buttonLinkAction()');
+        buttonLink.setAttribute('type', 'button');
         buttonLink.setAttribute('data-tooltip', 'Create link ('+item.osModifier+'+L)');
         item.menu.appendChild(buttonLink);
     }
@@ -407,7 +417,8 @@
         const buttonCut = document.createElement('button');
         buttonCut.classList.add('muds-item');
         buttonCut.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19,3L13,9L15,11L22,4V3M12,12.5A0.5,0.5 0 0,1 11.5,12A0.5,0.5 0 0,1 12,11.5A0.5,0.5 0 0,1 12.5,12A0.5,0.5 0 0,1 12,12.5M6,20A2,2 0 0,1 4,18C4,16.89 4.9,16 6,16A2,2 0 0,1 8,18C8,19.11 7.1,20 6,20M6,8A2,2 0 0,1 4,6C4,4.89 4.9,4 6,4A2,2 0 0,1 8,6C8,7.11 7.1,8 6,8M9.64,7.64C9.87,7.14 10,6.59 10,6A4,4 0 0,0 6,2A4,4 0 0,0 2,6A4,4 0 0,0 6,10C6.59,10 7.14,9.87 7.64,9.64L10,12L7.64,14.36C7.14,14.13 6.59,14 6,14A4,4 0 0,0 2,18A4,4 0 0,0 6,22A4,4 0 0,0 10,18C10,17.41 9.87,16.86 9.64,16.36L12,14L19,21H22V20L9.64,7.64Z" /></svg>';
-        buttonCut.setAttribute('onclick',item.original_input.id + '.buttonCutAction()');
+        buttonCut.setAttribute('onclick','muds.buttonCutAction()');
+        buttonCut.setAttribute('type', 'button');
         buttonCut.setAttribute('data-tooltip', 'Cut ('+item.osModifier+'+X)');
         item.menu.appendChild(buttonCut);
     }
@@ -415,7 +426,8 @@
         const buttonCopy = document.createElement('button');
         buttonCopy.classList.add('muds-item');
         buttonCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11l-6-6zM8 21V7h6v5h5v9H8z"/></svg>';
-        buttonCopy.setAttribute('onclick',item.original_input.id + '.buttonCopyAction()');
+        buttonCopy.setAttribute('onclick','muds.buttonCopyAction()');
+        buttonCopy.setAttribute('type', 'button');
         buttonCopy.setAttribute('data-tooltip', 'Copy ('+item.osModifier+'+C)');
         item.menu.appendChild(buttonCopy);
     }
@@ -423,7 +435,8 @@
         const buttonUndo = document.createElement('button');
         buttonUndo.classList.add('muds-item');
         buttonUndo.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M12.5 8c-2.65 0-5.05.99-6.9 2.6L2 7v9h9l-3.62-3.62c1.39-1.16 3.16-1.88 5.12-1.88 3.54 0 6.55 2.31 7.6 5.5l2.37-.78C21.08 11.03 17.15 8 12.5 8z"/></svg>';
-        buttonUndo.setAttribute('onclick', item.original_input.id + '.buttonUndoAction()');
+        buttonUndo.setAttribute('onclick', 'muds.buttonUndoAction()');
+        buttonUndo.setAttribute('type', 'button');
         buttonUndo.setAttribute('data-tooltip', 'Undo ('+item.osModifier+'+Z)');
         item.menu.appendChild(buttonUndo);
     }
@@ -431,7 +444,8 @@
         const buttonRedo = document.createElement('button');
         buttonRedo.classList.add('muds-item');
         buttonRedo.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M18.4 10.6C16.55 8.99 14.15 8 11.5 8c-4.65 0-8.58 3.03-9.96 7.22L3.9 16c1.05-3.19 4.05-5.5 7.6-5.5 1.95 0 3.73.72 5.12 1.88L13 16h9V7l-3.6 3.6z"/></svg>';
-        buttonRedo.setAttribute('onclick',item.original_input.id + '.buttonRedoAction()');
+        buttonRedo.setAttribute('onclick','muds.buttonRedoAction()');
+        buttonRedo.setAttribute('type', 'button');
         buttonRedo.setAttribute('data-tooltip', 'Redo (SHIFT+'+item.osModifier+'+Z)');
         item.menu.appendChild(buttonRedo);
     }
@@ -439,7 +453,8 @@
         const buttonChangeColor = document.createElement('button');
         buttonChangeColor.classList.add('muds-item');
         buttonChangeColor.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill-opacity=".36" d="M0 20h24v4H0v-4z"/><path d="M11 3L5.5 17h2.25l1.12-3h6.25l1.12 3h2.25L13 3h-2zm-1.38 9L12 5.67 14.38 12H9.62z"/></svg>';
-        buttonChangeColor.setAttribute('onclick',item.original_input.id + '.buttonChangeColorAction()');
+        buttonChangeColor.setAttribute('onclick','muds.buttonChangeColorAction()');
+        buttonChangeColor.setAttribute('type', 'button');
         buttonChangeColor.setAttribute('data-tooltip', 'Text color (SHIFT+'+item.osModifier+'+C)');
         item.menu.appendChild(buttonChangeColor);
     }
@@ -450,12 +465,13 @@
         imageInput.setAttribute('accept','image/*');
         imageInput.id = 'file';
         imageInput.style.display = 'none';
-        imageInput.setAttribute('onchange',item.original_input.id + '.buttonGetImageAction()');
+        imageInput.setAttribute('onchange','muds.buttonGetImageAction()');
         item.menu.appendChild(imageInput);
         const imageLabel = document.createElement('label');
         imageLabel.setAttribute('for','file');
         imageLabel.classList.add('muds-item');
         imageLabel.setAttribute('data-tooltip', 'Insert image');
+        imageLabel.setAttribute('type', 'button');
         imageLabel.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M18 20H4V6h9V4H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-9h-2v9zm-7.79-3.17l-1.96-2.36L5.5 18h11l-3.54-4.71zM20 4V1h-2v3h-3c.01.01 0 2 0 2h3v2.99c.01.01 2 0 2 0V6h3V4h-3z"/></svg>';
         item.menu.appendChild(imageLabel);
     }
@@ -463,7 +479,8 @@
         const buttonStrikeThrough = document.createElement('button');
         buttonStrikeThrough.classList.add('muds-item');
         buttonStrikeThrough.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M7.24 8.75c-.26-.48-.39-1.03-.39-1.67 0-.61.13-1.16.4-1.67.26-.5.63-.93 1.11-1.29.48-.35 1.05-.63 1.7-.83.66-.19 1.39-.29 2.18-.29.81 0 1.54.11 2.21.34.66.22 1.23.54 1.69.94.47.4.83.88 1.08 1.43s.38 1.15.38 1.81h-3.01c0-.31-.05-.59-.15-.85-.09-.27-.24-.49-.44-.68-.2-.19-.45-.33-.75-.44-.3-.1-.66-.16-1.06-.16-.39 0-.74.04-1.03.13s-.53.21-.72.36c-.19.16-.34.34-.44.55-.1.21-.15.43-.15.66 0 .48.25.88.74 1.21.38.25.77.48 1.41.7H7.39c-.05-.08-.11-.17-.15-.25zM21 12v-2H3v2h9.62c.18.07.4.14.55.2.37.17.66.34.87.51s.35.36.43.57c.07.2.11.43.11.69 0 .23-.05.45-.14.66-.09.2-.23.38-.42.53-.19.15-.42.26-.71.35-.29.08-.63.13-1.01.13-.43 0-.83-.04-1.18-.13s-.66-.23-.91-.42c-.25-.19-.45-.44-.59-.75s-.25-.76-.25-1.21H6.4c0 .55.08 1.13.24 1.58s.37.85.65 1.21c.28.35.6.66.98.92.37.26.78.48 1.22.65.44.17.9.3 1.38.39.48.08.96.13 1.44.13.8 0 1.53-.09 2.18-.28s1.21-.45 1.67-.79c.46-.34.82-.77 1.07-1.27s.38-1.07.38-1.71c0-.6-.1-1.14-.31-1.61-.05-.11-.11-.23-.17-.33H21V12z"/></svg>';
-        buttonStrikeThrough.setAttribute('onclick',item.original_input.id + '.buttonStrikeThroughAction()');
+        buttonStrikeThrough.setAttribute('onclick','muds.buttonStrikeThroughAction()');
+        buttonStrikeThrough.setAttribute('type', 'button');
         buttonStrikeThrough.setAttribute('data-tooltip', 'Strike Through ('+item.osModifier+'+S)');
         item.menu.appendChild(buttonStrikeThrough);
     }
@@ -471,7 +488,8 @@
         const buttonDelete = document.createElement('button');
         buttonDelete.classList.add('muds-item');
         buttonDelete.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M14.12 10.47L12 12.59l-2.13-2.12-1.41 1.41L10.59 14l-2.12 2.12 1.41 1.41L12 15.41l2.12 2.12 1.41-1.41L13.41 14l2.12-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4zM6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9z"/></svg>';
-        buttonDelete.setAttribute('onclick',item.original_input.id + '.buttonDeleteAction()');
+        buttonDelete.setAttribute('onclick','muds.buttonDeleteAction()');
+        buttonDelete.setAttribute('type', 'button');
         buttonDelete.setAttribute('data-tooltip', 'Delete (DEL)');
         item.menu.appendChild(buttonDelete);
     }
@@ -479,20 +497,22 @@
         const buttonSelectAll = document.createElement('button');
         buttonSelectAll.classList.add('muds-item');
         buttonSelectAll.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 5h2V3c-1.1 0-2 .9-2 2zm0 8h2v-2H3v2zm4 8h2v-2H7v2zM3 9h2V7H3v2zm10-6h-2v2h2V3zm6 0v2h2c0-1.1-.9-2-2-2zM5 21v-2H3c0 1.1.9 2 2 2zm-2-4h2v-2H3v2zM9 3H7v2h2V3zm2 18h2v-2h-2v2zm8-8h2v-2h-2v2zm0 8c1.1 0 2-.9 2-2h-2v2zm0-12h2V7h-2v2zm0 8h2v-2h-2v2zm-4 4h2v-2h-2v2zm0-16h2V3h-2v2zM7 17h10V7H7v10zm2-8h6v6H9V9z"/></svg>';
-        buttonSelectAll.setAttribute('onclick',item.original_input.id + '.buttonSelectAllAction()');
+        buttonSelectAll.setAttribute('onclick','muds.buttonSelectAllAction()');
+        buttonSelectAll.setAttribute('type', 'button');
         buttonSelectAll.setAttribute('data-tooltip', 'Select all ('+item.osModifier+'+A)');
         item.menu.appendChild(buttonSelectAll);
     }
     function buttonJustification(item) {
-        const buttonJustification = document.createElement('div');
+        const buttonJustification = document.createElement('button');
+        buttonJustification.setAttribute('type', 'button');
         buttonJustification.classList.add('muds-item','muds-dropdown','justification');
         buttonJustification.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg></label>' +
             '<ul>' +
-            '<li><button class="just-left" title="Justify Left" onclick="'+item.original_input.id + '.buttonJustifyLeftAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg> Justify Left</button></li>' +
-            '<li><button class="just-center" title="Justify Center" onclick="'+item.original_input.id + '.buttonJustifyCenterAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M7 15v2h10v-2H7zm-4 6h18v-2H3v2zm0-8h18v-2H3v2zm4-6v2h10V7H7zM3 3v2h18V3H3z"/></svg> Justify Center</button></li>' +
-            '<li><button class="just-right" title="Justify Right" onclick="'+item.original_input.id + '.buttonJustifyRightAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 21h18v-2H3v2zm6-4h12v-2H9v2zm-6-4h18v-2H3v2zm6-4h12V7H9v2zM3 3v2h18V3H3z"/></svg> Justify Right</button></li>' +
-            '<li><button class="just-indent" title="Indent" onclick="'+item.original_input.id + '.buttonIndentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM3 8v8l4-4-4-4zm8 9h10v-2H11v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> Indent</button></li>' +
-            '<li><button class="just-outdent" title="Outdent" onclick="'+item.original_input.id + '.buttonOutdentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 17h10v-2H11v2zm-8-5l4 4V8l-4 4zm0 9h18v-2H3v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> Outdent</button></li>' +
+            '<li><button type="button" class="just-left" title="Justify Left" onclick="'+'muds.buttonJustifyLeftAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg> Justify Left</button></li>' +
+            '<li><button type="button" class="just-center" title="Justify Center" onclick="'+'muds.buttonJustifyCenterAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M7 15v2h10v-2H7zm-4 6h18v-2H3v2zm0-8h18v-2H3v2zm4-6v2h10V7H7zM3 3v2h18V3H3z"/></svg> Justify Center</button></li>' +
+            '<li><button type="button" class="just-right" title="Justify Right" onclick="'+'muds.buttonJustifyRightAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 21h18v-2H3v2zm6-4h12v-2H9v2zm-6-4h18v-2H3v2zm6-4h12V7H9v2zM3 3v2h18V3H3z"/></svg> Justify Right</button></li>' +
+            '<li><button type="button" class="just-indent" title="Indent" onclick="'+'muds.buttonIndentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM3 8v8l4-4-4-4zm8 9h10v-2H11v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> Indent</button></li>' +
+            '<li><button type="button" class="just-outdent" title="Outdent" onclick="'+'muds.buttonOutdentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 17h10v-2H11v2zm-8-5l4 4V8l-4 4zm0 9h18v-2H3v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> Outdent</button></li>' +
             '</ul>';
         item.menu.appendChild(buttonJustification);
     }
@@ -500,7 +520,8 @@
         const buttonJustifyCenter = document.createElement('button');
         buttonJustifyCenter.classList.add('muds-item');
         buttonJustifyCenter.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M7 15v2h10v-2H7zm-4 6h18v-2H3v2zm0-8h18v-2H3v2zm4-6v2h10V7H7zM3 3v2h18V3H3z"/></svg>';
-        buttonJustifyCenter.setAttribute('onclick',item.original_input.id + '.buttonJustifyCenterAction()');
+        buttonJustifyCenter.setAttribute('onclick','muds.buttonJustifyCenterAction()');
+        buttonJustifyCenter.setAttribute('type', 'button');
         buttonJustifyCenter.setAttribute('data-tooltip', 'Justify center ('+item.osModifier+'+Up/Down Arrow)');
         item.menu.appendChild(buttonJustifyCenter);
     }
@@ -508,7 +529,8 @@
         const buttonJustifyLeft = document.createElement('button');
         buttonJustifyLeft.classList.add('muds-item');
         buttonJustifyLeft.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg>';
-        buttonJustifyLeft.setAttribute('onclick',item.original_input.id + '.buttonJustifyLeftAction()');
+        buttonJustifyLeft.setAttribute('onclick','muds.buttonJustifyLeftAction()');
+        buttonJustifyLeft.setAttribute('type', 'button');
         buttonJustifyLeft.setAttribute('data-tooltip', 'Justify Left ('+item.osModifier+'+Left Arrow)');
         item.menu.appendChild(buttonJustifyLeft);
     }
@@ -516,7 +538,8 @@
         const buttonJustifyRight = document.createElement('button');
         buttonJustifyRight.classList.add('muds-item');
         buttonJustifyRight.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 21h18v-2H3v2zm6-4h12v-2H9v2zm-6-4h18v-2H3v2zm6-4h12V7H9v2zM3 3v2h18V3H3z"/></svg>';
-        buttonJustifyRight.setAttribute('onclick',item.original_input.id + '.buttonJustifyRightAction()');
+        buttonJustifyRight.setAttribute('onclick','muds.buttonJustifyRightAction()');
+        buttonJustifyRight.setAttribute('type', 'button');
         buttonJustifyRight.setAttribute('data-tooltip', 'Justify Right ('+item.osModifier+'+Right Arrow)');
         item.menu.appendChild(buttonJustifyRight);
     }
@@ -524,7 +547,8 @@
         const buttonIndent = document.createElement('button');
         buttonIndent.classList.add('muds-item');
         buttonIndent.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM3 8v8l4-4-4-4zm8 9h10v-2H11v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg>';
-        buttonIndent.setAttribute('onclick',item.original_input.id + '.buttonIndentAction()');
+        buttonIndent.setAttribute('onclick','muds.buttonIndentAction()');
+        buttonIndent.setAttribute('type', 'button');
         buttonIndent.setAttribute('data-tooltip', 'Indent (SHIFT+'+item.osModifier+'+Right Arrow)');
         item.menu.appendChild(buttonIndent);
     }
@@ -532,7 +556,8 @@
         const buttonOutdent = document.createElement('button');
         buttonOutdent.classList.add('muds-item');
         buttonOutdent.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 17h10v-2H11v2zm-8-5l4 4V8l-4 4zm0 9h18v-2H3v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg>';
-        buttonOutdent.setAttribute('onclick',item.original_input.id + '.buttonOutdentAction()');
+        buttonOutdent.setAttribute('onclick','muds.buttonOutdentAction()');
+        buttonOutdent.setAttribute('type', 'button');
         buttonOutdent.setAttribute('data-tooltip', 'Outdent (SHIFT+'+item.osModifier+'+Left Arrow)');
         item.menu.appendChild(buttonOutdent);
     }
@@ -540,7 +565,8 @@
         const buttonPrintMe = document.createElement('button');
         buttonPrintMe.classList.add('muds-item');
         buttonPrintMe.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M19 8h-1V3H6v5H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zM8 5h8v3H8V5zm8 14H8v-4h8v4zm2-4v-2H6v2H4v-4c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v4h-2z"/><circle cx="18" cy="11.5" r="1"/></svg>';
-        buttonPrintMe.setAttribute('onclick',item.original_input.id + '.buttonPrintMeAction()');
+        buttonPrintMe.setAttribute('onclick','muds.buttonPrintMeAction()');
+        buttonPrintMe.setAttribute('type', 'button');
         buttonPrintMe.setAttribute('data-tooltip', 'Print ('+item.osModifier+'+P)');
         item.menu.appendChild(buttonPrintMe);
     }
@@ -548,7 +574,8 @@
         const buttonShowHTML = document.createElement('button');
         buttonShowHTML.classList.add('muds-item','show-html');
         buttonShowHTML.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>';
-        buttonShowHTML.setAttribute('onclick',item.original_input.id + '.buttonShowHTMLAction(event)');
+        buttonShowHTML.setAttribute('onclick','muds.buttonShowHTMLAction(event)');
+        buttonShowHTML.setAttribute('type', 'button');
         buttonShowHTML.setAttribute('data-tooltip', 'Show HTML ('+item.osModifier+'+H)');
         item.menu.appendChild(buttonShowHTML);
     }
@@ -556,7 +583,8 @@
         const buttonShowText = document.createElement('button');
         buttonShowText.classList.add('muds-item');
         buttonShowText.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M12 6c3.79 0 7.17 2.13 8.82 5.5C19.17 14.87 15.79 17 12 17s-7.17-2.13-8.82-5.5C4.83 8.13 8.21 6 12 6m0-2C7 4 2.73 7.11 1 11.5 2.73 15.89 7 19 12 19s9.27-3.11 11-7.5C21.27 7.11 17 4 12 4zm0 5c1.38 0 2.5 1.12 2.5 2.5S13.38 14 12 14s-2.5-1.12-2.5-2.5S10.62 9 12 9m0-2c-2.48 0-4.5 2.02-4.5 4.5S9.52 16 12 16s4.5-2.02 4.5-4.5S14.48 7 12 7z"/></svg>';
-        buttonShowText.setAttribute('onclick',item.original_input.id + '.buttonShowTextAction()');
+        buttonShowText.setAttribute('onclick','muds.buttonShowTextAction()');
+        buttonShowText.setAttribute('type', 'button');
         buttonShowText.setAttribute('data-tooltip', 'View content ('+item.osModifier+'+O)');
         item.menu.appendChild(buttonShowText);
     }
@@ -855,8 +883,9 @@
         mudsWrapperElement.appendChild(mudsContentSubmit);
         mudsContentSubmit.innerHTML = editor.original_content;
         mudsContentSubmit.setAttribute('name',mudsContentSubmitName);
+        mudsContentSubmit.setAttribute('id',mudsContentSubmitName);
         mudsContentElementSelector = document.querySelector('.muds-content');
-        editor.content.addEventListener('input', function() {
+        editor.content.addEventListener('keyup', function() {
             mudsContentSubmit.innerHTML = mudsContentElementSelector.innerHTML;
         });
     }

@@ -30,7 +30,7 @@
 
 &#x3C;!-- Initialize MUDS editor --&#x3E;
 &#x3C;script&#x3E;
-var editor = new muds({
+var muds = new muds({
     selector: &#x27;editor&#x27;
 });
 &#x3C;/script&#x3E;

@@ -127,7 +127,7 @@ var editor3 = new muds({
                     <pre data-lang="scss" data-option-autoprefixer></pre>
                     <pre data-lang="js">
 // Initialize muds editor
-var editor = new muds({
+var muds = new muds({
     selector: 'editor',
     menuStyle: 'custom',
     menuCustom: [

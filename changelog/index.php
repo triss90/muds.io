@@ -29,6 +29,7 @@
                             <li>Implementing textarea for submittable content</li>
                             <li>Adding custom "content subbmit name": <span class="tag">submitName: 'My_Submit_Name'</span></li>
                             <li>Muds should now be initialized with a <span class="tag">textarea</span> and not a <span class="tag">div</span></li>
+                            <li>Global Muds variable change from <span class="tag">editor</span> to <span class="tag">muds</span></li>
                         </ul>
                     </li>
                 </ul>
