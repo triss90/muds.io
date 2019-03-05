@@ -5,7 +5,7 @@
         this.options = Object.assign(muds.defaults, opts);
         this.original_input = document.getElementById(opts.selector);
         this.original_content = this.original_input.textContent;
-        this.original_id = this.original_input.id;
+        //this.original_id = this.original_input.id;
         this.menu_style = opts.menuStyle;
         this.menu_custom = opts.menuCustom;
         this.height = opts.height;
@@ -13,6 +13,7 @@
         this.tooltips = opts.tooltips;
         this.theme = opts.theme;
         this.selector = opts.selector;
+        this.onChange = opts.onChange;
         this.content_submit = opts.submitName;
         if (window.navigator.userAgent.indexOf("Mac") != -1) {
             this.osModifier = "CMD";
@@ -888,6 +889,11 @@
         editor.content.addEventListener('keyup', function() {
             mudsContentSubmit.innerHTML = mudsContentElementSelector.innerHTML;
         });
+        editor.content.addEventListener('input', function() {
+            editor.onChange();
+        });
+
+
     }
 
     // Attach our defaults for plugin to the plugin itself
@@ -900,7 +906,8 @@
         theme: 'light', // light, dark
         height: '150px',
         keybindings: true,
-        tooltips: true
+        tooltips: true,
+        onChange: false,
     };
 
     // make accessible globally

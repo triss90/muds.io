@@ -10,5 +10,6 @@
         <a href="/documentation/darkmode">Darkmode</a>
         <a href="/documentation/keybindings">Keybindings</a>
         <a href="/documentation/tooltips">Tooltips</a>
+        <a href="/documentation/events">Events</a>
     </nav>
 </div>

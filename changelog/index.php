@@ -32,6 +32,10 @@
                             <li>Global Muds variable change from <span class="tag">editor</span> to <span class="tag">muds</span></li>
                         </ul>
                     </li>
+                    <li>Adding support for events <ul>
+                            <li>Adding <span class="tag">onChange</span> event - <a href="https://muds.io/documentation/events/">docs</a></li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <br><br>

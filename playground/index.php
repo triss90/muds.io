@@ -37,6 +37,9 @@
             keybindings: true,
             menuStyle: 'custom',
             tooltips: true,
+            onChange: function() {
+                // JS goes here
+            },
             menuCustom: [
                 'code',
                 'header',
@@ -70,6 +73,9 @@
             ]
         });
 
+        function damn() {
+            console.log('test');
+        }
     </script>
 </body>
 </html>
