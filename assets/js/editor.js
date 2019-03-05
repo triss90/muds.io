@@ -13,6 +13,7 @@
         this.theme = opts.theme;
         this.selector = opts.selector;
         this.onChange = opts.onChange;
+        console.log(this);
         this.content_submit = opts.submitName;
         if (window.navigator.userAgent.indexOf("Mac") != -1) {
             this.osModifier = "CMD";
@@ -51,10 +52,11 @@
 
     // Menu Actions
     muds.prototype.enterFullScreen = function(string) {
+        var editObj;
         if (string) {
-            var editObj = string;
+            editObj = string;
         } else {
-            var editObj = this;
+            editObj = this;
         }
         const content = editObj.wrapper.querySelector('.muds-content');
         const toolbarButton = editObj.wrapper.querySelector('.muds-toolbar .muds-item.fullscreen');
@@ -70,16 +72,16 @@
         toolbarButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"/></svg>'
     };
     muds.prototype.exitFullScreen = function(string) {
+        var editObj;
         if (string) {
-            var editObj = string;
+            editObj = string;
         } else {
-            var editObj = this;
+            editObj = this;
         }
         const content = editObj.wrapper.querySelector('.muds-content');
         const toolbarButton = editObj.wrapper.querySelector('.muds-toolbar .muds-item.fullscreen');
         editObj.wrapper.setAttribute('style', '');
         editObj.wrapper.classList.remove('fullscreen');
-
         if (editObj.height === undefined) {
             content.style.height = "150px";
         } else {
@@ -89,87 +91,87 @@
         toolbarButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>'
     };
 
-    muds.prototype.buttonBodyTextAction = function(string) {
+    muds.prototype.buttonBodyTextAction = function() {
         document.execCommand('formatBlock', false, 'p');
     };
-    muds.prototype.buttonBlockquoteAction = function(string) {
+    muds.prototype.buttonBlockquoteAction = function() {
         document.execCommand('formatBlock', false, 'blockquote');
     };
-    muds.prototype.buttonCodeBlockAction = function(string) {
+    muds.prototype.buttonCodeBlockAction = function() {
         document.execCommand('formatBlock', false, 'pre');
     };
-    muds.prototype.buttonH1Action = function(string) {
+    muds.prototype.buttonH1Action = function() {
         document.execCommand('formatBlock', false, 'h1');
     };
-    muds.prototype.buttonH2Action = function(string) {
+    muds.prototype.buttonH2Action = function() {
         document.execCommand('formatBlock', false, 'h2');
     };
-    muds.prototype.buttonH3Action = function(string) {
+    muds.prototype.buttonH3Action = function() {
         document.execCommand('formatBlock', false, 'h3');
     };
-    muds.prototype.buttonFontDefaultAction = function(string) {
+    muds.prototype.buttonFontDefaultAction = function() {
         document.execCommand('fontName', false, '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"');
     };
-    muds.prototype.buttonFontArialAction = function(string) {
+    muds.prototype.buttonFontArialAction = function() {
         document.execCommand('fontName', false, 'Arial, Helvetica, sans-serif');
     };
-    muds.prototype.buttonFontArialBlackAction = function(string) {
+    muds.prototype.buttonFontArialBlackAction = function() {
         document.execCommand('fontName', false, '"Arial Black", Gadget, sans-serif');
     };
-    muds.prototype.buttonFontGeorgiaAction = function(string) {
+    muds.prototype.buttonFontGeorgiaAction = function() {
         document.execCommand('fontName', false, 'Georgia, serif');
     };
-    muds.prototype.buttonFontPalatinoAction = function(string) {
+    muds.prototype.buttonFontPalatinoAction = function() {
         document.execCommand('fontName', false, '"Palatino Linotype", "Book Antiqua", Palatino, serif');
     };
-    muds.prototype.buttonFontTimesNewRomanAction = function(string) {
+    muds.prototype.buttonFontTimesNewRomanAction = function() {
         document.execCommand('fontName', false, '"Times New Roman", Times, serif');
     };
-    muds.prototype.buttonFontComicSansAction = function(string) {
+    muds.prototype.buttonFontComicSansAction = function() {
         document.execCommand('fontName', false, '"Comic Sans MS", cursive, sans-serif');
     };
-    muds.prototype.buttonFontImpactAction = function(string) {
+    muds.prototype.buttonFontImpactAction = function() {
         document.execCommand('fontName', false, 'Impact, Charcoal, sans-serif');
     };
-    muds.prototype.buttonFontLucidaSansUnicodeAction = function(string) {
+    muds.prototype.buttonFontLucidaSansUnicodeAction = function() {
         document.execCommand('fontName', false, '"Lucida Sans Unicode", "Lucida Grande", sans-serif');
     };
-    muds.prototype.buttonFontLucidaConsoleAction = function(string) {
+    muds.prototype.buttonFontLucidaConsoleAction = function() {
         document.execCommand('fontName', false, '"Lucida Console", Monaco, monospace');
     };
-    muds.prototype.buttonFontTahamoAction = function(string) {
+    muds.prototype.buttonFontTahamoAction = function() {
         document.execCommand('fontName', false, 'Tahoma, Geneva, sans-serif');
     };
-    muds.prototype.buttonFontTrebuchetAction = function(string) {
+    muds.prototype.buttonFontTrebuchetAction = function() {
         document.execCommand('fontName', false, '"Trebuchet MS", Helvetica, sans-serif');
     };
-    muds.prototype.buttonFontVerdanaAction = function(string) {
+    muds.prototype.buttonFontVerdanaAction = function() {
         document.execCommand('fontName', false, 'Verdana, Geneva, sans-serif');
     };
-    muds.prototype.buttonFontCourierNewAction = function(string) {
+    muds.prototype.buttonFontCourierNewAction = function() {
         document.execCommand('fontName', false, '"Courier New", Courier, monospace');
     };
 
-    muds.prototype.buttonUnorderedListAction = function(string) {
+    muds.prototype.buttonUnorderedListAction = function() {
         document.execCommand('insertUnorderedList', false, '');
     };
-    muds.prototype.buttonOrderedListAction = function(string) {
+    muds.prototype.buttonOrderedListAction = function() {
         document.execCommand('insertOrderedList', false, '');
     };
 
-    muds.prototype.buttonUnderlineAction = function(string) {
+    muds.prototype.buttonUnderlineAction = function() {
         document.execCommand('underline', false, '');
     };
-    muds.prototype.buttonItalicAction = function(string) {
+    muds.prototype.buttonItalicAction = function() {
         document.execCommand('italic', false, '');
     };
-    muds.prototype.buttonBoldAction = function(string) {
+    muds.prototype.buttonBoldAction = function() {
         document.execCommand('bold', false, '');
     };
-    muds.prototype.buttonStrikeThroughAction = function(string) {
+    muds.prototype.buttonStrikeThroughAction = function() {
         document.execCommand('strikeThrough',false,'');
     };
-    muds.prototype.buttonLinkAction = function(string) {
+    muds.prototype.buttonLinkAction = function() {
         const selectedElement = window.getSelection().focusNode.parentElement;
         if (selectedElement.tagName === "A") {
             document.execCommand('unlink', false, '');
@@ -179,25 +181,25 @@
         }
     };
 
-    muds.prototype.buttonCutAction = function(string) {
+    muds.prototype.buttonCutAction = function() {
         document.execCommand('cut',false,'');
     };
-    muds.prototype.buttonCopyAction = function(string) {
+    muds.prototype.buttonCopyAction = function() {
         document.execCommand('copy', false, '');
     };
 
-    muds.prototype.buttonUndoAction = function(string) {
+    muds.prototype.buttonUndoAction = function() {
         document.execCommand('undo',false,'');
     };
-    muds.prototype.buttonRedoAction = function(string) {
+    muds.prototype.buttonRedoAction = function() {
         document.execCommand('redo',false,'');
     };
 
-    muds.prototype.buttonChangeColorAction = function(string) {
+    muds.prototype.buttonChangeColorAction = function() {
         const color = prompt('Enter your color in hex ex: #f1f233');
         document.execCommand('foreColor', false, color);
     };
-    muds.prototype.buttonGetImageAction = function(string) {
+    muds.prototype.buttonGetImageAction = function() {
         const editorContent = document.querySelector('.muds-content');
         const file = document.querySelector('input[type=file]').files[0];
         const reader = new FileReader();
@@ -216,10 +218,10 @@
             reader.readAsDataURL(file);
         }
     };
-    muds.prototype.buttonDeleteAction = function(string) {
+    muds.prototype.buttonDeleteAction = function() {
         document.execCommand('delete',false,'');
     };
-    muds.prototype.buttonSelectAllAction = function(string) {
+    muds.prototype.buttonSelectAllAction = function() {
         const editorContent = document.querySelector(".muds-content");
         if (document.activeElement !== editorContent) {
             editorContent.focus();
@@ -227,23 +229,23 @@
         document.execCommand('selectAll',false,'');
     };
 
-    muds.prototype.buttonJustifyCenterAction = function(string) {
+    muds.prototype.buttonJustifyCenterAction = function() {
         document.execCommand('justifyCenter',false,'');
     };
-    muds.prototype.buttonJustifyLeftAction = function(string) {
+    muds.prototype.buttonJustifyLeftAction = function() {
         document.execCommand('justifyLeft',false,'');
     };
-    muds.prototype.buttonJustifyRightAction = function(string) {
+    muds.prototype.buttonJustifyRightAction = function() {
         document.execCommand('justifyRight',false,'')
     };
-    muds.prototype.buttonIndentAction = function(string) {
+    muds.prototype.buttonIndentAction = function() {
         document.execCommand('indent',false,'')
     };
-    muds.prototype.buttonOutdentAction = function(string) {
+    muds.prototype.buttonOutdentAction = function() {
         document.execCommand('outdent',false,'')
     };
 
-    muds.prototype.buttonShowHTMLAction = function(string) {
+    muds.prototype.buttonShowHTMLAction = function() {
         const editorContent = document.querySelector(".muds-content");
         const HTMLButton = document.querySelector(".show-html");
         const menuButtons = document.querySelectorAll('.muds-item');
@@ -271,7 +273,7 @@
             }
         }
     };
-    muds.prototype.buttonShowTextAction = function(string) {
+    muds.prototype.buttonShowTextAction = function() {
         const editorContent = document.querySelector(".muds-content");
         const formattedText = editorContent.innerHTML;
         const myWindow = window.open("", "muds - View Text", "width=768,height=600");
@@ -279,7 +281,7 @@
         myWindow.document.write(formattedText);
         myWindow.document.write('</body></html>');
     };
-    muds.prototype.buttonPrintMeAction = function(string) {
+    muds.prototype.buttonPrintMeAction = function() {
         const editorContent = document.querySelector(".muds-content");
         const formattedText = editorContent.innerHTML;
         const myWindow = window.open("", "muds - Print", "width=768,height=600");
@@ -781,6 +783,7 @@
 
     // Build the Menu
     function buildMenu(item) {
+
         if (item.menu_style === "full" || item.menu_style === undefined ) {
             buttonHeader(item);
             buttonFonts(item);
@@ -814,43 +817,42 @@
             buttonStrikeThrough(item);
             buttonChangeColor(item);
         } else if (item.menu_style === "custom") {
-            function buildCustomMenu(menuItem) {
-                if (menuItem === "header"){buttonHeader(item);}
-                if (menuItem === "fonts"){buttonFonts(item);}
-                if (menuItem === "underline"){buttonUnderline(item);}
-                if (menuItem === "strikeThrough"){buttonStrikeThrough(item);}
-                if (menuItem === "italic"){buttonItalic(item);}
-                if (menuItem === "bold"){buttonBold(item);}
-                if (menuItem === "link"){buttonLink(item);}
-                if (menuItem === "blockquote"){buttonBlockquote(item);}
-                if (menuItem === "code"){buttonCodeBlock(item);}
-                if (menuItem === "changeColor"){buttonChangeColor(item);}
-                if (menuItem === "image"){buttonGetImage(item);}
-                if (menuItem === "undo"){buttonUndo(item);}
-                if (menuItem === "redo"){buttonRedo(item);}
-                if (menuItem === "justification"){buttonJustification(item);}
-                if (menuItem === "unorderedList"){buttonUnorderedList(item);}
-                if (menuItem === "orderedList"){buttonOrderedList(item);}
-                if (menuItem === "selectAll"){buttonSelectAll(item);}
-                if (menuItem === "copy"){buttonCopy(item);}
-                if (menuItem === "cut"){buttonCut(item);}
-                if (menuItem === "delete"){buttonDelete(item);}
-                if (menuItem === "justifyLeft"){buttonJustifyLeft(item);}
-                if (menuItem === "justifyCenter"){buttonJustifyCenter(item);}
-                if (menuItem === "justifyRight"){buttonJustifyRight(item);}
-                if (menuItem === "indent"){buttonIndent(item);}
-                if (menuItem === "outdent"){buttonOutdent(item);}
-                if (menuItem === "print"){buttonPrintMe(item);}
-                if (menuItem === "showHTML"){buttonShowHTML(item);}
-                if (menuItem === "showText"){buttonShowText(item);}
-                if (menuItem === "fullScreen"){buttonFullScreen(item);}
-                if (menuItem === "separator"){buttonSeparator(item);}
-            }
             const customMenuItems = item.menu_custom;
             for (var i = 0; i < customMenuItems.length; i++) {
                 buildCustomMenu(customMenuItems[i]);
             }
-
+        }
+        function buildCustomMenu(menuItem) {
+            if (menuItem === "header"){buttonHeader(item);}
+            if (menuItem === "fonts"){buttonFonts(item);}
+            if (menuItem === "underline"){buttonUnderline(item);}
+            if (menuItem === "strikeThrough"){buttonStrikeThrough(item);}
+            if (menuItem === "italic"){buttonItalic(item);}
+            if (menuItem === "bold"){buttonBold(item);}
+            if (menuItem === "link"){buttonLink(item);}
+            if (menuItem === "blockquote"){buttonBlockquote(item);}
+            if (menuItem === "code"){buttonCodeBlock(item);}
+            if (menuItem === "changeColor"){buttonChangeColor(item);}
+            if (menuItem === "image"){buttonGetImage(item);}
+            if (menuItem === "undo"){buttonUndo(item);}
+            if (menuItem === "redo"){buttonRedo(item);}
+            if (menuItem === "justification"){buttonJustification(item);}
+            if (menuItem === "unorderedList"){buttonUnorderedList(item);}
+            if (menuItem === "orderedList"){buttonOrderedList(item);}
+            if (menuItem === "selectAll"){buttonSelectAll(item);}
+            if (menuItem === "copy"){buttonCopy(item);}
+            if (menuItem === "cut"){buttonCut(item);}
+            if (menuItem === "delete"){buttonDelete(item);}
+            if (menuItem === "justifyLeft"){buttonJustifyLeft(item);}
+            if (menuItem === "justifyCenter"){buttonJustifyCenter(item);}
+            if (menuItem === "justifyRight"){buttonJustifyRight(item);}
+            if (menuItem === "indent"){buttonIndent(item);}
+            if (menuItem === "outdent"){buttonOutdent(item);}
+            if (menuItem === "print"){buttonPrintMe(item);}
+            if (menuItem === "showHTML"){buttonShowHTML(item);}
+            if (menuItem === "showText"){buttonShowText(item);}
+            if (menuItem === "fullScreen"){buttonFullScreen(item);}
+            if (menuItem === "separator"){buttonSeparator(item);}
         }
     }
 
@@ -859,14 +861,15 @@
         const mudsToolElement = editor.menu;
         const mudsWrapperElement = editor.wrapper;
         const mudsContentSubmit = editor.contentSubmittable;
+        var mudsContentSubmitName;
         mudsToolElement.classList.add('muds-toolbar');
         if (editor.tooltips != false) {
             mudsToolElement.classList.add('tooltips');
         }
         if (editor.content_submit === undefined) {
-            var mudsContentSubmitName = 'muds-submit';
+            mudsContentSubmitName = 'muds-submit';
         } else {
-            var mudsContentSubmitName = editor.content_submit;
+            mudsContentSubmitName = editor.content_submit;
         }
         if (editor.theme === 'light' || editor.theme === undefined) {
             mudsWrapperElement.classList.add('light');
@@ -889,9 +892,8 @@
         mudsContentSubmit.innerHTML = editor.original_content;
         mudsContentSubmit.setAttribute('name',mudsContentSubmitName);
         mudsContentSubmit.setAttribute('id',mudsContentSubmitName);
-        mudsContentElementSelector = mudsContentElement;
         editor.content.addEventListener('keyup', function() {
-            mudsContentSubmit.innerHTML = mudsContentElementSelector.innerHTML;
+            mudsContentSubmit.innerHTML = mudsContentElement.innerHTML;
         });
         if (editor.onChange != undefined) {
             editor.content.addEventListener('input', function() {

@@ -18,7 +18,7 @@
                 <p>You can easily prefill content in your MUDS editor like so: <span class="tag">content: 'content goes here'</span>.</p>
                 <br>
                 <h3>Example:</h3>
-                <div class="codepen" data-height="400" data-theme-id="36048" data-default-tab="html,js" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
+                <div class="codepen" data-height="400" data-theme-id="36048" data-default-tab="html,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
                     <pre data-lang="scss" data-option-autoprefixer></pre>
                     <pre data-lang="js">
 // Initialize muds editor
