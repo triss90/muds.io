@@ -37,6 +37,7 @@
                         </ul>
                     </li>
                     <li>Fixing a bug where custom height wasn't reapplied when leaving fullscreen</li>
+                    <li>Fixing a bug where onChange events would produced errors unless defined</li>
                 </ul>
 
                 <br><br>
