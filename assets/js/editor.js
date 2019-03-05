@@ -57,17 +57,17 @@
         } else {
             var editObj = this;
         }
-        const content = editObj.original_input.querySelector('.muds-content');
-        const toolbarButton = editObj.original_input.querySelector('.muds-toolbar .muds-item.fullscreen');
-        editObj.original_input.style.height = '100vh';
-        editObj.original_input.style.width = '100vw';
-        editObj.original_input.style.position = 'fixed';
-        editObj.original_input.style.top = '0';
-        editObj.original_input.style.left = '0';
-        editObj.original_input.style.zIndex = '999';
-        editObj.original_input.classList.add('fullscreen');
+        const content = editObj.wrapper.querySelector('.muds-content');
+        const toolbarButton = editObj.wrapper.querySelector('.muds-toolbar .muds-item.fullscreen');
+        editObj.wrapper.style.height = '100vh';
+        editObj.wrapper.style.width = '100vw';
+        editObj.wrapper.style.position = 'fixed';
+        editObj.wrapper.style.top = '0';
+        editObj.wrapper.style.left = '0';
+        editObj.wrapper.style.zIndex = '999';
+        editObj.wrapper.classList.add('fullscreen');
         content.style.height = '100%';
-        toolbarButton.setAttribute('onclick', editObj.original_input.id + '.exitFullScreen()');
+        toolbarButton.setAttribute('onclick', 'muds.exitFullScreen()');
         toolbarButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"/></svg>'
     };
     muds.prototype.exitFullScreen = function(string) {
@@ -76,12 +76,12 @@
         } else {
             var editObj = this;
         }
-        const content = editObj.original_input.querySelector('.muds-content');
-        const toolbarButton = editObj.original_input.querySelector('.muds-toolbar .muds-item.fullscreen');
-        editObj.original_input.setAttribute('style', '');
-        editObj.original_input.classList.remove('fullscreen');
+        const content = editObj.wrapper.querySelector('.muds-content');
+        const toolbarButton = editObj.wrapper.querySelector('.muds-toolbar .muds-item.fullscreen');
+        editObj.wrapper.setAttribute('style', '');
+        editObj.wrapper.classList.remove('fullscreen');
         content.style.height = editObj.height;
-        toolbarButton.setAttribute('onclick', editObj.original_input.id + '.enterFullScreen()');
+        toolbarButton.setAttribute('onclick', 'muds.enterFullScreen()');
         toolbarButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>'
     };
 
@@ -594,7 +594,7 @@
     function keybindings(editor) {
 
         const editorObj = editor;
-        const editorInput = editorObj.original_input;
+        const editorInput = editorObj.wrapper;
         
         editor.content.addEventListener("keydown", function(e) {
 
