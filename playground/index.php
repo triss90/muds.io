@@ -22,7 +22,6 @@
     <script>
         var editor = new muds({
             selector: 'editor',
-
             height: '542px',
             theme: "light",
             resize: true,

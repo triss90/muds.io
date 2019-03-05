@@ -21,15 +21,19 @@
         <div class="row">
             <div class="tiny-12 medium-7">
 
-<!--                <h2>MUDS v1.4.0 <a href="/download/muds-editor-v1.4.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>-->
-<!--                <ul>-->
-<!--                    <li>Refine codeblock style</li>-->
-<!--                    <li>Overhaul of how predefined content works</li>-->
-<!--                    <li>Implementing textarea for submittable content</li>-->
-<!--                    <li>Adding custom "content subbmit name": <span class="tag">submitName: 'My_Submit_Name'</span></li>-->
-<!--                </ul>-->
-<!---->
-<!--                <br><br>-->
+                <h2>MUDS v1.4.0 <a href="/download/muds-editor-v1.4.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
+                <ul>
+                   <li>Refine codeblock style</li>
+                    <li>Overhaul of how predefined content works
+                        <ul>
+                            <li>Implementing textarea for submittable content</li>
+                            <li>Adding custom "content subbmit name": <span class="tag">submitName: 'My_Submit_Name'</span></li>
+                            <li>Muds should now be initialized with a <span class="tag">textarea</span> and not a <span class="tag">div</span></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <br><br>
 
                 <h2>MUDS v1.3.5 <a href="/download/muds-editor-v1.3.5.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>

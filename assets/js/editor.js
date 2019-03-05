@@ -4,19 +4,14 @@
     var muds = function(opts) {
         this.options = Object.assign(muds.defaults, opts);
         this.original_input = document.getElementById(opts.selector);
-        const editorElement = document.querySelector('#'+opts.selector);
         this.original_content = this.original_input.innerHTML;
-        if (opts.theme === 'dark') {
-            editorElement.classList.add('dark');
-        } else {
-            editorElement.classList.add('light');
-        }
         this.menu_style = opts.menuStyle;
         this.menu_custom = opts.menuCustom;
         this.height = opts.height;
         this.resize = opts.resize;
         this.text = opts.content;
         this.tooltips = opts.tooltips;
+        this.theme = opts.theme;
         this.content_submit = opts.submitName;
         if (window.navigator.userAgent.indexOf("Mac") != -1) {
             this.osModifier = "CMD";
@@ -840,6 +835,12 @@
             var mudsContentSubmitName = 'muds-submit';
         } else {
             var mudsContentSubmitName = editor.content_submit;
+        }
+        console.log(editor.theme);
+        if (editor.theme === 'light' || editor.theme === undefined) {
+            mudsWrapperElement.classList.add('light');
+        } else {
+            mudsWrapperElement.classList.add('dark');
         }
         const mudsContentElement = editor.content;
         mudsContentElement.classList.add('muds-content');
