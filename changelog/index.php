@@ -21,6 +21,16 @@
         <div class="row">
             <div class="tiny-12 medium-7">
 
+<!--                <h2>MUDS v1.4.0 <a href="/download/muds-editor-v1.4.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>-->
+<!--                <ul>-->
+<!--                    <li>Refine codeblock style</li>-->
+<!--                    <li>Overhaul of how predefined content works</li>-->
+<!--                    <li>Implementing textarea for submittable content</li>-->
+<!--                    <li>Adding custom "content subbmit name": <span class="tag">submitName: 'My_Submit_Name'</span></li>-->
+<!--                </ul>-->
+<!---->
+<!--                <br><br>-->
+
                 <h2>MUDS v1.3.5 <a href="/download/muds-editor-v1.3.5.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
                     <li>Fix bug where separator didn't work with custom menu</li>
@@ -182,6 +192,7 @@
                     <li><strike>Custom keybindings</strike></li>
                     <li><strike>Code block support</strike></li>
                     <li><strike>Quoteblock support</strike></li>
+                    <li><strike>Make content more easily submittable</strike></li>
                 </ul>
                 <br>
                 <p>If you have any suggestions, feel free to reach out to <a href="https://twitter.com/Triss90" target="_blank">Tristan White</a>.</p>

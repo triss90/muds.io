@@ -5,7 +5,6 @@
         this.options = Object.assign(muds.defaults, opts);
         this.original_input = document.getElementById(opts.selector);
         const editorElement = document.querySelector('#'+opts.selector);
-        this.original_content = this.original_input.innerHTML;
         if (opts.theme === 'dark') {
             editorElement.classList.add('dark');
         } else {
@@ -17,7 +16,6 @@
         this.resize = opts.resize;
         this.text = opts.content;
         this.tooltips = opts.tooltips;
-        this.content_submit = opts.submitName;
         if (window.navigator.userAgent.indexOf("Mac") != -1) {
             this.osModifier = "CMD";
         } else {
@@ -25,16 +23,13 @@
         }
         this.menu = document.createElement('div');
         this.content = document.createElement('div');
-        this.contentSubmittable = document.createElement('textarea');
-        this.contentSubmittable.style.display = "none";
-        this.contentSubmittable.style.opacity = "0";
-        this.contentSubmittable.style.height = "0";
-        this.contentSubmittable.id = "muds-content-submittable";
-        this.wrapper = document.createElement('div');
+        this.content = document.createElement('div');
+        this.output = document.createElement('div');
         buildMenu(this);
         buildEditor(this);
         if (opts.keybindings != false) {
             keybindings(this);
+            // this.keybindings(this);
         }
     };
 
@@ -231,7 +226,7 @@
         document.execCommand('justifyCenter',false,'');
     };
     muds.prototype.buttonJustifyLeftAction = function(string) {
-        document.execCommand('justifyLeft',false,'');
+        document.execCommand('justifyLeft',false,'')
     };
     muds.prototype.buttonJustifyRightAction = function(string) {
         document.execCommand('justifyRight',false,'')
@@ -575,6 +570,7 @@
         
         editor.content.addEventListener("keydown", function(e) {
 
+            //console.log(e.keyCode);
 
             // Tab
             if(e.keyCode === 9) {
@@ -830,44 +826,26 @@
     // Build the editor
     function buildEditor(editor) {
         const mudsToolElement = editor.menu;
-        const mudsWrapperElement = editor.wrapper;
-        const mudsContentSubmit = editor.contentSubmittable;
         mudsToolElement.classList.add('muds-toolbar');
         if (editor.tooltips != false) {
             mudsToolElement.classList.add('tooltips');
         }
-        if (editor.content_submit === undefined) {
-            var mudsContentSubmitName = 'muds-submit';
-        } else {
-            var mudsContentSubmitName = editor.content_submit
-        }
         const mudsContentElement = editor.content;
         mudsContentElement.classList.add('muds-content');
-        mudsWrapperElement.id = editor.original_input.id;
         mudsContentElement.setAttribute('contenteditable','true');
         mudsContentElement.style.overflow = 'auto';
         mudsContentElement.style.height = editor.height;
         if (editor.resize !== false) { mudsContentElement.style.resize = 'vertical'; }
         if (editor.text !== undefined) { mudsContentElement.innerHTML = editor.text; }
-        editor.original_input.replaceWith(mudsWrapperElement);
-        mudsWrapperElement.appendChild(mudsToolElement);
-        mudsWrapperElement.appendChild(mudsContentElement);
-        mudsContentElement.innerHTML = editor.original_content;
-        mudsWrapperElement.appendChild(mudsContentSubmit);
-        mudsContentSubmit.innerHTML = editor.original_content;
-        mudsContentSubmit.setAttribute('name',mudsContentSubmitName);
-        mudsContentElementSelector = document.querySelector('.muds-content');
-        editor.content.addEventListener('input', function() {
-            mudsContentSubmit.innerHTML = mudsContentElementSelector.innerHTML;
-        });
+        const mudsOutputElement = editor.output;
+        mudsOutputElement.classList.add('muds-output');
+        editor.original_input.appendChild(mudsToolElement);
+        editor.original_input.appendChild(mudsContentElement);
+        editor.original_input.appendChild(mudsOutputElement);
     }
-
-
-
     // Attach our defaults for plugin to the plugin itself
     muds.defaults = {
         selector: '',
-        submitName: 'muds-submit',
         resize: true,
         menuStyle: 'custom', // full, minimal, custom
         menuCustom: [], //'header','underline','strikeThrough','bold','italic','link','changeColor','image','undo','redo','unorderedList','orderedList','selectAll','copy','cut','delete','justifyLeft','justifyCenter','justifyRight','print','showHTML','showText','fullScreen'

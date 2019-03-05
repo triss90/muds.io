@@ -14,20 +14,18 @@
 </head>
 <body>
 
-    <textarea id="editor">adadada
-    adadaggg
-    Daniel er træls...</textarea>
+    <textarea id="editor"></textarea>
 
     <script src="/assets/js/editor.js" ></script>
     <script>
         var editor = new muds({
             selector: 'editor',
-
             height: '542px',
+            content: '<h1>Try the MUDS editor today</h1><p>No matter what you\'re building, <a href="#0">MUDS has you covered</a>. From content management to email marketing, here are our customers\' most common uses:</p><ul><li>Content Management Systems</li><li>Learning Management Systems</li><li>Customer Relationship Management and marketing automation</li></ul><blockquote>Our team is hard at work, creating and adding new features to take the Javascript web WYSIWYG editing capabilities to the next level.</blockquote><br><h2>Initialize the MUDS editor</h2><pre> var editor = new muds({selector: "editor"});</pre>',
             theme: "light",
             resize: true,
             keybindings: true,
-            menuStyle: 'full',
+            menuStyle: 'custom',
             tooltips: true,
             menuCustom: [
                 'code',
