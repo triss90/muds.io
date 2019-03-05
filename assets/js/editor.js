@@ -9,7 +9,6 @@
         this.menu_custom = opts.menuCustom;
         this.height = opts.height;
         this.resize = opts.resize;
-        this.text = opts.content;
         this.tooltips = opts.tooltips;
         this.theme = opts.theme;
         this.content_submit = opts.submitName;
@@ -836,7 +835,6 @@
         } else {
             var mudsContentSubmitName = editor.content_submit;
         }
-        console.log(editor.theme);
         if (editor.theme === 'light' || editor.theme === undefined) {
             mudsWrapperElement.classList.add('light');
         } else {
@@ -863,8 +861,6 @@
         });
     }
 
-
-
     // Attach our defaults for plugin to the plugin itself
     muds.defaults = {
         selector: '',
@@ -873,7 +869,6 @@
         menuStyle: 'custom', // full, minimal, custom
         menuCustom: [], //'header','underline','strikeThrough','bold','italic','link','changeColor','image','undo','redo','unorderedList','orderedList','selectAll','copy','cut','delete','justifyLeft','justifyCenter','justifyRight','print','showHTML','showText','fullScreen'
         theme: 'light', // light, dark
-        content: '',
         height: '150px',
         keybindings: true,
         tooltips: true

@@ -22,7 +22,7 @@
             <li>Daniel er MEGA træls...</li>
         </ul>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid atque cupiditate, facere fugiat illum laboriosam libero magni nisi porro praesentium quaerat quas ratione reiciendis soluta tenetur voluptatem voluptatibus. Mollitia, totam.</p>
-        <h3>This is a test</h3>
+        <br><h3>This is a test</h3>
         <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid atque cupiditate, facere fugiat illum laboriosam libero magni nisi porro praesentium quaerat quas ratione reiciendis soluta tenetur voluptatem voluptatibus. Mollitia, totam.</blockquote>
     </textarea>
 
@@ -30,6 +30,7 @@
     <script>
         var editor = new muds({
             selector: 'editor',
+            submitName: 'mySubmit',
             height: '542px',
             theme: "light",
             resize: true,
