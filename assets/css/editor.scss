@@ -1,9 +1,12 @@
 .muds-toolbar {
   background: #F7F7F7;
-  padding: 8px 5px 5px 5px;
+  padding: 5px 5px 5px 5px !important;
   border: 2px solid #EBEBEB;
   border-radius: 2px 2px 0 0;
   text-align: left;
+  line-height: 1 !important;
+  position: relative !important;
+  box-sizing: border-box !important;
   &.tooltips {
     .muds-item {
       &[data-tooltip] {
@@ -63,7 +66,11 @@
     border-radius: 0;
     color: #999;
     display: inline-block;
-    padding: 0px 6px;
+    padding: 0px 6px !important;
+    height: 1.2rem !important;
+    line-height: 1 !important;
+    box-sizing: border-box !important;
+    vertical-align: sub !important;
     &:focus {
       outline: 0;
     }
@@ -97,8 +104,8 @@
       }
     }
     svg {
-      height: 1.25rem !important;
-      width: 1.25rem !important;
+      height: 1.2rem !important;
+      width: 1.2rem !important;
       fill: #999;
       margin: 0;
       padding: 0;
@@ -113,17 +120,29 @@
   }
   .muds-separator {
     background: #d1d1d1;
-    width: 2px;
-    height: 1rem;
-    position: relative;
-    display: inline-block;
-    margin: 0px 1rem;
-    top: -2px;
+    width: 2px !important;
+    height: 1.2rem !important;
+    position: relative !important;
+    display: inline-block !important;
+    margin: 0px 1rem !important;
+    padding: 0 !important;
+    top: 0px !important;
+    bottom: 0px !important;
+    vertical-align: bottom !important;
+    box-sizing: border-box !important;
   }
   .muds-dropdown {
-    position: relative;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    color: #999;
     display: inline-block;
-    padding: 0px 6px;
+    padding: 0px 6px !important;
+    vertical-align: text-bottom !important;
+    height: 1.2rem !important;
+    position: relative !important;
+    line-height: 1 !important;
+    box-sizing: sub !important;
     &:hover ul {
       opacity: 1;
       visibility: visible;
@@ -198,8 +217,8 @@
     }
     label {
       svg {
-        height: 1.25rem !important;
-        width: 1.25rem !important;
+        height: 1.2rem !important;
+        width: 1.2rem !important;
         fill: #999;
         margin: 0;
         padding: 0;
@@ -299,10 +318,11 @@
   border-top: 0;
   height: 150px;
   font-size: 16px;
-  width: calc(100% - 24px); // Subtract padding and border width
+  width: 100%;
   overflow: scroll;
   text-align: left;
   border-radius: 0 0 2px 2px;
+  box-sizing: border-box;
   color: #333 !important;
   h1 {
     font-size: 2.5rem !important;
