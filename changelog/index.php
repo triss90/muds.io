@@ -38,6 +38,7 @@
                     </li>
                     <li>Fixing a bug where custom height wasn't reapplied when leaving fullscreen</li>
                     <li>Fixing a bug where onChange events would produced errors unless defined</li>
+                    <li>Fixing a bug where tab wouldn't insert 4 spaces correctly</li>
                 </ul>
 
                 <br><br>
