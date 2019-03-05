@@ -839,7 +839,7 @@
         if (editor.content_submit === undefined) {
             var mudsContentSubmitName = 'muds-submit';
         } else {
-            var mudsContentSubmitName = editor.content_submit
+            var mudsContentSubmitName = editor.content_submit;
         }
         const mudsContentElement = editor.content;
         mudsContentElement.classList.add('muds-content');
