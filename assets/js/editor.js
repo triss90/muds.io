@@ -13,7 +13,6 @@
         this.theme = opts.theme;
         this.selector = opts.selector;
         this.onChange = opts.onChange;
-        console.log(this);
         this.content_submit = opts.submitName;
         if (window.navigator.userAgent.indexOf("Mac") != -1) {
             this.osModifier = "CMD";
