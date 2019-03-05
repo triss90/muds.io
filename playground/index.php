@@ -14,22 +14,12 @@
 </head>
 <body>
 
-    <textarea id="editordd">
-        <h1>adadada</h1>
-        adadaggg
-        <ul>
-            <li>Daniel er træls...</li>
-            <li>Daniel er MEGA træls...</li>
-        </ul>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid atque cupiditate, facere fugiat illum laboriosam libero magni nisi porro praesentium quaerat quas ratione reiciendis soluta tenetur voluptatem voluptatibus. Mollitia, totam.</p>
-        <br><h3>This is a test</h3>
-        <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid atque cupiditate, facere fugiat illum laboriosam libero magni nisi porro praesentium quaerat quas ratione reiciendis soluta tenetur voluptatem voluptatibus. Mollitia, totam.</blockquote>
-    </textarea>
+    <textarea id="oajbfnoesjf"></textarea>
 
     <script src="/assets/js/editor.js" ></script>
     <script>
         var muds = new muds({
-            selector: 'editordd',
+            selector: 'oajbfnoesjf',
             submitName: 'mySubmit',
             height: '542px',
             theme: "light",
@@ -37,9 +27,9 @@
             keybindings: true,
             menuStyle: 'custom',
             tooltips: true,
-            onChange: function() {
-                console.log('onChange event fired...!');
-            },
+            // onChange: function() {
+            //     console.log('onChange event fired...!');
+            // },
             menuCustom: [
                 'header',
                 'fonts',

@@ -36,6 +36,7 @@
                             <li>Adding <span class="tag">onChange</span> event - <a href="https://muds.io/documentation/events/">docs</a></li>
                         </ul>
                     </li>
+                    <li>Fixing a bug where custom height wasn't reapplied when leaving fullscreen</li>
                 </ul>
 
                 <br><br>

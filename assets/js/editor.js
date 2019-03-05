@@ -919,11 +919,11 @@
         editor.content.addEventListener('keyup', function() {
             mudsContentSubmit.innerHTML = mudsContentElementSelector.innerHTML;
         });
-        editor.content.addEventListener('input', function() {
-            editor.onChange();
-        });
-
-
+        if (editor.onChange != undefined) {
+            editor.content.addEventListener('input', function() {
+                editor.onChange();
+            });
+        }
     }
 
     // Attach our defaults for plugin to the plugin itself
@@ -937,7 +937,7 @@
         height: '150px',
         keybindings: true,
         tooltips: true,
-        onChange: false,
+        onChange: false
     };
 
     // make accessible globally
