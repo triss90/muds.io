@@ -15,7 +15,9 @@
                 <a href="/download/muds-editor-v<?php echo $mudsVersion; ?>.zip" class="button primary" download><i class="fa fa-download" aria-hidden="true"></i> Download v<?php echo $mudsVersion; ?></a>
                 <a href="https://github.com/triss90/muds.io" target="_blank" class="button secondary"><i class="fa fa-github" aria-hidden="true"></i> View on GitHub</a>
                 <br><br><br><br><br><br>
-                <div id="editor"></div>
+                <textarea id="editor">
+                    <h1>Try the MUDS editor today</h1><p>No matter what you're building, MUDS has you covered. From content management to email marketing, here are our customers' most common uses:</p><ul><li>Content Management Systems</li><li>Learning Management Systems</li><li>Customer Relationship Management and marketing automation</li></ul><br><p><a href="https://tristanwhite.info" target="_blank">Our team</a> is hard at work, creating and adding <a href="https://muds.io/changelog/">new features</a> to take the Javascript web WYSIWYG editing capabilities to the next level.</p><blockquote>The Muds editor has proven to seamlessly integrate with my webapp. It has offered me endless customizability, so as to suit my needs.<br>- Ronan Richardson</blockquote><br><h2>Initialize the MUDS editor</h2><pre> var muds = new muds({selector: "editor"});</pre>
+                </textarea>
             </div>
             <div class="tiny-12">
                 <br>
@@ -47,7 +49,7 @@
 &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds.min.css&#x22;&#x3E;
 
 &#x3C;!-- Create the editor container --&#x3E;
-&#x3C;div id=&#x22;editor&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;textarea id=&#x22;editor&#x22;&#x3E;&#x3C;/textarea&#x3E;
 
 &#x3C;!-- Include the MUDS library --&#x3E;
 &#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
@@ -77,7 +79,6 @@ var muds = new muds({
     var muds = new muds({
         selector: 'editor',
         menuStyle: 'full',
-        content: '<h1>Try the MUDS editor today</h1><p>No matter what you\'re building, MUDS has you covered. From content management to email marketing, here are our customers\' most common uses:</p><ul><li>Content Management Systems</li><li>Learning Management Systems</li><li>Customer Relationship Management and marketing automation</li></ul><br><p><a href="https://tristanwhite.info" target="_blank">Our team</a> is hard at work, creating and adding <a href="https://muds.io/changelog/">new features</a> to take the Javascript web WYSIWYG editing capabilities to the next level.</p><blockquote>The Muds editor has proven to seamlessly integrate with my webapp. It has offered me endless customizability, so as to suit my needs.<br>- Ronan Richardson</blockquote><br><h2>Initialize the MUDS editor</h2><pre> var muds = new muds({selector: "editor"});</pre>',
         height: '370px'
     });
 
