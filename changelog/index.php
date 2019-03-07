@@ -26,9 +26,11 @@
 <!--                    <li>Update readme</li>-->
 <!--                    <li>Fix list style types, so they aren't accidentally overwritten by local styles</li>-->
 <!--                    <li>Add support for all major browser: Safari, Chrome, Firefox, Opera, Edge and Internet Explorer 9+</li>-->
+<!--                    <li>Made editor tabable</li>-->
+<!--                    <li>Changed default linebreak from <span class="tag">&#x3C;div&#x3E;&#x3C;br&#x3E;&#x3C;/div&#x3E;</span> to <span class="tag">&#x3C;p&#x3E;&#x3C;/p&#x3E;</span></li>-->
 <!--                </ul>-->
-<!---->
-<!--                <br><br>-->
+
+                <br><br>
 
                 <h2>MUDS v1.4.0 <a href="/download/muds-editor-v1.4.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
