@@ -940,7 +940,6 @@
         mudsContentElement.style.overflow = 'auto';
         mudsContentElement.style.height = editor.height;
         if (editor.resize !== false) { mudsContentElement.style.resize = 'vertical'; }
-        if (editor.text !== undefined) { mudsContentElement.innerHTML = editor.text; }
         editor.original_input.parentNode.replaceChild(mudsWrapperElement, editor.original_input);
         mudsWrapperElement.appendChild(mudsToolElement);
         mudsWrapperElement.appendChild(mudsContentElement);
