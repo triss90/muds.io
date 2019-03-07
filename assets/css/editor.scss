@@ -240,7 +240,7 @@
       text-align: left;
       transition: all 200ms;
       z-index: 3;
-      &:before {
+      &::before {
         content: '';
         position: absolute;
         top: -12px;
@@ -248,7 +248,7 @@
         width: 100%;
         background-color: transparent;
       }
-      &:after {
+      &::after {
         content: '';
         position: absolute;
         left: 6px;
@@ -293,7 +293,7 @@
             font-size: 1.1rem;
           }
         }
-        &:first-of-type:after {
+        &:first-of-type::after {
           content: '';
           position: absolute;
           left: 6px;
@@ -349,9 +349,12 @@
   }
   ul, ol {
     margin-left: 1.5rem;
-    li {
-
-    }
+  }
+  ul, ul li {
+    list-style-type: disc !important;
+  }
+  ol, ol li {
+    list-style-type: decimal !important;
   }
   blockquote {
     font-size: 1rem !important;

@@ -238,7 +238,7 @@
 		},
 	"\/assets\/css\/editor.scss": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
@@ -754,6 +754,16 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"\/assets\/js\/editor_old.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/editor_old-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"\/changelog\/index.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -935,6 +945,14 @@
 		"oA": 0,
 		"oAP": "\/LICENSE",
 		"oF": 0
+		},
+	"\/package-lock.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/package-lock-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		},
 	"\/playground\/index.php": {
 		"cB": 0,

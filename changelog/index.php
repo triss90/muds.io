@@ -24,6 +24,8 @@
 <!--                <h2>MUDS v1.4.1 <a href="/download/muds-editor-v1.4.1.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>-->
 <!--                <ul>-->
 <!--                    <li>Update readme</li>-->
+<!--                    <li>Fix list style types, so they aren't accidentally overwritten by local styles</li>-->
+<!--                    <li>Add support for all major browser: Safari, Chrome, Firefox, Opera, Edge and Internet Explorer 9+</li>-->
 <!--                </ul>-->
 <!---->
 <!--                <br><br>-->
@@ -34,9 +36,9 @@
                     <li>Overhaul of how predefined content works
                         <ul>
                             <li>Implementing textarea for submittable content</li>
-                            <li>Adding custom "content subbmit name": <span class="tag">submitName: 'My_Submit_Name'</span></li>
+                            <li>Adding custom "content submit name": <span class="tag">submitName: 'My_Submit_Name'</span></li>
                             <li>Muds should now be initialized with a <span class="tag">textarea</span> and not a <span class="tag">div</span></li>
-                            <li>Global Muds variable change from <span class="tag">editor</span> to <span class="tag">muds</span></li>
+                            <li>Global MUDS variable change from <span class="tag">editor</span> to <span class="tag">muds</span></li>
                         </ul>
                     </li>
                     <li>Adding support for events <ul>

@@ -1,15 +1,8 @@
 (function(){
 
+    // Constructor Function
     var muds = function(opts) {
-
-        function merge_options(obj1,obj2) {
-            var obj3 = {};
-            for (var attrname in obj1) { obj3[attrname] = obj1[attrname]; }
-            for (var attrname in obj2) { obj3[attrname] = obj2[attrname]; }
-            return obj3;
-        }
-        this.options = merge_options(muds.defaults,opts);
-
+        this.options = Object.assign(muds.defaults, opts);
         this.original_input = document.getElementById(opts.selector);
         this.original_content = this.original_input.textContent;
         this.menu_style = opts.menuStyle;
@@ -39,8 +32,6 @@
             keybindings(this);
         }
     };
-
-
 
     // Encode and decode HTML
     window.htmlentities = {
@@ -320,9 +311,7 @@
     }
     function buttonHeader(item) {
         const buttonHeader = document.createElement('div');
-        buttonHeader.classList.add('muds-item');
-        buttonHeader.classList.add('muds-dropdown');
-        buttonHeader.classList.add('headers');
+        buttonHeader.classList.add('muds-item','muds-dropdown','headers');
         buttonHeader.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M5 4v3h5.5v12h3V7H19V4H5z"/></svg></label>' +
             '<ul>' +
             '<li><button type="button" class="muds-h1" title="Healine 1 (cmd+1)" onclick="'+'muds.buttonH1Action()'+'">Header 1</button></li>' +
@@ -336,9 +325,7 @@
     }
     function buttonFonts(item) {
         const buttonFonts = document.createElement('div');
-        buttonFonts.classList.add('muds-item');
-        buttonFonts.classList.add('muds-dropdown');
-        buttonFonts.classList.add('fonts');
+        buttonFonts.classList.add('muds-item','muds-dropdown','fonts');
         buttonFonts.innerHTML = '<label><svg baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M9.93 13.5h4.14L12 7.98zM20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-4.05 16.5l-1.14-3H9.17l-1.12 3H5.96l5.11-13h1.86l5.11 13h-2.09z"/></svg>\n</label>' +
             '<ul>' +
             '<div class="wrapper">' +
@@ -522,10 +509,9 @@
         item.menu.appendChild(buttonSelectAll);
     }
     function buttonJustification(item) {
-        const buttonJustification = document.createElement('div');
-        buttonJustification.classList.add('muds-item');
-        buttonJustification.classList.add('muds-dropdown');
-        buttonJustification.classList.add('justification');
+        const buttonJustification = document.createElement('button');
+        buttonJustification.setAttribute('type', 'button');
+        buttonJustification.classList.add('muds-item','muds-dropdown','justification');
         buttonJustification.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg></label>' +
             '<ul>' +
             '<li><button type="button" class="just-left" title="Justify Left" onclick="'+'muds.buttonJustifyLeftAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg> Justify Left</button></li>' +
@@ -614,7 +600,7 @@
 
         const editorObj = editor;
         const editorInput = editorObj.wrapper;
-
+        
         editor.content.addEventListener("keydown", function(e) {
 
 
@@ -898,7 +884,7 @@
         mudsContentElement.style.height = editor.height;
         if (editor.resize !== false) { mudsContentElement.style.resize = 'vertical'; }
         if (editor.text !== undefined) { mudsContentElement.innerHTML = editor.text; }
-        editor.original_input.parentNode.replaceChild(mudsWrapperElement, editor.original_input);
+        editor.original_input.replaceWith(mudsWrapperElement);
         mudsWrapperElement.appendChild(mudsToolElement);
         mudsWrapperElement.appendChild(mudsContentElement);
         mudsContentElement.innerHTML = editor.original_content;

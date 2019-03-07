@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <textarea id="oajbfnoesjf">
+    <textarea id="editorSelector">
        <h2>MUDS v1.4.0 <a href="/download/muds-editor-v1.4.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
                    <li>Refine codeblock style</li>
@@ -39,12 +39,12 @@
     <script src="/assets/js/editor.js" ></script>
     <script>
         var muds = new muds({
-            selector: 'oajbfnoesjf',
+            selector: 'editorSelector',
             submitName: 'mySubmit',
             height: '542px',
             theme: "light",
             resize: true,
-            keybindings: true,
+            keybindings: false,
             menuStyle: 'custom',
             tooltips: true,
             onChange: function() {
