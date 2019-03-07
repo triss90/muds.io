@@ -28,7 +28,7 @@
             theme: "light",
             resize: true,
             keybindings: true,
-            menuStyle: 'minimal',
+            menuStyle: 'custom',
             tooltips: true,
             onChange: function() {
                 console.log('onChange event fired...!');

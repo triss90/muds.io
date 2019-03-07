@@ -1,6 +1,8 @@
 (function(){
 
     var muds = function(opts) {
+
+        // Load editor options (default and user)
         function merge_options(obj1,obj2) {
             var obj3 = {};
             var attrname;
@@ -9,6 +11,8 @@
             return obj3;
         }
         this.options = merge_options(muds.defaults,opts);
+
+        // Assign options to object
         this.original_input = document.getElementById(opts.selector);
         this.original_content = this.original_input.textContent;
         this.menu_style = opts.menuStyle;
@@ -20,23 +24,29 @@
         this.selector = opts.selector;
         this.onChange = opts.onChange;
         this.content_submit = opts.submitName;
+
+        // Set default modifier button
         if (window.navigator.userAgent.indexOf("Mac") != -1) {
             this.osModifier = "CMD";
         } else {
             this.osModifier = "CTRL";
         }
+
         this.menu = document.createElement('div');
         this.content = document.createElement('div');
+        this.wrapper = document.createElement('div');
+
+        // Create and hide textarea element
         this.contentSubmittable = document.createElement('textarea');
         this.contentSubmittable.style.display = "none";
         this.contentSubmittable.style.opacity = "0";
         this.contentSubmittable.style.height = "0";
-        this.wrapper = document.createElement('div');
+
+        // Build Menu
         buildMenu(this);
+
+        //Build Editor
         buildEditor(this);
-        if (opts.keybindings != false) {
-            keybindings(this);
-        }
     };
 
     // Encode and decode HTML
@@ -55,8 +65,6 @@
             });
         }
     };
-
-
 
     // Menu Actions
     muds.prototype.enterFullScreen = function(string) {
@@ -175,21 +183,7 @@
         document.execCommand('italic', false, '');
     };
     muds.prototype.buttonBoldAction = function() {
-        // var editor = document.getElementById(this.original_input.id);
-        // var doc = editor.ownerDocument.defaultView;
-        // var sel = doc.getSelection();
-        // var range = sel.getRangeAt(0);
-        // var node = document.createTextNode("");
-
         document.execCommand('bold', false, '');
-
-        // range.insertNode(node);
-        // range.setStartAfter(node);
-        // range.setEndAfter(node-1);
-        // sel.removeAllRanges();
-        // sel.addRange(range);
-
-
     };
     muds.prototype.buttonStrikeThroughAction = function() {
         document.execCommand('strikeThrough',false,'');
@@ -652,8 +646,6 @@
         item.menu.appendChild(buttonShowText);
     }
 
-
-
     // Keybindings
     function keybindings(editor) {
 
@@ -915,31 +907,47 @@
 
     // Build the editor
     function buildEditor(editor) {
+        // Set editor variables
         const mudsToolElement = editor.menu;
         const mudsWrapperElement = editor.wrapper;
         const mudsContentSubmit = editor.contentSubmittable;
         var mudsContentSubmitName;
-        mudsToolElement.classList.add('muds-toolbar');
+        const mudsContentElement = editor.content;
+
+        // Enables tooltips
         if (editor.tooltips != false) {
             mudsToolElement.classList.add('tooltips');
         }
+
+        // Enables keybindings
+        if (editor.keybindings != false) {
+            keybindings(editor);
+        }
+
+        // Sets texarea name
         if (editor.content_submit === undefined) {
             mudsContentSubmitName = 'muds-submit';
         } else {
             mudsContentSubmitName = editor.content_submit;
         }
+
+        // Enable darkmode
         if (editor.theme === 'light' || editor.theme === undefined) {
             mudsWrapperElement.classList.add('light');
         } else {
             mudsWrapperElement.classList.add('dark');
         }
-        const mudsContentElement = editor.content;
+
+        // Enable resizable editor
+        if (editor.resize !== false) { mudsContentElement.style.resize = 'vertical'; }
+
+        // Buil edtior
+        mudsToolElement.classList.add('muds-toolbar');
         mudsContentElement.classList.add('muds-content');
         mudsWrapperElement.id = editor.original_input.id;
         mudsContentElement.setAttribute('contenteditable','true');
         mudsContentElement.style.overflow = 'auto';
         mudsContentElement.style.height = editor.height;
-        if (editor.resize !== false) { mudsContentElement.style.resize = 'vertical'; }
         editor.original_input.parentNode.replaceChild(mudsWrapperElement, editor.original_input);
         mudsWrapperElement.appendChild(mudsToolElement);
         mudsWrapperElement.appendChild(mudsContentElement);
@@ -948,9 +956,11 @@
         mudsContentSubmit.innerHTML = editor.original_content;
         mudsContentSubmit.setAttribute('name',mudsContentSubmitName);
         mudsContentSubmit.setAttribute('id',mudsContentSubmitName);
+
         // Set the default break to insert "<p></p>"
         document.execCommand("defaultParagraphSeparator", false, "p");
 
+        // Copy content to textarea
         editor.content.addEventListener('keyup', function() {
             mudsContentSubmit.innerHTML = mudsContentElement.innerHTML;
         });
@@ -963,6 +973,7 @@
             });
         }
 
+        // Enables onChange event
         if (editor.onChange != undefined) {
             editor.content.addEventListener('input', function() {
                 editor.onChange();
