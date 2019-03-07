@@ -997,5 +997,4 @@
 
     // make accessible globally
     window.muds = muds;
-
 })();

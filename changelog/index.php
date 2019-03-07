@@ -206,6 +206,7 @@
                     <li><strike>Custom ordering of menu items</strike></li>
                     <li>Custom themes or some version of injected custom CSS</li>
                     <li>Better image handling capabilities</li>
+                    <li>Custom buttons</li>
                     <li><strike>Tooltips on menuitems</strike></li>
                     <li>Color control (both text and background color)</li>
                     <li><strike>Custom font type support</strike></li>
