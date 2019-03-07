@@ -13,7 +13,6 @@
     </style>
 </head>
 <body>
-    <input type="text">
     <textarea id="editorSelector">
         <p>This is a test</p>
         <p>This is another test</p>

@@ -214,6 +214,7 @@
                     <li>Multi instance support</li>
                     <li><strike>In-, and outdent support</strike></li>
                     <li>Embedded video support</li>
+                    <li>Plugin support</li>
                     <li><strike>Custom keybindings</strike></li>
                     <li><strike>Code block support</strike></li>
                     <li><strike>Quoteblock support</strike></li>

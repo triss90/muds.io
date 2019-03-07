@@ -2,7 +2,7 @@
 
     var muds = function(opts) {
 
-        // Load editor options (default and user)
+        // Object merger function
         function merge_options(obj1,obj2) {
             var obj3 = {};
             var attrname;
@@ -10,6 +10,8 @@
             for (attrname in obj2) { obj3[attrname] = obj2[attrname]; }
             return obj3;
         }
+
+        // Load editor options (default and user)
         this.options = merge_options(muds.defaults,opts);
 
         // Assign options to object
@@ -47,23 +49,6 @@
 
         //Build Editor
         buildEditor(this);
-    };
-
-    // Encode and decode HTML
-    var htmlentities;
-    window.htmlentities = {
-        encode : function(str) {
-            let buf = [];
-            for (let i=str.length-1;i>=0;i--) {
-                buf.unshift(['&#', str[i].charCodeAt(), ';'].join(''));
-            }
-            return buf.join('');
-        },
-        decode : function(str) {
-            return str.replace(/&#(\d+);/g, function(match, dec) {
-                return String.fromCharCode(dec);
-            });
-        }
     };
 
     // Menu Actions
@@ -263,6 +248,21 @@
     };
 
     muds.prototype.buttonShowHTMLAction = function() {
+        // Encode and decode HTML
+        htmlentities = {
+            encode : function(str) {
+                let buf = [];
+                for (let i=str.length-1;i>=0;i--) {
+                    buf.unshift(['&#', str[i].charCodeAt(), ';'].join(''));
+                }
+                return buf.join('');
+            },
+            decode : function(str) {
+                return str.replace(/&#(\d+);/g, function(match, dec) {
+                    return String.fromCharCode(dec);
+                });
+            }
+        };
         const editorContent = document.querySelector(".muds-content");
         const HTMLButton = document.querySelector(".show-html");
         const menuButtons = document.querySelectorAll('.muds-item');
