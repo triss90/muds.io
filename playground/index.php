@@ -13,10 +13,7 @@
     </style>
 </head>
 <body>
-    <textarea id="editorSelector">
-        <p>This is a test</p>
-        <p>This is another test</p>
-    </textarea>
+    <textarea id="editorSelector"></textarea>
 
     <script src="/assets/js/editor.js" ></script>
     <script>

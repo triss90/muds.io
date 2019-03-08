@@ -34,6 +34,7 @@
             this.osModifier = "CTRL";
         }
 
+        // Create editor elements
         this.menu = document.createElement('div');
         this.content = document.createElement('div');
         this.wrapper = document.createElement('div');
@@ -941,21 +942,27 @@
         // Enable resizable editor
         if (editor.resize !== false) { mudsContentElement.style.resize = 'vertical'; }
 
-        // Buil edtior
+        // Build editor
         mudsToolElement.classList.add('muds-toolbar');
         mudsContentElement.classList.add('muds-content');
         mudsWrapperElement.id = editor.original_input.id;
         mudsContentElement.setAttribute('contenteditable','true');
         mudsContentElement.style.overflow = 'auto';
         mudsContentElement.style.height = editor.height;
-        editor.original_input.parentNode.replaceChild(mudsWrapperElement, editor.original_input);
         mudsWrapperElement.appendChild(mudsToolElement);
         mudsWrapperElement.appendChild(mudsContentElement);
-        mudsContentElement.innerHTML = editor.original_content;
         mudsWrapperElement.appendChild(mudsContentSubmit);
-        mudsContentSubmit.innerHTML = editor.original_content;
         mudsContentSubmit.setAttribute('name',mudsContentSubmitName);
         mudsContentSubmit.setAttribute('id',mudsContentSubmitName);
+        editor.original_input.parentNode.replaceChild(mudsWrapperElement, editor.original_input);
+
+        // Insert predefined content content
+        if (editor.original_content === "" || editor.original_content === NULL || editor.original_content === undefined) {
+            mudsContentElement.innerHTML = "<p><br></p>";
+        } else {
+            mudsContentElement.innerHTML = editor.original_content;
+            mudsContentSubmit.innerHTML = editor.original_content;
+        }
 
         // Set the default break to insert "<p></p>"
         document.execCommand("defaultParagraphSeparator", false, "p");
@@ -997,4 +1004,5 @@
 
     // make accessible globally
     window.muds = muds;
+
 })();
