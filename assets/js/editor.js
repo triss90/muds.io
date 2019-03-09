@@ -833,7 +833,6 @@
 
     // Build the Menu
     function buildMenu(item) {
-
         if (item.menu_style === "full" || item.menu_style === undefined ) {
             buttonHeader(item);
             buttonFonts(item);

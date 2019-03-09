@@ -27,7 +27,9 @@
 <!--                    <li>Fix list style types, so they aren't accidentally overwritten by local styles</li>-->
 <!--                    <li>Add support for all major browser: Safari, Chrome, Firefox, Opera, Edge and Internet Explorer 9+</li>-->
 <!--                    <li>Made editor tabable</li>-->
+<!--                    <li>Updated the dropdown styles to uniformly match the editor</li>-->
 <!--                    <li>Focus is now prevented from moving when buttons are clicked</li>-->
+<!--                    <li>Now adds a leading <span class="tag">&#x3C;p&#x3E;&#x3C;br&#x3E;&#x3C;/p&#x3E;</span> if no prefilled content is defined</li>-->
 <!--                    <li>Changed default linebreak from <span class="tag">&#x3C;div&#x3E;&#x3C;br&#x3E;&#x3C;/div&#x3E;</span> to <span class="tag">&#x3C;p&#x3E;&#x3C;/p&#x3E;</span></li>-->
 <!--                </ul>-->
 
