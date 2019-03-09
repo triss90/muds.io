@@ -406,7 +406,7 @@
 
 
 // Custom Themes
-.dark {
+.darkmoon {
   .muds-toolbar {
     background: #202125;
     border: 2px solid #202125 !important;
@@ -555,6 +555,93 @@
   }
   .muds-resizer {
     background: #604982;
+    &::after {
+      background: #ddd;
+    }
+  }
+}
+
+.spectral {
+  &.fullscreen {
+    background: rgba(0,0,0,0.95);
+  }
+  .muds-toolbar {
+    background: rgba(0,0,0,0.3);
+    border: none !important;
+    .muds-separator {
+      background: rgba(255,255,255,0.3);
+    }
+    .muds-item {
+      color: #f4f4f4;
+      &.disabled {
+        svg {
+          fill: rgba(0,0,0,0.4);
+        }
+        &:hover {
+          svg {
+            fill: rgba(0,0,0,0.4);
+          }
+        }
+      }
+      svg {
+        fill: #f4f4f4;
+      }
+      &:hover {
+        color: #f9f9f9;
+        cursor: pointer;
+        svg {
+          fill: #f9f9f9;
+        }
+      }
+    }
+    .muds-dropdown {
+      ul {
+        background-color: rgba(0,0,0,0.7) !important;
+        border-color: rgba(0,0,0,0.7) !important;
+        &:after {
+          border-bottom-color: rgba(0,0,0,0.7) !important;
+        }
+        li {
+          color: #f4f4f4 !important;
+          &:hover {
+            background-color: rgba(0,0,0,0.5);
+            color: #f4f4f4 !important;
+          }
+          &:first-of-type:after {
+            border-bottom-color: rgba(0,0,0,0.7) !important;
+          }
+          button {
+            color: #f4f4f4 !important;
+            svg {
+              fill: #f4f4f4 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .muds-content {
+    border: none !important;
+    background: rgba(0,0,0,0.3) !important;
+    color: #f4f4f4 !important;
+    .muds-quote {
+      background: rgba(0,0,0,0.3) !important;
+      color: #f4f4f4 !important;
+      border-left-color: rgba(0,0,0,0.3) !important;
+      &:before {
+        color: rgba(0,0,0,0.3) !important;
+      }
+    }
+    pre {
+      background: rgba(0,0,0,0.3) !important;
+      color: #f4f4f4 !important;
+    }
+    a {
+      color: rgba(0,0,0,0.4) !important;
+    }
+  }
+  .muds-resizer {
+    background: rgba(0,0,0,0.3);
     &::after {
       background: #ddd;
     }

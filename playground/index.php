@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="/assets/css/editor.css">
     <title>Playground</title>
     <style>
+        html {
+            background: linear-gradient(to right, #93F9B9, #1D976C);
+        }
         body {
             padding: 0 10%;
         }
@@ -50,7 +53,7 @@
             selector: 'editorSelector',
             submitName: 'mySubmit',
             height: '542px',
-            theme: "royal",
+            theme: "spectral",
             resize: true,
             keybindings: true,
             menuStyle: 'custom',

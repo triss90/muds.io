@@ -33,6 +33,8 @@
 <!--                    <li>Add support for custom themes-->
 <!--                        <ul>-->
 <!--                            <li>Add "Royal" Theme</li>-->
+<!--                            <li>Add "Darkmoon" Theme</li>-->
+<!--                            <li>Add "Spectral" Theme</li>-->
 <!--                        </ul>-->
 <!--                    </li>-->
 <!--                    <li>Update print and preview styles</li>-->
