@@ -53,7 +53,7 @@
             selector: 'editorSelector',
             submitName: 'mySubmit',
             height: '542px',
-            theme: "spectral",
+            theme: "light",
             resize: true,
             keybindings: true,
             menuStyle: 'custom',

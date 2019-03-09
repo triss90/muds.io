@@ -83,7 +83,6 @@
         editObj.wrapper.setAttribute('style', '');
         editObj.wrapper.style.position = 'relative';
         editObj.wrapper.classList.remove('fullscreen');
-        console.log(editObj.height);
         if (editObj.height === undefined) {
             content.wrapper.height = '150px';
         } else {
@@ -252,7 +251,7 @@
 
     muds.prototype.buttonShowHTMLAction = function() {
         // Encode and decode HTML
-        htmlentities = {
+        const htmlentities = {
             encode : function(str) {
                 let buf = [];
                 for (let i=str.length-1;i>=0;i--) {
@@ -913,7 +912,7 @@
         const mudsToolElement = editor.menu;
         const mudsWrapperElement = editor.wrapper;
         const mudsContentSubmit = editor.contentSubmittable;
-        var mudsContentSubmitName;
+        let mudsContentSubmitName;
         const mudsContentElement = editor.content;
 
         // Enables tooltips
@@ -976,7 +975,6 @@
             const resizer = document.createElement('div');
             resizer.className = 'muds-resizer';
             element.appendChild(resizer);
-
             resizer.addEventListener('mousedown', initResize, false);
             function initResize() {
                 window.addEventListener('mousemove', Resize, false);
