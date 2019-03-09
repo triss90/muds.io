@@ -47,7 +47,7 @@
             selector: 'editorSelector',
             submitName: 'mySubmit',
             height: '542px',
-            theme: "light",
+            theme: "dark",
             resize: true,
             keybindings: true,
             menuStyle: 'custom',
@@ -87,8 +87,6 @@
                 'fullScreen'
             ],
         });
-
-
 
     </script>
 </body>

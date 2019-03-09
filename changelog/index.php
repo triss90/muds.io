@@ -30,6 +30,7 @@
 <!--                    <li>Made editor tabable</li>-->
 <!--                    <li>Fix bug where indent sometimes added a blockquote</li>-->
 <!--                    <li>Add custom resizer</li>-->
+<!--                    <li>Update print and preview styles</li>-->
 <!--                    <li>Updated the dropdown styles to uniformly match the editor</li>-->
 <!--                    <li>Focus is now prevented from moving when buttons are clicked</li>-->
 <!--                    <li>Now adds a leading <span class="tag">&#x3C;p&#x3E;&#x3C;br&#x3E;&#x3C;/p&#x3E;</span> if no prefilled content is defined</li>-->

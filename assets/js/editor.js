@@ -934,10 +934,10 @@
         }
 
         // Enable darkmode
-        if (editor.theme === 'light' || editor.theme === undefined) {
+        if (editor.theme === undefined) {
             mudsWrapperElement.classList.add('light');
         } else {
-            mudsWrapperElement.classList.add('dark');
+            mudsWrapperElement.classList.add(editor.theme);
         }
 
         // Build editor
