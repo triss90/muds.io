@@ -940,22 +940,27 @@
             mudsWrapperElement.classList.add('dark');
         }
 
-        // Enable resizable editor
-        if (editor.resize !== false) { mudsContentElement.style.resize = 'vertical'; }
-
         // Build editor
         mudsToolElement.classList.add('muds-toolbar');
         mudsContentElement.classList.add('muds-content');
         mudsWrapperElement.id = editor.original_input.id;
+        mudsWrapperElement.style.position = "relative";
+        mudsWrapperElement.style.height = "150px";
         mudsContentElement.setAttribute('contenteditable','true');
         mudsContentElement.style.overflow = 'auto';
-        mudsContentElement.style.height = editor.height;
+        mudsWrapperElement.style.height = editor.height;
         mudsWrapperElement.appendChild(mudsToolElement);
         mudsWrapperElement.appendChild(mudsContentElement);
         mudsWrapperElement.appendChild(mudsContentSubmit);
         mudsContentSubmit.setAttribute('name',mudsContentSubmitName);
         mudsContentSubmit.setAttribute('id',mudsContentSubmitName);
         editor.original_input.parentNode.replaceChild(mudsWrapperElement, editor.original_input);
+        mudsContentElement.style.height = 'calc(100% - ' + editor.menu.offsetHeight + "px";
+
+        // Adjust editor height to compensate for varying menu height when resiz
+        window.addEventListener('resize', function() {
+            mudsContentElement.style.height = 'calc(100% - ' + editor.menu.offsetHeight + "px";
+        }, true);
 
         // Insert predefined content content
         if (editor.original_content === "" || editor.original_content === undefined) {
@@ -963,6 +968,29 @@
         } else {
             mudsContentElement.innerHTML = editor.original_content;
             mudsContentSubmit.innerHTML = editor.original_content;
+        }
+
+        // Enable resizable editor
+        if (editor.resize !== false) {
+            const element = editor.wrapper;
+            const resizer = document.createElement('div');
+            resizer.className = 'muds-resizer';
+            element.appendChild(resizer);
+
+            resizer.addEventListener('mousedown', initResize, false);
+            function initResize() {
+                window.addEventListener('mousemove', Resize, false);
+                window.addEventListener('mouseup', stopResize, false);
+                editor.content.style.pointerEvents = "none";
+            }
+            function Resize(e) {
+                element.style.height = (e.clientY - element.offsetTop) + 'px';
+            }
+            function stopResize() {
+                window.removeEventListener('mousemove', Resize, false);
+                window.removeEventListener('mouseup', stopResize, false);
+                editor.content.style.pointerEvents = "auto";
+            }
         }
 
         // Set the default break to insert "<p></p>"
@@ -974,9 +1002,9 @@
         });
 
         // Prevents focus from moving when buttons are clicked
-        var mudsBUttons = document.querySelectorAll('.muds-item');
-        for (let i = 0; i < mudsBUttons.length; i++) {
-            mudsBUttons[i].addEventListener("mousedown", function() {
+        var mudsButtons = document.querySelectorAll('.muds-item');
+        for (let i = 0; i < mudsButtons.length; i++) {
+            mudsButtons[i].addEventListener("mousedown", function() {
                 event.preventDefault();
             });
         }
