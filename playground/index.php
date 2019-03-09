@@ -25,7 +25,8 @@
                         <li>Global MUDS variable change from <span class="tag">editor</span> to <span class="tag">muds</span></li>
                     </ul>
                 </li>
-                <li>Adding support for events <ul>
+                <li>Adding support for events
+                    <ul>
                         <li>Adding <span class="tag">onChange</span> event - <a href="https://muds.io/documentation/events/">docs</a></li>
                     </ul>
                 </li>
@@ -34,8 +35,10 @@
                 <li>Fixing a bug where tab wouldn't insert 4 spaces correctly</li>
             </ul>
 
+        <blockquote class="muds-quote">Fixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctly</blockquote>
         <p>Fixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctly</p>
-        <p>Fixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctly</p>
+        <h3>Code Example</h3>
+        <pre>Fixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctly</pre>
 
     </textarea>
 
@@ -47,7 +50,7 @@
             selector: 'editorSelector',
             submitName: 'mySubmit',
             height: '542px',
-            theme: "dark",
+            theme: "royal",
             resize: true,
             keybindings: true,
             menuStyle: 'custom',
@@ -62,6 +65,7 @@
                 'strikeThrough',
                 'bold',
                 'italic',
+                'separator',
                 'link',
                 'blockquote',
                 'code',

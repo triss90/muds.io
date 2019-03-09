@@ -404,6 +404,8 @@
   }
 }
 
+
+// Custom Themes
 .dark {
   .muds-toolbar {
     background: #202125;
@@ -449,9 +451,6 @@
           &:first-of-type:after {
             border-bottom-color: #202125;
           }
-          button {
-
-          }
         }
       }
     }
@@ -471,6 +470,91 @@
   }
   .muds-resizer {
     background: #777;
+    &::after {
+      background: #ddd;
+    }
+  }
+}
+
+.royal {
+  .muds-toolbar {
+    background: #553982;
+    border: 1px solid #553982 !important;
+    .muds-separator {
+      background: rgba(255,255,255,0.3);
+    }
+    .muds-item {
+      color: #f4f4f4;
+      &.disabled {
+        svg {
+          fill: rgba(0,0,0,0.4);
+        }
+        &:hover {
+          svg {
+            fill: rgba(0,0,0,0.4);
+          }
+        }
+      }
+      svg {
+        fill: #f4f4f4;
+      }
+      &:hover {
+        color: #f9f9f9;
+        cursor: pointer;
+        svg {
+          fill: #f9f9f9;
+        }
+      }
+    }
+    .muds-dropdown {
+      ul {
+        background-color: #553982 !important;
+        border-color: #3b3582 !important;
+        &:after {
+          border-bottom-color: #3b3582 !important;
+        }
+        li {
+          color: #f4f4f4 !important;
+          &:hover {
+            background-color: rgba(0,0,0,0.2);
+            color: #f4f4f4 !important;
+          }
+          &:first-of-type:after {
+            border-bottom-color: #553982 !important;
+          }
+          button {
+            color: #f4f4f4 !important;
+            svg {
+              fill: #f4f4f4 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .muds-content {
+    border: 1px solid #553982 !important;
+    background: white !important;
+    color: #333 !important;
+    .muds-quote {
+      background: #eee !important;
+      color: #333 !important;
+      border-left-color: #553982 !important;
+      &:before {
+        color: #553982 !important;
+      }
+    }
+    pre {
+      background: #eee !important;
+      color: #333 !important;
+    }
+    a {
+      color: #553982 !important;
+      font-weight: bold;
+    }
+  }
+  .muds-resizer {
+    background: #604982;
     &::after {
       background: #ddd;
     }

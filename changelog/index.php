@@ -30,6 +30,11 @@
 <!--                    <li>Made editor tabable</li>-->
 <!--                    <li>Fix bug where indent sometimes added a blockquote</li>-->
 <!--                    <li>Add custom resizer</li>-->
+<!--                    <li>Add support for custom themes-->
+<!--                        <ul>-->
+<!--                            <li>Add "Royal" Theme</li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
 <!--                    <li>Update print and preview styles</li>-->
 <!--                    <li>Updated the dropdown styles to uniformly match the editor</li>-->
 <!--                    <li>Focus is now prevented from moving when buttons are clicked</li>-->
