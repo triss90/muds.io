@@ -29,6 +29,7 @@
 <!--                    <li>Add support for all major browser: Safari, Chrome, Firefox, Opera, Edge and Internet Explorer 9+</li>-->
 <!--                    <li>Made editor tabable</li>-->
 <!--                    <li>Fix bug where indent sometimes added a blockquote</li>-->
+<!--                    <li>Add custom resizer</li>-->
 <!--                    <li>Updated the dropdown styles to uniformly match the editor</li>-->
 <!--                    <li>Focus is now prevented from moving when buttons are clicked</li>-->
 <!--                    <li>Now adds a leading <span class="tag">&#x3C;p&#x3E;&#x3C;br&#x3E;&#x3C;/p&#x3E;</span> if no prefilled content is defined</li>-->
@@ -44,7 +45,7 @@
                         <ul>
                             <li>Implementing textarea for submittable content</li>
                             <li>Adding custom "content submit name": <span class="tag">submitName: 'My_Submit_Name'</span></li>
-                            <li>Muds should now be initialized with a <span class="tag">textarea</span> and not a <span class="tag">div</span></li>
+                            <li>Muds should now be initialis$ed with a <span class="tag">textarea</span> and not a <span class="tag">div</span></li>
                             <li>Global MUDS variable change from <span class="tag">editor</span> to <span class="tag">muds</span></li>
                         </ul>
                     </li>
