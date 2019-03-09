@@ -956,7 +956,7 @@
         editor.original_input.parentNode.replaceChild(mudsWrapperElement, editor.original_input);
 
         // Insert predefined content content
-        if (editor.original_content === "" || editor.original_content === NULL || editor.original_content === undefined) {
+        if (editor.original_content === "" || editor.original_content === undefined) {
             mudsContentElement.innerHTML = "<p><br></p>";
         } else {
             mudsContentElement.innerHTML = editor.original_content;
