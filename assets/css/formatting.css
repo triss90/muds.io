@@ -27,7 +27,7 @@ a {
 ul, ol {
     margin-left: 1.5rem !important;
 }
-blockquote {
+.muds-quote {
     font-size: 1rem !important;
     margin: 1rem 3rem 1rem 3rem !important;
     font-style: italic !important;
@@ -38,7 +38,7 @@ blockquote {
     position: relative !important;
     background: #EDEDED !important;
 }
-blockquote::before{
+.muds-quote::before{
     font-family: Arial !important;
     content: "\201C" !important;
     color: #61aeee !important;
