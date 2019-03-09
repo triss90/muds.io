@@ -25,6 +25,7 @@
 <!--                <ul>-->
 <!--                    <li>Update readme</li>-->
 <!--                    <li>Fix list style types, so they aren't accidentally overwritten by local styles</li>-->
+<!--                    <li>Fix bug where prefill content sometimes wouldn't show</li>-->
 <!--                    <li>Add support for all major browser: Safari, Chrome, Firefox, Opera, Edge and Internet Explorer 9+</li>-->
 <!--                    <li>Made editor tabable</li>-->
 <!--                    <li>Updated the dropdown styles to uniformly match the editor</li>-->

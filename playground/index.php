@@ -33,6 +33,10 @@
                 <li>Fixing a bug where onChange events would produced errors unless defined</li>
                 <li>Fixing a bug where tab wouldn't insert 4 spaces correctly</li>
             </ul>
+
+        <p>Fixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctly</p>
+        <p>Fixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctly</p>
+
     </textarea>
 
     <script src="/assets/js/editor.js" ></script>

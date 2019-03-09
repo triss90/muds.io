@@ -98,6 +98,8 @@
     };
     muds.prototype.buttonBlockquoteAction = function() {
         document.execCommand('formatBlock', false, 'blockquote');
+        const quote = window.getSelection().focusNode.parentNode;
+        quote.classList.add('quote');
     };
     muds.prototype.buttonCodeBlockAction = function() {
         document.execCommand('formatBlock', false, 'pre');

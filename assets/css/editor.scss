@@ -349,7 +349,7 @@
   ol, ol li {
     list-style-type: decimal !important;
   }
-  blockquote {
+  blockquote.quote {
     font-size: 1rem !important;
     margin: 1rem 3rem 1rem 3rem !important;
     font-style: italic !important;
@@ -440,7 +440,7 @@
     border: 2px solid #202125;
     background: #191A1D;
     color: #eee !important;
-    blockquote {
+    blockquote.quote {
       background: #333 !important;
       color: #eee !important;
     }
