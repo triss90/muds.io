@@ -24,7 +24,7 @@
                 <p>
                     <input class="tgl tgl-light" id="cb1" type="checkbox" />
                     <label class="tgl-btn" for="cb1"></label>
-                    <strong style="position:relative; bottom:10px; left:5px;">Try our new darkmode</strong>
+                    <strong style="position:relative; bottom:10px; left:5px;">Try our newest theme "spectral"</strong>
                 </p>
 
             </div>
@@ -79,16 +79,16 @@ var muds = new muds({
     var muds = new muds({
         selector: 'editor',
         menuStyle: 'full',
-        height: '350px'
+        height: '340px'
     });
 
     function themeSwitcher() {
         var editor = document.getElementById('editor');
         if (editor.classList.contains('light') === true) {
             editor.classList.remove('light');
-            editor.classList.add('dark');
-        } else if (editor.classList.contains('dark') === true) {
-            editor.classList.remove('dark');
+            editor.classList.add('spectral');
+        } else if (editor.classList.contains('spectral') === true) {
+            editor.classList.remove('spectral');
             editor.classList.add('light');
         }
     }

@@ -21,6 +21,13 @@
         <div class="row">
             <div class="tiny-12 medium-7">
 
+                <h2>MUDS v1.5.1 <a href="/download/muds-editor-v1.5.1.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
+                <ul>
+                    <li>Fix bug where resize didn't work properly when scrolled.</li>
+                </ul>
+
+                <br><br>
+
                 <h2>MUDS v1.5.0 <a href="/download/muds-editor-v1.5.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
                     <li>Update readme</li>

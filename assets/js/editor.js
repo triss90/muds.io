@@ -1019,8 +1019,8 @@
                     original_y = element.getBoundingClientRect().top;
                     original_mouse_x = e.pageX;
                     original_mouse_y = e.pageY;
-                    window.addEventListener('mousemove', resize)
-                    window.addEventListener('mouseup', stopResize)
+                    window.addEventListener('mousemove', resize);
+                    window.addEventListener('mouseup', stopResize);
                 });
                 function resize(e) {
                     const height = original_height + (e.pageY - original_mouse_y);

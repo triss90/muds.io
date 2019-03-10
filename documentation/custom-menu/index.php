@@ -23,7 +23,7 @@
                 <br>
 
                 <h3>Full Editor:</h3>
-                <div class="codepen" data-height="400" data-theme-id="36048" data-default-tab="js,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
+                <div class="codepen" data-height="450" data-theme-id="36048" data-default-tab="html,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
                     <pre data-lang="scss" data-option-autoprefixer>
 html, body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -34,13 +34,7 @@ b {
     margin-bottom: 0.5rem;
 }
                     </pre>
-                    <pre data-lang="js">
-// Initialize muds editor
-var muds = new muds({
-    selector: 'full-editor',
-    menuStyle: 'full'
-});
-                    </pre>
+                    <pre data-lang="js"> </pre>
                     <pre data-lang="html">
 &#x3C;!-- Include the MUDS stylesheet --&#x3E;
 &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds.min.css&#x22;&#x3E;
@@ -51,11 +45,19 @@ var muds = new muds({
 
 &#x3C;!-- Include the MUDS library --&#x3E;
 &#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+
+&#x3C;!-- Initialize MUDS editor --&#x3E;
+&#x3C;script&#x3E;
+var muds = new muds({
+    selector: 'editor',
+    menuStyle: 'full'
+});
+&#x3C;/script&#x3E;
                     </pre>
                 </div>
 
                 <h3>Minimal Editor:</h3>
-                <div class="codepen" data-height="400" data-theme-id="36048" data-default-tab="js,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
+                <div class="codepen" data-height="450" data-theme-id="36048" data-default-tab="html,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
                     <pre data-lang="scss" data-option-autoprefixer>
 html, body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -66,13 +68,7 @@ b {
     margin-bottom: 0.5rem;
 }
                     </pre>
-                    <pre data-lang="js">
-// Initialize another muds editor
-var muds = new muds({
-    selector: 'minimal-editor',
-    menuStyle: 'minimal'
-});
-                    </pre>
+                    <pre data-lang="js"></pre>
                     <pre data-lang="html">
 &#x3C;!-- Include the MUDS stylesheet --&#x3E;
 &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds.min.css&#x22;&#x3E;
@@ -83,44 +79,14 @@ var muds = new muds({
 
 &#x3C;!-- Include the MUDS library --&#x3E;
 &#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
-                    </pre>
-                </div>
 
-                <h3>Example:</h3>
-                <div class="codepen" data-height="400" data-theme-id="36048" data-default-tab="js,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
-                    <pre data-lang="scss" data-option-autoprefixer>
-html, body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 16px;
-}
-b {
-    display: block;
-    margin-bottom: 0.5rem;
-}
-                    </pre>
-                    <pre data-lang="js">
-// Initialize yet another muds editor
+&#x3C;!-- Initialize MUDS editor --&#x3E;
+&#x3C;script&#x3E;
 var muds = new muds({
-    selector: 'custom-editor',
-    menuStyle: 'custom',
-    menuCustom: [
-        'header',
-        'link',
-        'bold',
-        'showHTML'
-    ]
+    selector: 'editor',
+    menuStyle: 'minimal'
 });
-                    </pre>
-                    <pre data-lang="html">
-&#x3C;!-- Include the MUDS stylesheet --&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds.min.css&#x22;&#x3E;
-
-&#x3C;b&#x3E;Custom Editor&#x3C;/b&#x3E;
-&#x3C;!-- Create yet another editor container --&#x3E;
-&#x3C;div id=&#x22;custom-editor&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;!-- Include the MUDS library --&#x3E;
-&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;/script&#x3E;
                     </pre>
                 </div>
 
@@ -167,10 +133,21 @@ var muds = new muds({
                 </p>
                 <br>
                 <h3>Example:</h3>
-                <div class="codepen" data-height="380" data-theme-id="36048" data-default-tab="js,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
+                <div class="codepen" data-height="1000" data-theme-id="36048" data-default-tab="html,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
                     <pre data-lang="scss" data-option-autoprefixer></pre>
-                    <pre data-lang="js">
-// Initialize muds editor
+                    <pre data-lang="js"></pre>
+                    <pre data-lang="html">
+&#x3C;!-- Include the MUDS stylesheet --&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds.min.css&#x22;&#x3E;
+
+&#x3C;!-- Create the editor container --&#x3E;
+&#x3C;textarea id=&#x22;editor&#x22;&#x3E;&#x3C;/textarea&#x3E;
+
+&#x3C;!-- Include the MUDS library --&#x3E;
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+
+&#x3C;!-- Initialize MUDS editor --&#x3E;
+&#x3C;script&#x3E;
 var muds = new muds({
     selector: 'editor',
     menuStyle: 'custom',
@@ -207,16 +184,7 @@ var muds = new muds({
         'fullScreen'
     ]
 });
-                    </pre>
-                    <pre data-lang="html">
-&#x3C;!-- Include the MUDS stylesheet --&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds.min.css&#x22;&#x3E;
-
-&#x3C;!-- Create the editor container --&#x3E;
-&#x3C;textarea id=&#x22;editor&#x22;&#x3E;&#x3C;/textarea&#x3E;
-
-&#x3C;!-- Include the MUDS library --&#x3E;
-&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;/script&#x3E;
                     </pre>
                 </div>
             </div>
