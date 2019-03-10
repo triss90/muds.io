@@ -241,7 +241,7 @@
                     <li>Emoji menu (You can already use emojis in the editor)</li>
                     <li><strike>A redesign of HTML editing mode.</strike></li>
                     <li><strike>Custom ordering of menu items</strike></li>
-                    <li>Custom themes or some version of injected custom CSS</li>
+                    <li><strike>Custom themes or some version of injected custom CSS</strike></li>
                     <li>Better image handling capabilities</li>
                     <li>Custom buttons</li>
                     <li><strike>Tooltips on menuitems</strike></li>
