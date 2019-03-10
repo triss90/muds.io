@@ -1011,7 +1011,12 @@
                 editor.content.style.pointerEvents = "none";
             }
             function Resize(e) {
-                element.style.height = (e.clientY - element.offsetTop) + 'px';
+                console.log(e.clientY);
+                if (e.clientY <= 75) {
+                    element.style.height = '75px';
+                } else {
+                    element.style.height = (e.clientY - element.offsetTop) + 'px';
+                }
             }
             function stopResize() {
                 window.removeEventListener('mousemove', Resize, false);
