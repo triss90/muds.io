@@ -38,6 +38,7 @@
 <!--                        </ul>-->
 <!--                    </li>-->
 <!--                    <li>Update print and preview styles</li>-->
+<!--                    <li>Add support for placeholder text</li>-->
 <!--                    <li>Fix bug where resize didn't work after exiting fullsccreen</li>-->
 <!--                    <li>Updated the dropdown styles to uniformly match the editor</li>-->
 <!--                    <li>Focus is now prevented from moving when buttons are clicked</li>-->

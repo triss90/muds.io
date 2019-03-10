@@ -26,6 +26,7 @@
         this.selector = opts.selector;
         this.onChange = opts.onChange;
         this.content_submit = opts.submitName;
+        this.placeholder = opts.placeholder;
 
         // Set default modifier button
         if (window.navigator.userAgent.indexOf("Mac") != -1) {
@@ -909,11 +910,13 @@
     // Build the editor
     function buildEditor(editor) {
         // Set editor variables
-        const mudsToolElement = editor.menu;
         const mudsWrapperElement = editor.wrapper;
+        const mudsToolElement = editor.menu;
+        const mudsContentElement = editor.content;
         const mudsContentSubmit = editor.contentSubmittable;
         let mudsContentSubmitName;
-        const mudsContentElement = editor.content;
+
+
 
         // Enables tooltips
         if (editor.tooltips != false) {
@@ -932,37 +935,63 @@
             mudsContentSubmitName = editor.content_submit;
         }
 
-        // Enable darkmode
+        // Enable custom theme
         if (editor.theme === undefined) {
             mudsWrapperElement.classList.add('light');
         } else {
             mudsWrapperElement.classList.add(editor.theme);
         }
 
+
         // Build editor
         mudsToolElement.classList.add('muds-toolbar');
+
         mudsContentElement.classList.add('muds-content');
-        mudsWrapperElement.id = editor.original_input.id;
-        mudsWrapperElement.style.position = "relative";
-        mudsWrapperElement.style.height = "150px";
         mudsContentElement.setAttribute('contenteditable','true');
         mudsContentElement.style.overflow = 'auto';
+
+        mudsContentSubmit.setAttribute('name',mudsContentSubmitName);
+        mudsContentSubmit.setAttribute('id',mudsContentSubmitName);
+
+        mudsWrapperElement.id = editor.original_input.id;
+        mudsWrapperElement.style.position = 'relative';
+        mudsWrapperElement.style.height = '150px';
         mudsWrapperElement.style.height = editor.height;
+
         mudsWrapperElement.appendChild(mudsToolElement);
         mudsWrapperElement.appendChild(mudsContentElement);
         mudsWrapperElement.appendChild(mudsContentSubmit);
-        mudsContentSubmit.setAttribute('name',mudsContentSubmitName);
-        mudsContentSubmit.setAttribute('id',mudsContentSubmitName);
-        editor.original_input.parentNode.replaceChild(mudsWrapperElement, editor.original_input);
-        mudsContentElement.style.height = 'calc(100% - ' + editor.menu.offsetHeight + "px";
 
-        // Adjust editor height to compensate for varying menu height when resiz
+        // Create and add placeholder text
+        if (editor.placeholder != undefined && editor.content.innerText === '') {
+            var mudsPlaceholderElement = document.createElement('div');
+            mudsPlaceholderElement.classList.add('muds-placeholder');
+            mudsPlaceholderElement.innerHTML = editor.placeholder;
+            if (editor.original_content != '') {
+                mudsPlaceholderElement.style.display = 'none';
+            }
+            mudsWrapperElement.appendChild(mudsPlaceholderElement);
+        }
+
+        // Replace initial textarea with div element
+        editor.original_input.parentNode.replaceChild(mudsWrapperElement, editor.original_input);
+
+        // Adjust initial editor heights base on menu size
+        mudsContentElement.style.height = 'calc(100% - ' + editor.menu.offsetHeight + 'px';
+        if (editor.placeholder != undefined && editor.content.innerText === '' && editor.original_content === '') {
+            mudsPlaceholderElement.style.top = editor.menu.offsetHeight + 10 + 'px';
+        }
+
+        // Adjust editor heights to compensate for varying menu height when resize
         window.addEventListener('resize', function() {
             mudsContentElement.style.height = 'calc(100% - ' + editor.menu.offsetHeight + "px";
+            if (editor.placeholder != undefined) {
+                mudsPlaceholderElement.style.top = editor.menu.offsetHeight + 10 + 'px';
+            }
         }, true);
 
         // Insert predefined content content
-        if (editor.original_content === "" || editor.original_content === undefined) {
+        if (editor.original_content === '' || editor.original_content === undefined) {
             mudsContentElement.innerHTML = "<p><br></p>";
         } else {
             mudsContentElement.innerHTML = editor.original_content;
@@ -992,11 +1021,17 @@
         }
 
         // Set the default break to insert "<p></p>"
-        document.execCommand("defaultParagraphSeparator", false, "p");
+        document.execCommand('defaultParagraphSeparator', false, 'p');
 
-        // Copy content to textarea
-        editor.content.addEventListener('keyup', function() {
+        // Copy content to textarea and/or show/hide placeholder text
+        editor.content.addEventListener('input', function() {
             mudsContentSubmit.innerHTML = mudsContentElement.innerHTML;
+            if (editor.placeholder != undefined && editor.content.innerText != '') {
+                mudsPlaceholderElement.style.display = 'none';
+            } else if (editor.placeholder != undefined && editor.content.innerText === '') {
+                mudsPlaceholderElement.style.display = 'block';
+                mudsPlaceholderElement.style.top = editor.menu.offsetHeight + 10 + 'px';
+            }
         });
 
         // Prevents focus from moving when buttons are clicked
@@ -1020,6 +1055,7 @@
         selector: '',
         submitName: 'muds-submit',
         resize: true,
+        placeholder: false,
         menuStyle: 'custom', // full, minimal, custom
         menuCustom: [], //'header','underline','strikeThrough','bold','italic','link','changeColor','image','undo','redo','unorderedList','orderedList','selectAll','copy','cut','delete','justifyLeft','justifyCenter','justifyRight','print','showHTML','showText','fullScreen'
         theme: 'light', // light, dark

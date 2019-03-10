@@ -785,13 +785,6 @@
 		"oAP": "\/documentation\/custom-menu\/index.php",
 		"oF": 0
 		},
-	"\/documentation\/darkmode\/index.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/documentation\/darkmode\/index.php",
-		"oF": 0
-		},
 	"\/documentation\/editor-formatting\/index.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -818,6 +811,20 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/documentation\/keybindings\/index.php",
+		"oF": 0
+		},
+	"\/documentation\/placeholder\/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/documentation\/placeholder\/index.php",
+		"oF": 0
+		},
+	"\/documentation\/themes\/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/documentation\/themes\/index.php",
 		"oF": 0
 		},
 	"\/documentation\/tooltips\/index.php": {

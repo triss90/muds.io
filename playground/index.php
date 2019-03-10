@@ -16,34 +16,34 @@
     </style>
 </head>
 <body>
-    <textarea id="editorSelector">
-        <h2>MUDS v1.4.0 <a href="/download/muds-editor-v1.4.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
+    <textarea id="editorSelector">test</textarea>
+
+    <h2>MUDS v1.4.0 <a href="/download/muds-editor-v1.4.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
+    <ul>
+        <li>Refine codeblock style</li>
+        <li>Overhaul of how predefined content works
             <ul>
-               <li>Refine codeblock style</li>
-                <li>Overhaul of how predefined content works
-                    <ul>
-                        <li>Implementing textarea for submittable content</li>
-                        <li>Adding custom "content submit name": <span class="tag">submitName: 'My_Submit_Name'</span></li>
-                        <li>Muds should now be initialized with a <span class="tag">textarea</span> and not a <span class="tag">div</span></li>
-                        <li>Global MUDS variable change from <span class="tag">editor</span> to <span class="tag">muds</span></li>
-                    </ul>
-                </li>
-                <li>Adding support for events
-                    <ul>
-                        <li>Adding <span class="tag">onChange</span> event - <a href="https://muds.io/documentation/events/">docs</a></li>
-                    </ul>
-                </li>
-                <li>Fixing a bug where custom height wasn't reapplied when leaving fullscreen</li>
-                <li>Fixing a bug where onChange events would produced errors unless defined</li>
-                <li>Fixing a bug where tab wouldn't insert 4 spaces correctly</li>
+                <li>Implementing textarea for submittable content</li>
+                <li>Adding custom "content submit name": <span class="tag">submitName: 'My_Submit_Name'</span></li>
+                <li>Muds should now be initialized with a <span class="tag">textarea</span> and not a <span class="tag">div</span></li>
+                <li>Global MUDS variable change from <span class="tag">editor</span> to <span class="tag">muds</span></li>
             </ul>
+        </li>
+        <li>Adding support for events
+            <ul>
+                <li>Adding <span class="tag">onChange</span> event - <a href="https://muds.io/documentation/events/">docs</a></li>
+            </ul>
+        </li>
+        <li>Fixing a bug where custom height wasn't reapplied when leaving fullscreen</li>
+        <li>Fixing a bug where onChange events would produced errors unless defined</li>
+        <li>Fixing a bug where tab wouldn't insert 4 spaces correctly</li>
+    </ul>
 
-        <blockquote class="muds-quote">Fixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctly</blockquote>
-        <p>Fixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctly</p>
-        <h3>Code Example</h3>
-        <pre>Fixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctly</pre>
+    <blockquote class="muds-quote">Fixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctly</blockquote>
+    <p>Fixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctly</p>
+    <h3>Code Example</h3>
+    <pre>Fixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctly</pre>
 
-    </textarea>
 
     <h1>adapkdnapid</h1>
 
@@ -52,15 +52,16 @@
         var muds = new muds({
             selector: 'editorSelector',
             submitName: 'mySubmit',
+            placeholder: 'Type some text here...',
             height: '542px',
             theme: "light",
             resize: true,
             keybindings: true,
-            menuStyle: 'custom',
             tooltips: true,
             onChange: function() {
                 console.log('onChange event fired...!');
             },
+            menuStyle: 'custom',
             menuCustom: [
                 'header',
                 'fonts',
