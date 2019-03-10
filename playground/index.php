@@ -16,8 +16,7 @@
     </style>
 </head>
 <body>
-    <textarea id="editorSelector">test</textarea>
-
+    <textarea id="editorSelector">
     <h2>MUDS v1.4.0 <a href="/download/muds-editor-v1.4.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
     <ul>
         <li>Refine codeblock style</li>
@@ -43,6 +42,8 @@
     <p>Fixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctly</p>
     <h3>Code Example</h3>
     <pre>Fixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctly</pre>
+    </textarea>
+
 
 
     <h1>adapkdnapid</h1>
@@ -53,7 +54,7 @@
             selector: 'editorSelector',
             submitName: 'mySubmit',
             placeholder: 'Type some text here...',
-            height: '542px',
+            height: '500px',
             theme: "light",
             resize: true,
             keybindings: true,

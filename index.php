@@ -79,7 +79,7 @@ var muds = new muds({
     var muds = new muds({
         selector: 'editor',
         menuStyle: 'full',
-        height: '370px'
+        height: '350px'
     });
 
     function themeSwitcher() {

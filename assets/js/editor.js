@@ -916,8 +916,6 @@
         const mudsContentSubmit = editor.contentSubmittable;
         let mudsContentSubmitName;
 
-
-
         // Enables tooltips
         if (editor.tooltips != false) {
             mudsToolElement.classList.add('tooltips');
@@ -941,7 +939,6 @@
         } else {
             mudsWrapperElement.classList.add(editor.theme);
         }
-
 
         // Build editor
         mudsToolElement.classList.add('muds-toolbar');
@@ -999,30 +996,43 @@
         }
 
         // Enable resizable editor
-        if (editor.resize !== false) {
-            const element = editor.wrapper;
+        if (editor.resize != false) {
+            const edtiorWrapper = editor.wrapper;
             const resizer = document.createElement('div');
             resizer.className = 'muds-resizer';
-            element.appendChild(resizer);
-            resizer.addEventListener('mousedown', initResize, false);
-            function initResize() {
-                window.addEventListener('mousemove', Resize, false);
-                window.addEventListener('mouseup', stopResize, false);
-                editor.content.style.pointerEvents = "none";
-            }
-            function Resize(e) {
-                console.log(e.clientY);
-                if (e.clientY <= 75) {
-                    element.style.height = '75px';
-                } else {
-                    element.style.height = (e.clientY - element.offsetTop) + 'px';
+            edtiorWrapper.appendChild(resizer);
+            function makeResizableDiv(div) {
+                const element = document.querySelector(div);
+                const currentResizer = document.querySelector(div + ' .muds-resizer');
+                const minimum_size = 20;
+                let original_width = 0;
+                let original_height = 0;
+                let original_x = 0;
+                let original_y = 0;
+                let original_mouse_x = 0;
+                let original_mouse_y = 0;
+                currentResizer.addEventListener('mousedown', function(e) {
+                    e.preventDefault();
+                    original_width = parseFloat(getComputedStyle(element, null).getPropertyValue('width').replace('px', ''));
+                    original_height = parseFloat(getComputedStyle(element, null).getPropertyValue('height').replace('px', ''));
+                    original_x = element.getBoundingClientRect().left;
+                    original_y = element.getBoundingClientRect().top;
+                    original_mouse_x = e.pageX;
+                    original_mouse_y = e.pageY;
+                    window.addEventListener('mousemove', resize)
+                    window.addEventListener('mouseup', stopResize)
+                });
+                function resize(e) {
+                    const height = original_height + (e.pageY - original_mouse_y);
+                    if (height > minimum_size) {
+                        element.style.height = height + 'px'
+                    }
+                }
+                function stopResize() {
+                    window.removeEventListener('mousemove', resize)
                 }
             }
-            function stopResize() {
-                window.removeEventListener('mousemove', Resize, false);
-                window.removeEventListener('mouseup', stopResize, false);
-                editor.content.style.pointerEvents = "auto";
-            }
+            makeResizableDiv('#'+editor.original_input.id);
         }
 
         // Set the default break to insert "<p></p>"

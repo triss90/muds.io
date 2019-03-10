@@ -21,30 +21,30 @@
         <div class="row">
             <div class="tiny-12 medium-7">
 
-<!--                <h2>MUDS v1.4.1 <a href="/download/muds-editor-v1.4.1.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>-->
-<!--                <ul>-->
-<!--                    <li>Update readme</li>-->
-<!--                    <li>Fix list style types, so they aren't accidentally overwritten by local styles</li>-->
-<!--                    <li>Fix bug where prefill content sometimes wouldn't show</li>-->
-<!--                    <li>Add support for all major browser: Safari, Chrome, Firefox, Opera, Edge and Internet Explorer 9+</li>-->
-<!--                    <li>Made editor tabable</li>-->
-<!--                    <li>Fix bug where indent sometimes added a blockquote</li>-->
-<!--                    <li>Add custom resizer</li>-->
-<!--                    <li>Add support for custom themes-->
-<!--                        <ul>-->
-<!--                            <li>Add "Royal" Theme</li>-->
-<!--                            <li>Add "Darkmoon" Theme</li>-->
-<!--                            <li>Add "Spectral" Theme</li>-->
-<!--                        </ul>-->
-<!--                    </li>-->
-<!--                    <li>Update print and preview styles</li>-->
-<!--                    <li>Add support for placeholder text</li>-->
-<!--                    <li>Fix bug where resize didn't work after exiting fullsccreen</li>-->
-<!--                    <li>Updated the dropdown styles to uniformly match the editor</li>-->
-<!--                    <li>Focus is now prevented from moving when buttons are clicked</li>-->
-<!--                    <li>Now adds a leading <span class="tag">&#x3C;p&#x3E;&#x3C;br&#x3E;&#x3C;/p&#x3E;</span> if no prefilled content is defined</li>-->
-<!--                    <li>Changed default linebreak from <span class="tag">&#x3C;div&#x3E;&#x3C;br&#x3E;&#x3C;/div&#x3E;</span> to <span class="tag">&#x3C;p&#x3E;&#x3C;/p&#x3E;</span></li>-->
-<!--                </ul>-->
+                <h2>MUDS v1.5.0 <a href="/download/muds-editor-v1.5.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
+                <ul>
+                    <li>Update readme</li>
+                    <li>Fix list style types, so they aren't accidentally overwritten by local styles</li>
+                    <li>Fix bug where prefill content sometimes wouldn't show</li>
+                    <li>Add support for all major browser: Safari, Chrome, Firefox, Opera, Edge and Internet Explorer 9+</li>
+                    <li>Made editor tabable</li>
+                    <li>Fix bug where indent sometimes added a blockquote</li>
+                    <li>Add custom resizer</li>
+                    <li>Add support for custom themes
+                        <ul>
+                            <li>Add "Royal" Theme</li>
+                            <li>Add "Darkmoon" Theme</li>
+                            <li>Add "Spectral" Theme</li>
+                        </ul>
+                    </li>
+                    <li>Update print and preview styles</li>
+                    <li>Add support for placeholder text</li>
+                    <li>Fix bug where resize didn't work after exiting fullsccreen</li>
+                    <li>Updated the dropdown styles to uniformly match the editor</li>
+                    <li>Focus is now prevented from moving when buttons are clicked</li>
+                    <li>Now adds a leading <span class="tag">&#x3C;p&#x3E;&#x3C;br&#x3E;&#x3C;/p&#x3E;</span> if no prefilled content is defined</li>
+                    <li>Changed default linebreak from <span class="tag">&#x3C;div&#x3E;&#x3C;br&#x3E;&#x3C;/div&#x3E;</span> to <span class="tag">&#x3C;p&#x3E;&#x3C;/p&#x3E;</span></li>
+                </ul>
 
                 <br><br>
 
