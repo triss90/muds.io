@@ -5,7 +5,7 @@
                 <h2>MUDS Editor</h2>
                 <br><br>
                 <p class="desc">Your powerful, lightweight editor.</p>
-                <p class="desc">MUDS Editor only takes up 9.1 KB compressed and gzipped</p>
+                <p class="desc">MUDS Editor only takes up ~10 KB compressed and gzipped</p>
                 <br><br>
                 <a href="/documentation/" class="button secondary big"><i class="fa fa-book" aria-hidden="true"></i> Documentation</a>
                 <a href="/download/muds-editor-v<?php echo $mudsVersion; ?>.zip" class="button primary big" download><i class="fa fa-download" aria-hidden="true"></i> Download v<?php echo $mudsVersion; ?></a>

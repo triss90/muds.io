@@ -272,7 +272,10 @@
         const htmlCode = editorContent.innerHTML;
         const htmlCodeEncoded = htmlentities.encode(htmlCode);
         if (HTMLButton.classList.contains('active') === false) {
-            editorContent.innerHTML = htmlCodeEncoded;
+
+
+            editorContent.innerHTML ='<pre style="margin-left:-10px!important;margin-top:-10px!important;width:calc(100% + 20px);height:calc(100% + 20px);">'+htmlCodeEncoded+'</pre>';
+
             for (let i = 0; i < menuButtons.length; ++i) {
                 if (menuButtons[i].classList.contains('show-html')) {
                     menuButtons[i].classList.add('active');

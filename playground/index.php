@@ -17,8 +17,7 @@
     </style>
 </head>
 <body>
-    <textarea id="editorSelector">
-        <h2>MUDS v1.4.0 <a href="/download/muds-editor-v1.4.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
+    <textarea id="editorSelector"><h2>MUDS v1.4.0 <a href="/download/muds-editor-v1.4.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
         <ul>
             <li>Refine codeblock style</li>
             <li>Overhaul of how predefined content works

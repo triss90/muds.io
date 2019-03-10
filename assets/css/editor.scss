@@ -387,6 +387,17 @@
   &:before {
     content: ""
   }
+  .muds-code {
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    font-size: 0.75rem;
+    overflow-x: scroll;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border: 0;
+    resize: none;
+    margin-left: -10px;
+    margin-top: -10px;
+  }
 }
 
 .muds-placeholder {
