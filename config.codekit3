@@ -259,6 +259,75 @@
 		"oF": 1,
 		"oS": 3
 		},
+	"\/assets\/css\/themes\/darkmoon.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/themes\/darkmoon-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/assets\/css\/themes\/darkmoon.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/themes\/darkmoon.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/css\/themes\/royal.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/themes\/royal-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/assets\/css\/themes\/royal.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/themes\/royal.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/css\/themes\/spectral.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/themes\/spectral-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/assets\/css\/themes\/spectral.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/themes\/spectral.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"\/assets\/icons\/baseline-font_download-24px.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -754,16 +823,6 @@
 		"sC": 3,
 		"tS": 1
 		},
-	"\/assets\/js\/editor_old.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/assets\/js\/editor_old-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"\/changelog\/index.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -825,6 +884,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/documentation\/themes\/index.php",
+		"oF": 0
+		},
+	"\/documentation\/themes\/list\/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/documentation\/themes\/list\/index.php",
 		"oF": 0
 		},
 	"\/documentation\/tooltips\/index.php": {
@@ -937,6 +1003,27 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/download\/muds-editor-v1.5.0.zip",
+		"oF": 0
+		},
+	"\/download\/muds-editor-v1.5.1.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/download\/muds-editor-v1.5.1.zip",
+		"oF": 0
+		},
+	"\/download\/muds-editor-v1.5.2.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/download\/muds-editor-v1.5.2.zip",
+		"oF": 0
+		},
+	"\/download\/muds-editor-v1.5.3.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/download\/muds-editor-v1.5.3.zip",
 		"oF": 0
 		},
 	"\/google9a2ba4a21ba11ef5.html": {

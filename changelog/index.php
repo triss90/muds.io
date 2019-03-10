@@ -21,6 +21,21 @@
         <div class="row">
             <div class="tiny-12 medium-7">
 
+                <h2>MUDS v1.5.3 <a href="/download/muds-editor-v1.5.3.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
+                <ul>
+                    <li>Adjust button size</li>
+                    <li>Adjust dropdown location in relation to buttons</li>
+                </ul>
+
+                <br><br>
+
+                <h2>MUDS v1.5.2 <a href="/download/muds-editor-v1.5.2.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
+                <ul>
+                    <li>Removed themes from main library and added them to <a href="../documentation/themes/list/">Theme store</a>.</li>
+                </ul>
+
+                <br><br>
+
                 <h2>MUDS v1.5.1 <a href="/download/muds-editor-v1.5.1.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
                     <li>Fix bug where resize didn't work properly when scrolled.</li>

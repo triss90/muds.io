@@ -1,0 +1,69 @@
+.darkmoon {
+  .muds-toolbar {
+    background: #202125;
+    border: 2px solid #202125 !important;
+    .muds-separator {
+      background: #575757;
+    }
+    .muds-item {
+      color: #999;
+      &.disabled {
+        svg {
+          fill: #454545;
+        }
+        &:hover {
+          svg {
+            fill: #454545;
+          }
+        }
+      }
+      svg {
+        fill: #999;
+      }
+      &:hover {
+        color: #f9f9f9;
+        cursor: pointer;
+        svg {
+          fill: #f9f9f9;
+        }
+      }
+    }
+    .muds-dropdown {
+      ul {
+        background-color: #202125;
+        border-color: #454545;
+        &:after {
+          border-bottom-color: #454545;
+        }
+        li {
+          &:hover {
+            background-color: #19191a;
+            color: #f4f4f4;
+          }
+          &:first-of-type:after {
+            border-bottom-color: #202125;
+          }
+        }
+      }
+    }
+  }
+  .muds-content {
+    border: 2px solid #202125;
+    background: #191A1D;
+    color: #eee !important;
+    .muds-quote {
+      background: #333 !important;
+      color: #eee !important;
+    }
+    pre {
+      background: #333 !important;
+      color: #eee !important;
+    }
+  }
+  .muds-resizer {
+    background: #777;
+    &::after {
+      background: #ddd;
+    }
+  }
+}
