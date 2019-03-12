@@ -837,11 +837,11 @@
 		"oAP": "\/documentation\/character-count\/index.php",
 		"oF": 0
 		},
-	"\/documentation\/content-prefill\/index.php": {
+	"\/documentation\/content\/index.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/documentation\/content-prefill\/index.php",
+		"oAP": "\/documentation\/content\/index.php",
 		"oF": 0
 		},
 	"\/documentation\/custom-menu\/index.php": {

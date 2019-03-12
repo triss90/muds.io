@@ -5,7 +5,7 @@
     <nav class="doc-nav">
         <a href="/documentation/">Installation and setup</a>
         <a href="/documentation/editor-formatting">Customize editor</a>
-        <a href="/documentation/content-prefill">Prefill content</a>
+        <a href="/documentation/content">Content handling</a>
         <a href="/documentation/themes">Custom themes</a>
         <a href="/documentation/keybindings">Keybindings</a>
         <a href="/documentation/placeholder">Placeholder</a>
