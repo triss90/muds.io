@@ -25,7 +25,8 @@
 <!--                <ul>-->
 <!--                    <li>Update HTML Code view</li>-->
 <!--                    <li>Set minimum height on resizable editor</li>-->
-<!--                    <li>Add Tooltips to dropdown</li>-->
+<!--                    <li>Add Tooltips to dropdown items</li>-->
+<!--                    <li>Add option for character count</li>-->
 <!--                </ul>-->
 <!---->
 <!--                <br><br>-->

@@ -59,6 +59,7 @@
             onChange: function() {
                 console.log('onChange event fired...!');
             },
+            characterCount: true,
             menuStyle: 'custom',
             menuCustom: [
                 'header',

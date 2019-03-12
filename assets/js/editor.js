@@ -27,6 +27,7 @@
         this.onChange = opts.onChange;
         this.content_submit = opts.submitName;
         this.placeholder = opts.placeholder;
+        this.character_count = opts.characterCount;
 
         // Set default modifier button
         if (window.navigator.userAgent.indexOf("Mac") != -1) {
@@ -995,6 +996,17 @@
             mudsContentSubmit.innerHTML = editor.original_content;
         }
 
+        // Show character count
+        function characterCount() {
+            return mudsContentElement.textContent.length;
+        }
+        if (editor.character_count === true) {
+            var mudsCharacterCountElement = document.createElement('div');
+            mudsCharacterCountElement.classList.add('muds-character-count');
+            mudsCharacterCountElement.textContent = characterCount();
+            mudsWrapperElement.appendChild(mudsCharacterCountElement);
+        }
+
         // Enable resizable editor
         if (editor.resize != false) {
             const edtiorWrapper = editor.wrapper;
@@ -1025,7 +1037,6 @@
                 });
                 function resize(e) {
                     const height = original_height + (e.pageY - original_mouse_y);
-                    console.log(height);
                     if (height > minimum_size) {
                         element.style.height = height + 'px'
                     }
@@ -1040,9 +1051,14 @@
         // Set the default break to insert "<p></p>"
         document.execCommand('defaultParagraphSeparator', false, 'p');
 
-        // Copy content to textarea and/or show/hide placeholder text
+        // Copy content to textarea
+        // Show/hide placeholder text
+        // Update character count
         editor.content.addEventListener('input', function() {
             mudsContentSubmit.innerHTML = mudsContentElement.innerHTML;
+            if (editor.character_count === true) {
+                mudsCharacterCountElement.textContent = characterCount();
+            }
             if (editor.placeholder != undefined && editor.content.innerText != '') {
                 mudsPlaceholderElement.style.display = 'none';
             } else if (editor.placeholder != undefined && editor.content.innerText === '') {
@@ -1079,7 +1095,8 @@
         height: '150px',
         keybindings: true,
         tooltips: true,
-        onChange: false
+        onChange: false,
+        characterCount: false
     };
 
     // make accessible globally

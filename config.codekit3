@@ -830,6 +830,13 @@
 		"oAP": "\/changelog\/index.php",
 		"oF": 0
 		},
+	"\/documentation\/character-count\/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/documentation\/character-count\/index.php",
+		"oF": 0
+		},
 	"\/documentation\/content-prefill\/index.php": {
 		"cB": 0,
 		"ft": 8192,

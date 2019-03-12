@@ -10,6 +10,7 @@
         <a href="/documentation/keybindings">Keybindings</a>
         <a href="/documentation/placeholder">Placeholder</a>
         <a href="/documentation/tooltips">Tooltips</a>
+        <a href="/documentation/character-count">Character Count</a>
         <a href="/documentation/custom-menu">Customize menu items</a>
         <a href="/documentation/events">Events</a>
     </nav>
