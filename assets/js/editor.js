@@ -28,6 +28,7 @@
         this.content_submit = opts.submitName;
         this.placeholder = opts.placeholder;
         this.character_count = opts.characterCount;
+        this.required = opts.required;
 
         // Set default modifier button
         if (window.navigator.userAgent.indexOf("Mac") != -1) {
@@ -941,6 +942,11 @@
             mudsWrapperElement.classList.add(editor.theme);
         }
 
+        // Required input
+        if (editor.required === true) {
+            mudsContentSubmit.setAttribute('required','true');
+        }
+
         // Build editor
         mudsToolElement.classList.add('muds-toolbar');
 
@@ -1096,6 +1102,7 @@
         keybindings: true,
         tooltips: true,
         onChange: false,
+        required: false,
         characterCount: false
     };
 

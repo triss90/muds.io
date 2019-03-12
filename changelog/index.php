@@ -27,6 +27,7 @@
 <!--                    <li>Set minimum height on resizable editor</li>-->
 <!--                    <li>Add Tooltips to dropdown items</li>-->
 <!--                    <li>Add option for character count</li>-->
+<!--                    <li>Add option for require textarea on submit</li>-->
 <!--                </ul>-->
 <!---->
 <!--                <br><br>-->

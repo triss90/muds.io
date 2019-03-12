@@ -54,6 +54,7 @@
             height: '500px',
             theme: "light",
             resize: true,
+            required: true,
             keybindings: true,
             tooltips: true,
             onChange: function() {
