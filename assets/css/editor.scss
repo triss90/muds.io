@@ -72,6 +72,9 @@
     font-size: 0.8rem;
     box-sizing: border-box !important;
     vertical-align: bottom !important;
+    &.dropped {
+      padding: 0 !important;
+    }
     &:focus {
       outline: 0;
     }
@@ -272,6 +275,8 @@
           color: #999;
           font-size: 0.9rem;
           cursor: pointer;
+          line-height: 1.2rem !important;
+          padding: 0.0rem 0 !important;
           svg {
             height: 1rem !important;
             fill: #999 !important;

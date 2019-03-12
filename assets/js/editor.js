@@ -272,10 +272,7 @@
         const htmlCode = editorContent.innerHTML;
         const htmlCodeEncoded = htmlentities.encode(htmlCode);
         if (HTMLButton.classList.contains('active') === false) {
-
-
-            editorContent.innerHTML ='<pre style="margin-left:-10px!important;margin-top:-10px!important;width:calc(100% + 20px);height:calc(100% + 20px);">'+htmlCodeEncoded+'</pre>';
-
+            editorContent.innerHTML ='<pre style="margin:-10px!important;width:calc(100% + 20px);height:calc(100% + 20px);">'+htmlCodeEncoded+'</pre>';
             for (let i = 0; i < menuButtons.length; ++i) {
                 if (menuButtons[i].classList.contains('show-html')) {
                     menuButtons[i].classList.add('active');
@@ -341,12 +338,12 @@
         buttonHeader.classList.add('headers');
         buttonHeader.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M5 4v3h5.5v12h3V7H19V4H5z"/></svg></label>' +
             '<ul>' +
-            '<li><button type="button" class="muds-h1" tabindex="-1" title="Healine 1 (cmd+1)" onclick="'+'muds.buttonH1Action()'+'">Header 1</button></li>' +
-            '<li><button type="button" class="muds-h2" tabindex="-1" title="Healine 2 (cmd+2)" onclick="'+'muds.buttonH2Action()'+'">Header 2</button></li>' +
-            '<li><button type="button" class="muds-h3" tabindex="-1" title="Healine 3 (cmd+3)" onclick="'+'muds.buttonH3Action()'+'">Header 3</button></li>' +
-            '<li><button type="button" class="muds-body" tabindex="-1" title="Body Text (cmd+0)" onclick="'+'muds.buttonBodyTextAction()'+'">Body</button></li>' +
-            '<li><button type="button" class="muds-blockquote" tabindex="-1" title="Blockquote (shift+cmd+B)" onclick="'+'muds.buttonBlockquoteAction()'+'">Blockquote</button></li>' +
-            '<li><button type="button" class="muds-blockquote" tabindex="-1" title="Code Block" onclick="'+'muds.buttonCodeBlockAction()'+'">Code Block</button></li>' +
+            '<li><button type="button" class="muds-item dropped muds-h1" tabindex="-1" data-tooltip="Healine 1 ('+item.osModifier+'+1)" onclick="'+'muds.buttonH1Action()'+'">Header 1</button></li>' +
+            '<li><button type="button" class="muds-item dropped muds-h2" tabindex="-1" data-tooltip="Healine 2 ('+item.osModifier+'+2)" onclick="'+'muds.buttonH2Action()'+'">Header 2</button></li>' +
+            '<li><button type="button" class="muds-item dropped muds-h3" tabindex="-1" data-tooltip="Healine 3 ('+item.osModifier+'+3)" onclick="'+'muds.buttonH3Action()'+'">Header 3</button></li>' +
+            '<li><button type="button" class="muds-item dropped muds-body" tabindex="-1" data-tooltip="Body Text ('+item.osModifier+'+0)" onclick="'+'muds.buttonBodyTextAction()'+'">Body</button></li>' +
+            '<li><button type="button" class="muds-item dropped muds-blockquote" tabindex="-1" data-tooltip="Blockquote (shift+'+item.osModifier+'+B)" onclick="'+'muds.buttonBlockquoteAction()'+'">Blockquote</button></li>' +
+            '<li><button type="button" class="muds-item dropped muds-blockquote" tabindex="-1" data-tooltip="Code Block" onclick="'+'muds.buttonCodeBlockAction()'+'">Code Block</button></li>' +
             '</ul>';
         item.menu.appendChild(buttonHeader);
     }
@@ -563,11 +560,11 @@
         buttonJustification.classList.add('justification');
         buttonJustification.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg></label>' +
             '<ul>' +
-            '<li><button type="button" class="just-left" title="Justify Left" onclick="'+'muds.buttonJustifyLeftAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg> Justify Left</button></li>' +
-            '<li><button type="button" class="just-center" title="Justify Center" onclick="'+'muds.buttonJustifyCenterAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M7 15v2h10v-2H7zm-4 6h18v-2H3v2zm0-8h18v-2H3v2zm4-6v2h10V7H7zM3 3v2h18V3H3z"/></svg> Justify Center</button></li>' +
-            '<li><button type="button" class="just-right" title="Justify Right" onclick="'+'muds.buttonJustifyRightAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 21h18v-2H3v2zm6-4h12v-2H9v2zm-6-4h18v-2H3v2zm6-4h12V7H9v2zM3 3v2h18V3H3z"/></svg> Justify Right</button></li>' +
-            '<li><button type="button" class="just-indent" title="Indent" onclick="'+'muds.buttonIndentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM3 8v8l4-4-4-4zm8 9h10v-2H11v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> Indent</button></li>' +
-            '<li><button type="button" class="just-outdent" title="Outdent" onclick="'+'muds.buttonOutdentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 17h10v-2H11v2zm-8-5l4 4V8l-4 4zm0 9h18v-2H3v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> Outdent</button></li>' +
+            '<li><button type="button" class="muds-item dropped just-left" data-tooltip="Justify Left ('+item.osModifier+'+Left Arrow)" onclick="'+'muds.buttonJustifyLeftAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg> Justify Left</button></li>' +
+            '<li><button type="button" class="muds-item dropped just-center" data-tooltip="Justify Center ('+item.osModifier+'+Up/Down Arrow)" onclick="'+'muds.buttonJustifyCenterAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M7 15v2h10v-2H7zm-4 6h18v-2H3v2zm0-8h18v-2H3v2zm4-6v2h10V7H7zM3 3v2h18V3H3z"/></svg> Justify Center</button></li>' +
+            '<li><button type="button" class="muds-item dropped just-right" data-tooltip="Justify Right ('+item.osModifier+'+Right Arrow)" onclick="'+'muds.buttonJustifyRightAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 21h18v-2H3v2zm6-4h12v-2H9v2zm-6-4h18v-2H3v2zm6-4h12V7H9v2zM3 3v2h18V3H3z"/></svg> Justify Right</button></li>' +
+            '<li><button type="button" class="muds-item dropped just-indent" data-tooltip="Indent (SHIFT+'+item.osModifier+'+Right Arrow)" onclick="'+'muds.buttonIndentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM3 8v8l4-4-4-4zm8 9h10v-2H11v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> Indent</button></li>' +
+            '<li><button type="button" class="muds-item dropped just-outdent" data-tooltip="Outdent (SHIFT+'+item.osModifier+'+Left Arrow)" onclick="'+'muds.buttonOutdentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 17h10v-2H11v2zm-8-5l4 4V8l-4 4zm0 9h18v-2H3v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> Outdent</button></li>' +
             '</ul>';
         item.menu.appendChild(buttonJustification);
     }
@@ -1007,7 +1004,8 @@
             function makeResizableDiv(div) {
                 const element = document.querySelector(div);
                 const currentResizer = document.querySelector(div + ' .muds-resizer');
-                const minimum_size = 20;
+                const toolbar = document.querySelector('.muds-toolbar');
+                const minimum_size = toolbar.clientHeight+20;
                 let original_width = 0;
                 let original_height = 0;
                 let original_x = 0;
@@ -1027,6 +1025,7 @@
                 });
                 function resize(e) {
                     const height = original_height + (e.pageY - original_mouse_y);
+                    console.log(height);
                     if (height > minimum_size) {
                         element.style.height = height + 'px'
                     }

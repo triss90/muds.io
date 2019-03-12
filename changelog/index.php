@@ -24,6 +24,8 @@
 <!--                <h2>MUDS v1.5.4 <a href="/download/muds-editor-v1.5.4.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>-->
 <!--                <ul>-->
 <!--                    <li>Update HTML Code view</li>-->
+<!--                    <li>Set minimum height on resizable editor</li>-->
+<!--                    <li>Add Tooltips to dropdown</li>-->
 <!--                </ul>-->
 <!---->
 <!--                <br><br>-->
