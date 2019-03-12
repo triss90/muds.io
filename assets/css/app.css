@@ -381,6 +381,11 @@ ul {
   .royal .muds-resizer::after {
     background: #ddd; }
 
+.royal .muds-character-count {
+  background: #604982;
+  color: white;
+  right: 0; }
+
 .spectral.fullscreen {
   background: rgba(0, 0, 0, 0.95); }
 
