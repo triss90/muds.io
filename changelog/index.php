@@ -28,6 +28,7 @@
 <!--                    <li>Add Tooltips to dropdown items</li>-->
 <!--                    <li>Add option for character count</li>-->
 <!--                    <li>Add option for required textarea on submit</li>-->
+<!--                    <li>Exiting full screen now takes into adjust to resized height</li>-->
 <!--                </ul>-->
 <!---->
 <!--                <br><br>-->
