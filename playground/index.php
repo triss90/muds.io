@@ -52,7 +52,7 @@
             submitName: 'mySubmit',
             placeholder: 'Type some text here...',
             height: '500px',
-            theme: "royal",
+            theme: "darkmoon",
             resize: true,
             required: true,
             keybindings: true,

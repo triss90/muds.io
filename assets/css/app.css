@@ -324,6 +324,11 @@ ul {
   .darkmoon .muds-resizer::after {
     background: #ddd; }
 
+.darkmoon .muds-character-count {
+  background: #777;
+  color: #000;
+  right: 0; }
+
 .royal .muds-toolbar {
   background: #553982;
   border: 1px solid #553982 !important; }
