@@ -21,6 +21,13 @@
         <div class="row">
             <div class="tiny-12 medium-7">
 
+                <h2>MUDS v1.5.5 <a href="/download/muds-editor-v1.5.5.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
+                <ul>
+                    <li>Fix bug where fullscreen wouldn't work without a predefined editor height</li>
+                </ul>
+
+                <br><br>
+
                 <h2>MUDS v1.5.4 <a href="/download/muds-editor-v1.5.4.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
                     <li>Update HTML Code view</li>
