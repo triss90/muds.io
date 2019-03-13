@@ -1,0 +1,86 @@
+.markee {
+  &.fullscreen {
+
+  }
+  .muds-toolbar {
+    border-radius: 0 !important;
+    background: white;
+    border: 0!important;
+    border-top: 3px solid #41b6e6 !important;
+    padding: 0.3rem 0.5rem 0.6rem 0.5rem!important;
+    .muds-separator {
+      opacity: 0;
+      margin: 0 .5rem !important;
+    }
+    .muds-item {
+      background: #e3e3e3;
+      border-radius: 0 !important;
+      margin: 0 2px;
+      &.muds-dropdown {
+        top: 3px;
+        vertical-align: center;
+      }
+      &.disabled {
+        svg {
+          //fill: rgba(0,0,0,0.4);
+        }
+        &:hover {
+          svg {
+            //fill: rgba(0,0,0,0.4);
+          }
+        }
+      }
+      svg {
+        //fill: #f4f4f4;
+      }
+      &:hover {
+
+        svg {
+
+        }
+      }
+    }
+    .muds-dropdown {
+      ul {
+        &:after {
+        }
+        li {
+          &:hover {
+          }
+          &:first-of-type:after {
+          }
+          button {
+            svg {
+              position: relative !important;
+              bottom: 2px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .muds-content {
+    border-radius: 0 !important;
+    border: 1px solid #eee !important;
+    .muds-quote {
+
+      &:before {
+      }
+    }
+    pre {
+
+    }
+    a {
+
+    }
+  }
+  .muds-resizer {
+    border-radius: 0 0 10px 10px;
+    &::after {
+    }
+  }
+  .muds-character-count {
+    border-radius: 5px 0 0 0;
+    background: #eee !important;
+  }
+}

@@ -282,6 +282,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"\/assets\/css\/themes\/markee.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/themes\/markee.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/assets\/css\/themes\/royal.css": {
 		"aP": 1,
 		"bl": 0,

@@ -456,3 +456,34 @@ ul {
   bottom: 8px;
   right: 8px;
   border-radius: 2px; }
+
+.markee .muds-toolbar {
+  border-radius: 0 !important;
+  background: white;
+  border: 0 !important;
+  border-top: 3px solid #41b6e6 !important;
+  padding: 0.3rem 0.5rem 0.6rem 0.5rem !important; }
+  .markee .muds-toolbar .muds-separator {
+    opacity: 0;
+    margin: 0 .5rem !important; }
+  .markee .muds-toolbar .muds-item {
+    background: #e3e3e3;
+    border-radius: 0 !important;
+    margin: 0 2px; }
+    .markee .muds-toolbar .muds-item.muds-dropdown {
+      top: 3px;
+      vertical-align: center; }
+  .markee .muds-toolbar .muds-dropdown ul li button svg {
+    position: relative !important;
+    bottom: 2px !important; }
+
+.markee .muds-content {
+  border-radius: 0 !important;
+  border: 1px solid #eee !important; }
+
+.markee .muds-resizer {
+  border-radius: 0 0 10px 10px; }
+
+.markee .muds-character-count {
+  border-radius: 5px 0 0 0;
+  background: #eee !important; }
