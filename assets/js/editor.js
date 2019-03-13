@@ -87,6 +87,7 @@
         const toolbarButton = editObj.wrapper.querySelector('.muds-toolbar .muds-item.fullscreen');
         editObj.wrapper.setAttribute('style', '');
         editObj.wrapper.style.position = 'relative';
+        editObj.style.overflow = 'hidden';
         editObj.wrapper.classList.remove('fullscreen');
         editObj.wrapper.style.height = editObj.editedEditorHeight;
         toolbarButton.setAttribute('onclick', 'muds.enterFullScreen()');
@@ -958,6 +959,7 @@
         mudsWrapperElement.id = editor.original_input.id;
         mudsWrapperElement.style.position = 'relative';
         mudsWrapperElement.style.height = '150px';
+        mudsWrapperElement.style.overflow = 'hidden';
         mudsWrapperElement.style.height = editor.height;
 
         mudsWrapperElement.appendChild(mudsToolElement);
