@@ -1071,6 +1071,11 @@
             }
         });
 
+        // Move focus to editor when placeholder is clicked
+        mudsPlaceholderElement.addEventListener('click', function() {
+            editor.content.focus();
+        });
+
         // Prevents focus from moving when buttons are clicked
         var mudsButtons = document.querySelectorAll('.muds-item');
         for (let i = 0; i < mudsButtons.length; i++) {
