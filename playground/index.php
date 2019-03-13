@@ -51,7 +51,7 @@
             selector: 'editorSelector',
             submitName: 'mySubmit',
             placeholder: 'Type some text here...',
-            //height: '500px',
+            height: '500px',
             theme: "light",
             resize: true,
             required: true,

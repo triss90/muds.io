@@ -84,13 +84,12 @@
         } else {
             editObj = this;
         }
-        const content = editObj.wrapper.querySelector('.muds-content');
         const toolbarButton = editObj.wrapper.querySelector('.muds-toolbar .muds-item.fullscreen');
         editObj.wrapper.setAttribute('style', '');
         editObj.wrapper.style.position = 'relative';
         editObj.wrapper.classList.remove('fullscreen');
         if (editObj.height === undefined) {
-            content.wrapper.height = '150px';
+            editObj.wrapper.style.height = '150px';
         } else {
             editObj.wrapper.style.height = editObj.editedEditorHeight;
         }
