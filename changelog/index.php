@@ -21,18 +21,21 @@
         <div class="row">
             <div class="tiny-12 medium-7">
 
-<!--                <h2>MUDS v1.5.4 <a href="/download/muds-editor-v1.5.4.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>-->
-<!--                <ul>-->
-<!--                    <li>Update HTML Code view</li>-->
-<!--                    <li>Set minimum height on resizable editor</li>-->
-<!--                    <li>Add Tooltips to dropdown items</li>-->
-<!--                    <li>Add option for character count</li>-->
-<!--                    <li>Update themes with character count styles</li>-->
-<!--                    <li>Add option for required textarea on submit</li>-->
-<!--                    <li>Exiting full screen now takes into adjust to resized height</li>-->
-<!--                </ul>-->
-<!---->
-<!--                <br><br>-->
+                <h2>MUDS v1.5.4 <a href="/download/muds-editor-v1.5.4.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
+                <ul>
+                    <li>Update HTML Code view</li>
+                    <li>Set minimum height on resizable editor</li>
+                    <li>Add Tooltips to dropdown items</li>
+                    <li>Add option for character count
+                        <ul>
+                            <li>Update themes with character count styles</li>
+                        </ul>
+                    </li>
+                    <li>Add option for required textarea on submit</li>
+                    <li>Exiting full screen now adjust for resized editor height</li>
+                </ul>
+
+                <br><br>
 
                 <h2>MUDS v1.5.3 <a href="/download/muds-editor-v1.5.3.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
