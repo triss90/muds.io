@@ -6,53 +6,63 @@
     border-radius: 0 !important;
     background: white;
     border: 0!important;
-    border-top: 3px solid #41b6e6 !important;
+    border-top: 4px solid #41b6e6 !important;
     padding: 0.3rem 0.5rem 0.6rem 0.5rem!important;
     .muds-separator {
       opacity: 0;
       margin: 0 .5rem !important;
     }
     .muds-item {
-      background: #e3e3e3;
-      border-radius: 0 !important;
-      margin: 0 2px;
-      &.muds-dropdown {
-        top: 3px;
-        vertical-align: center;
-      }
-      &.disabled {
-        svg {
-          //fill: rgba(0,0,0,0.4);
-        }
-        &:hover {
-          svg {
-            //fill: rgba(0,0,0,0.4);
-          }
-        }
-      }
+      background: #e3e3e3 !important;
+      padding: 2px 4px !important;
+      border-radius: 2px !important;
+      margin: 3px !important;
+      width: 2rem !important;
+      height: 1.3rem !important;
       svg {
-        //fill: #f4f4f4;
-      }
-      &:hover {
-
-        svg {
-
-        }
+        left: 15%;
+        top: 15%;
+        height: 70%;
+        width: 70%;
       }
     }
     .muds-dropdown {
       ul {
-        &:after {
-        }
+        left: 0px;
         li {
-          &:hover {
-          }
-          &:first-of-type:after {
-          }
           button {
+            width: auto !important;
+            height: auto !important;
+            background: none !important;
             svg {
               position: relative !important;
               bottom: 2px !important;
+            }
+          }
+        }
+      }
+      &.headers {
+        ul {
+          li {
+            button {
+              &.muds-blockquote {
+                background: #eee !important;
+                border-left: 3px solid #61aeee !important;
+              }
+            }
+          }
+        }
+      }
+      &.justification {
+        ul {
+          li {
+            button {
+              svg {
+                width: 1rem;
+                height: 1rem;
+                left: 0;
+                top: 2px;
+              }
             }
           }
         }
@@ -62,17 +72,6 @@
   .muds-content {
     border-radius: 0 !important;
     border: 1px solid #eee !important;
-    .muds-quote {
-
-      &:before {
-      }
-    }
-    pre {
-
-    }
-    a {
-
-    }
   }
   .muds-resizer {
     border-radius: 0 0 10px 10px;

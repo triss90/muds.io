@@ -52,6 +52,18 @@
           }
         }
       }
+      &.headers {
+        ul {
+          li {
+            button {
+              &.muds-blockquote {
+                background: rgba(0,0,0,0.5) !important;
+                border-left: 3px solid rgba(0,0,0,1) !important;
+              }
+            }
+          }
+        }
+      }
     }
   }
   .muds-content {

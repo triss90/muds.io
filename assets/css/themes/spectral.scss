@@ -48,9 +48,27 @@
             border-bottom-color: rgba(0,0,0,0.7) !important;
           }
           button {
+            &.muds-blockquote {
+              font-size: 1rem;
+              background: rgba(0,0,0,0.7) !important;
+              border-left: 3px solid red !important;
+              padding: 6px 8px !important;
+            }
             color: #f4f4f4 !important;
             svg {
               fill: #f4f4f4 !important;
+            }
+          }
+        }
+      }
+      &.headers {
+        ul {
+          li {
+            button {
+              &.muds-blockquote {
+                background: rgba(0,0,0,0.5) !important;
+                border-left: 3px solid rgba(0,0,0,1) !important;
+              }
             }
           }
         }

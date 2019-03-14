@@ -87,7 +87,6 @@
         const toolbarButton = editObj.wrapper.querySelector('.muds-toolbar .muds-item.fullscreen');
         editObj.wrapper.setAttribute('style', '');
         editObj.wrapper.style.position = 'relative';
-        editObj.style.overflow = 'hidden';
         editObj.wrapper.classList.remove('fullscreen');
         editObj.wrapper.style.height = editObj.editedEditorHeight;
         toolbarButton.setAttribute('onclick', 'muds.enterFullScreen()');
@@ -344,7 +343,7 @@
             '<li><button type="button" class="muds-item dropped muds-h3" tabindex="-1" data-tooltip="Healine 3 ('+item.osModifier+'+3)" onclick="'+'muds.buttonH3Action()'+'">Header 3</button></li>' +
             '<li><button type="button" class="muds-item dropped muds-body" tabindex="-1" data-tooltip="Body Text ('+item.osModifier+'+0)" onclick="'+'muds.buttonBodyTextAction()'+'">Body</button></li>' +
             '<li><button type="button" class="muds-item dropped muds-blockquote" tabindex="-1" data-tooltip="Blockquote (shift+'+item.osModifier+'+B)" onclick="'+'muds.buttonBlockquoteAction()'+'">Blockquote</button></li>' +
-            '<li><button type="button" class="muds-item dropped muds-blockquote" tabindex="-1" data-tooltip="Code Block" onclick="'+'muds.buttonCodeBlockAction()'+'">Code Block</button></li>' +
+            '<li><button type="button" class="muds-item dropped muds-code" tabindex="-1" data-tooltip="Code Block" onclick="'+'muds.buttonCodeBlockAction()'+'">Code Block</button></li>' +
             '</ul>';
         item.menu.appendChild(buttonHeader);
     }
@@ -959,7 +958,6 @@
         mudsWrapperElement.id = editor.original_input.id;
         mudsWrapperElement.style.position = 'relative';
         mudsWrapperElement.style.height = '150px';
-        mudsWrapperElement.style.overflow = 'hidden';
         mudsWrapperElement.style.height = editor.height;
 
         mudsWrapperElement.appendChild(mudsToolElement);

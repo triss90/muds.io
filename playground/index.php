@@ -75,7 +75,7 @@
             submitName: 'mySubmit',
             placeholder: 'Type some text here...',
             height: '500px',
-            theme: "light",
+            theme: "markee",
             resize: true,
             required: true,
             keybindings: true,

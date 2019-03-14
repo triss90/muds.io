@@ -1,3 +1,316 @@
+//.muds-toolbar {
+//  background: #F7F7F7;
+//  padding: 5px 5px 5px 5px !important;
+//  border: 2px solid #EBEBEB;
+//  border-radius: 2px 2px 0 0;
+//  text-align: left;
+//  line-height: 1.5 !important;
+//  position: relative !important;
+//  box-sizing: border-box !important;
+//  &.tooltips {
+//    .muds-item {
+//      &[data-tooltip] {
+//        position: relative;
+//        cursor: pointer;
+//        &:before, &:after {
+//          visibility: hidden;
+//          opacity: 0;
+//          pointer-events: none;
+//          z-index: 9999;
+//        }
+//        &:before {
+//          position: absolute;
+//          top: 150%;
+//          left: -50%;
+//          margin-bottom: 5px;
+//          margin-left: 50%;
+//          padding: 7px;
+//          width: auto;
+//          -webkit-border-radius: 3px;
+//          -moz-border-radius: 3px;
+//          border-radius: 3px;
+//          background-color: #000;
+//          background-color: hsla(0, 0%, 20%, 1);
+//          color: #fff;
+//          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+//          content: attr(data-tooltip);
+//          white-space: nowrap;
+//          text-align: center;
+//          font-size: 0.8rem;
+//          line-height: 1.2;
+//        }
+//        &:after {
+//          position: absolute;
+//          top: calc(150% - 5px);
+//          left: 50%;
+//          margin-left: -5px;
+//          width: 0;
+//          border-bottom: 5px solid #000;
+//          border-bottom: 5px solid hsla(0, 0%, 20%, 1);
+//          border-right: 5px solid transparent;
+//          border-left: 5px solid transparent;
+//          content: " ";
+//          font-size: 0;
+//          line-height: 0;
+//        }
+//        &:hover:before, &:hover:after {
+//          visibility: visible;
+//          opacity: 1;
+//        }
+//      }
+//    }
+//  }
+//  .muds-item {
+//    background-color: transparent;
+//    border: none;
+//    border-radius: 0;
+//    color: #999;
+//    display: inline-block;
+//    padding: 0px 6px !important;
+//    height: 1.2rem !important;
+//    line-height: 1 !important;
+//    font-size: 0.8rem;
+//    box-sizing: border-box !important;
+//    vertical-align: bottom !important;
+//    &.dropped {
+//      padding: 0 !important;
+//    }
+//    &:focus {
+//      outline: 0;
+//    }
+//    &.disabled {
+//      cursor: not-allowed !important;
+//      svg {
+//        fill: #cecece;
+//      }
+//      &:hover {
+//        cursor: not-allowed;
+//        svg {
+//          fill: #cecece;
+//        }
+//      }
+//      &.muds-dropdown  {
+//        label, label svg {
+//          cursor: not-allowed;
+//        }
+//        ul {
+//          display: none;
+//        }
+//      }
+//    }
+//    &.show-html {
+//      &.active {
+//        background: #ccc;
+//        border-radius: 2px;
+//        svg {
+//          fill: #333;
+//        }
+//      }
+//    }
+//    svg {
+//      height: 1.2rem !important;
+//      width: 1.2rem !important;
+//      fill: #999;
+//      margin: 0;
+//      padding: 0;
+//    }
+//    &:hover {
+//      color: #333;
+//      cursor: pointer;
+//      svg {
+//        fill: #333;;
+//      }
+//    }
+//  }
+//  .muds-separator {
+//    background: #d1d1d1;
+//    width: 2px !important;
+//    height: 1.2rem !important;
+//    position: relative !important;
+//    display: inline-block !important;
+//    margin: 0px 1rem !important;
+//    padding: 0 !important;
+//    top: 0px !important;
+//    bottom: 0px !important;
+//    vertical-align: bottom !important;
+//    box-sizing: border-box !important;
+//  }
+//  .muds-dropdown {
+//    background-color: transparent;
+//    border: none;
+//    border-radius: 0;
+//    color: #999;
+//    display: inline-block;
+//    padding: 0px 6px !important;
+//    vertical-align: text-bottom !important;
+//    height: 1.2rem !important;
+//    position: relative !important;
+//    line-height: 1.5 !important;
+//    &:hover ul {
+//      opacity: 1;
+//      visibility: visible;
+//    }
+//    &.headers {
+//      ul {
+//        width: 130px;
+//      }
+//    }
+//    &.justification {
+//      ul {
+//        width: 150px;
+//      }
+//    }
+//    &.fonts {
+//      ul {
+//        padding:0 !important;
+//        width: 185px !important;
+//        max-height: 160px !important;
+//        .wrapper {
+//          overflow-y: scroll !important;
+//          max-height: 160px !important;
+//          li {
+//            button {
+//              font-size: 0.9rem;
+//              &.font-default {
+//                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+//              }
+//              &.font-arial {
+//                font-family: Arial, Helvetica, sans-serif;
+//              }
+//              &.font-arial-black {
+//                font-family: "Arial Black", Gadget, sans-serif
+//              }
+//              &.font-georgia {
+//                font-family: Georgia, serif;
+//              }
+//              &.font-palatino {
+//                font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+//              }
+//              &.font-times-new-roman {
+//                font-family: "Times New Roman", Times, serif;
+//              }
+//              &.font-comic-sans {
+//                font-family: "Comic Sans MS", cursive, sans-serif;
+//              }
+//              &.font-impact {
+//                font-family: Impact, Charcoal, sans-serif;
+//              }
+//              &.font-lucida-sans-unicode {
+//                font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+//              }
+//              &.font-tahoma {
+//                font-family: Tahoma, Geneva, sans-serif;
+//              }
+//              &.font-trebuchet {
+//                font-family: "Trebuchet MS", Helvetica, sans-serif;
+//              }
+//              &.font-verdana {
+//                font-family: Verdana, Geneva, sans-serif;
+//              }
+//              &.font-courier-new {
+//                font-family: "Courier New", Courier, monospace;
+//              }
+//              &.font-lucida-console {
+//                font-family: "Lucida Console", Monaco, monospace;
+//              }
+//            }
+//          }
+//        }
+//      }
+//    }
+//    label {
+//      box-sizing: bottom !important;
+//      display: block;
+//      position: relative;
+//      top: 2px;
+//      svg {
+//        height: 1.1rem !important;
+//        width: 1.1rem !important;
+//        fill: #999;
+//        margin: 0;
+//        padding: 0;
+//      }
+//    }
+//    ul {
+//      position: absolute;
+//      margin: 1rem 0 !important;
+//      padding: 4px 0;
+//      top: 16px;
+//      left: 0;
+//      background-color: white;
+//      border: 2px solid #EBEBEB;
+//      border-radius: 2px;
+//      box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.05);
+//      list-style-type: none;
+//      opacity: 0;
+//      visibility: hidden;
+//      text-align: left;
+//      z-index: 3;
+//      &::after {
+//        content: '';
+//        position: absolute;
+//        left: 6px;
+//        top: -18px;
+//        height: 0;
+//        width: 0;
+//        border: 8px solid transparent;
+//        border-bottom-color: #EBEBEB;
+//      }
+//      li {
+//        padding: 5px 10px;
+//        color: hsl(0, 0%, 60%);
+//        cursor: pointer;
+//        transition: all 100ms;
+//        &:hover {
+//          background-color: hsl(0, 0%, 90%);
+//          color: black;
+//        }
+//        button {
+//          background: none;
+//          padding: 0;
+//          margin: 0;
+//          display: inline-block;
+//          text-align: left;
+//          border: none;
+//          color: #999;
+//          font-size: 0.9rem;
+//          cursor: pointer;
+//          line-height: 1.2rem !important;
+//          padding: 0.0rem 0 !important;
+//          svg {
+//            height: 1rem !important;
+//            fill: #999 !important;
+//            position: relative;
+//            top: 3px;
+//          }
+//          &.muds-h1 {
+//            font-size: 1.6rem;
+//          }
+//          &.muds-h2 {
+//            font-size: 1.3rem;
+//          }
+//          &.muds-h3 {
+//            font-size: 1.1rem;
+//          }
+//        }
+//        &:first-of-type::after {
+//          content: '';
+//          position: absolute;
+//          left: 6px;
+//          top: -16px;
+//          height: 0;
+//          width: 0;
+//          z-index: 1;
+//          border: 8px solid transparent;
+//          border-bottom-color: white;
+//          pointer-events: none;
+//        }
+//      }
+//    }
+//  }
+//}
+
+
 .muds-toolbar {
   background: #F7F7F7;
   padding: 5px 5px 5px 5px !important;
@@ -7,6 +320,8 @@
   line-height: 1.5 !important;
   position: relative !important;
   box-sizing: border-box !important;
+  display: flex;
+  flex-wrap: wrap;
   &.tooltips {
     .muds-item {
       &[data-tooltip] {
@@ -60,23 +375,36 @@
       }
     }
   }
-  .muds-item {
-    background-color: transparent;
+  .muds-item, .muds-dropdown {
+    background: transparent !important;
     border: none;
     border-radius: 0;
     color: #999;
-    display: inline-block;
-    padding: 0px 6px !important;
-    height: 1.2rem !important;
+    display: block;
+    box-sizing: border-box;
+    padding: 0;
+    height: 1.25rem !important;
+    width: 1.25rem !important;
     line-height: 1 !important;
-    font-size: 0.8rem;
+    margin: 4px;
+    font-size: 16px;
     box-sizing: border-box !important;
     vertical-align: bottom !important;
+    position: relative;
+    svg {
+      max-height: 100% !important;
+      max-width: 100% !important;
+      position: absolute;
+      top: 0;
+      left: 0;
+      fill: #999;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .muds-item {
     &.dropped {
       padding: 0 !important;
-    }
-    &:focus {
-      outline: 0;
     }
     &.disabled {
       cursor: not-allowed !important;
@@ -107,12 +435,8 @@
         }
       }
     }
-    svg {
-      height: 1.2rem !important;
-      width: 1.2rem !important;
-      fill: #999;
-      margin: 0;
-      padding: 0;
+    &:focus {
+      outline: 0;
     }
     &:hover {
       color: #333;
@@ -136,41 +460,124 @@
     box-sizing: border-box !important;
   }
   .muds-dropdown {
-    background-color: transparent;
-    border: none;
-    border-radius: 0;
-    color: #999;
-    display: inline-block;
-    padding: 0px 6px !important;
-    vertical-align: text-bottom !important;
-    height: 1.2rem !important;
-    position: relative !important;
-    line-height: 1.5 !important;
+    ul {
+      position: absolute;
+      margin: 1rem 0 !important;
+      padding: 4px 0;
+      top: 16px;
+      left: -4px;
+      background-color: white;
+      border: 2px solid #EBEBEB;
+      border-radius: 2px;
+      box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.05);
+      list-style-type: none;
+      opacity: 0;
+      visibility: hidden;
+      text-align: left;
+      z-index: 3;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 6px;
+        top: -18px;
+        height: 0;
+        width: 0;
+        border: 8px solid transparent;
+        border-bottom-color: #EBEBEB;
+      }
+      li {
+        padding: 5px;
+        color: hsl(0, 0%, 60%);
+        cursor: pointer;
+        transition: all 100ms;
+        &:hover {
+          background-color: hsl(0, 0%, 90%);
+          color: black;
+        }
+        button {
+          height: auto !important;
+          width: auto !important;
+          background: none !important;
+          border: 0 !important;
+          text-align: left !important;
+          svg {
+            height: 1rem !important;
+            fill: #999 !important;
+            position: relative;
+            top: 3px;
+          }
+        }
+        &:first-of-type::after {
+          content: '';
+          position: absolute;
+          left: 6px;
+          top: -16px;
+          height: 0;
+          width: 0;
+          z-index: 1;
+          border: 8px solid transparent;
+          border-bottom-color: white;
+          pointer-events: none;
+        }
+      }
+    }
     &:hover ul {
       opacity: 1;
       visibility: visible;
     }
     &.headers {
       ul {
-        width: 130px;
+        width: 150px;
+        li {
+          button {
+            &.muds-h1 {
+              font-size: 1.6rem;
+            }
+            &.muds-h2 {
+              font-size: 1.3rem;
+            }
+            &.muds-h3 {
+              font-size: 1.1rem;
+            }
+            &.muds-body {
+              font-size: 1rem;
+            }
+            &.muds-blockquote {
+              font-size: 1rem;
+              background: #eee !important;
+              border-left: 3px solid #61aeee !important;
+              padding: 6px 16px 6px 10px !important;
+            }
+            &.muds-code {
+              font-size: 0.9rem;
+              font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+            }
+          }
+        }
       }
     }
     &.justification {
       ul {
-        width: 150px;
+        width: 160px;
       }
     }
     &.fonts {
       ul {
-        padding:0 !important;
+        padding: 0 !important;
         width: 185px !important;
         max-height: 160px !important;
         .wrapper {
           overflow-y: scroll !important;
           max-height: 160px !important;
           li {
+            &:first-child {
+              margin-top: 1px;
+            }
             button {
               font-size: 0.9rem;
+              padding: 0 !important;
+              color: #666 !important;
+
               &.font-default {
                 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
               }
@@ -215,95 +622,6 @@
               }
             }
           }
-        }
-      }
-    }
-    label {
-      box-sizing: bottom !important;
-      display: block;
-      position: relative;
-      top: 2px;
-      svg {
-        height: 1.1rem !important;
-        width: 1.1rem !important;
-        fill: #999;
-        margin: 0;
-        padding: 0;
-      }
-    }
-    ul {
-      position: absolute;
-      margin: 1rem 0 !important;
-      padding: 4px 0;
-      top: 16px;
-      left: 0;
-      background-color: white;
-      border: 2px solid #EBEBEB;
-      border-radius: 2px;
-      box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.05);
-      list-style-type: none;
-      opacity: 0;
-      visibility: hidden;
-      text-align: left;
-      z-index: 3;
-      &::after {
-        content: '';
-        position: absolute;
-        left: 6px;
-        top: -18px;
-        height: 0;
-        width: 0;
-        border: 8px solid transparent;
-        border-bottom-color: #EBEBEB;
-      }
-      li {
-        padding: 5px 10px;
-        color: hsl(0, 0%, 60%);
-        cursor: pointer;
-        transition: all 100ms;
-        &:hover {
-          background-color: hsl(0, 0%, 90%);
-          color: black;
-        }
-        button {
-          background: none;
-          padding: 0;
-          margin: 0;
-          display: inline-block;
-          text-align: left;
-          border: none;
-          color: #999;
-          font-size: 0.9rem;
-          cursor: pointer;
-          line-height: 1.2rem !important;
-          padding: 0.0rem 0 !important;
-          svg {
-            height: 1rem !important;
-            fill: #999 !important;
-            position: relative;
-            top: 3px;
-          }
-          &.muds-h1 {
-            font-size: 1.6rem;
-          }
-          &.muds-h2 {
-            font-size: 1.3rem;
-          }
-          &.muds-h3 {
-            font-size: 1.1rem;
-          }
-        }
-        &:first-of-type::after {
-          content: '';
-          position: absolute;
-          left: 6px;
-          top: -16px;
-          height: 0;
-          width: 0;
-          z-index: 1;
-          border: 8px solid transparent;
-          border-bottom-color: white;
-          pointer-events: none;
         }
       }
     }
