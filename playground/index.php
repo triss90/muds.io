@@ -17,31 +17,7 @@
     </style>
 </head>
 <body>
-    <textarea id="editorSelector"><h2>MUDS v1.4.0 <a href="/download/muds-editor-v1.4.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
-<ul>
-    <li>Refine codeblock style</li>
-    <li>Overhaul of how predefined content works
-        <ul>
-            <li>Implementing textarea for submittable content</li>
-            <li>Implementing textarea for submittable content</li>
-            <li>Implementing textarea for submittable content</li>
-            <li>Implementing textarea for submittable content</li>
-        </ul>
-    </li>
-    <li>Adding support for events
-        <ul>
-            <li>Adding event - <a href="https://muds.io/documentation/events/">docs</a></li>
-        </ul>
-    </li>
-    <li>Fixing a bug where custom height wasn't reapplied when leaving fullscreen</li>
-    <li>Fixing a bug where onChange events would produced errors unless defined</li>
-    <li>Fixing a bug where tab wouldn't insert 4 spaces correctly</li>
-</ul>
-<blockquote class="muds-quote">Fixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctly</blockquote>
-<p>Fixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctly</p>
-<h3>Code Example</h3>
-<pre>Fixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctly</pre>
-    </textarea>
+    <textarea id="editorSelector"></textarea>
 
     <br><br>
     <h2>MUDS v1.4.0 <a href="/download/muds-editor-v1.4.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
@@ -73,9 +49,9 @@
         var muds = new muds({
             selector: 'editorSelector',
             submitName: 'mySubmit',
-            placeholder: 'Type some text here...',
-            height: '500px',
-            theme: "markee",
+            placeholder: 'Skriv dit <b>review her</b> og hjælp andre med at danne et indtryk 👍😎<br><small>Brug mindst 50 tegn til at beskrive din oplevelse ️✍️</small>',
+            height: '150px',
+            theme: "light",
             resize: true,
             required: true,
             keybindings: true,

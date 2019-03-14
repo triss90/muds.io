@@ -16,7 +16,7 @@
 
                 <h2>Themes</h2>
 
-                <h3>Spectral theme</h3>
+                <h3 id="spectral">Spectral theme</h3>
                 <p><a href="https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds-spectral.min.css" download>Download</a>, or include the library <span class="tag">https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds-spectral.min.css</span></p>
                 <div class="codepen" data-height="330" data-theme-id="36048" data-default-tab="result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
                     <pre data-lang="scss" data-option-autoprefixer></pre>
@@ -52,7 +52,7 @@ var muds = new muds({
 
                 <br><br>
 
-                <h3>Darkmoon theme</h3>
+                <h3 id="darkmoon">Darkmoon theme</h3>
                 <p><a href="https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds-darkmoon.min.css" download>Download</a>, or include the library <span class="tag">https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds-darkmoon.min.css</span></p>
                 <div class="codepen" data-height="330" data-theme-id="36048" data-default-tab="result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
                     <pre data-lang="scss" data-option-autoprefixer></pre>
@@ -82,7 +82,7 @@ var muds = new muds({
 
                 <br><br>
 
-                <h3>Royal theme</h3>
+                <h3 id="royal">Royal theme</h3>
                 <p><a href="https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds-royal.min.css" download>Download</a>, or include the library <span class="tag">https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds-royal.min.css</span></p>
                 <div class="codepen" data-height="330" data-theme-id="36048" data-default-tab="result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
                     <pre data-lang="scss" data-option-autoprefixer></pre>
@@ -112,7 +112,7 @@ var muds = new muds({
 
                 <br><br>
 
-                <h3>Markee theme</h3>
+                <h3 id="markee">Markee theme</h3>
                 <p><a href="https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds-royal.min.css" download>Download</a>, or include the library <span class="tag">https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds-markee.min.css</span></p>
                 <div class="codepen" data-height="330" data-theme-id="36048" data-default-tab="result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
                     <pre data-lang="scss" data-option-autoprefixer></pre>
