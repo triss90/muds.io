@@ -9,7 +9,7 @@
     <title>Playground</title>
     <style>
         html, body {
-            /*background: linear-gradient(to right, #93F9B9, #1D976C) !important;*/
+            background: linear-gradient(to right, #93F9B9, #1D976C) !important;
         }
         body {
             padding: 2% 10%;
