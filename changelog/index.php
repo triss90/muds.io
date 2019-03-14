@@ -21,15 +21,15 @@
         <div class="row">
             <div class="tiny-12 medium-7">
 
-<!--                <h2>MUDS v1.5.6 <a href="/download/muds-editor-v1.5.6.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>-->
-<!--                <ul>-->
-<!--                    <li>Add theme: Markee - <a href="https://muds.io/documentation/themes/list/index.php#markee">Download</a></li>-->
-<!--                    <li>Fix bug where placeholder could overflow editor</li>-->
-<!--                    <li>Fix bug where content wouldn't be focused when placeholder was clicked</li>-->
-<!--                    <li>Update menu buttons styles for all themes</li>-->
-<!--                </ul>-->
-<!---->
-<!--                <br><br>-->
+                <h2>MUDS v1.5.6 <a href="/download/muds-editor-v1.5.6.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
+                <ul>
+                    <li>Add theme: Markee - <a href="https://muds.io/documentation/themes/list/index.php#markee">Download</a></li>
+                    <li>Fix bug where placeholder could overflow editor</li>
+                    <li>Fix bug where content wouldn't be focused when placeholder was clicked</li>
+                    <li>Update menu buttons styles for all themes</li>
+                </ul>
+
+                <br><br>
 
                 <h2>MUDS v1.5.5 <a href="/download/muds-editor-v1.5.5.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>

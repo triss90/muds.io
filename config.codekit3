@@ -226,16 +226,6 @@
 		"oF": 1,
 		"oS": 3
 		},
-	"\/assets\/css\/editor.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/assets\/css\/editor-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"\/assets\/css\/editor.scss": {
 		"aP": 1,
 		"bl": 1,
@@ -244,8 +234,8 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/assets\/css\/editor.css",
-		"oF": 1,
+		"oAP": "\/assets\/css\/muds.min.css",
+		"oF": 3,
 		"oS": 3,
 		"uL": 1
 		},
@@ -259,13 +249,13 @@
 		"oF": 1,
 		"oS": 3
 		},
-	"\/assets\/css\/themes\/darkmoon.css": {
+	"\/assets\/css\/muds.min.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/assets\/css\/themes\/darkmoon-min.css",
+		"oAP": "\/assets\/css\/muds.min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -276,9 +266,9 @@
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
-		"oA": 1,
-		"oAP": "\/assets\/css\/themes\/darkmoon.css",
-		"oF": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/themes\/muds-darkmoon.min.css",
+		"oF": 3,
 		"oS": 3,
 		"uL": 1
 		},
@@ -289,19 +279,49 @@
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
-		"oA": 1,
-		"oAP": "\/assets\/css\/themes\/markee.css",
-		"oF": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/themes\/muds-markee.min.css",
+		"oF": 3,
 		"oS": 0,
 		"uL": 1
 		},
-	"\/assets\/css\/themes\/royal.css": {
+	"\/assets\/css\/themes\/muds-darkmoon.min.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/assets\/css\/themes\/royal-min.css",
+		"oAP": "\/assets\/css\/themes\/muds-darkmoon.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/assets\/css\/themes\/muds-markee.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/themes\/muds-markee.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/assets\/css\/themes\/muds-royal.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/themes\/muds-royal.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/assets\/css\/themes\/muds-spectral.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/themes\/muds-spectral.min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -312,21 +332,11 @@
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
-		"oA": 1,
-		"oAP": "\/assets\/css\/themes\/royal.css",
-		"oF": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/themes\/muds-royal.min.css",
+		"oF": 3,
 		"oS": 3,
 		"uL": 1
-		},
-	"\/assets\/css\/themes\/spectral.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/assets\/css\/themes\/spectral-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"\/assets\/css\/themes\/spectral.scss": {
 		"aP": 1,
@@ -335,9 +345,9 @@
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
-		"oA": 1,
-		"oAP": "\/assets\/css\/themes\/spectral.css",
-		"oF": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/themes\/muds-spectral.min.css",
+		"oF": 3,
 		"oS": 3,
 		"uL": 1
 		},
@@ -809,32 +819,32 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"\/assets\/js\/editor-dist.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/assets\/js\/editor-dist-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"\/assets\/js\/editor-dist.js.map": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/assets\/js\/editor-dist.js.map",
-		"oF": 0
-		},
 	"\/assets\/js\/editor.js": {
 		"ft": 64,
 		"ma": 1,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/editor-dist.js",
+		"oAP": "\/assets\/js\/muds.min.js",
 		"oF": 3,
 		"sC": 3,
 		"tS": 1
+		},
+	"\/assets\/js\/muds.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/muds.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/assets\/js\/muds.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/js\/muds.min.js.map",
+		"oF": 0
 		},
 	"\/changelog\/index.php": {
 		"cB": 0,
@@ -1058,6 +1068,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/download\/muds-editor-v1.5.5.zip",
+		"oF": 0
+		},
+	"\/download\/muds-editor-v1.5.6.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/download\/muds-editor-v1.5.6.zip",
 		"oF": 0
 		},
 	"\/google9a2ba4a21ba11ef5.html": {

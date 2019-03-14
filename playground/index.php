@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/assets/css/app.css">
-    <link rel="stylesheet" href="/assets/css/editor.css">
+    <link rel="stylesheet" href="/assets/css/muds.min.css">
     <title>Playground</title>
     <style>
         html, body {
-            background: linear-gradient(to right, #93F9B9, #1D976C) !important;
+            /*background: linear-gradient(to right, #93F9B9, #1D976C) !important;*/
         }
         body {
             padding: 2% 10%;
@@ -44,7 +44,7 @@
     <p>Fixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctlyFixing a bug where tab wouldn't insert 4 spaces correctly</p>
     <h3>Code Example</h3>
 
-    <script src="/assets/js/editor.js" ></script>
+    <script src="/assets/js/muds.min.js" ></script>
     <script>
         var muds = new muds({
             selector: 'editorSelector',

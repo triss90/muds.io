@@ -1,5 +1,5 @@
 <?php
-    $mudsVersion = "1.5.5";
+    $mudsVersion = "1.5.6";
 ?>
 
 <!doctype html>
