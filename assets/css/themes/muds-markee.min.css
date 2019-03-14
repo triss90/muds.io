@@ -3,6 +3,8 @@
   background: white;
   border: 0 !important;
   border-top: 4px solid #41b6e6 !important;
+  border-left: 1px solid #eee !important;
+  border-right: 1px solid #eee !important;
   padding: 0.3rem 0.5rem 0.6rem 0.5rem !important; }
   .markee .muds-toolbar .muds-separator {
     opacity: 0;
@@ -46,4 +48,5 @@
 
 .markee .muds-character-count {
   border-radius: 5px 0 0 0;
-  background: #eee !important; }
+  background: #eee !important;
+  color: #bbb; }
