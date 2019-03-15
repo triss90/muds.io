@@ -1,8 +1,9 @@
 (function(){
 
+    // Load settings and run Muds Editor
     var muds = function(opts) {
 
-        // Object merger function
+        // Merge default options with user options
         function merge_options(obj1,obj2) {
             var obj3 = {};
             var attrname;
@@ -10,9 +11,22 @@
             for (attrname in obj2) { obj3[attrname] = obj2[attrname]; }
             return obj3;
         }
-
-        // Load editor options (default and user)
         this.options = merge_options(muds.defaults,opts);
+
+
+        this.langDefault = muds.langDefault;
+        console.log(this.langDefault);
+        console.log(this.options.language);
+
+
+        if (this.options.language != 'en-US' && this.options.language != 'da-DK') {
+            this.options.language = 'en-US';
+        }
+
+        console.log(this.options.language);
+
+        console.log(this.langDefault[this.options.language].buttons.formatting.h1);
+
 
         // Assign options to object
         this.original_input = document.getElementById(opts.selector);
@@ -55,7 +69,6 @@
         //Build Editor
         buildEditor(this);
     };
-
 
     // Menu Actions
     muds.prototype.enterFullScreen = function(string) {
@@ -314,7 +327,6 @@
         myWindow.close();
     };
 
-
     // Menu buttons
     function buttonSeparator(item) {
         const buttonSeparator = document.createElement('span');
@@ -328,7 +340,7 @@
         buttonFullScreen.setAttribute('onclick', 'muds.enterFullScreen()');
         buttonFullScreen.setAttribute('tabindex', '-1');
         buttonFullScreen.setAttribute('type', 'button');
-        buttonFullScreen.setAttribute('data-tooltip', 'Fullscreen ('+item.osModifier+'+Enter)');
+        buttonFullScreen.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.fullscreen+' ('+item.osModifier+'+Enter)');
         item.menu.appendChild(buttonFullScreen);
     }
     function buttonHeader(item) {
@@ -338,12 +350,12 @@
         buttonHeader.classList.add('headers');
         buttonHeader.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M5 4v3h5.5v12h3V7H19V4H5z"/></svg></label>' +
             '<ul>' +
-            '<li><button type="button" class="muds-item dropped muds-h1" tabindex="-1" data-tooltip="Healine 1 ('+item.osModifier+'+1)" onclick="'+'muds.buttonH1Action()'+'">Header 1</button></li>' +
-            '<li><button type="button" class="muds-item dropped muds-h2" tabindex="-1" data-tooltip="Healine 2 ('+item.osModifier+'+2)" onclick="'+'muds.buttonH2Action()'+'">Header 2</button></li>' +
-            '<li><button type="button" class="muds-item dropped muds-h3" tabindex="-1" data-tooltip="Healine 3 ('+item.osModifier+'+3)" onclick="'+'muds.buttonH3Action()'+'">Header 3</button></li>' +
-            '<li><button type="button" class="muds-item dropped muds-body" tabindex="-1" data-tooltip="Body Text ('+item.osModifier+'+0)" onclick="'+'muds.buttonBodyTextAction()'+'">Body</button></li>' +
-            '<li><button type="button" class="muds-item dropped muds-blockquote" tabindex="-1" data-tooltip="Blockquote (shift+'+item.osModifier+'+B)" onclick="'+'muds.buttonBlockquoteAction()'+'">Blockquote</button></li>' +
-            '<li><button type="button" class="muds-item dropped muds-code" tabindex="-1" data-tooltip="Code Block" onclick="'+'muds.buttonCodeBlockAction()'+'">Code Block</button></li>' +
+            '<li><button type="button" class="muds-item dropped muds-h1" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.h1+' ('+item.osModifier+'+1)" onclick="'+'muds.buttonH1Action()'+'">'+item.langDefault[item.options.language].buttons.formatting.h1+'</button></li>' +
+            '<li><button type="button" class="muds-item dropped muds-h2" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.h2+'  ('+item.osModifier+'+2)" onclick="'+'muds.buttonH2Action()'+'">'+item.langDefault[item.options.language].buttons.formatting.h2+'</button></li>' +
+            '<li><button type="button" class="muds-item dropped muds-h3" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.h3+'  ('+item.osModifier+'+3)" onclick="'+'muds.buttonH3Action()'+'">'+item.langDefault[item.options.language].buttons.formatting.h3+'</button></li>' +
+            '<li><button type="button" class="muds-item dropped muds-body" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.body+'  ('+item.osModifier+'+0)" onclick="'+'muds.buttonBodyTextAction()'+'">'+item.langDefault[item.options.language].buttons.formatting.body+'</button></li>' +
+            '<li><button type="button" class="muds-item dropped muds-blockquote" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.blockquote+'  (shift+'+item.osModifier+'+B)" onclick="'+'muds.buttonBlockquoteAction()'+'">'+item.langDefault[item.options.language].buttons.formatting.blockquote+'</button></li>' +
+            '<li><button type="button" class="muds-item dropped muds-code" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.code+' " onclick="'+'muds.buttonCodeBlockAction()'+'">'+item.langDefault[item.options.language].buttons.formatting.code+'</button></li>' +
             '</ul>';
         item.menu.appendChild(buttonHeader);
     }
@@ -380,7 +392,7 @@
         buttonUnorderedList.setAttribute('onclick', 'muds.buttonUnorderedListAction()');
         buttonUnorderedList.setAttribute('type', 'button');
         buttonUnorderedList.setAttribute('tabindex', '-1');
-        buttonUnorderedList.setAttribute('data-tooltip', 'Unordered list ('+item.osModifier+'+.)');
+        buttonUnorderedList.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.list.unordered+' ('+item.osModifier+'+.)');
         item.menu.appendChild(buttonUnorderedList);
     }
     function buttonOrderedList(item) {
@@ -390,7 +402,7 @@
         buttonOrderedList.setAttribute('onclick', 'muds.buttonOrderedListAction()');
         buttonOrderedList.setAttribute('type', 'button');
         buttonOrderedList.setAttribute('tabindex', '-1');
-        buttonOrderedList.setAttribute('data-tooltip', 'Ordered list  ('+item.osModifier+'+,)');
+        buttonOrderedList.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.list.ordered+' ('+item.osModifier+'+,)');
         item.menu.appendChild(buttonOrderedList);
     }
     function buttonUnderline(item) {
@@ -400,7 +412,7 @@
         buttonUnderline.setAttribute('onclick', 'muds.buttonUnderlineAction()');
         buttonUnderline.setAttribute('type', 'button');
         buttonUnderline.setAttribute('tabindex', '-1');
-        buttonUnderline.setAttribute('data-tooltip', 'Underline ('+item.osModifier+'+U)');
+        buttonUnderline.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.underline+' ('+item.osModifier+'+U)');
         item.menu.appendChild(buttonUnderline);
     }
     function buttonItalic(item) {
@@ -410,7 +422,7 @@
         buttonItalic.setAttribute('onclick','muds.buttonItalicAction()');
         buttonItalic.setAttribute('type', 'button');
         buttonItalic.setAttribute('tabindex', '-1');
-        buttonItalic.setAttribute('data-tooltip', 'Italic ('+item.osModifier+'+I)');
+        buttonItalic.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.italic+' ('+item.osModifier+'+I)');
         item.menu.appendChild(buttonItalic);
     }
     function buttonBlockquote(item) {
@@ -420,7 +432,7 @@
         buttonBlockquote.setAttribute('onclick','muds.buttonBlockquoteAction()');
         buttonBlockquote.setAttribute('type', 'button');
         buttonBlockquote.setAttribute('tabindex', '-1');
-        buttonBlockquote.setAttribute('data-tooltip', 'Blockquote (SHIFT+'+item.osModifier+'+B)');
+        buttonBlockquote.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.blockquote+' (SHIFT+'+item.osModifier+'+B)');
         item.menu.appendChild(buttonBlockquote);
     }
     function buttonCodeBlock(item) {
@@ -430,7 +442,7 @@
         buttonCodeBlock.setAttribute('onclick','muds.buttonCodeBlockAction()');
         buttonCodeBlock.setAttribute('type', 'button');
         buttonCodeBlock.setAttribute('tabindex', '-1');
-        buttonCodeBlock.setAttribute('data-tooltip', 'Code Block');
+        buttonCodeBlock.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.code);
         item.menu.appendChild(buttonCodeBlock);
     }
     function buttonBold(item) {
@@ -441,7 +453,7 @@
         buttonBold.setAttribute('type', 'button');
         buttonBold.setAttribute('tabindex', '-1');
         buttonBold.setAttribute('unselectable', 'on');
-        buttonBold.setAttribute('data-tooltip', 'Bold ('+item.osModifier+'+B)');
+        buttonBold.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.bold+' ('+item.osModifier+'+B)');
         item.menu.appendChild(buttonBold);
     }
     function buttonLink(item) {
@@ -451,7 +463,7 @@
         buttonLink.setAttribute('onclick','muds.buttonLinkAction()');
         buttonLink.setAttribute('type', 'button');
         buttonLink.setAttribute('tabindex', '-1');
-        buttonLink.setAttribute('data-tooltip', 'Create link ('+item.osModifier+'+L)');
+        buttonLink.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.link+' ('+item.osModifier+'+L)');
         item.menu.appendChild(buttonLink);
     }
     function buttonCut(item) {
@@ -461,7 +473,7 @@
         buttonCut.setAttribute('onclick','muds.buttonCutAction()');
         buttonCut.setAttribute('type', 'button');
         buttonCut.setAttribute('tabindex', '-1');
-        buttonCut.setAttribute('data-tooltip', 'Cut ('+item.osModifier+'+X)');
+        buttonCut.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.cut+' ('+item.osModifier+'+X)');
         item.menu.appendChild(buttonCut);
     }
     function buttonCopy(item) {
@@ -471,7 +483,7 @@
         buttonCopy.setAttribute('onclick','muds.buttonCopyAction()');
         buttonCopy.setAttribute('type', 'button');
         buttonCopy.setAttribute('tabindex', '-1');
-        buttonCopy.setAttribute('data-tooltip', 'Copy ('+item.osModifier+'+C)');
+        buttonCopy.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.copy+' ('+item.osModifier+'+C)');
         item.menu.appendChild(buttonCopy);
     }
     function buttonUndo(item) {
@@ -481,7 +493,7 @@
         buttonUndo.setAttribute('onclick', 'muds.buttonUndoAction()');
         buttonUndo.setAttribute('type', 'button');
         buttonUndo.setAttribute('tabindex', '-1');
-        buttonUndo.setAttribute('data-tooltip', 'Undo ('+item.osModifier+'+Z)');
+        buttonUndo.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.undo+' ('+item.osModifier+'+Z)');
         item.menu.appendChild(buttonUndo);
     }
     function buttonRedo(item) {
@@ -491,7 +503,7 @@
         buttonRedo.setAttribute('onclick','muds.buttonRedoAction()');
         buttonRedo.setAttribute('type', 'button');
         buttonRedo.setAttribute('tabindex', '-1');
-        buttonRedo.setAttribute('data-tooltip', 'Redo (SHIFT+'+item.osModifier+'+Z)');
+        buttonRedo.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.redo+' (SHIFT+'+item.osModifier+'+Z)');
         item.menu.appendChild(buttonRedo);
     }
     function buttonChangeColor(item) {
@@ -501,7 +513,7 @@
         buttonChangeColor.setAttribute('onclick','muds.buttonChangeColorAction()');
         buttonChangeColor.setAttribute('type', 'button');
         buttonChangeColor.setAttribute('tabindex', '-1');
-        buttonChangeColor.setAttribute('data-tooltip', 'Text color (SHIFT+'+item.osModifier+'+C)');
+        buttonChangeColor.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.textColor+' (SHIFT+'+item.osModifier+'+C)');
         item.menu.appendChild(buttonChangeColor);
     }
     function buttonGetImage(item) {
@@ -517,7 +529,7 @@
         const imageLabel = document.createElement('label');
         imageLabel.setAttribute('for','file');
         imageLabel.classList.add('muds-item');
-        imageLabel.setAttribute('data-tooltip', 'Insert image');
+        imageLabel.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.image);
         imageLabel.setAttribute('type', 'button');
         imageLabel.setAttribute('tabindex', '-1');
         imageLabel.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M18 20H4V6h9V4H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-9h-2v9zm-7.79-3.17l-1.96-2.36L5.5 18h11l-3.54-4.71zM20 4V1h-2v3h-3c.01.01 0 2 0 2h3v2.99c.01.01 2 0 2 0V6h3V4h-3z"/></svg>';
@@ -530,7 +542,7 @@
         buttonStrikeThrough.setAttribute('onclick','muds.buttonStrikeThroughAction()');
         buttonStrikeThrough.setAttribute('type', 'button');
         buttonStrikeThrough.setAttribute('tabindex', '-1');
-        buttonStrikeThrough.setAttribute('data-tooltip', 'Strike Through ('+item.osModifier+'+S)');
+        buttonStrikeThrough.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.strikeThrough+' ('+item.osModifier+'+S)');
         item.menu.appendChild(buttonStrikeThrough);
     }
     function buttonDelete(item) {
@@ -540,7 +552,7 @@
         buttonDelete.setAttribute('onclick','muds.buttonDeleteAction()');
         buttonDelete.setAttribute('type', 'button');
         buttonDelete.setAttribute('tabindex', '-1');
-        buttonDelete.setAttribute('data-tooltip', 'Delete (DEL)');
+        buttonDelete.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.delete+' (DEL)');
         item.menu.appendChild(buttonDelete);
     }
     function buttonSelectAll(item) {
@@ -550,7 +562,7 @@
         buttonSelectAll.setAttribute('onclick','muds.buttonSelectAllAction()');
         buttonSelectAll.setAttribute('type', 'button');
         buttonSelectAll.setAttribute('tabindex', '-1');
-        buttonSelectAll.setAttribute('data-tooltip', 'Select all ('+item.osModifier+'+A)');
+        buttonSelectAll.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.selectAll+' ('+item.osModifier+'+A)');
         item.menu.appendChild(buttonSelectAll);
     }
     function buttonJustification(item) {
@@ -560,11 +572,11 @@
         buttonJustification.classList.add('justification');
         buttonJustification.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg></label>' +
             '<ul>' +
-            '<li><button type="button" class="muds-item dropped just-left" data-tooltip="Justify Left ('+item.osModifier+'+Left Arrow)" onclick="'+'muds.buttonJustifyLeftAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg> Justify Left</button></li>' +
-            '<li><button type="button" class="muds-item dropped just-center" data-tooltip="Justify Center ('+item.osModifier+'+Up/Down Arrow)" onclick="'+'muds.buttonJustifyCenterAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M7 15v2h10v-2H7zm-4 6h18v-2H3v2zm0-8h18v-2H3v2zm4-6v2h10V7H7zM3 3v2h18V3H3z"/></svg> Justify Center</button></li>' +
-            '<li><button type="button" class="muds-item dropped just-right" data-tooltip="Justify Right ('+item.osModifier+'+Right Arrow)" onclick="'+'muds.buttonJustifyRightAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 21h18v-2H3v2zm6-4h12v-2H9v2zm-6-4h18v-2H3v2zm6-4h12V7H9v2zM3 3v2h18V3H3z"/></svg> Justify Right</button></li>' +
-            '<li><button type="button" class="muds-item dropped just-indent" data-tooltip="Indent (SHIFT+'+item.osModifier+'+Right Arrow)" onclick="'+'muds.buttonIndentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM3 8v8l4-4-4-4zm8 9h10v-2H11v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> Indent</button></li>' +
-            '<li><button type="button" class="muds-item dropped just-outdent" data-tooltip="Outdent (SHIFT+'+item.osModifier+'+Left Arrow)" onclick="'+'muds.buttonOutdentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 17h10v-2H11v2zm-8-5l4 4V8l-4 4zm0 9h18v-2H3v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> Outdent</button></li>' +
+            '<li><button type="button" class="muds-item dropped just-left" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.left+' ('+item.osModifier+'+Left Arrow)" onclick="'+'muds.buttonJustifyLeftAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg> '+item.langDefault[item.options.language].buttons.justification.left+'</button></li>' +
+            '<li><button type="button" class="muds-item dropped just-center" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.center+' ('+item.osModifier+'+Up/Down Arrow)" onclick="'+'muds.buttonJustifyCenterAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M7 15v2h10v-2H7zm-4 6h18v-2H3v2zm0-8h18v-2H3v2zm4-6v2h10V7H7zM3 3v2h18V3H3z"/></svg> '+item.langDefault[item.options.language].buttons.justification.center+'</button></li>' +
+            '<li><button type="button" class="muds-item dropped just-right" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.right+' ('+item.osModifier+'+Right Arrow)" onclick="'+'muds.buttonJustifyRightAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 21h18v-2H3v2zm6-4h12v-2H9v2zm-6-4h18v-2H3v2zm6-4h12V7H9v2zM3 3v2h18V3H3z"/></svg> '+item.langDefault[item.options.language].buttons.justification.right+'</button></li>' +
+            '<li><button type="button" class="muds-item dropped just-indent" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.indent+' (SHIFT+'+item.osModifier+'+Right Arrow)" onclick="'+'muds.buttonIndentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM3 8v8l4-4-4-4zm8 9h10v-2H11v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> '+item.langDefault[item.options.language].buttons.justification.indent+'</button></li>' +
+            '<li><button type="button" class="muds-item dropped just-outdent" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.outdent+' (SHIFT+'+item.osModifier+'+Left Arrow)" onclick="'+'muds.buttonOutdentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 17h10v-2H11v2zm-8-5l4 4V8l-4 4zm0 9h18v-2H3v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> '+item.langDefault[item.options.language].buttons.justification.outdent+'</button></li>' +
             '</ul>';
         item.menu.appendChild(buttonJustification);
     }
@@ -575,7 +587,7 @@
         buttonJustifyCenter.setAttribute('onclick','muds.buttonJustifyCenterAction()');
         buttonJustifyCenter.setAttribute('type', 'button');
         buttonJustifyCenter.setAttribute('tabindex', '-1');
-        buttonJustifyCenter.setAttribute('data-tooltip', 'Justify center ('+item.osModifier+'+Up/Down Arrow)');
+        buttonJustifyCenter.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.center+' ('+item.osModifier+'+Up/Down Arrow)');
         item.menu.appendChild(buttonJustifyCenter);
     }
     function buttonJustifyLeft(item) {
@@ -585,7 +597,7 @@
         buttonJustifyLeft.setAttribute('onclick','muds.buttonJustifyLeftAction()');
         buttonJustifyLeft.setAttribute('type', 'button');
         buttonJustifyLeft.setAttribute('tabindex', '-1');
-        buttonJustifyLeft.setAttribute('data-tooltip', 'Justify Left ('+item.osModifier+'+Left Arrow)');
+        buttonJustifyLeft.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.left+' ('+item.osModifier+'+Left Arrow)');
         item.menu.appendChild(buttonJustifyLeft);
     }
     function buttonJustifyRight(item) {
@@ -595,7 +607,7 @@
         buttonJustifyRight.setAttribute('onclick','muds.buttonJustifyRightAction()');
         buttonJustifyRight.setAttribute('type', 'button');
         buttonJustifyRight.setAttribute('tabindex', '-1');
-        buttonJustifyRight.setAttribute('data-tooltip', 'Justify Right ('+item.osModifier+'+Right Arrow)');
+        buttonJustifyRight.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.right+' ('+item.osModifier+'+Right Arrow)');
         item.menu.appendChild(buttonJustifyRight);
     }
     function buttonIndent(item) {
@@ -605,7 +617,7 @@
         buttonIndent.setAttribute('onclick','muds.buttonIndentAction()');
         buttonIndent.setAttribute('type', 'button');
         buttonIndent.setAttribute('tabindex', '-1');
-        buttonIndent.setAttribute('data-tooltip', 'Indent (SHIFT+'+item.osModifier+'+Right Arrow)');
+        buttonIndent.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.indent+' (SHIFT+'+item.osModifier+'+Right Arrow)');
         item.menu.appendChild(buttonIndent);
     }
     function buttonOutdent(item) {
@@ -615,7 +627,7 @@
         buttonOutdent.setAttribute('onclick','muds.buttonOutdentAction()');
         buttonOutdent.setAttribute('type', 'button');
         buttonOutdent.setAttribute('tabindex', '-1');
-        buttonOutdent.setAttribute('data-tooltip', 'Outdent (SHIFT+'+item.osModifier+'+Left Arrow)');
+        buttonOutdent.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.outdent+' (SHIFT+'+item.osModifier+'+Left Arrow)');
         item.menu.appendChild(buttonOutdent);
     }
     function buttonPrintMe(item) {
@@ -625,7 +637,7 @@
         buttonPrintMe.setAttribute('onclick','muds.buttonPrintMeAction()');
         buttonPrintMe.setAttribute('type', 'button');
         buttonPrintMe.setAttribute('tabindex', '-1');
-        buttonPrintMe.setAttribute('data-tooltip', 'Print ('+item.osModifier+'+P)');
+        buttonPrintMe.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.print+' ('+item.osModifier+'+P)');
         item.menu.appendChild(buttonPrintMe);
     }
     function buttonShowHTML(item) {
@@ -635,7 +647,7 @@
         buttonShowHTML.setAttribute('onclick','muds.buttonShowHTMLAction(event)');
         buttonShowHTML.setAttribute('type', 'button');
         buttonShowHTML.setAttribute('tabindex', '-1');
-        buttonShowHTML.setAttribute('data-tooltip', 'Show HTML ('+item.osModifier+'+H)');
+        buttonShowHTML.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.showHtml+' ('+item.osModifier+'+H)');
         item.menu.appendChild(buttonShowHTML);
     }
     function buttonShowText(item) {
@@ -645,7 +657,7 @@
         buttonShowText.setAttribute('onclick','muds.buttonShowTextAction()');
         buttonShowText.setAttribute('type', 'button');
         buttonShowText.setAttribute('tabindex', '-1');
-        buttonShowText.setAttribute('data-tooltip', 'View content ('+item.osModifier+'+O)');
+        buttonShowText.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.showText+' ('+item.osModifier+'+O)');
         item.menu.appendChild(buttonShowText);
     }
 
@@ -1104,11 +1116,65 @@
         menuCustom: [], //'header','underline','strikeThrough','bold','italic','link','changeColor','image','undo','redo','unorderedList','orderedList','selectAll','copy','cut','delete','justifyLeft','justifyCenter','justifyRight','print','showHTML','showText','fullScreen'
         theme: 'light', // light, dark
         height: '150px',
+        language: 'en-US',
         keybindings: true,
         tooltips: true,
         onChange: false,
         required: false,
         characterCount: false
+    };
+
+    muds.langDefault = {
+        'en-US': {
+            buttons: {
+                functions: {
+                    fullscreen: 'Fullscreen',
+                    textColor: 'Text Color',
+                    image: 'Insert Image',
+                    cut: 'Cut',
+                    copy: 'Copy',
+                    undo: 'Undo',
+                    redo: 'Redo',
+                    delete: 'Delete',
+                    selectAll: 'Select All',
+                    print: 'Print',
+                    showHtml: 'Edit HTML',
+                    showText: 'View Content'
+                },
+                formatting: {
+                    h1: 'Headline 1',
+                    h2: 'Headline 2',
+                    h3: 'Headline 3',
+                    body: 'Body Text',
+                    blockquote: 'Blockquote',
+                    code: 'Code Block',
+                    bold: 'Bold',
+                    underline: 'Underline',
+                    italic: 'Italic',
+                    strikeThrough: 'Strike Through',
+                    link: 'Create Link'
+                },
+                keybindings: {
+                    up: 'Up',
+                    down: 'Down',
+                    left: 'Left',
+                    right: 'Right',
+                    enter: 'Enter',
+                    arrow: 'Arrow'
+                },
+                list: {
+                    ordered: 'Ordered List',
+                    unordered: 'Unordered List'
+                },
+                justification: {
+                    left: 'Justify left',
+                    center: 'Justify Center',
+                    right: 'Justify Right',
+                    indent: 'Indent',
+                    outdent: 'Outdent'
+                }
+            }
+        }
     };
 
     // make accessible globally

@@ -21,6 +21,19 @@
         <div class="row">
             <div class="tiny-12 medium-7">
 
+<!--                <h2>MUDS v1.6.0 <a href="/download/muds-editor-v1.6.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>-->
+<!--                <ul>-->
+<!--                    <li>Fix various visual bugs</li>-->
+<!--                    <li>Add Language support - <a href="/documentation/languages/">Documentation</a>-->
+<!--                        <ul>-->
+<!--                            <li>English</li>-->
+<!--                            <li>Danish</li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!---->
+<!--                <br><br>-->
+
                 <h2>MUDS v1.5.8 <a href="/download/muds-editor-v1.5.8.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
                     <li>FIx bug where placeholder would throw an error if not defined</li>
@@ -38,10 +51,11 @@
 
                 <h2>MUDS v1.5.6 <a href="/download/muds-editor-v1.5.6.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
-                    <li>Add theme: Markee - <a href="https://muds.io/documentation/themes/list/index.php#markee">Download</a></li>
                     <li>Fix bug where placeholder could overflow editor</li>
                     <li>Fix bug where content wouldn't be focused when placeholder was clicked</li>
-                    <li>Update menu buttons styles for all themes</li>
+                    <li>Update menu button styles for all themes</li>
+                    <li>Add theme: Markee - <a href="https://muds.io/documentation/themes/list/index.php#markee">Download</a></li>
+
                 </ul>
 
                 <br><br>
@@ -282,7 +296,7 @@
             </div>
             <div class="tiny-12 medium-5">
                 <h2>Our roadmap</h2>
-                <p>We're currently working and a lot exciting changes, among them are:</p>
+                <p>We're currently working and a lot of exciting changes, among them are:</p>
                 <ul>
                     <li>Table support</li>
                     <li><strike>Redesigned documentation</strike></li>

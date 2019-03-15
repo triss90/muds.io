@@ -150,6 +150,8 @@
   .muds-dropdown {
     ul {
       position: absolute;
+      white-space: nowrap !important;
+      box-sizing: border-box !important;
       margin: 1rem 0 !important;
       padding: 4px 0;
       top: 16px;
@@ -157,7 +159,7 @@
       background-color: white;
       border: 2px solid #EBEBEB;
       border-radius: 2px;
-      box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.05);
+      box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.085);
       list-style-type: none;
       opacity: 0;
       visibility: hidden;
@@ -193,6 +195,7 @@
             fill: #999 !important;
             position: relative;
             top: 3px;
+            max-width: auto !important;
           }
         }
         &:first-of-type::after {
@@ -209,13 +212,23 @@
         }
       }
     }
+    svg {
+      max-height: 100% !important;
+      max-width: 26px !important;
+      position: absolute;
+      top: 0;
+      left: 0;
+      fill: #999;
+      margin: 0;
+      padding: 0;
+    }
     &:hover ul {
       opacity: 1;
       visibility: visible;
     }
     &.headers {
       ul {
-        width: 150px;
+        width: auto;
         li {
           button {
             &.muds-h1 {
@@ -246,17 +259,29 @@
     }
     &.justification {
       ul {
-        width: 160px;
+        display: block;
+        width: auto;
+        padding-right: 5px;
+        li {
+          width: calc(100% + 5px);
+          button {
+            width: auto;
+            font-size: 0.85rem !important;
+            svg {
+              max-width: auto !important;
+            }
+          }
+        }
       }
     }
     &.fonts {
       ul {
         padding: 0 !important;
-        width: 185px !important;
+        white-space: nowrap !important;
         max-height: 160px !important;
         .wrapper {
           overflow-y: scroll !important;
-          max-height: 160px !important;
+          max-height: 156px !important;
           li {
             &:first-child {
               margin-top: 1px;
@@ -265,7 +290,6 @@
               font-size: 0.9rem;
               padding: 0 !important;
               color: #666 !important;
-
               &.font-default {
                 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
               }

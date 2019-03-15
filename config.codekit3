@@ -829,6 +829,26 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"\/assets\/js\/lang\/muds-da-DK-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/lang\/muds-da-DK-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/assets\/js\/lang\/muds-da-DK.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/lang\/muds-da-DK-min.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 0
+		},
 	"\/assets\/js\/muds.min.js": {
 		"ft": 64,
 		"ma": 0,
@@ -900,6 +920,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/documentation\/keybindings\/index.php",
+		"oF": 0
+		},
+	"\/documentation\/languages\/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/documentation\/languages\/index.php",
 		"oF": 0
 		},
 	"\/documentation\/placeholder\/index.php": {

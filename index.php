@@ -16,7 +16,7 @@
                 <a href="https://github.com/triss90/muds.io" target="_blank" class="button secondary"><i class="fa fa-github" aria-hidden="true"></i> View on GitHub</a>
                 <br><br><br><br><br><br>
                 <textarea id="editor">
-                    <h1>Try the MUDS editor today</h1><p>No matter what you're building, MUDS has you covered. From content management to email marketing, here are our customers' most common uses:</p><ul><li>Content Management Systems</li><li>Learning Management Systems</li><li>Customer Relationship Management and marketing automation</li></ul><br><p><a href="https://tristanwhite.info" target="_blank">Our team</a> is hard at work, creating and adding <a href="https://muds.io/changelog/">new features</a> to take the Javascript web WYSIWYG editing capabilities to the next level.</p><blockquote class="muds-quote">The Muds editor has proven to seamlessly integrate with my webapp. It has offered me endless customizability, so as to suit my needs.<br>- Ronan Richardson</blockquote><br><h2>Initialize the MUDS editor</h2><pre> var muds = new muds({selector: "editor"});</pre>
+                    <h1>Try the MUDS editor today</h1><p>No matter what you are building, MUDS has you covered. From content management to email marketing, here are our customers' most common uses:</p><ul><li>Content Management Systems</li><li>Learning Management Systems</li><li>Customer Relationship Management and marketing automation</li></ul><br><p><a href="https://tristanwhite.info" target="_blank">Our team</a> is hard at work, creating and adding <a href="https://muds.io/changelog/">new features</a> to take the Javascript web WYSIWYG editing capabilities to the next level.</p><blockquote class="muds-quote">The Muds editor has proven to seamlessly integrate with my webapp. It has offered me endless customisability, so as to suit my needs.<br>- Ronan Richardson</blockquote><br><h2>Initialise the MUDS editor</h2><pre> var muds = new muds({selector: "editor"});</pre>
                 </textarea>
             </div>
             <div class="tiny-12">
@@ -79,7 +79,9 @@ var muds = new muds({
     var muds = new muds({
         selector: 'editor',
         menuStyle: 'full',
-        height: '400px'
+        height: '400px',
+        characterCount: true,
+        placeholder: 'This is a MUDS editor placeholder 😉'
     });
 
     function themeSwitcher() {

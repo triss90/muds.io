@@ -17,7 +17,9 @@
     </style>
 </head>
 <body>
-    <textarea id="editorSelector"></textarea>
+    <textarea id="editorSelector">
+        <h1>Try the MUDS editor today</h1><p>No matter what you are building, MUDS has you covered. From content management to email marketing, here are our customers' most common uses:</p><ul><li>Content Management Systems</li><li>Learning Management Systems</li><li>Customer Relationship Management and marketing automation</li></ul><br><p><a href="https://tristanwhite.info" target="_blank">Our team</a> is hard at work, creating and adding <a href="https://muds.io/changelog/">new features</a> to take the Javascript web WYSIWYG editing capabilities to the next level.</p><blockquote class="muds-quote">The Muds editor has proven to seamlessly integrate with my webapp. It has offered me endless customisability, so as to suit my needs.<br>- Ronan Richardson</blockquote><br><h2>Initialise the MUDS editor</h2><pre> var muds = new muds({selector: "editor"});</pre>
+    </textarea>
 
     <br><br>
     <h2>MUDS v1.4.0 <a href="/download/muds-editor-v1.4.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
@@ -45,12 +47,13 @@
     <h3>Code Example</h3>
 
     <script src="/assets/js/muds.min.js" ></script>
+    <script src="/assets/js/lang/muds-da-DK.js" ></script>
     <script>
         var muds = new muds({
             selector: 'editorSelector',
             submitName: 'mySubmit',
             placeholder: 'Skriv dit <b>review her</b> og hjælp andre med at danne et indtryk 👍😎<br><small>Brug mindst 50 tegn til at beskrive din oplevelse ️✍️</small>',
-            height: '150px',
+            height: '500px',
             theme: "light",
             resize: true,
             required: true,
@@ -60,6 +63,7 @@
                 console.log('onChange event fired...!');
             },
             characterCount: true,
+            language: 'da-DK',
             menuStyle: 'custom',
             menuCustom: [
                 'header',
@@ -94,7 +98,6 @@
                 'fullScreen'
             ],
         });
-
     </script>
 </body>
 </html>
