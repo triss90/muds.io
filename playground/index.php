@@ -64,7 +64,7 @@
                 console.log('onChange event fired...!');
             },
             characterCount: true,
-            language: 'de-DE',
+            language: 'da-DK',
             menuStyle: 'custom',
             menuCustom: [
                 'header',

@@ -296,7 +296,7 @@ table th {
   letter-spacing: .1em;
   text-transform: uppercase; }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   table {
     border: 0; }
   table caption {

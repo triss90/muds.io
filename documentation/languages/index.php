@@ -49,15 +49,20 @@ var muds = new muds({
                     <thead>
                     <tr>
                         <th scope="col" width="115px">Language</th>
-                        <th scope="col" width="115px">Attribute</th>
+                        <th scope="col" width="115px">Option</th>
                         <th scope="col">CDN</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>Danish</td>
+                        <td data-label="Language">Danish</td>
                         <td data-label="Attribute"><span class="tag">'da-DK'</span></td>
                         <td data-label="CDN"><a href="https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds-da-DK.min.js">https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds-da-DK.min.js</a></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Language">German</td>
+                        <td data-label="Attribute"><span class="tag">'de-DE'</span></td>
+                        <td data-label="CDN"><a href="https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds-de-DE.min.js">https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds-de-DE.min.js</a></td>
                     </tr>
                     </tbody>
                 </table>

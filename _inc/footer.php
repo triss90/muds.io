@@ -20,5 +20,16 @@
 <script src="/assets/js/app.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds.min.js"></script>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62496570-5"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-62496570-5');
+</script>
+
 </body>
 </html>
