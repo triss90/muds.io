@@ -12,6 +12,7 @@
         <a href="/documentation/tooltips">Tooltips</a>
         <a href="/documentation/character-count">Character count</a>
         <a href="/documentation/custom-menu">Customize menu items</a>
+        <a href="/documentation/languages">i18n Support</a>
         <a href="/documentation/events">Events</a>
     </nav>
 </div>

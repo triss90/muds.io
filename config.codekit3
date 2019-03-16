@@ -849,6 +849,26 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"\/assets\/js\/lang\/muds-en-US-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/lang\/muds-en-US-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/assets\/js\/lang\/muds-en-US.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/lang\/muds-en-US-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"\/assets\/js\/muds.min.js": {
 		"ft": 64,
 		"ma": 0,

@@ -63,7 +63,7 @@
                 console.log('onChange event fired...!');
             },
             characterCount: true,
-            language: 'da-DK',
+            language: 'da-DKd',
             menuStyle: 'custom',
             menuCustom: [
                 'header',
