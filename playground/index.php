@@ -48,6 +48,7 @@
 
     <script src="/assets/js/muds.min.js" ></script>
     <script src="/assets/js/lang/muds-da-DK.js" ></script>
+    <script src="/assets/js/lang/muds-de-DE.js" ></script>
     <script>
         var muds = new muds({
             selector: 'editorSelector',
@@ -63,7 +64,7 @@
                 console.log('onChange event fired...!');
             },
             characterCount: true,
-            language: 'da-DKd',
+            language: 'de-DE',
             menuStyle: 'custom',
             menuCustom: [
                 'header',

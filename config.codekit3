@@ -849,6 +849,16 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"\/assets\/js\/lang\/muds-de-DE.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/lang\/muds-de-DE-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"\/assets\/js\/lang\/muds-en-US-min.js": {
 		"ft": 64,
 		"ma": 0,
