@@ -15,11 +15,10 @@
 
         // Set language
         this.langDefault = muds.langDefault;
-        if (this.options.language != 'en-US' &&
-            this.options.language != 'de-DE' &&
-            this.options.language != 'da-DK') {
+        if (Object.keys(this.langDefault).includes(this.options.language) != true) {
             this.options.language = 'en-US';
         }
+
 
         // Assign options to object
         this.original_input = document.getElementById(opts.selector);
@@ -1099,7 +1098,7 @@
         }
     }
 
-    // Attach our defaults for plugin to the plugin itself
+    // Attach defaults for plugin to the plugin itself
     muds.defaults = {
         selector: '',
         submitName: 'muds-submit',
@@ -1117,6 +1116,7 @@
         characterCount: false
     };
 
+    // Attach default language for plugin to the plugin itself
     muds.langDefault = {
         'en-US': {
             buttons: {
