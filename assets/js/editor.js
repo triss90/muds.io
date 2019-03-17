@@ -564,11 +564,11 @@
         buttonJustification.classList.add('justification');
         buttonJustification.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg></label>' +
             '<ul>' +
-            '<li><button type="button" class="muds-item dropped just-left" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.left+' ('+item.osModifier+'+'+item.langDefault[item.options.language].buttons.keybindings.left+' '+item.langDefault[item.options.language].buttons.keybindings.arrow+')" onclick="'+'muds.buttonJustifyLeftAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg> '+item.langDefault[item.options.language].buttons.justification.left+'</button></li>' +
-            '<li><button type="button" class="muds-item dropped just-center" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.center+' ('+item.osModifier+'+'+item.langDefault[item.options.language].buttons.keybindings.up+'/'+item.langDefault[item.options.language].buttons.keybindings.down+' '+item.langDefault[item.options.language].buttons.keybindings.arrow+')" onclick="'+'muds.buttonJustifyCenterAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M7 15v2h10v-2H7zm-4 6h18v-2H3v2zm0-8h18v-2H3v2zm4-6v2h10V7H7zM3 3v2h18V3H3z"/></svg> '+item.langDefault[item.options.language].buttons.justification.center+'</button></li>' +
-            '<li><button type="button" class="muds-item dropped just-right" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.right+' ('+item.osModifier+'+'+item.langDefault[item.options.language].buttons.keybindings.right+' '+item.langDefault[item.options.language].buttons.keybindings.arrow+')" onclick="'+'muds.buttonJustifyRightAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 21h18v-2H3v2zm6-4h12v-2H9v2zm-6-4h18v-2H3v2zm6-4h12V7H9v2zM3 3v2h18V3H3z"/></svg> '+item.langDefault[item.options.language].buttons.justification.right+'</button></li>' +
-            '<li><button type="button" class="muds-item dropped just-indent" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.indent+' (SHIFT+'+item.osModifier+'+'+item.langDefault[item.options.language].buttons.keybindings.right+' '+item.langDefault[item.options.language].buttons.keybindings.arrow+')" onclick="'+'muds.buttonIndentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM3 8v8l4-4-4-4zm8 9h10v-2H11v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> '+item.langDefault[item.options.language].buttons.justification.indent+'</button></li>' +
-            '<li><button type="button" class="muds-item dropped just-outdent" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.outdent+' (SHIFT+'+item.osModifier+'+'+item.langDefault[item.options.language].buttons.keybindings.left+' '+item.langDefault[item.options.language].buttons.keybindings.arrow+')" onclick="'+'muds.buttonOutdentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 17h10v-2H11v2zm-8-5l4 4V8l-4 4zm0 9h18v-2H3v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> '+item.langDefault[item.options.language].buttons.justification.outdent+'</button></li>' +
+            '<li><button type="button" class="muds-item dropped just-left" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.left+' ('+item.osModifier+'+7'+')" onclick="'+'muds.buttonJustifyLeftAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg> '+item.langDefault[item.options.language].buttons.justification.left+'</button></li>' +
+            '<li><button type="button" class="muds-item dropped just-center" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.center+' ('+item.osModifier+'+8'+')" onclick="'+'muds.buttonJustifyCenterAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M7 15v2h10v-2H7zm-4 6h18v-2H3v2zm0-8h18v-2H3v2zm4-6v2h10V7H7zM3 3v2h18V3H3z"/></svg> '+item.langDefault[item.options.language].buttons.justification.center+'</button></li>' +
+            '<li><button type="button" class="muds-item dropped just-right" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.right+' ('+item.osModifier+'+9'+')" onclick="'+'muds.buttonJustifyRightAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 21h18v-2H3v2zm6-4h12v-2H9v2zm-6-4h18v-2H3v2zm6-4h12V7H9v2zM3 3v2h18V3H3z"/></svg> '+item.langDefault[item.options.language].buttons.justification.right+'</button></li>' +
+            '<li><button type="button" class="muds-item dropped just-indent" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.indent+' (SHIFT+'+item.osModifier+'+7'+')" onclick="'+'muds.buttonIndentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM3 8v8l4-4-4-4zm8 9h10v-2H11v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> '+item.langDefault[item.options.language].buttons.justification.indent+'</button></li>' +
+            '<li><button type="button" class="muds-item dropped just-outdent" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.outdent+' (SHIFT+'+item.osModifier+'+8'+')" onclick="'+'muds.buttonOutdentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 17h10v-2H11v2zm-8-5l4 4V8l-4 4zm0 9h18v-2H3v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> '+item.langDefault[item.options.language].buttons.justification.outdent+'</button></li>' +
             '</ul>';
         item.menu.appendChild(buttonJustification);
     }
@@ -579,7 +579,7 @@
         buttonJustifyCenter.setAttribute('onclick','muds.buttonJustifyCenterAction()');
         buttonJustifyCenter.setAttribute('type', 'button');
         buttonJustifyCenter.setAttribute('tabindex', '-1');
-        buttonJustifyCenter.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.center+' ('+item.osModifier+'+'+item.langDefault[item.options.language].buttons.keybindings.up+'/'+item.langDefault[item.options.language].buttons.keybindings.down+' '+item.langDefault[item.options.language].buttons.keybindings.arrow+')');
+        buttonJustifyCenter.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.center+' ('+item.osModifier+'+8)');
         item.menu.appendChild(buttonJustifyCenter);
     }
     function buttonJustifyLeft(item) {
@@ -589,7 +589,7 @@
         buttonJustifyLeft.setAttribute('onclick','muds.buttonJustifyLeftAction()');
         buttonJustifyLeft.setAttribute('type', 'button');
         buttonJustifyLeft.setAttribute('tabindex', '-1');
-        buttonJustifyLeft.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.left+' ('+item.osModifier+'+'+item.langDefault[item.options.language].buttons.keybindings.left+' '+item.langDefault[item.options.language].buttons.keybindings.arrow+')');
+        buttonJustifyLeft.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.left+' ('+item.osModifier+'+7)');
         item.menu.appendChild(buttonJustifyLeft);
     }
     function buttonJustifyRight(item) {
@@ -599,7 +599,7 @@
         buttonJustifyRight.setAttribute('onclick','muds.buttonJustifyRightAction()');
         buttonJustifyRight.setAttribute('type', 'button');
         buttonJustifyRight.setAttribute('tabindex', '-1');
-        buttonJustifyRight.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.right+' ('+item.osModifier+'+'+item.langDefault[item.options.language].buttons.keybindings.right+' '+item.langDefault[item.options.language].buttons.keybindings.arrow+')');
+        buttonJustifyRight.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.right+' ('+item.osModifier+'+9)');
         item.menu.appendChild(buttonJustifyRight);
     }
     function buttonIndent(item) {
@@ -609,7 +609,7 @@
         buttonIndent.setAttribute('onclick','muds.buttonIndentAction()');
         buttonIndent.setAttribute('type', 'button');
         buttonIndent.setAttribute('tabindex', '-1');
-        buttonIndent.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.indent+' (SHIFT+'+item.osModifier+'+'+item.langDefault[item.options.language].buttons.keybindings.right+' '+item.langDefault[item.options.language].buttons.keybindings.arrow+')');
+        buttonIndent.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.indent+' (SHIFT+'+item.osModifier+'+7)');
         item.menu.appendChild(buttonIndent);
     }
     function buttonOutdent(item) {
@@ -619,7 +619,7 @@
         buttonOutdent.setAttribute('onclick','muds.buttonOutdentAction()');
         buttonOutdent.setAttribute('type', 'button');
         buttonOutdent.setAttribute('tabindex', '-1');
-        buttonOutdent.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.outdent+' (SHIFT+'+item.osModifier+'+'+item.langDefault[item.options.language].buttons.keybindings.left+' '+item.langDefault[item.options.language].buttons.keybindings.arrow+')');
+        buttonOutdent.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.outdent+' (SHIFT+'+item.osModifier+'+8)');
         item.menu.appendChild(buttonOutdent);
     }
     function buttonPrintMe(item) {
@@ -687,7 +687,7 @@
             }
 
             // Align Left / Outdent
-            if(e.keyCode === 37) {
+            if(e.keyCode === 55) {
                 if(e.metaKey === true && e.shiftKey === false || e.ctrlKey === true && e.shiftKey === false) {
                     e.preventDefault();
                     muds.prototype.buttonJustifyLeftAction();
@@ -699,7 +699,7 @@
             }
 
             // Align Center
-            if(e.keyCode === 38 || e.keyCode === 40) {
+            if(e.keyCode === 56) {
                 if(e.metaKey === true || e.ctrlKey === true) {
                     e.preventDefault();
                     muds.prototype.buttonJustifyCenterAction();
@@ -707,7 +707,7 @@
             }
 
             // Align Right / Indent
-            if(e.keyCode === 39) {
+            if(e.keyCode === 57) {
                 if(e.metaKey === true && e.shiftKey === false || e.ctrlKey === true && e.shiftKey === false) {
                     e.preventDefault();
                     muds.prototype.buttonJustifyRightAction();

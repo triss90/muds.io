@@ -29,11 +29,11 @@
                     <li><span class="tag">Ctrl/Cmd + V</span>: Paste from clipboard</li>
                     <li><span class="tag">Ctrl/Cmd + Z</span>: Undo</li>
                     <li><span class="tag">Shift + Ctrl/Cmd + Z</span>: Redo</li>
-                    <li><span class="tag">Ctrl/Cmd + Left Arrow</span>: Align Left</li>
-                    <li><span class="tag">Ctrl/Cmd + Up Arrow/Down Arrow</span>: Align Center</li>
-                    <li><span class="tag">Ctrl/Cmd + Right Arrow</span>: Align Right</li>
-                    <li><span class="tag">Shift + Ctrl/Cmd + Right Arrow</span>: Indent</li>
-                    <li><span class="tag">Shift + Ctrl/Cmd + Left Arrow</span>: Outdent</li>
+                    <li><span class="tag">Ctrl/Cmd + 7</span>: Align Left</li>
+                    <li><span class="tag">Ctrl/Cmd + 8</span>: Align Center</li>
+                    <li><span class="tag">Ctrl/Cmd + 9</span>: Align Right</li>
+                    <li><span class="tag">Shift + Ctrl/Cmd + 9</span>: Indent</li>
+                    <li><span class="tag">Shift + Ctrl/Cmd + 7</span>: Outdent</li>
                     <li><span class="tag">Shift + Ctrl/Cmd + C</span>: Open "Change Color" dialog</li>
                     <li><span class="tag">Ctrl/Cmd + L</span>: Open "Insert Link" dialog</li>
                     <li><span class="tag">Ctrl/Cmd + H</span>: Show HTML</li>
