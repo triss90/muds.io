@@ -55,7 +55,7 @@
             submitName: 'mySubmit',
             placeholder: 'Skriv dit <b>review her</b> og hjælp andre med at danne et indtryk 👍😎<br><small>Brug mindst 50 tegn til at beskrive din oplevelse ️✍️</small>',
             height: '500px',
-            theme: "light",
+            theme: "spectral",
             resize: true,
             required: true,
             keybindings: true,
