@@ -15,10 +15,9 @@
 
         // Set language
         this.langDefault = muds.langDefault;
-        if (Object.keys(this.langDefault).includes(this.options.language) != true) {
+        if (Object.keys(this.langDefault).indexOf(this.options.language) === -1) {
             this.options.language = 'en-US';
         }
-
 
         // Assign options to object
         this.original_input = document.getElementById(opts.selector);
@@ -28,6 +27,7 @@
         this.height = opts.height;
         this.resize = opts.resize;
         this.tooltips = opts.tooltips;
+        this.keybindings = opts.keybindings;
         this.theme = opts.theme;
         this.selector = opts.selector;
         this.onChange = opts.onChange;
@@ -1015,44 +1015,46 @@
             mudsWrapperElement.appendChild(mudsCharacterCountElement);
         }
 
+        // Resize function
+        function makeResizableDiv(div) {
+            const element = document.querySelector(div);
+            const currentResizer = document.querySelector(div + ' .muds-resizer');
+            const toolbar = document.querySelector('.muds-toolbar');
+            const minimum_size = toolbar.clientHeight+20;
+            let original_width = 0;
+            let original_height = 0;
+            let original_x = 0;
+            let original_y = 0;
+            let original_mouse_x = 0;
+            let original_mouse_y = 0;
+            currentResizer.addEventListener('mousedown', function(e) {
+                e.preventDefault();
+                original_width = parseFloat(getComputedStyle(element, null).getPropertyValue('width').replace('px', ''));
+                original_height = parseFloat(getComputedStyle(element, null).getPropertyValue('height').replace('px', ''));
+                original_x = element.getBoundingClientRect().left;
+                original_y = element.getBoundingClientRect().top;
+                original_mouse_x = e.pageX;
+                original_mouse_y = e.pageY;
+                window.addEventListener('mousemove', resize);
+                window.addEventListener('mouseup', stopResize);
+            });
+            function resize(e) {
+                const height = original_height + (e.pageY - original_mouse_y);
+                if (height > minimum_size) {
+                    element.style.height = height + 'px'
+                }
+            }
+            function stopResize() {
+                window.removeEventListener('mousemove', resize)
+            }
+        }
+
         // Enable resizable editor
         if (editor.resize != false) {
             const edtiorWrapper = editor.wrapper;
             const resizer = document.createElement('div');
             resizer.className = 'muds-resizer';
             edtiorWrapper.appendChild(resizer);
-            function makeResizableDiv(div) {
-                const element = document.querySelector(div);
-                const currentResizer = document.querySelector(div + ' .muds-resizer');
-                const toolbar = document.querySelector('.muds-toolbar');
-                const minimum_size = toolbar.clientHeight+20;
-                let original_width = 0;
-                let original_height = 0;
-                let original_x = 0;
-                let original_y = 0;
-                let original_mouse_x = 0;
-                let original_mouse_y = 0;
-                currentResizer.addEventListener('mousedown', function(e) {
-                    e.preventDefault();
-                    original_width = parseFloat(getComputedStyle(element, null).getPropertyValue('width').replace('px', ''));
-                    original_height = parseFloat(getComputedStyle(element, null).getPropertyValue('height').replace('px', ''));
-                    original_x = element.getBoundingClientRect().left;
-                    original_y = element.getBoundingClientRect().top;
-                    original_mouse_x = e.pageX;
-                    original_mouse_y = e.pageY;
-                    window.addEventListener('mousemove', resize);
-                    window.addEventListener('mouseup', stopResize);
-                });
-                function resize(e) {
-                    const height = original_height + (e.pageY - original_mouse_y);
-                    if (height > minimum_size) {
-                        element.style.height = height + 'px'
-                    }
-                }
-                function stopResize() {
-                    window.removeEventListener('mousemove', resize)
-                }
-            }
             makeResizableDiv('#'+editor.original_input.id);
         }
 

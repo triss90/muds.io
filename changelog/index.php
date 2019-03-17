@@ -21,19 +21,19 @@
         <div class="row">
             <div class="tiny-12 medium-7">
 
-                <h2>MUDS v1.6.0 <a href="/download/muds-editor-v1.6.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
-                <ul>
-                    <li>Fix various visual bugs</li>
-                    <li>Add Language support - <a href="/documentation/languages/">Documentation</a>
-                        <ul>
-                            <li>English</li>
-                            <li>Danish</li>
-                            <li>German</li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <br><br>
+<!--                <h2>MUDS v1.6.0 <a href="/download/muds-editor-v1.6.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>-->
+<!--                <ul>-->
+<!--                    <li>Fix various visual bugs</li>-->
+<!--                    <li>Add Language support - <a href="/documentation/languages/">Documentation</a>-->
+<!--                        <ul>-->
+<!--                            <li>English</li>-->
+<!--                            <li>Danish</li>-->
+<!--                            <li>German</li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!---->
+<!--                <br><br>-->
 
                 <h2>MUDS v1.5.8 <a href="/download/muds-editor-v1.5.8.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>
