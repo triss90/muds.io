@@ -72,15 +72,12 @@
             placeholder: 'Skriv dit <b>review her</b> og hjælp andre med at danne et indtryk 👍😎<br><small>Brug mindst 50 tegn til at beskrive din oplevelse ️✍️</small>',
             height: '280px',
             minHeight: '200px',
-            maxHeight: '400px',
+            // maxHeight: '400px',
             theme: "light",
             resize: true,
             required: true,
             keybindings: true,
             tooltips: true,
-            onChange: function() {
-                console.log('onChange event fired...!');
-            },
             characterCount: true,
             language: 'da-DK',
             menuStyle: 'custom',
@@ -116,6 +113,9 @@
                 'showText',
                 'fullScreen'
             ],
+            onChange: function() {
+                console.log('onChange event fired...!');
+            },
         });
     </script>
 </body>

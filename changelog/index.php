@@ -26,6 +26,7 @@
 <!--                    <li>Fix various visual bugs</li>-->
 <!--                    <li>Fix bug where keybindings couldn't be disabled</li>-->
 <!--                    <li>Fix bug where link insert would be "null" if input was empty</li>-->
+<!--                    <li>Fix bug where fullscreen sometimes wouldn't cover 100% height</li>-->
 <!--                    <li>Add Language support - <a href="/documentation/languages/">Documentation</a>-->
 <!--                        <ul>-->
 <!--                            <li>English</li>-->

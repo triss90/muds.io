@@ -80,9 +80,7 @@
         editObj.wrapper.style.top = '0';
         editObj.wrapper.style.left = '0';
         editObj.wrapper.style.zIndex = '999';
-        editObj.content.style.height = 'calc(100% - ' - editObj.menu.offsetHeight + 'px';
-        console.log(editObj.menu.offsetHeight );
-        console.log(editObj.content);
+        editObj.content.style.height = 'calc(100% - ' + editObj.menu.offsetHeight + 'px';
         if (editObj.maxHeight != undefined) {
             editObj.wrapper.style.maxHeight = '';
         }
@@ -104,6 +102,7 @@
         editObj.wrapper.setAttribute('style', '');
         editObj.wrapper.style.position = 'relative';
         editObj.wrapper.style.height = editObj.editedEditorHeight;
+        editObj.content.style.height = 'calc('+ editObj.editedEditorHeight +' - ' + editObj.menu.offsetHeight + 'px';
         if (editObj.maxHeight != undefined) {
             editObj.wrapper.style.maxHeight = editObj.maxHeight;
         }
@@ -1019,7 +1018,7 @@
         editor.original_input.parentNode.replaceChild(mudsWrapperElement, editor.original_input);
 
         // Adjust initial editor heights base on menu size
-        // mudsContentElement.style.height = 'calc(100% - ' + editor.menu.offsetHeight + 'px';
+        mudsContentElement.style.height = 'calc(100% - ' + editor.menu.offsetHeight + 'px';
         if (editor.placeholder != undefined && editor.content.innerText === '' && editor.original_content === '') {
             mudsPlaceholderElement.style.top = editor.menu.offsetHeight + 10 + 'px';
         }
