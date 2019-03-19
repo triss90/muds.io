@@ -15,10 +15,10 @@
             <!-- Default height -->
             <div class="tiny-12 small-9">
                 <h2>Editor Height</h2>
-                <p>The default height of the editor is 100px (this excludes the height of the menu). If you wish to alter this, simply add <span class="tag">height: '342px'</span> to your configuration.</p>
+                <p>If you don’t set the height, the editable area’s height will change according to contents. You can define min-, and max-height as well.</p>
                 <br>
                 <h3>Example:</h3>
-                <div class="codepen" data-height="450" data-theme-id="36048" data-default-tab="html,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
+                <div class="codepen" data-height="475" data-theme-id="36048" data-default-tab="html,result" data-user="triss90" data-slug-hash="87854d8d260cfeef702dee5310ba6188" data-editable="false" data-prefill='{"title":"MUDS - EDITOR","tags":[],"stylesheets":[],"scripts":[]}'>
                    <pre data-lang="html">
 &#x3C;!-- Include the MUDS stylesheet --&#x3E;
 &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/muds-editor@<?php echo $mudsVersion; ?>/muds.min.css&#x22;&#x3E;
@@ -33,7 +33,9 @@
 &#x3C;script&#x3E;
 var muds = new muds({
     selector: 'editor',
-    height: '342px'
+    height: '300px',
+    minheight: '200px',
+    maxHeight: '400px',
 });
 &#x3C;/script&#x3E;
                     </pre>

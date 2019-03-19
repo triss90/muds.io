@@ -25,6 +25,8 @@
         this.menu_style = opts.menuStyle;
         this.menu_custom = opts.menuCustom;
         this.height = opts.height;
+        this.minHeight = opts.minHeight;
+        this.maxHeight = opts.maxHeight;
         this.resize = opts.resize;
         this.tooltips = opts.tooltips;
         this.keybindings = opts.keybindings;
@@ -78,6 +80,12 @@
         editObj.wrapper.style.top = '0';
         editObj.wrapper.style.left = '0';
         editObj.wrapper.style.zIndex = '999';
+        if (editObj.maxHeight != undefined) {
+            editObj.wrapper.style.maxHeight = '';
+        }
+        if (editObj.minHeight != undefined) {
+            editObj.wrapper.style.minHeight = '';
+        }
         editObj.wrapper.classList.add('fullscreen');
         toolbarButton.setAttribute('onclick', 'muds.exitFullScreen()');
         toolbarButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"/></svg>'
@@ -92,8 +100,14 @@
         const toolbarButton = editObj.wrapper.querySelector('.muds-toolbar .muds-item.fullscreen');
         editObj.wrapper.setAttribute('style', '');
         editObj.wrapper.style.position = 'relative';
-        editObj.wrapper.classList.remove('fullscreen');
         editObj.wrapper.style.height = editObj.editedEditorHeight;
+        if (editObj.maxHeight != undefined) {
+            editObj.wrapper.style.maxHeight = editObj.maxHeight;
+        }
+        if (editObj.minHeight != undefined) {
+            editObj.wrapper.style.minHeight = editObj.minHeight;
+        }
+        editObj.wrapper.classList.remove('fullscreen');
         toolbarButton.setAttribute('onclick', 'muds.enterFullScreen()');
         toolbarButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>'
     };
@@ -961,8 +975,15 @@
 
         mudsWrapperElement.id = editor.original_input.id;
         mudsWrapperElement.style.position = 'relative';
-        mudsWrapperElement.style.height = '150px';
         mudsWrapperElement.style.height = editor.height;
+        if (editor.maxHeight != undefined) {
+            mudsWrapperElement.style.height = editor.maxHeight;
+            mudsWrapperElement.style.maxHeight = editor.maxHeight;
+        }
+        if (editor.minHeight != undefined) {
+            mudsWrapperElement.style.height = editor.minHeight;
+            mudsWrapperElement.style.minHeight = editor.minHeight;
+        }
 
         mudsWrapperElement.appendChild(mudsToolElement);
         mudsWrapperElement.appendChild(mudsContentElement);
@@ -1110,6 +1131,8 @@
         menuCustom: [], //'header','underline','strikeThrough','bold','italic','link','changeColor','image','undo','redo','unorderedList','orderedList','selectAll','copy','cut','delete','justifyLeft','justifyCenter','justifyRight','print','showHTML','showText','fullScreen'
         theme: 'light', // light, dark
         height: '150px',
+        minHeight: null,
+        maxHeight: null,
         language: 'en-US',
         keybindings: true,
         tooltips: true,
