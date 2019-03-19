@@ -201,7 +201,9 @@
             document.execCommand('unlink', false, '');
         } else {
             const linkURL = prompt('Enter the URL');
-            document.execCommand('createLink', false, linkURL);
+            if (linkURL != null) {
+                document.execCommand('createLink', false, linkURL);
+            }
         }
     };
 
