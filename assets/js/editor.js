@@ -977,11 +977,15 @@
         mudsWrapperElement.style.position = 'relative';
         mudsWrapperElement.style.height = editor.height;
         if (editor.maxHeight != undefined) {
-            mudsWrapperElement.style.height = editor.maxHeight;
+            if (editor.height === undefined) {
+                mudsWrapperElement.style.height = editor.maxHeight;
+            }
             mudsWrapperElement.style.maxHeight = editor.maxHeight;
         }
         if (editor.minHeight != undefined) {
-            mudsWrapperElement.style.height = editor.minHeight;
+            if (editor.height === undefined) {
+                mudsWrapperElement.style.height = editor.minHeight;
+            }
             mudsWrapperElement.style.minHeight = editor.minHeight;
         }
 
