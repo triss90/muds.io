@@ -62,8 +62,6 @@
         <button class="muds-dialog-action">Choose color</button>
     </div>
 
-
-
     <script src="/assets/js/muds.min.js" ></script>
     <script src="/assets/js/lang/muds-da-DK.js" ></script>
     <script src="/assets/js/lang/muds-de-DE.js" ></script>
