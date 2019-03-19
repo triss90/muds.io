@@ -399,6 +399,7 @@
         buttonUnorderedList.setAttribute('type', 'button');
         buttonUnorderedList.setAttribute('tabindex', '-1');
         buttonUnorderedList.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.list.unordered+' ('+item.osModifier+'+.)');
+        buttonUnorderedList.classList.add('muds-unorderedlist-button');
         item.menu.appendChild(buttonUnorderedList);
     }
     function buttonOrderedList(item) {
@@ -409,6 +410,7 @@
         buttonOrderedList.setAttribute('type', 'button');
         buttonOrderedList.setAttribute('tabindex', '-1');
         buttonOrderedList.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.list.ordered+' ('+item.osModifier+'+,)');
+        buttonOrderedList.classList.add('muds-orderedlist-button');
         item.menu.appendChild(buttonOrderedList);
     }
     function buttonUnderline(item) {
@@ -419,6 +421,7 @@
         buttonUnderline.setAttribute('type', 'button');
         buttonUnderline.setAttribute('tabindex', '-1');
         buttonUnderline.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.underline+' ('+item.osModifier+'+U)');
+        buttonUnderline.classList.add('muds-underline-button');
         item.menu.appendChild(buttonUnderline);
     }
     function buttonItalic(item) {
@@ -429,6 +432,7 @@
         buttonItalic.setAttribute('type', 'button');
         buttonItalic.setAttribute('tabindex', '-1');
         buttonItalic.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.italic+' ('+item.osModifier+'+I)');
+        buttonItalic.classList.add('muds-italic-button');
         item.menu.appendChild(buttonItalic);
     }
     function buttonBlockquote(item) {
@@ -460,6 +464,7 @@
         buttonBold.setAttribute('tabindex', '-1');
         buttonBold.setAttribute('unselectable', 'on');
         buttonBold.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.bold+' ('+item.osModifier+'+B)');
+        buttonBold.classList.add('muds-bold-button');
         item.menu.appendChild(buttonBold);
     }
     function buttonLink(item) {
@@ -549,6 +554,7 @@
         buttonStrikeThrough.setAttribute('type', 'button');
         buttonStrikeThrough.setAttribute('tabindex', '-1');
         buttonStrikeThrough.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.strikeThrough+' ('+item.osModifier+'+S)');
+        buttonStrikeThrough.classList.add('muds-strike-button');
         item.menu.appendChild(buttonStrikeThrough);
     }
     function buttonDelete(item) {
@@ -944,7 +950,7 @@
             keybindings(editor);
         }
 
-        // Sets texarea name
+        // Sets textarea name
         if (editor.content_submit === undefined) {
             mudsContentSubmitName = 'muds-submit';
         } else {
@@ -1020,6 +1026,60 @@
                 mudsPlaceholderElement.style.top = editor.menu.offsetHeight + 10 + 'px';
             }
         }, true);
+
+        // Test and display state of buttons
+        document.onselectionchange = function() {
+            // Buttons
+            const boldButton = document.querySelector('.muds-bold-button');
+            const italicButton = document.querySelector('.muds-italic-button');
+            const strikeButton = document.querySelector('.muds-strike-button');
+            const underlineButton = document.querySelector('.muds-underline-button');
+            const unorderedListButton = document.querySelector('.muds-unorderedlist-button');
+            const orderedListButton = document.querySelector('.muds-orderedlist-button');
+
+            // Highlight Bold
+            if (document.queryCommandState('bold') === true) {
+                boldButton.classList.add('active');
+            } else if (document.queryCommandState('bold') === false) {
+                boldButton.classList.remove('active');
+            }
+
+            // Highlight Italic
+            if (document.queryCommandState('italic') === true) {
+                italicButton.classList.add('active');
+            } else if (document.queryCommandState('italic') === false) {
+                italicButton.classList.remove('active');
+            }
+
+            // Highlight StrikeThrough
+            if (document.queryCommandState('strikeThrough') === true) {
+                strikeButton.classList.add('active');
+            } else if (document.queryCommandState('strikeThrough') === false) {
+                strikeButton.classList.remove('active');
+            }
+
+            // Highlight Underline
+            if (document.queryCommandState('underline') === true) {
+                underlineButton.classList.add('active');
+            } else if (document.queryCommandState('underline') === false) {
+                underlineButton.classList.remove('active');
+            }
+
+            // Highlight Unordered list
+            if (document.queryCommandState('insertUnorderedList') === true) {
+                unorderedListButton.classList.add('active');
+            } else if (document.queryCommandState('insertUnorderedList') === false) {
+                unorderedListButton.classList.remove('active');
+            }
+
+            // Highlight Ordered list
+            if (document.queryCommandState('insertOrderedList') === true) {
+                orderedListButton.classList.add('active');
+            } else if (document.queryCommandState('insertOrderedList') === false) {
+                orderedListButton.classList.remove('active');
+            }
+
+        };
 
         // Insert predefined content content
         if (editor.original_content === '' || editor.original_content === undefined) {

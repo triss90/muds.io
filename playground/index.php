@@ -18,7 +18,7 @@
 </head>
 <body>
     <textarea id="editorSelector"><h1>Try the MUDS editor today</h1>
-        <p>No matter what you are building, MUDS has you covered. From content management to email marketing, here are our customers' most common uses:</p>
+        <p>No matter what you are building, <b>MUDS</b> <u>has you covered.</u> <strike>From content</strike> <i>management</i> to email marketing, here are our customers' most common uses:</p>
         <ul>
             <li>Content Management Systems</li>
             <li>Learning Management Systems</li>
@@ -72,7 +72,7 @@
             selector: 'editorSelector',
             submitName: 'mySubmit',
             placeholder: 'Skriv dit <b>review her</b> og hjælp andre med at danne et indtryk 👍😎<br><small>Brug mindst 50 tegn til at beskrive din oplevelse ️✍️</small>',
-            height: '300px',
+            height: '280px',
             minHeight: '200px',
             maxHeight: '400px',
             theme: "light",

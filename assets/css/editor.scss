@@ -123,6 +123,17 @@
         }
       }
     }
+    &.muds-orderedlist-button,
+    &.muds-unorderedlist-button,
+    &.muds-bold-button,
+    &.muds-italic-button,
+    &.muds-strike-button,
+    &.muds-underline-button {
+      &.active {
+        background: #ddd !important;
+        border-radius: 2px !important;
+      }
+    }
     &:focus {
       outline: 0;
     }
@@ -475,5 +486,5 @@
   z-index: 10;
   padding: 2px 3px;
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-  font-weight: bold
+  font-weight: bold;
 }
