@@ -128,10 +128,24 @@
     &.muds-bold-button,
     &.muds-italic-button,
     &.muds-strike-button,
-    &.muds-underline-button {
+    &.muds-underline-button,
+    &.muds-code2-button,
+    &.muds-blockquote2-button,
+    &.muds-link-button {
       &.active {
         background: #ddd !important;
         border-radius: 2px !important;
+      }
+    }
+    &.muds-h1-button,
+    &.muds-h2-button,
+    &.muds-h3-button,
+    &.muds-blockquote-button,
+    &.muds-code-button,
+    &.muds-body-button {
+      &.active {
+        color: #61aeee !important;
+        left: 10px;
       }
     }
     &:focus {
@@ -240,7 +254,9 @@
     &.headers {
       ul {
         width: auto;
+        padding-right: 10px;
         li {
+          width: calc(100% + 10px);
           button {
             &.muds-h1 {
               font-size: 1.6rem;

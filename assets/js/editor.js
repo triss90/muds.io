@@ -360,12 +360,12 @@
         buttonHeader.classList.add('headers');
         buttonHeader.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M5 4v3h5.5v12h3V7H19V4H5z"/></svg></label>' +
             '<ul>' +
-            '<li><button type="button" class="muds-item dropped muds-h1" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.h1+' ('+item.osModifier+'+1)" onclick="'+'muds.buttonH1Action()'+'">'+item.langDefault[item.options.language].buttons.formatting.h1+'</button></li>' +
-            '<li><button type="button" class="muds-item dropped muds-h2" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.h2+'  ('+item.osModifier+'+2)" onclick="'+'muds.buttonH2Action()'+'">'+item.langDefault[item.options.language].buttons.formatting.h2+'</button></li>' +
-            '<li><button type="button" class="muds-item dropped muds-h3" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.h3+'  ('+item.osModifier+'+3)" onclick="'+'muds.buttonH3Action()'+'">'+item.langDefault[item.options.language].buttons.formatting.h3+'</button></li>' +
-            '<li><button type="button" class="muds-item dropped muds-body" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.body+'  ('+item.osModifier+'+0)" onclick="'+'muds.buttonBodyTextAction()'+'">'+item.langDefault[item.options.language].buttons.formatting.body+'</button></li>' +
-            '<li><button type="button" class="muds-item dropped muds-blockquote" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.blockquote+'  (shift+'+item.osModifier+'+B)" onclick="'+'muds.buttonBlockquoteAction()'+'">'+item.langDefault[item.options.language].buttons.formatting.blockquote+'</button></li>' +
-            '<li><button type="button" class="muds-item dropped muds-code" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.code+' " onclick="'+'muds.buttonCodeBlockAction()'+'">'+item.langDefault[item.options.language].buttons.formatting.code+'</button></li>' +
+            '<li><button type="button" class="muds-item dropped muds-h1 muds-h1-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.h1+' ('+item.osModifier+'+1)" onclick="'+'muds.buttonH1Action()'+'">'+item.langDefault[item.options.language].buttons.formatting.h1+'</button></li>' +
+            '<li><button type="button" class="muds-item dropped muds-h2 muds-h2-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.h2+'  ('+item.osModifier+'+2)" onclick="'+'muds.buttonH2Action()'+'">'+item.langDefault[item.options.language].buttons.formatting.h2+'</button></li>' +
+            '<li><button type="button" class="muds-item dropped muds-h3 muds-h3-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.h3+'  ('+item.osModifier+'+3)" onclick="'+'muds.buttonH3Action()'+'">'+item.langDefault[item.options.language].buttons.formatting.h3+'</button></li>' +
+            '<li><button type="button" class="muds-item dropped muds-body muds-body-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.body+'  ('+item.osModifier+'+0)" onclick="'+'muds.buttonBodyTextAction()'+'">'+item.langDefault[item.options.language].buttons.formatting.body+'</button></li>' +
+            '<li><button type="button" class="muds-item dropped muds-blockquote muds-blockquote-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.blockquote+'  (shift+'+item.osModifier+'+B)" onclick="'+'muds.buttonBlockquoteAction()'+'">'+item.langDefault[item.options.language].buttons.formatting.blockquote+'</button></li>' +
+            '<li><button type="button" class="muds-item dropped muds-code muds-code-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.code+' " onclick="'+'muds.buttonCodeBlockAction()'+'">'+item.langDefault[item.options.language].buttons.formatting.code+'</button></li>' +
             '</ul>';
         item.menu.appendChild(buttonHeader);
     }
@@ -447,6 +447,7 @@
         buttonBlockquote.setAttribute('type', 'button');
         buttonBlockquote.setAttribute('tabindex', '-1');
         buttonBlockquote.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.blockquote+' (SHIFT+'+item.osModifier+'+B)');
+        buttonBlockquote.classList.add('muds-blockquote2-button');
         item.menu.appendChild(buttonBlockquote);
     }
     function buttonCodeBlock(item) {
@@ -457,6 +458,7 @@
         buttonCodeBlock.setAttribute('type', 'button');
         buttonCodeBlock.setAttribute('tabindex', '-1');
         buttonCodeBlock.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.code);
+        buttonCodeBlock.classList.add('muds-code2-button');
         item.menu.appendChild(buttonCodeBlock);
     }
     function buttonBold(item) {
@@ -479,6 +481,7 @@
         buttonLink.setAttribute('type', 'button');
         buttonLink.setAttribute('tabindex', '-1');
         buttonLink.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.link+' ('+item.osModifier+'+L)');
+        buttonLink.classList.add('muds-link-button');
         item.menu.appendChild(buttonLink);
     }
     function buttonCut(item) {
@@ -1031,56 +1034,169 @@
             }
         }, true);
 
+        // Get Selection container element
+        function getSelectionContainerElement() {
+            var range, sel, container;
+            if (document.selection && document.selection.createRange) {
+                // IE case
+                range = document.selection.createRange();
+                return range.parentElement();
+            } else if (window.getSelection) {
+                sel = window.getSelection();
+                if (sel.getRangeAt) {
+                    if (sel.rangeCount > 0) {
+                        range = sel.getRangeAt(0);
+                    }
+                } else {
+                    // Old WebKit selection object has no getRangeAt, so
+                    // create a range from other selection properties
+                    range = document.createRange();
+                    range.setStart(sel.anchorNode, sel.anchorOffset);
+                    range.setEnd(sel.focusNode, sel.focusOffset);
+
+                    // Handle the case when the selection was selected backwards (from the end to the start in the document)
+                    if (range.collapsed !== sel.isCollapsed) {
+                        range.setStart(sel.focusNode, sel.focusOffset);
+                        range.setEnd(sel.anchorNode, sel.anchorOffset);
+                    }
+                }
+
+                if (range) {
+                    container = range.commonAncestorContainer;
+
+                    // Check if the container is a text node and return its parent if so
+                    return container.nodeType === 3 ? container.parentNode : container;
+                }
+            }
+        }
+
         // Test and display state of buttons
+        const boldButton = document.querySelector('.muds-bold-button');
+        const italicButton = document.querySelector('.muds-italic-button');
+        const strikeButton = document.querySelector('.muds-strike-button');
+        const underlineButton = document.querySelector('.muds-underline-button');
+        const unorderedListButton = document.querySelector('.muds-unorderedlist-button');
+        const orderedListButton = document.querySelector('.muds-orderedlist-button');
+        const linkButton = document.querySelector('.muds-link-button');
+        const h1Button = document.querySelector('.muds-h1-button');
+        const h2Button = document.querySelector('.muds-h2-button');
+        const h3Button = document.querySelector('.muds-h3-button');
+        const bodyButton = document.querySelector('.muds-body-button');
+        const codeButton = document.querySelector('.muds-code-button');
+        const code2Button = document.querySelector('.muds-code2-button');
+        const blockquoteButton = document.querySelector('.muds-blockquote-button');
+        const blockquote2Button = document.querySelector('.muds-blockquote2-button');
         document.onselectionchange = function() {
-            // Buttons
-            const boldButton = document.querySelector('.muds-bold-button');
-            const italicButton = document.querySelector('.muds-italic-button');
-            const strikeButton = document.querySelector('.muds-strike-button');
-            const underlineButton = document.querySelector('.muds-underline-button');
-            const unorderedListButton = document.querySelector('.muds-unorderedlist-button');
-            const orderedListButton = document.querySelector('.muds-orderedlist-button');
 
             // Highlight Bold
-            if (document.queryCommandState('bold') === true) {
+            if (document.queryCommandState('bold') === true && boldButton != null) {
                 boldButton.classList.add('active');
-            } else if (document.queryCommandState('bold') === false) {
+            } else if (document.queryCommandState('bold') === false && boldButton != null) {
                 boldButton.classList.remove('active');
             }
 
             // Highlight Italic
-            if (document.queryCommandState('italic') === true) {
+            if (document.queryCommandState('italic') === true && italicButton != null) {
                 italicButton.classList.add('active');
-            } else if (document.queryCommandState('italic') === false) {
+            } else if (document.queryCommandState('italic') === false && italicButton != null) {
                 italicButton.classList.remove('active');
             }
 
             // Highlight StrikeThrough
-            if (document.queryCommandState('strikeThrough') === true) {
+            if (document.queryCommandState('strikeThrough') === true && strikeButton != null) {
                 strikeButton.classList.add('active');
-            } else if (document.queryCommandState('strikeThrough') === false) {
+            } else if (document.queryCommandState('strikeThrough') === false && strikeButton != null) {
                 strikeButton.classList.remove('active');
             }
 
             // Highlight Underline
-            if (document.queryCommandState('underline') === true) {
+            if (document.queryCommandState('underline') === true && underlineButton != null) {
                 underlineButton.classList.add('active');
-            } else if (document.queryCommandState('underline') === false) {
+            } else if (document.queryCommandState('underline') === false && underlineButton != null) {
                 underlineButton.classList.remove('active');
             }
 
             // Highlight Unordered list
-            if (document.queryCommandState('insertUnorderedList') === true) {
+            if (document.queryCommandState('insertUnorderedList') === true && unorderedListButton != null) {
                 unorderedListButton.classList.add('active');
-            } else if (document.queryCommandState('insertUnorderedList') === false) {
+            } else if (document.queryCommandState('insertUnorderedList') === false && unorderedListButton != null) {
                 unorderedListButton.classList.remove('active');
             }
 
             // Highlight Ordered list
-            if (document.queryCommandState('insertOrderedList') === true) {
+            if (document.queryCommandState('insertOrderedList') === true && orderedListButton != null) {
                 orderedListButton.classList.add('active');
-            } else if (document.queryCommandState('insertOrderedList') === false) {
+            } else if (document.queryCommandState('insertOrderedList') === false && orderedListButton != null) {
                 orderedListButton.classList.remove('active');
+            }
+
+            // Highlight H1
+            if (getSelectionContainerElement().tagName === 'H1' && h1Button != null) {
+                h1Button.classList.add('active');
+            } else if (getSelectionContainerElement().tagName != 'H1' && h1Button != null) {
+                h1Button.classList.remove('active');
+            }
+
+            // Highlight H2
+            if (getSelectionContainerElement().tagName === 'H2' && h2Button != null) {
+                h2Button.classList.add('active');
+            } else if (getSelectionContainerElement().tagName != 'H2' && h2Button != null){
+                h2Button.classList.remove('active');
+            }
+
+            // Highlight H3
+            if (getSelectionContainerElement().tagName === 'H3' && h3Button != null) {
+                h3Button.classList.add('active');
+            } else if (getSelectionContainerElement().tagName != 'H3' && h3Button != null) {
+                h3Button.classList.remove('active');
+            }
+
+            // Highlight Body
+            if (getSelectionContainerElement().tagName === 'P' && bodyButton != null) {
+                bodyButton.classList.add('active');
+            } else if (getSelectionContainerElement().tagName != 'P' && bodyButton != null) {
+                bodyButton.classList.remove('active');
+            }
+
+            // Highlight Code
+            if (getSelectionContainerElement().tagName === 'PRE') {
+                if (codeButton != null) {
+                    codeButton.classList.add('active');
+                }
+                if (code2Button != null) {
+                    code2Button.classList.add('active');
+                }
+            } else {
+                if (codeButton != null) {
+                    codeButton.classList.remove('active');
+                }
+                if (code2Button != null) {
+                    code2Button.classList.remove('active');
+                }
+            }
+
+            // Highlight Link
+            if (getSelectionContainerElement().tagName === 'A' && linkButton != null) {
+                linkButton.classList.add('active');
+            } else if (getSelectionContainerElement().tagName != 'A' && linkButton != null) {
+                linkButton.classList.remove('active');
+            }
+
+            // Highlight Blockquote
+            if (getSelectionContainerElement().tagName === 'BLOCKQUOTE' && getSelectionContainerElement().classList.contains('muds-quote') === true) {
+                if (blockquoteButton != null) {
+                    blockquoteButton.classList.add('active');
+                }
+                if (blockquote2Button != null) {
+                    blockquote2Button.classList.add('active');
+                }
+            } else {
+                if (blockquoteButton != null) {
+                    blockquoteButton.classList.remove('active');
+                }
+                if (blockquote2Button != null) {
+                    blockquote2Button.classList.remove('active');
+                }
             }
 
         };

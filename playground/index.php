@@ -18,11 +18,18 @@
 </head>
 <body>
     <textarea id="editorSelector"><h1>Try the MUDS editor today</h1>
-        <p>No matter what you are building, <b>MUDS</b> <u>has you covered.</u> <strike>From content</strike> <i>management</i> to email marketing, here are our customers' most common uses:</p>
+        <p>No matter what you are building, <b>MUDS</b> <u>has you covered.</u> <strike>From content</strike> <i>management</i> to <u><strike><b><i>email</i></b></strike></u> marketing, here are our customers' most common uses:</p>
         <ul>
             <li>Content Management Systems</li>
             <li>Learning Management Systems</li>
-            <li>Customer Relationship Management and marketing automation</li></ul><br><p><a href="https://tristanwhite.info" target="_blank">Our team</a> is hard at work, creating and adding <a href="https://muds.io/changelog/">new features</a> to take the Javascript web WYSIWYG editing capabilities to the next level.</p><blockquote class="muds-quote">The Muds editor has proven to seamlessly integrate with my webapp. It has offered me endless customisability, so as to suit my needs.<br>- Ronan Richardson</blockquote><br><h2>Initialise the MUDS editor</h2><pre> var muds = new muds({selector: "editor"});</pre>
+            <li>Customer Relationship Management and marketing automation</li>
+        </ul>
+        <br>
+        <p><a href="https://tristanwhite.info" target="_blank">Our team</a> is hard at work, creating and adding <a href="https://muds.io/changelog/">new features</a> to take the Javascript web WYSIWYG editing capabilities to the next level.</p>
+        <blockquote class="muds-quote">The Muds editor has proven to seamlessly integrate with my webapp. It has offered me endless customisability, so as to suit my needs.<br>- Ronan Richardson</blockquote>
+        <br>
+        <h2>Initialise the MUDS editor</h2>
+        <pre> var muds = new muds({selector: "editor"});</pre>
     </textarea>
 
     <br><br>
@@ -72,7 +79,7 @@
             placeholder: 'Skriv dit <b>review her</b> og hjælp andre med at danne et indtryk 👍😎<br><small>Brug mindst 50 tegn til at beskrive din oplevelse ️✍️</small>',
             height: '280px',
             minHeight: '200px',
-            // maxHeight: '400px',
+            maxHeight: '400px',
             theme: "light",
             resize: true,
             required: true,
