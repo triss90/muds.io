@@ -83,7 +83,7 @@
             theme: "light",
             resize: true,
             required: true,
-            keybindings: true,
+            keybindings: false,
             tooltips: true,
             characterCount: true,
             language: 'da-DK',

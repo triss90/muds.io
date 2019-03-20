@@ -350,7 +350,11 @@
         buttonFullScreen.setAttribute('onclick', 'muds.enterFullScreen()');
         buttonFullScreen.setAttribute('tabindex', '-1');
         buttonFullScreen.setAttribute('type', 'button');
-        buttonFullScreen.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.fullscreen+' ('+item.osModifier+'+'+item.langDefault[item.options.language].buttons.keybindings.enter+')');
+        if(item.keybindings === false) {
+            buttonFullScreen.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.fullscreen);
+        } else {
+            buttonFullScreen.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.fullscreen+ ' ('+item.osModifier+'+'+item.langDefault[item.options.language].buttons.keybindings.enter+')');
+        }
         item.menu.appendChild(buttonFullScreen);
     }
     function buttonHeader(item) {
@@ -358,15 +362,28 @@
         buttonHeader.classList.add('muds-item');
         buttonHeader.classList.add('muds-dropdown');
         buttonHeader.classList.add('headers');
-        buttonHeader.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M5 4v3h5.5v12h3V7H19V4H5z"/></svg></label>' +
-            '<ul>' +
-            '<li><button type="button" class="muds-item dropped muds-h1 muds-h1-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.h1+' ('+item.osModifier+'+1)" onclick="'+'muds.buttonH1Action()'+'">'+item.langDefault[item.options.language].buttons.formatting.h1+'</button></li>' +
-            '<li><button type="button" class="muds-item dropped muds-h2 muds-h2-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.h2+'  ('+item.osModifier+'+2)" onclick="'+'muds.buttonH2Action()'+'">'+item.langDefault[item.options.language].buttons.formatting.h2+'</button></li>' +
-            '<li><button type="button" class="muds-item dropped muds-h3 muds-h3-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.h3+'  ('+item.osModifier+'+3)" onclick="'+'muds.buttonH3Action()'+'">'+item.langDefault[item.options.language].buttons.formatting.h3+'</button></li>' +
-            '<li><button type="button" class="muds-item dropped muds-body muds-body-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.body+'  ('+item.osModifier+'+0)" onclick="'+'muds.buttonBodyTextAction()'+'">'+item.langDefault[item.options.language].buttons.formatting.body+'</button></li>' +
-            '<li><button type="button" class="muds-item dropped muds-blockquote muds-blockquote-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.blockquote+'  (shift+'+item.osModifier+'+B)" onclick="'+'muds.buttonBlockquoteAction()'+'">'+item.langDefault[item.options.language].buttons.formatting.blockquote+'</button></li>' +
-            '<li><button type="button" class="muds-item dropped muds-code muds-code-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.code+' " onclick="'+'muds.buttonCodeBlockAction()'+'">'+item.langDefault[item.options.language].buttons.formatting.code+'</button></li>' +
-            '</ul>';
+        if(item.keybindings === false) {
+            buttonHeader.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M5 4v3h5.5v12h3V7H19V4H5z"/></svg></label>' +
+                '<ul>' +
+                '<li><button type="button" class="muds-item dropped muds-h1 muds-h1-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.h1+'">'+item.langDefault[item.options.language].buttons.formatting.h1+'</button></li>' +
+                '<li><button type="button" class="muds-item dropped muds-h2 muds-h2-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.h2+'">'+item.langDefault[item.options.language].buttons.formatting.h2+'</button></li>' +
+                '<li><button type="button" class="muds-item dropped muds-h3 muds-h3-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.h3+'">'+item.langDefault[item.options.language].buttons.formatting.h3+'</button></li>' +
+                '<li><button type="button" class="muds-item dropped muds-body muds-body-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.body+'">'+item.langDefault[item.options.language].buttons.formatting.body+'</button></li>' +
+                '<li><button type="button" class="muds-item dropped muds-blockquote muds-blockquote-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.blockquote+'">'+item.langDefault[item.options.language].buttons.formatting.blockquote+'</button></li>' +
+                '<li><button type="button" class="muds-item dropped muds-code muds-code-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.code+' " onclick="'+'muds.buttonCodeBlockAction()'+'">'+item.langDefault[item.options.language].buttons.formatting.code+'</button></li>' +
+                '</ul>';
+        } else {
+            buttonHeader.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M5 4v3h5.5v12h3V7H19V4H5z"/></svg></label>' +
+                '<ul>' +
+                '<li><button type="button" class="muds-item dropped muds-h1 muds-h1-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.h1+' ('+item.osModifier+'+1)" onclick="'+'muds.buttonH1Action()'+'">'+item.langDefault[item.options.language].buttons.formatting.h1+'</button></li>' +
+                '<li><button type="button" class="muds-item dropped muds-h2 muds-h2-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.h2+'  ('+item.osModifier+'+2)" onclick="'+'muds.buttonH2Action()'+'">'+item.langDefault[item.options.language].buttons.formatting.h2+'</button></li>' +
+                '<li><button type="button" class="muds-item dropped muds-h3 muds-h3-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.h3+'  ('+item.osModifier+'+3)" onclick="'+'muds.buttonH3Action()'+'">'+item.langDefault[item.options.language].buttons.formatting.h3+'</button></li>' +
+                '<li><button type="button" class="muds-item dropped muds-body muds-body-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.body+'  ('+item.osModifier+'+0)" onclick="'+'muds.buttonBodyTextAction()'+'">'+item.langDefault[item.options.language].buttons.formatting.body+'</button></li>' +
+                '<li><button type="button" class="muds-item dropped muds-blockquote muds-blockquote-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.blockquote+'  (shift+'+item.osModifier+'+B)" onclick="'+'muds.buttonBlockquoteAction()'+'">'+item.langDefault[item.options.language].buttons.formatting.blockquote+'</button></li>' +
+                '<li><button type="button" class="muds-item dropped muds-code muds-code-button" tabindex="-1" data-tooltip="'+item.langDefault[item.options.language].buttons.formatting.code+' " onclick="'+'muds.buttonCodeBlockAction()'+'">'+item.langDefault[item.options.language].buttons.formatting.code+'</button></li>' +
+                '</ul>';
+        }
+
         item.menu.appendChild(buttonHeader);
     }
     function buttonFonts(item) {
@@ -402,7 +419,11 @@
         buttonUnorderedList.setAttribute('onclick', 'muds.buttonUnorderedListAction()');
         buttonUnorderedList.setAttribute('type', 'button');
         buttonUnorderedList.setAttribute('tabindex', '-1');
-        buttonUnorderedList.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.list.unordered+' ('+item.osModifier+'+.)');
+        if(item.keybindings === false) {
+            buttonUnorderedList.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.list.unordered);
+        } else {
+            buttonUnorderedList.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.list.unordered+' ('+item.osModifier+'+.)');
+        }
         buttonUnorderedList.classList.add('muds-unorderedlist-button');
         item.menu.appendChild(buttonUnorderedList);
     }
@@ -413,7 +434,11 @@
         buttonOrderedList.setAttribute('onclick', 'muds.buttonOrderedListAction()');
         buttonOrderedList.setAttribute('type', 'button');
         buttonOrderedList.setAttribute('tabindex', '-1');
-        buttonOrderedList.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.list.ordered+' ('+item.osModifier+'+,)');
+        if(item.keybindings === false) {
+            buttonOrderedList.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.list.ordered);
+        } else {
+            buttonOrderedList.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.list.ordered+' ('+item.osModifier+'+,)');
+        }
         buttonOrderedList.classList.add('muds-orderedlist-button');
         item.menu.appendChild(buttonOrderedList);
     }
@@ -424,7 +449,11 @@
         buttonUnderline.setAttribute('onclick', 'muds.buttonUnderlineAction()');
         buttonUnderline.setAttribute('type', 'button');
         buttonUnderline.setAttribute('tabindex', '-1');
-        buttonUnderline.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.underline+' ('+item.osModifier+'+U)');
+        if(item.keybindings === false) {
+            buttonUnderline.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.underline);
+        } else {
+            buttonUnderline.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.underline+' ('+item.osModifier+'+U)');
+        }
         buttonUnderline.classList.add('muds-underline-button');
         item.menu.appendChild(buttonUnderline);
     }
@@ -435,7 +464,11 @@
         buttonItalic.setAttribute('onclick','muds.buttonItalicAction()');
         buttonItalic.setAttribute('type', 'button');
         buttonItalic.setAttribute('tabindex', '-1');
-        buttonItalic.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.italic+' ('+item.osModifier+'+I)');
+        if(item.keybindings === false) {
+            buttonItalic.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.italic);
+        } else {
+            buttonItalic.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.italic+' ('+item.osModifier+'+I)');
+        }
         buttonItalic.classList.add('muds-italic-button');
         item.menu.appendChild(buttonItalic);
     }
@@ -446,7 +479,11 @@
         buttonBlockquote.setAttribute('onclick','muds.buttonBlockquoteAction()');
         buttonBlockquote.setAttribute('type', 'button');
         buttonBlockquote.setAttribute('tabindex', '-1');
-        buttonBlockquote.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.blockquote+' (SHIFT+'+item.osModifier+'+B)');
+        if(item.keybindings === false) {
+            buttonBlockquote.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.blockquote);
+        } else {
+            buttonBlockquote.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.blockquote+' (SHIFT+'+item.osModifier+'+B)');
+        }
         buttonBlockquote.classList.add('muds-blockquote2-button');
         item.menu.appendChild(buttonBlockquote);
     }
@@ -469,7 +506,11 @@
         buttonBold.setAttribute('type', 'button');
         buttonBold.setAttribute('tabindex', '-1');
         buttonBold.setAttribute('unselectable', 'on');
-        buttonBold.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.bold+' ('+item.osModifier+'+B)');
+        if(item.keybindings === false) {
+            buttonBold.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.bold);
+        } else {
+            buttonBold.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.bold+' ('+item.osModifier+'+B)');
+        }
         buttonBold.classList.add('muds-bold-button');
         item.menu.appendChild(buttonBold);
     }
@@ -480,7 +521,11 @@
         buttonLink.setAttribute('onclick','muds.buttonLinkAction()');
         buttonLink.setAttribute('type', 'button');
         buttonLink.setAttribute('tabindex', '-1');
-        buttonLink.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.link+' ('+item.osModifier+'+L)');
+        if(item.keybindings === false) {
+            buttonLink.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.link);
+        } else {
+            buttonLink.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.link+' ('+item.osModifier+'+L)');
+        }
         buttonLink.classList.add('muds-link-button');
         item.menu.appendChild(buttonLink);
     }
@@ -491,7 +536,11 @@
         buttonCut.setAttribute('onclick','muds.buttonCutAction()');
         buttonCut.setAttribute('type', 'button');
         buttonCut.setAttribute('tabindex', '-1');
-        buttonCut.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.cut+' ('+item.osModifier+'+X)');
+        if(item.keybindings === false) {
+            buttonCut.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.cut);
+        } else {
+            buttonCut.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.cut+' ('+item.osModifier+'+X)');
+        }
         item.menu.appendChild(buttonCut);
     }
     function buttonCopy(item) {
@@ -501,7 +550,11 @@
         buttonCopy.setAttribute('onclick','muds.buttonCopyAction()');
         buttonCopy.setAttribute('type', 'button');
         buttonCopy.setAttribute('tabindex', '-1');
-        buttonCopy.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.copy+' ('+item.osModifier+'+C)');
+        if(item.keybindings === false) {
+            buttonCopy.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.copy);
+        } else {
+            buttonCopy.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.copy+' ('+item.osModifier+'+C)');
+        }
         item.menu.appendChild(buttonCopy);
     }
     function buttonUndo(item) {
@@ -511,7 +564,11 @@
         buttonUndo.setAttribute('onclick', 'muds.buttonUndoAction()');
         buttonUndo.setAttribute('type', 'button');
         buttonUndo.setAttribute('tabindex', '-1');
-        buttonUndo.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.undo+' ('+item.osModifier+'+Z)');
+        if(item.keybindings === false) {
+            buttonUndo.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.undo);
+        } else {
+            buttonUndo.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.undo+' ('+item.osModifier+'+Z)');
+        }
         item.menu.appendChild(buttonUndo);
     }
     function buttonRedo(item) {
@@ -521,7 +578,11 @@
         buttonRedo.setAttribute('onclick','muds.buttonRedoAction()');
         buttonRedo.setAttribute('type', 'button');
         buttonRedo.setAttribute('tabindex', '-1');
-        buttonRedo.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.redo+' (SHIFT+'+item.osModifier+'+Z)');
+        if(item.keybindings === false) {
+            buttonRedo.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.redo);
+        } else {
+            buttonRedo.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.redo+' (SHIFT+'+item.osModifier+'+Z)');
+        }
         item.menu.appendChild(buttonRedo);
     }
     function buttonChangeColor(item) {
@@ -531,7 +592,11 @@
         buttonChangeColor.setAttribute('onclick','muds.buttonChangeColorAction()');
         buttonChangeColor.setAttribute('type', 'button');
         buttonChangeColor.setAttribute('tabindex', '-1');
-        buttonChangeColor.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.textColor+' (SHIFT+'+item.osModifier+'+C)');
+        if(item.keybindings === false) {
+            buttonChangeColor.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.textColor);
+        } else {
+            buttonChangeColor.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.textColor+' (SHIFT+'+item.osModifier+'+C)');
+        }
         item.menu.appendChild(buttonChangeColor);
     }
     function buttonGetImage(item) {
@@ -560,7 +625,11 @@
         buttonStrikeThrough.setAttribute('onclick','muds.buttonStrikeThroughAction()');
         buttonStrikeThrough.setAttribute('type', 'button');
         buttonStrikeThrough.setAttribute('tabindex', '-1');
-        buttonStrikeThrough.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.strikeThrough+' ('+item.osModifier+'+S)');
+        if(item.keybindings === false) {
+            buttonStrikeThrough.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.strikeThrough);
+        } else {
+            buttonStrikeThrough.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.formatting.strikeThrough+' ('+item.osModifier+'+S)');
+        }
         buttonStrikeThrough.classList.add('muds-strike-button');
         item.menu.appendChild(buttonStrikeThrough);
     }
@@ -571,7 +640,11 @@
         buttonDelete.setAttribute('onclick','muds.buttonDeleteAction()');
         buttonDelete.setAttribute('type', 'button');
         buttonDelete.setAttribute('tabindex', '-1');
-        buttonDelete.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.delete+' (DEL)');
+        if(item.keybindings === false) {
+            buttonDelete.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.delete);
+        } else {
+            buttonDelete.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.delete+' (DEL)');
+        }
         item.menu.appendChild(buttonDelete);
     }
     function buttonSelectAll(item) {
@@ -581,7 +654,11 @@
         buttonSelectAll.setAttribute('onclick','muds.buttonSelectAllAction()');
         buttonSelectAll.setAttribute('type', 'button');
         buttonSelectAll.setAttribute('tabindex', '-1');
-        buttonSelectAll.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.selectAll+' ('+item.osModifier+'+A)');
+        if(item.keybindings === false) {
+            buttonSelectAll.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.selectAll);
+        } else {
+            buttonSelectAll.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.selectAll+' ('+item.osModifier+'+A)');
+        }
         item.menu.appendChild(buttonSelectAll);
     }
     function buttonJustification(item) {
@@ -589,14 +666,26 @@
         buttonJustification.classList.add('muds-item');
         buttonJustification.classList.add('muds-dropdown');
         buttonJustification.classList.add('justification');
-        buttonJustification.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg></label>' +
-            '<ul>' +
-            '<li><button type="button" class="muds-item dropped just-left" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.left+' ('+item.osModifier+'+7'+')" onclick="'+'muds.buttonJustifyLeftAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg> '+item.langDefault[item.options.language].buttons.justification.left+'</button></li>' +
-            '<li><button type="button" class="muds-item dropped just-center" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.center+' ('+item.osModifier+'+8'+')" onclick="'+'muds.buttonJustifyCenterAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M7 15v2h10v-2H7zm-4 6h18v-2H3v2zm0-8h18v-2H3v2zm4-6v2h10V7H7zM3 3v2h18V3H3z"/></svg> '+item.langDefault[item.options.language].buttons.justification.center+'</button></li>' +
-            '<li><button type="button" class="muds-item dropped just-right" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.right+' ('+item.osModifier+'+9'+')" onclick="'+'muds.buttonJustifyRightAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 21h18v-2H3v2zm6-4h12v-2H9v2zm-6-4h18v-2H3v2zm6-4h12V7H9v2zM3 3v2h18V3H3z"/></svg> '+item.langDefault[item.options.language].buttons.justification.right+'</button></li>' +
-            '<li><button type="button" class="muds-item dropped just-indent" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.indent+' (SHIFT+'+item.osModifier+'+7'+')" onclick="'+'muds.buttonIndentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM3 8v8l4-4-4-4zm8 9h10v-2H11v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> '+item.langDefault[item.options.language].buttons.justification.indent+'</button></li>' +
-            '<li><button type="button" class="muds-item dropped just-outdent" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.outdent+' (SHIFT+'+item.osModifier+'+8'+')" onclick="'+'muds.buttonOutdentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 17h10v-2H11v2zm-8-5l4 4V8l-4 4zm0 9h18v-2H3v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> '+item.langDefault[item.options.language].buttons.justification.outdent+'</button></li>' +
-            '</ul>';
+        if(item.keybindings === false) {
+            buttonJustification.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg></label>' +
+                '<ul>' +
+                '<li><button type="button" class="muds-item dropped just-left" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.left+'" onclick="'+'muds.buttonJustifyLeftAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg> '+item.langDefault[item.options.language].buttons.justification.left+'</button></li>' +
+                '<li><button type="button" class="muds-item dropped just-center" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.center+'" onclick="'+'muds.buttonJustifyCenterAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M7 15v2h10v-2H7zm-4 6h18v-2H3v2zm0-8h18v-2H3v2zm4-6v2h10V7H7zM3 3v2h18V3H3z"/></svg> '+item.langDefault[item.options.language].buttons.justification.center+'</button></li>' +
+                '<li><button type="button" class="muds-item dropped just-right" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.right+'" onclick="'+'muds.buttonJustifyRightAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 21h18v-2H3v2zm6-4h12v-2H9v2zm-6-4h18v-2H3v2zm6-4h12V7H9v2zM3 3v2h18V3H3z"/></svg> '+item.langDefault[item.options.language].buttons.justification.right+'</button></li>' +
+                '<li><button type="button" class="muds-item dropped just-indent" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.indent+'" onclick="'+'muds.buttonIndentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM3 8v8l4-4-4-4zm8 9h10v-2H11v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> '+item.langDefault[item.options.language].buttons.justification.indent+'</button></li>' +
+                '<li><button type="button" class="muds-item dropped just-outdent" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.outdent+'" onclick="'+'muds.buttonOutdentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 17h10v-2H11v2zm-8-5l4 4V8l-4 4zm0 9h18v-2H3v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> '+item.langDefault[item.options.language].buttons.justification.outdent+'</button></li>' +
+                '</ul>';
+        } else {
+            buttonJustification.innerHTML = '<label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg></label>' +
+                '<ul>' +
+                '<li><button type="button" class="muds-item dropped just-left" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.left+' ('+item.osModifier+'+7'+')" onclick="'+'muds.buttonJustifyLeftAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></svg> '+item.langDefault[item.options.language].buttons.justification.left+'</button></li>' +
+                '<li><button type="button" class="muds-item dropped just-center" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.center+' ('+item.osModifier+'+8'+')" onclick="'+'muds.buttonJustifyCenterAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M7 15v2h10v-2H7zm-4 6h18v-2H3v2zm0-8h18v-2H3v2zm4-6v2h10V7H7zM3 3v2h18V3H3z"/></svg> '+item.langDefault[item.options.language].buttons.justification.center+'</button></li>' +
+                '<li><button type="button" class="muds-item dropped just-right" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.right+' ('+item.osModifier+'+9'+')" onclick="'+'muds.buttonJustifyRightAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 21h18v-2H3v2zm6-4h12v-2H9v2zm-6-4h18v-2H3v2zm6-4h12V7H9v2zM3 3v2h18V3H3z"/></svg> '+item.langDefault[item.options.language].buttons.justification.right+'</button></li>' +
+                '<li><button type="button" class="muds-item dropped just-indent" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.indent+' (SHIFT+'+item.osModifier+'+7'+')" onclick="'+'muds.buttonIndentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM3 8v8l4-4-4-4zm8 9h10v-2H11v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> '+item.langDefault[item.options.language].buttons.justification.indent+'</button></li>' +
+                '<li><button type="button" class="muds-item dropped just-outdent" data-tooltip="'+item.langDefault[item.options.language].buttons.justification.outdent+' (SHIFT+'+item.osModifier+'+8'+')" onclick="'+'muds.buttonOutdentAction()'+'"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 17h10v-2H11v2zm-8-5l4 4V8l-4 4zm0 9h18v-2H3v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> '+item.langDefault[item.options.language].buttons.justification.outdent+'</button></li>' +
+                '</ul>';
+        }
+
         item.menu.appendChild(buttonJustification);
     }
     function buttonJustifyCenter(item) {
@@ -606,7 +695,11 @@
         buttonJustifyCenter.setAttribute('onclick','muds.buttonJustifyCenterAction()');
         buttonJustifyCenter.setAttribute('type', 'button');
         buttonJustifyCenter.setAttribute('tabindex', '-1');
-        buttonJustifyCenter.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.center+' ('+item.osModifier+'+8)');
+        if(item.keybindings === false) {
+            buttonJustifyCenter.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.center);
+        } else {
+            buttonJustifyCenter.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.center+' ('+item.osModifier+'+8)');
+        }
         item.menu.appendChild(buttonJustifyCenter);
     }
     function buttonJustifyLeft(item) {
@@ -616,7 +709,11 @@
         buttonJustifyLeft.setAttribute('onclick','muds.buttonJustifyLeftAction()');
         buttonJustifyLeft.setAttribute('type', 'button');
         buttonJustifyLeft.setAttribute('tabindex', '-1');
-        buttonJustifyLeft.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.left+' ('+item.osModifier+'+7)');
+        if(item.keybindings === false) {
+            buttonJustifyLeft.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.left);
+        } else {
+            buttonJustifyLeft.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.left+' ('+item.osModifier+'+7)');
+        }
         item.menu.appendChild(buttonJustifyLeft);
     }
     function buttonJustifyRight(item) {
@@ -626,7 +723,11 @@
         buttonJustifyRight.setAttribute('onclick','muds.buttonJustifyRightAction()');
         buttonJustifyRight.setAttribute('type', 'button');
         buttonJustifyRight.setAttribute('tabindex', '-1');
-        buttonJustifyRight.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.right+' ('+item.osModifier+'+9)');
+        if(item.keybindings === false) {
+            buttonJustifyRight.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.right);
+        } else {
+            buttonJustifyRight.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.right+' ('+item.osModifier+'+9)');
+        }
         item.menu.appendChild(buttonJustifyRight);
     }
     function buttonIndent(item) {
@@ -636,7 +737,11 @@
         buttonIndent.setAttribute('onclick','muds.buttonIndentAction()');
         buttonIndent.setAttribute('type', 'button');
         buttonIndent.setAttribute('tabindex', '-1');
-        buttonIndent.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.indent+' (SHIFT+'+item.osModifier+'+7)');
+        if(item.keybindings === false) {
+            buttonIndent.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.indent);
+        } else {
+            buttonIndent.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.indent+' (SHIFT+'+item.osModifier+'+7)');
+        }
         item.menu.appendChild(buttonIndent);
     }
     function buttonOutdent(item) {
@@ -646,7 +751,11 @@
         buttonOutdent.setAttribute('onclick','muds.buttonOutdentAction()');
         buttonOutdent.setAttribute('type', 'button');
         buttonOutdent.setAttribute('tabindex', '-1');
-        buttonOutdent.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.outdent+' (SHIFT+'+item.osModifier+'+8)');
+        if(item.keybindings === false) {
+            buttonOutdent.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.outdent);
+        } else {
+            buttonOutdent.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.justification.outdent+' (SHIFT+'+item.osModifier+'+8)');
+        }
         item.menu.appendChild(buttonOutdent);
     }
     function buttonPrintMe(item) {
@@ -656,7 +765,11 @@
         buttonPrintMe.setAttribute('onclick','muds.buttonPrintMeAction()');
         buttonPrintMe.setAttribute('type', 'button');
         buttonPrintMe.setAttribute('tabindex', '-1');
-        buttonPrintMe.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.print+' ('+item.osModifier+'+P)');
+        if(item.keybindings === false) {
+            buttonPrintMe.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.print);
+        } else {
+            buttonPrintMe.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.print+' ('+item.osModifier+'+P)');
+        }
         item.menu.appendChild(buttonPrintMe);
     }
     function buttonShowHTML(item) {
@@ -666,7 +779,11 @@
         buttonShowHTML.setAttribute('onclick','muds.buttonShowHTMLAction(event)');
         buttonShowHTML.setAttribute('type', 'button');
         buttonShowHTML.setAttribute('tabindex', '-1');
-        buttonShowHTML.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.showHtml+' ('+item.osModifier+'+H)');
+        if(item.keybindings === false) {
+            buttonShowHTML.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.showHtml);
+        } else {
+            buttonShowHTML.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.showHtml+' ('+item.osModifier+'+H)');
+        }
         item.menu.appendChild(buttonShowHTML);
     }
     function buttonShowText(item) {
@@ -676,7 +793,11 @@
         buttonShowText.setAttribute('onclick','muds.buttonShowTextAction()');
         buttonShowText.setAttribute('type', 'button');
         buttonShowText.setAttribute('tabindex', '-1');
-        buttonShowText.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.showText+' ('+item.osModifier+'+O)');
+        if(item.keybindings === false) {
+            buttonShowText.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.showText);
+        } else {
+            buttonShowText.setAttribute('data-tooltip', item.langDefault[item.options.language].buttons.functions.showText+' ('+item.osModifier+'+O)');
+        }
         item.menu.appendChild(buttonShowText);
     }
 

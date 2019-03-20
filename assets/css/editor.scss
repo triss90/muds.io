@@ -135,6 +135,9 @@
       &.active {
         background: #ddd !important;
         border-radius: 2px !important;
+        svg {
+          fill: #666 !important;
+        }
       }
     }
     &.muds-h1-button,

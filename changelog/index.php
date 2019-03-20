@@ -28,6 +28,7 @@
 <!--                    <li>Fix bug where link insert would be "null" if input was empty</li>-->
 <!--                    <li>Fix bug where fullscreen sometimes wouldn't cover 100% height</li>-->
 <!--                    <li>Fix bug where leaving fullscreen sometimes wouldn't resize editor correctly</li>-->
+<!--                    <li>Fix bug where disabled keybindings still showed in tooltips</li>-->
 <!--                    <li>Add Language support - <a href="/documentation/languages/">Documentation</a>-->
 <!--                        <ul>-->
 <!--                            <li>English</li>-->
