@@ -409,6 +409,9 @@ table th {
       cursor: pointer; }
       .royal .muds-toolbar .muds-item:hover svg {
         fill: #f9f9f9; }
+    .royal .muds-toolbar .muds-item.muds-h1-button.active, .royal .muds-toolbar .muds-item.muds-h2-button.active, .royal .muds-toolbar .muds-item.muds-h3-button.active, .royal .muds-toolbar .muds-item.muds-blockquote-button.active, .royal .muds-toolbar .muds-item.muds-code-button.active, .royal .muds-toolbar .muds-item.muds-body-button.active {
+      color: #f4f4f4 !important;
+      left: 10px; }
   .royal .muds-toolbar .muds-dropdown ul {
     background-color: #553982 !important;
     border-color: #3b3582 !important; }
@@ -428,6 +431,8 @@ table th {
   .royal .muds-toolbar .muds-dropdown.headers ul li button.muds-blockquote {
     background: rgba(0, 0, 0, 0.5) !important;
     border-left: 3px solid black !important; }
+  .royal .muds-toolbar .muds-dropdown.fonts ul .wrapper li button {
+    color: #f4f4f4 !important; }
 
 .royal .muds-content {
   border: 1px solid #553982 !important;
@@ -477,6 +482,14 @@ table th {
       cursor: pointer; }
       .spectral .muds-toolbar .muds-item:hover svg {
         fill: #f9f9f9; }
+    .spectral .muds-toolbar .muds-item.muds-orderedlist-button.active, .spectral .muds-toolbar .muds-item.muds-unorderedlist-button.active, .spectral .muds-toolbar .muds-item.muds-bold-button.active, .spectral .muds-toolbar .muds-item.muds-italic-button.active, .spectral .muds-toolbar .muds-item.muds-strike-button.active, .spectral .muds-toolbar .muds-item.muds-underline-button.active, .spectral .muds-toolbar .muds-item.muds-code2-button.active, .spectral .muds-toolbar .muds-item.muds-blockquote2-button.active, .spectral .muds-toolbar .muds-item.muds-link-button.active {
+      background: rgba(0, 0, 0, 0.3) !important;
+      border-radius: 2px !important; }
+      .spectral .muds-toolbar .muds-item.muds-orderedlist-button.active svg, .spectral .muds-toolbar .muds-item.muds-unorderedlist-button.active svg, .spectral .muds-toolbar .muds-item.muds-bold-button.active svg, .spectral .muds-toolbar .muds-item.muds-italic-button.active svg, .spectral .muds-toolbar .muds-item.muds-strike-button.active svg, .spectral .muds-toolbar .muds-item.muds-underline-button.active svg, .spectral .muds-toolbar .muds-item.muds-code2-button.active svg, .spectral .muds-toolbar .muds-item.muds-blockquote2-button.active svg, .spectral .muds-toolbar .muds-item.muds-link-button.active svg {
+        fill: #f4f4f4 !important; }
+    .spectral .muds-toolbar .muds-item.muds-h1-button.active, .spectral .muds-toolbar .muds-item.muds-h2-button.active, .spectral .muds-toolbar .muds-item.muds-h3-button.active, .spectral .muds-toolbar .muds-item.muds-blockquote-button.active, .spectral .muds-toolbar .muds-item.muds-code-button.active, .spectral .muds-toolbar .muds-item.muds-body-button.active {
+      color: rgba(255, 255, 255, 0.6) !important;
+      left: 10px; }
   .spectral .muds-toolbar .muds-dropdown ul {
     background-color: rgba(0, 0, 0, 0.7) !important;
     border-color: rgba(0, 0, 0, 0.7) !important; }
@@ -553,6 +566,14 @@ table th {
       top: 15%;
       height: 70%;
       width: 70%; }
+    .markee .muds-toolbar .muds-item.muds-orderedlist-button.active, .markee .muds-toolbar .muds-item.muds-unorderedlist-button.active, .markee .muds-toolbar .muds-item.muds-bold-button.active, .markee .muds-toolbar .muds-item.muds-italic-button.active, .markee .muds-toolbar .muds-item.muds-strike-button.active, .markee .muds-toolbar .muds-item.muds-underline-button.active, .markee .muds-toolbar .muds-item.muds-code2-button.active, .markee .muds-toolbar .muds-item.muds-blockquote2-button.active, .markee .muds-toolbar .muds-item.muds-link-button.active {
+      background: #aaa !important;
+      border-radius: 2px !important; }
+      .markee .muds-toolbar .muds-item.muds-orderedlist-button.active svg, .markee .muds-toolbar .muds-item.muds-unorderedlist-button.active svg, .markee .muds-toolbar .muds-item.muds-bold-button.active svg, .markee .muds-toolbar .muds-item.muds-italic-button.active svg, .markee .muds-toolbar .muds-item.muds-strike-button.active svg, .markee .muds-toolbar .muds-item.muds-underline-button.active svg, .markee .muds-toolbar .muds-item.muds-code2-button.active svg, .markee .muds-toolbar .muds-item.muds-blockquote2-button.active svg, .markee .muds-toolbar .muds-item.muds-link-button.active svg {
+        fill: #fff !important; }
+    .markee .muds-toolbar .muds-item.muds-h1-button.active, .markee .muds-toolbar .muds-item.muds-h2-button.active, .markee .muds-toolbar .muds-item.muds-h3-button.active, .markee .muds-toolbar .muds-item.muds-blockquote-button.active, .markee .muds-toolbar .muds-item.muds-code-button.active, .markee .muds-toolbar .muds-item.muds-body-button.active {
+      color: #61aeee !important;
+      left: 10px; }
   .markee .muds-toolbar .muds-dropdown ul {
     left: 0px; }
     .markee .muds-toolbar .muds-dropdown ul li button {

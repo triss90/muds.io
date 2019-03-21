@@ -27,6 +27,34 @@
         height: 70%;
         width: 70%;
       }
+      &.muds-orderedlist-button,
+      &.muds-unorderedlist-button,
+      &.muds-bold-button,
+      &.muds-italic-button,
+      &.muds-strike-button,
+      &.muds-underline-button,
+      &.muds-code2-button,
+      &.muds-blockquote2-button,
+      &.muds-link-button {
+        &.active {
+          background: #aaa !important;
+          border-radius: 2px !important;
+          svg {
+            fill: #fff !important;
+          }
+        }
+      }
+      &.muds-h1-button,
+      &.muds-h2-button,
+      &.muds-h3-button,
+      &.muds-blockquote-button,
+      &.muds-code-button,
+      &.muds-body-button {
+        &.active {
+          color: #61aeee !important;
+          left: 10px;
+        }
+      }
     }
     .muds-dropdown {
       ul {

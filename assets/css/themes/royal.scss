@@ -27,6 +27,17 @@
           fill: #f9f9f9;
         }
       }
+      &.muds-h1-button,
+      &.muds-h2-button,
+      &.muds-h3-button,
+      &.muds-blockquote-button,
+      &.muds-code-button,
+      &.muds-body-button {
+        &.active {
+          color: #f4f4f4 !important;
+          left: 10px;
+        }
+      }
     }
     .muds-dropdown {
       ul {
@@ -59,6 +70,17 @@
               &.muds-blockquote {
                 background: rgba(0,0,0,0.5) !important;
                 border-left: 3px solid rgba(0,0,0,1) !important;
+              }
+            }
+          }
+        }
+      }
+      &.fonts {
+        ul {
+          .wrapper {
+            li {
+              button {
+                color: #f4f4f4 !important;
               }
             }
           }
