@@ -1144,6 +1144,7 @@
         // Adjust editor heights to compensate for varying menu height when resize
         window.addEventListener('resize', function() {
             mudsContentElement.style.height = 'calc(100% - ' + editor.menu.offsetHeight + "px";
+
             if (editor.placeholder != undefined) {
                 mudsPlaceholderElement.style.top = editor.menu.offsetHeight + 10 + 'px';
             }
@@ -1316,14 +1317,6 @@
 
         };
 
-        // Insert predefined content content
-        if (editor.original_content === '' || editor.original_content === undefined) {
-            mudsContentElement.innerHTML = "<p><br></p>";
-        } else {
-            mudsContentElement.innerHTML = editor.original_content;
-            mudsContentSubmit.innerHTML = editor.original_content;
-        }
-
         // Show character count
         function characterCount() {
             return mudsContentElement.textContent.length;
@@ -1337,12 +1330,16 @@
 
         // Adjust initial editor heights base on menu size
         mudsContentElement.style.height = 'calc(100% - ' + editor.menu.offsetHeight + 'px';
-        if (editor.height === undefined && editor.minHeight === undefined && editor.maxHeight === undefined) {
-            mudsContentElement.style.minHeight = 'calc(150px - ' + editor.menu.offsetHeight + 'px';
-            mudsCharacterCountElement.style.bottom = '6px';
-        }
         if (editor.placeholder != undefined && editor.content.innerText === '' && editor.original_content === '') {
             mudsPlaceholderElement.style.top = editor.menu.offsetHeight + 10 + 'px';
+        }
+
+        // Insert predefined content content
+        if (editor.original_content === '' || editor.original_content === undefined) {
+            mudsContentElement.innerHTML = "<p><br></p>";
+        } else {
+            mudsContentElement.innerHTML = editor.original_content;
+            mudsContentSubmit.innerHTML = editor.original_content;
         }
 
         // Resize function
@@ -1371,7 +1368,11 @@
             function resize(e) {
                 const height = original_height + (e.pageY - original_mouse_y);
                 if (height > minimum_size) {
-                    element.style.height = height + 'px'
+                    element.style.height = height + 'px';
+                    // Adjust resize bar if no heights are defined when resizing
+                    if (editor.height === undefined && editor.minHeight === undefined && editor.maxHeight === undefined) {
+                        currentResizer.style.top = '-6px';
+                    }
                 }
             }
             function stopResize() {
@@ -1384,8 +1385,13 @@
             const edtiorWrapper = editor.wrapper;
             const resizer = document.createElement('div');
             resizer.className = 'muds-resizer';
+            // Adjust resize bar if no heights are defined
+            if (editor.height === undefined && editor.minHeight === undefined && editor.maxHeight === undefined) {
+                resizer.style.top = '0px';
+            }
             edtiorWrapper.appendChild(resizer);
             makeResizableDiv('#'+editor.original_input.id);
+
         }
 
         // Set the default break to insert "<p></p>"

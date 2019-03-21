@@ -17,20 +17,21 @@
     </style>
 </head>
 <body>
-    <textarea id="editorSelector"><h1>Try the MUDS editor today</h1>
-        <p>No matter what you are building, <b>MUDS</b> <u>has you covered.</u> <strike>From content</strike> <i>management</i> to <u><strike><b><i>email</i></b></strike></u> marketing, here are our customers' most common uses:</p>
-        <ul>
-            <li>Content Management Systems</li>
-            <li>Learning Management Systems</li>
-            <li>Customer Relationship Management and marketing automation</li>
-        </ul>
-        <br>
-        <p><a href="https://tristanwhite.info" target="_blank">Our team</a> is hard at work, creating and adding <a href="https://muds.io/changelog/">new features</a> to take the Javascript web WYSIWYG editing capabilities to the next level.</p>
-        <blockquote class="muds-quote">The Muds editor has proven to seamlessly integrate with my webapp. It has offered me endless customisability, so as to suit my needs.<br>- Ronan Richardson</blockquote>
-        <br>
-        <h2>Initialise the MUDS editor</h2>
-        <pre> var muds = new muds({selector: "editor"});</pre>
-    </textarea>
+    <textarea id="editorSelector"></textarea>
+
+    <!--        <h1>Try the MUDS editor today</h1>-->
+    <!--        <p>No matter what you are building, <b>MUDS</b> <u>has you covered.</u> <strike>From content</strike> <i>management</i> to <u><strike><b><i>email</i></b></strike></u> marketing, here are our customers' most common uses:</p>-->
+    <!--        <ul>-->
+    <!--            <li>Content Management Systems</li>-->
+    <!--            <li>Learning Management Systems</li>-->
+    <!--            <li>Customer Relationship Management and marketing automation</li>-->
+    <!--        </ul>-->
+    <!--        <br>-->
+    <!--        <p><a href="https://tristanwhite.info" target="_blank">Our team</a> is hard at work, creating and adding <a href="https://muds.io/changelog/">new features</a> to take the Javascript web WYSIWYG editing capabilities to the next level.</p>-->
+    <!--        <blockquote class="muds-quote">The Muds editor has proven to seamlessly integrate with my webapp. It has offered me endless customisability, so as to suit my needs.<br>- Ronan Richardson</blockquote>-->
+    <!--        <br>-->
+    <!--        <h2>Initialise the MUDS editor</h2>-->
+    <!--        <pre> var muds = new muds({selector: "editor"});</pre>-->
 
     <br><br>
     <h2>MUDS v1.4.0 <a href="/download/muds-editor-v1.4.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
