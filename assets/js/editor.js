@@ -1141,12 +1141,6 @@
         // Replace initial textarea with div element
         editor.original_input.parentNode.replaceChild(mudsWrapperElement, editor.original_input);
 
-        // Adjust initial editor heights base on menu size
-        mudsContentElement.style.height = 'calc(100% - ' + editor.menu.offsetHeight + 'px';
-        if (editor.placeholder != undefined && editor.content.innerText === '' && editor.original_content === '') {
-            mudsPlaceholderElement.style.top = editor.menu.offsetHeight + 10 + 'px';
-        }
-
         // Adjust editor heights to compensate for varying menu height when resize
         window.addEventListener('resize', function() {
             mudsContentElement.style.height = 'calc(100% - ' + editor.menu.offsetHeight + "px";
@@ -1339,6 +1333,16 @@
             mudsCharacterCountElement.classList.add('muds-character-count');
             mudsCharacterCountElement.textContent = characterCount();
             mudsWrapperElement.appendChild(mudsCharacterCountElement);
+        }
+
+        // Adjust initial editor heights base on menu size
+        mudsContentElement.style.height = 'calc(100% - ' + editor.menu.offsetHeight + 'px';
+        if (editor.height === undefined && editor.minHeight === undefined && editor.maxHeight === undefined) {
+            mudsContentElement.style.minHeight = 'calc(150px - ' + editor.menu.offsetHeight + 'px';
+            mudsCharacterCountElement.style.bottom = '6px';
+        }
+        if (editor.placeholder != undefined && editor.content.innerText === '' && editor.original_content === '') {
+            mudsPlaceholderElement.style.top = editor.menu.offsetHeight + 10 + 'px';
         }
 
         // Resize function
