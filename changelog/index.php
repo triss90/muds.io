@@ -21,37 +21,37 @@
         <div class="row">
             <div class="tiny-12 medium-7">
 
-<!--                <h2>MUDS v1.6.0 <a href="/download/muds-editor-v1.6.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>-->
-<!--                <ul>-->
-<!--                    <li>Fix various visual bugs</li>-->
-<!--                    <li>Fix bug where keybindings couldn't be disabled</li>-->
-<!--                    <li>Fix bug where disabled keybindings still showed in tooltips</li>-->
-<!--                    <li>Fix bug where link insert would be "null" if input was empty</li>-->
-<!--                    <li>Fix bug where fullscreen sometimes wouldn't cover 100% height</li>-->
-<!--                    <li>Fix bug where leaving fullscreen sometimes wouldn't resize editor correctly</li>-->
-<!--                    <li>Fix bug where character counter didn't display correctly if no heights were set</li>-->
-<!--                    <li>Fix bug where character counter would shift when resizing</li>-->
-<!--                    <li>Add Language support - <a href="/documentation/languages/">Documentation</a>-->
-<!--                        <ul>-->
-<!--                            <li>English</li>-->
-<!--                            <li>Danish</li>-->
-<!--                            <li>German</li>-->
-<!--                        </ul>-->
-<!--                    </li>-->
-<!--                    <li>Change shortcuts on justification to:-->
-<!--                        <ul>-->
-<!--                            <li>Align left: <span class="tag">CMD+7</span></li>-->
-<!--                            <li>Align center: <span class="tag">CMD+8</span></li>-->
-<!--                            <li>Align right: <span class="tag">CMD+9</span></li>-->
-<!--                            <li>Outdent <span class="tag">SHIFT+CMD+7</span></li>-->
-<!--                            <li>Indent <span class="tag">SHIFT+CMD+9</span></li>-->
-<!--                        </ul>-->
-<!--                    </li>-->
-<!--                    <li>Add min-, and max-height options to the editor</li>-->
-<!--                    <li>Add highlight for active styles in menu</li>-->
-<!--                </ul>-->
-<!---->
-<!--                <br><br>-->
+                <h2>MUDS v1.6.0 <a href="/download/muds-editor-v1.6.0.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
+                <ul>
+                    <li>Fix various visual bugs</li>
+                    <li>Fix bug where keybindings couldn't be disabled</li>
+                    <li>Fix bug where disabled keybindings still showed in tooltips</li>
+                    <li>Fix bug where link insert would be "null" if input was empty</li>
+                    <li>Fix bug where fullscreen sometimes wouldn't cover 100% height</li>
+                    <li>Fix bug where leaving fullscreen sometimes wouldn't resize editor correctly</li>
+                    <li>Fix bug where character counter didn't display correctly if no heights were set</li>
+                    <li>Fix bug where character counter would shift when resizing</li>
+                    <li>Add Language support - <a href="/documentation/languages/">Documentation</a>
+                        <ul>
+                            <li>English</li>
+                            <li>Danish</li>
+                            <li>German</li>
+                        </ul>
+                    </li>
+                    <li>Change shortcuts on justification to:
+                        <ul>
+                            <li>Align left: <span class="tag">CMD+7</span></li>
+                            <li>Align center: <span class="tag">CMD+8</span></li>
+                            <li>Align right: <span class="tag">CMD+9</span></li>
+                            <li>Outdent <span class="tag">SHIFT+CMD+7</span></li>
+                            <li>Indent <span class="tag">SHIFT+CMD+9</span></li>
+                        </ul>
+                    </li>
+                    <li>Add min-, and max-height options to the editor</li>
+                    <li>Add highlight for active styles in menu</li>
+                </ul>
+
+                <br><br>
 
                 <h2>MUDS v1.5.8 <a href="/download/muds-editor-v1.5.8.zip" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></h2>
                 <ul>

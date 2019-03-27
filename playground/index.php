@@ -80,7 +80,7 @@
             height: '400px',
             minHeight: '300px',
             maxHeight: '600px',
-            theme: "spectral",
+            theme: "light",
             resize: true,
             required: true,
             keybindings: true,

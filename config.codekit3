@@ -839,6 +839,16 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"\/assets\/js\/lang\/muds-da-DK.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/lang\/muds-da-DK.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"\/assets\/js\/lang\/muds-de-DE.js": {
 		"ft": 64,
 		"ma": 0,
@@ -849,6 +859,16 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"\/assets\/js\/lang\/muds-de-DE.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/lang\/muds-de-DE.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"\/assets\/js\/lang\/muds-en-US.js": {
 		"ft": 64,
 		"ma": 0,
@@ -856,6 +876,16 @@
 		"oA": 0,
 		"oAP": "\/assets\/js\/lang\/muds-en-US.min.js",
 		"oF": 2,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/assets\/js\/lang\/muds-en-US.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/lang\/muds-en-US.min-min.js",
+		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
@@ -1126,6 +1156,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/download\/muds-editor-v1.5.8.zip",
+		"oF": 0
+		},
+	"\/download\/muds-editor-v1.6.0.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/download\/muds-editor-v1.6.0.zip",
 		"oF": 0
 		},
 	"\/google9a2ba4a21ba11ef5.html": {
